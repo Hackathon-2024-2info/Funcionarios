@@ -1,5 +1,8 @@
+<script setup>
+import PagCadastro from '../components/PagCadastro.vue'
 
+</script>
 
-<style>
-
-</style>
+<template> 
+<PagCadastro></PagCadastro>
+</template>
