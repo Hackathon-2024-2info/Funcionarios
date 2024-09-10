@@ -36,23 +36,23 @@ function processarForm() {
 
 
 <template>
+  <h1 class="faca">FAÇA SEU CADASTRO</h1>
   <div class="formularioo">
-    <h1>Faça seu cadastro</h1>
     <form class="formulario" @submit.prevent="processarForm">
-      <label for="">Crie seu usuário</label>
-      <input type="text" v-model="info.usuario" required />
-      <label for="">Crie sua senha</label>
-      <input type="password" v-model="info.senha" required />
-      <label for="">Confirme sua senha</label>
-      <input type="password" v-model="info.confisenha" required />
-      <label for="">Seu nome</label>
-      <input type="text" v-model="info.nome" required />
-      <label for="">Insira seu email</label>
-      <input type="email" v-model="info.email" required />
-      <label for="">Insira seu telefone</label>
-      <input type="number" v-model="info.telefone" required />
-      <label for="">Insira sua matrícula</label>
-      <input type="number" v-model="info.matricula" required />
+      <label for="">CRIE SEU USUÁRIO</label>
+      <input type="text" v-model="info.usuario" required placeholder="Insira um usuário" />
+      <label for="">CRIE SUA SENHA</label>
+      <input type="password" v-model="info.senha" required placeholder="Insira uma senha" />
+      <label for="">CONFIRME SUA SENHA</label>
+      <input type="password" v-model="info.confisenha" required placeholder="Confirme sua senha" />
+      <label for="">SEU NOME</label>
+      <input type="text" v-model="info.nome" required placeholder="Insira seu nome" />
+      <label for="">INSIRA SEU E-MAIL</label>
+      <input type="email" v-model="info.email" required placeholder="Insira seu e-mail" />
+      <label for="">INSIRA SEU TELEFONE</label>
+      <input type="number" v-model="info.telefone" required placeholder="Insira seu telefone" />
+      <label for="">INSIRA SUA MATRICULA</label>
+      <input type="number" v-model="info.matricula" required placeholder="Insira seu número de matrícula" />
       <button id="enviar" type="submit">Concluir</button>
     </form>
   </div>
@@ -77,11 +77,35 @@ function processarForm() {
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
 
+.formularioo {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: r;
+}
+
+.faca {
+  display: flex;
+  position: absolute;
+  left: 273px;
+  right: 851px;
+  top: 63px;
+  bottom: 922px;
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
 .containerA {
   position: absolute;
   width: 539px;
-  height: 100.7%;
-  left: 64.4%;
+  height: 100.5%;
+  left: 70.85%;
   top: -5px;
   background: #0F0541;
   margin: 0px;
@@ -151,6 +175,55 @@ function processarForm() {
 
 
 .voltar p {
+  color: #FFFFFF;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+  width: 578px;
+  height: 30px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  left: 273px;
+  right: 851px;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  width: 578px;
+  height: 10px;
+  left: 273px;
+  right: 851px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  color: #000000;
+  padding-bottom: 30px;
+}
+
+#enviar {
+  font-family: 'Karla';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  gap: 10px;
+  position: absolute;
+  left: 302px;
+  right: 881px;
+  bottom: 47px;
+  background: #091D87;
+  border-radius: 5px;
   color: #FFFFFF;
 }
 </style>
