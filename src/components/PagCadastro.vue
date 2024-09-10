@@ -11,7 +11,6 @@ const info = reactive({
   matricula: ''
 })
 
-
 function processarForm() {
   if (
     info.senha == info.confisenha &&
@@ -23,7 +22,6 @@ function processarForm() {
   }
 }
 
-
 // function verifSenha() {
 //   if (info.senha == "") {
 //     return 'O campo não foi preenchido'
@@ -33,7 +31,6 @@ function processarForm() {
 //   }
 // }
 </script>
-
 
 <template>
   <h1 class="faca">Faça seu cadastro</h1>
@@ -52,19 +49,23 @@ function processarForm() {
       <label for="">INSIRA SEU TELEFONE</label>
       <input type="number" v-model="info.telefone" required placeholder="Insira seu telefone" />
       <label for="">INSIRA SUA MATRICULA</label>
-      <input type="number" v-model="info.matricula" required placeholder="Insira seu número de matrícula" />
+      <input
+        type="number"
+        v-model="info.matricula"
+        required
+        placeholder="Insira seu número de matrícula"
+      />
       <button id="enviar" type="submit">Concluir</button>
     </form>
   </div>
   <div class="containerA">
-    <img class="logo" src="../assets/logo AVANTE.png" alt="">
+    <img class="logo" src="../assets/logo AVANTE.png" alt="" />
     <p class="bemvinde">SEJA BEM-VINDO!</p>
-    <p class="conta">Faça seu cadastro para ter acesso ao sistema </p>
+    <p class="conta">Faça seu cadastro para ter acesso ao sistema</p>
     <div class="voltar">
       <p>Voltar a página de login</p>
     </div>
   </div>
-
 
   <!-- Futuramente pra mandar pro banco aqui!!!! -->
   <div v-if="mostrarResultado" class="resultado">
@@ -75,7 +76,6 @@ function processarForm() {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
-
 
 .formularioo {
   display: flex;
@@ -91,8 +91,7 @@ function processarForm() {
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 225%;
   color: #000000;
 }
 
@@ -102,49 +101,44 @@ function processarForm() {
   height: 100%;
   left: 70.85%;
   top: 0%;
-  background: #0F0541;
-  margin: 0px;
+  background: #0f0541;
+  margin: 0;
 }
 
 .logo {
   display: flex;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 170px;
-  top: 150px;
+  width: 40%;
+  height: 25%;
+  left: 30%;
+  top: 18%;
 }
-
 
 .bemvinde {
   display: flex;
   position: absolute;
-  height: 30px;
-  left: 125px;
-  top: 300px;
+  height: 40%;
+  left: 19%;
+  top: 35%;
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 40px;
-  color: #FFFFFF;
-  margin-top: 100px;
+  font-size: 225%;
+  color: #ffffff;
+  margin-top: 15%;
 }
-
 
 .conta {
   display: flex;
-  position: absolute;
-  height: 28px;
-  left: 110px;
-  top: 541px;
+  text-align: center;
+  margin-top: 80%;
+  margin-left: -2%;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
-  color: #FFFFFF;
-
+  font-size: 150%;
+  color: #ffffff;
+  padding: 20%;
 }
 
 .voltar {
@@ -153,23 +147,18 @@ function processarForm() {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 15px 40px;
-  gap: 10px;
-  width: 230px;
+  padding: 0.1% 10%;
+  margin-top: -15%;
+  margin-left: 25%;
+  width: 30%;
   position: absolute;
-  left: 141px;
-  right: 1042px;
-  top: 644px;
-  bottom: 340px;
-  background: #091D87;
+  background: #091d87;
   border-radius: 5px;
-
-
 }
 
-
 .voltar p {
-  color: #FFFFFF;
+  color: #ffffff;
+  font-size: 90%;
 }
 
 input {
@@ -189,26 +178,24 @@ label {
   display: flex;
   flex-direction: row;
   width: 578px;
-  height: 10px;
-  left: 273px;
-  right: 851px;
+  height: 1.5%;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 100%;
   display: flex;
   color: #000000;
- padding-bottom: 3%;
+  padding-bottom: 3%;
 }
 
 #enviar {
   font-family: 'Karla';
   display: flex;
   padding: 2% 20%;
-  background: #091D87;
+  background: #091d87;
   border-radius: 5px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 25%;
+  border: none;
 }
 </style>
