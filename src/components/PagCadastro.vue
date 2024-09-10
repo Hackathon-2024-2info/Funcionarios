@@ -36,7 +36,7 @@ function processarForm() {
 
 
 <template>
-  <h1 class="faca">FAÇA SEU CADASTRO</h1>
+  <h1 class="faca">Faça seu cadastro</h1>
   <div class="formularioo">
     <form class="formulario" @submit.prevent="processarForm">
       <label for="">CRIE SEU USUÁRIO</label>
@@ -79,14 +79,15 @@ function processarForm() {
 
 .formularioo {
   display: flex;
-  align-items: center;
-  margin-top: 100px;
+  justify-content: center;
+  width: 120%;
+  margin-left: -26%;
 }
 
 .faca {
   display: flex;
   top: 10%;
-  margin-left: 25%;
+  margin-left: 26%;
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 400;
@@ -98,9 +99,9 @@ function processarForm() {
 .containerA {
   position: absolute;
   width: 29.15%;
-  height: 100.5%;
+  height: 100%;
   left: 70.85%;
-  top: -5px;
+  top: 0%;
   background: #0F0541;
   margin: 0px;
 }
@@ -132,7 +133,6 @@ function processarForm() {
 
 
 .conta {
-  /* Ainda não tem uma conta? */
   display: flex;
   position: absolute;
   height: 28px;
@@ -177,14 +177,12 @@ input {
   justify-content: center;
   flex-direction: row;
   padding: 10px;
-  gap: 10px;
-  width: 578px;
-  height: 30px;
+  width: 100%;
+  height: 4.5%;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
-  left: 273px;
-  right: 851px;
+  margin-bottom: 4.5%;
 }
 
 label {
@@ -201,23 +199,16 @@ label {
   line-height: 19px;
   display: flex;
   color: #000000;
-  padding-bottom: 30px;
+ padding-bottom: 3%;
 }
 
 #enviar {
   font-family: 'Karla';
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 40px;
-  gap: 10px;
-  position: absolute;
-  left: 302px;
-  right: 881px;
-  bottom: 47px;
+  padding: 2% 20%;
   background: #091D87;
   border-radius: 5px;
   color: #FFFFFF;
+  margin-left: 25%;
 }
 </style>
