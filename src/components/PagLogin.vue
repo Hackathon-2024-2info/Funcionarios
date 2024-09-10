@@ -44,16 +44,21 @@ function processarForm() {
     </section>
 
     <aside>
+      <h1 id="h1">Faça seu login</h1>
       <div class="container">
-        <h1 id="h1">Faça seu login</h1>
-        <div class="formularioo">
+
+        <div></div>
+        <div> 
+
           <form class="formulario" @submit.prevent="processarForm">
             <label for="">SEU USUÁRIO</label>
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <button id="enviar" type="submit">Concluir</button>
-          </form>
+            <button id="enviar" type="submit">Concluir</button></form>
+        <div></div>
+       
+          
         </div>
       </div>
     </aside>
@@ -64,7 +69,10 @@ function processarForm() {
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
-
+.container{
+  display: grid;
+  grid-template-columns: 20;
+}
 .pergunta{
 margin-top: 15%;
   margin-bottom: 15%;
@@ -92,9 +100,9 @@ h1{
 }
 .logo {
   display: flex;
-margin-left: 30%;
 margin-top: 30%;
-
+align-items: center;
+align-self: center;
 }
 input {
   width: 578px;
