@@ -44,7 +44,7 @@ function processarForm() {
     </section>
 
     <aside>
-      <div>
+      <div class="container">
         <h1 id="h1">Faça seu login</h1>
         <div class="formularioo">
           <form class="formulario" @submit.prevent="processarForm">
