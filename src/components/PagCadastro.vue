@@ -81,29 +81,23 @@ function processarForm() {
   display: flex;
   align-items: center;
   margin-top: 100px;
-  flex-direction: r;
 }
 
 .faca {
   display: flex;
-  position: absolute;
-  left: 273px;
-  right: 851px;
-  top: 63px;
-  bottom: 922px;
+  top: 10%;
+  margin-left: 25%;
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 45px;
-  align-items: center;
-  text-align: center;
   color: #000000;
 }
 
 .containerA {
   position: absolute;
-  width: 539px;
+  width: 29.15%;
   height: 100.5%;
   left: 70.85%;
   top: -5px;
