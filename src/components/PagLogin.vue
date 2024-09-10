@@ -11,7 +11,6 @@ const info = reactive({
   matricula: ''
 })
 
-
 function processarForm() {
   if (
     info.senha == info.confisenha &&
@@ -23,7 +22,6 @@ function processarForm() {
   }
 }
 
-
 // function verifSenha() {
 //   if (info.senha == "") {
 //     return 'O campo não foi preenchido'
@@ -34,32 +32,32 @@ function processarForm() {
 // }
 </script>
 
-
 <template>
-  <h1 class="faca">FAÇA SEU LOGIN</h1>
-  <div class="formularioo">
-    <form class="formulario" @submit.prevent="processarForm">
-      <label for="">SEU USUÁRIO</label>
-      <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
-      <label for="">SUA SENHA</label>
-      <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-      <button id="enviar" type="submit">Concluir</button>
-    </form>
-  </div>
-  <div class="containerA">
-    <img class="logo" src="../assets/logo AVANTE.png" alt="">
-    <p class="bemvinde">SEJA BEM-VINDO!</p>
-    <p class="conta">Faça seu cadastro para ter acesso ao sistema </p>
-    <div class="voltar">
-      <p>Voltar a página de login</p>
-    </div>
-  </div>
+  <main id="main">
+    <section>
+      <div>
+        <img class="logo" src="../assets/logo AVANTE.png" alt="" />
+        <h1>SEJA BEM-VINDO!</h1>
+        <p class="pergunta">Ainda não tem uma conta?</p>
+        <p class="conta">Cadastre-se</p>
+      </div>
+    </section>
 
-
-  <!-- Futuramente pra mandar pro banco aqui!!!! -->
-  <div v-if="mostrarResultado" class="resultado">
-    <p>Cadastro concluído!</p>
-  </div>
+    <aside>
+      <div>
+        <h1 id="h1">Faça seu login</h1>
+        <div class="formularioo">
+          <form class="formulario" @submit.prevent="processarForm">
+            <label for="">SEU USUÁRIO</label>
+            <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
+            <label for="">SUA SENHA</label>
+            <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
+            <button id="enviar" type="submit">Concluir</button>
+          </form>
+        </div>
+      </div>
+    </aside>
+  </main>
 </template>
 
 <style scoped>
@@ -67,129 +65,47 @@ function processarForm() {
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
 
-.formularioo {
-  display: flex;
-  align-items: center;
-  margin-top: 100px;
-  flex-direction: r;
+.pergunta{
+margin-top: 15%;
+  margin-bottom: 15%;
+  font-size: 22px;
+}
+#main {
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
-.faca {
-  display: flex;
-  position: absolute;
-  left: 273px;
-  right: 851px;
-  top: 63px;
-  bottom: 922px;
-  font-family: 'Readex Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 45px;
-  align-items: center;
-  text-align: center;
+#h1{
   color: #000000;
+  font-size: 36px;
+  margin-top: 15%;
 }
-
-.containerA {
-  position: absolute;
-  width: 539px;
-  height: 100.5%;
-  left: 70.85%;
-  top: -5px;
-  background: #0F0541;
-  margin: 0px;
-}
-
-.logo {
-  display: flex;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 170px;
-  top: 150px;
-}
-
-
-.bemvinde {
-  display: flex;
-  position: absolute;
-  height: 30px;
-  left: 125px;
-  top: 300px;
+h1{
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   color: #FFFFFF;
-  margin-top: 100px;
+  text-align: center;
+  margin-top: 2%;
 }
-
-
-.conta {
-  /* Ainda não tem uma conta? */
+.logo {
   display: flex;
-  position: absolute;
-  height: 28px;
-  left: 110px;
-  top: 541px;
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
-  color: #FFFFFF;
+margin-left: 30%;
+margin-top: 30%;
 
 }
-
-.voltar {
-  display: flex;
-  font-family: 'Karla';
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 40px;
-  gap: 10px;
-  width: 230px;
-  position: absolute;
-  left: 141px;
-  right: 1042px;
-  top: 644px;
-  bottom: 340px;
-  background: #091D87;
-  border-radius: 5px;
-
-
-}
-
-
-.voltar p {
-  color: #FFFFFF;
-}
-
 input {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  padding: 10px;
-  gap: 10px;
   width: 578px;
   height: 30px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
-  left: 273px;
-  right: 851px;
+
 }
 
-label {
-  display: flex;
-  flex-direction: row;
-  width: 578px;
-  height: 10px;
-  left: 273px;
-  right: 851px;
+label{
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
@@ -197,23 +113,45 @@ label {
   line-height: 19px;
   display: flex;
   color: #000000;
-  padding-bottom: 30px;
+  text-align: center;
 }
 
-#enviar {
-  font-family: 'Karla';
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 40px;
-  gap: 10px;
-  position: absolute;
-  left: 302px;
-  right: 881px;
-  bottom: 47px;
+.conta{
+  
   background: #091D87;
   border-radius: 5px;
-  color: #FFFFFF;
+  font-family: 'Karla';
+  justify-content: center;
+  padding: 15px 40px;
+  gap: 10px;
+  width: 230px;
+  margin-left: 20%;
+  font-size: 16px;
 }
+
+section {
+  background: #0f0541;
+  height: 100vh;
+  width: 100%;
+}
+
+aside {
+  margin: 5%;
+}
+
+.bemvindo,
+.conta,
+p {
+  color: white;
+}
+.bemvindo {
+  font-family: 'Readex Pro';
+  font-size: 32px;
+
+}
+
+.consta,
+p {
+  font-family: 'Karla'; text-align: center;
+} 
 </style>
