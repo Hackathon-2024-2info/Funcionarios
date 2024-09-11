@@ -33,6 +33,7 @@ function processarForm() {
 </script>
 
 <template>
+  <main id="main">
   <h1 class="faca">Faça seu cadastro</h1>
   <div class="formularioo">
     <form class="formulario" @submit.prevent="processarForm">
@@ -49,12 +50,7 @@ function processarForm() {
       <label for="">INSIRA SEU TELEFONE</label>
       <input type="number" v-model="info.telefone" required placeholder="Insira seu telefone" />
       <label for="">INSIRA SUA MATRICULA</label>
-      <input
-        type="number"
-        v-model="info.matricula"
-        required
-        placeholder="Insira seu número de matrícula"
-      />
+      <input type="number" v-model="info.matricula" required placeholder="Insira seu número de matrícula" />
       <button id="enviar" type="submit">Concluir</button>
     </form>
   </div>
@@ -71,11 +67,18 @@ function processarForm() {
   <div v-if="mostrarResultado" class="resultado">
     <p>Cadastro concluído!</p>
   </div>
+</main>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
+
+
+#main {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
 
 .formularioo {
   display: flex;
@@ -96,18 +99,23 @@ function processarForm() {
 }
 
 .containerA {
-  position: absolute;
+  display: grid;
+  grid-template-columns: 20;
+  /* position: absolute; */
   width: 29.15%;
   height: 100%;
-  left: 70.85%;
-  top: 0%;
+  /* left: 70.85%; */
+  left: 100%;
+  margin-top: 0%;
   background: #0f0541;
   margin: 0;
+  display: grid;
+  grid-template-columns: 20;
 }
 
 .logo {
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   width: 40%;
   height: 25%;
   left: 30%;
@@ -116,7 +124,7 @@ function processarForm() {
 
 .bemvinde {
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   height: 40%;
   left: 19%;
   top: 35%;
@@ -142,7 +150,7 @@ function processarForm() {
 }
 
 .voltar {
-  display: flex;
+  /* display: flex;
   font-family: 'Karla';
   flex-direction: row;
   justify-content: center;
@@ -153,7 +161,22 @@ function processarForm() {
   width: 30%;
   position: absolute;
   background: #091d87;
+  border-radius: 5px; */
+  /* Button */
+
+  /* Auto layout */
+  font-family: 'Karla';
+  
+  display: flex;
+  flex-direction: row;
+  padding: 1% 10%;
+  background: #091d87;
   border-radius: 5px;
+  color: #ffffff;
+  margin-left: 25%;
+  margin-top: -15%;
+  width: 30%;
+  border: none;
 }
 
 .voltar p {
