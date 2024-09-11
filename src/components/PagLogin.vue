@@ -35,19 +35,19 @@ function processarForm() {
 <template>
   <main id="main">
     <section>
-      <div><div class="img">
+      <div class="img">
           <img class="logo" src="../assets/logo AVANTE.png" alt="" />
       </div>
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <p class="conta">Cadastre-se</p>
-      </div>
+        <button id="enviar" type="submit">Cadastre-se</button>
+     
     </section>
 
     <aside>
       <h1 id="h1">Faça seu login</h1>
-      <div class="container"   !important>
+      <div class="container">
 
         <div></div>
         <div> 
@@ -81,12 +81,11 @@ function processarForm() {
 
 .container{
   display: grid;
-  grid-template-columns: 25% 1fr 25%;
+  grid-template-columns: 25% 1fr 25%
 }
 .pergunta{
-margin-top: 15%;
-  margin-bottom: 15%;
-  font-size: 22px;
+margin-top: 5rem;
+font-size: 22px;
 }
 #main {
   display: grid;
@@ -116,10 +115,12 @@ align-self: center;
 }
 input {
   width: 578px;
-  height: 30px;
+  height: 46px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
+margin: 0;
+padding-left: 2%;
 
 }
 
@@ -132,14 +133,17 @@ label{
   display: flex;
   color: #000000;
   text-align: center;
+  margin-top: 6%;
+  margin-bottom: 4%;
+  
 }
 
-.conta{
-  
+ button{
+  margin: 0 30% 0 30%;
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
-  display: flex;
+  display: inline;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -147,7 +151,10 @@ label{
   gap: 10px;
   width: 230px;
   font-size: 16px;
-  
+  color: white;
+  margin-top: 3rem;
+  border: none;
+  text-align: center;
 }
 
 section {
