@@ -75,16 +75,20 @@ function processarForm() {
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
 
-#main {
+/* #main {
   display: grid;
   grid-template-columns: 30% 70%;
-}
+} */
 
 .formularioo {
   display: flex;
   justify-content: center;
   width: 120%;
   margin-left: -26%;
+}
+div .formularioo{
+  max-width: 120%;;
+
 }
 
 .faca {
@@ -99,23 +103,22 @@ function processarForm() {
 }
 
 .containerA {
-  display: grid;
-  grid-template-columns: 20;
-  /* position: absolute; */
+  /* display: grid;
+  grid-template-columns: 20; */
+  position: absolute;
   width: 29.15%;
   height: 100%;
-  /* left: 70.85%; */
-  left: 100%;
-  margin-top: 0%;
+  left: 70.85%;
+  left: 70.5%;
   background: #0f0541;
   margin: 0;
   display: grid;
-  grid-template-columns: 20;
+
 }
 
 .logo {
   display: flex;
-  /* position: absolute; */
+  position: absolute;
   width: 40%;
   height: 25%;
   left: 30%;
@@ -124,7 +127,7 @@ function processarForm() {
 
 .bemvinde {
   display: flex;
-  /* position: absolute; */
+  position: absolute;
   height: 40%;
   left: 19%;
   top: 35%;
