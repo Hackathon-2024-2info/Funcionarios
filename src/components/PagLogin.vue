@@ -35,8 +35,10 @@ function processarForm() {
 <template>
   <main id="main">
     <section>
-      <div>
-        <img class="logo" src="../assets/logo AVANTE.png" alt="" />
+      <div><div class="img">
+          <img class="logo" src="../assets/logo AVANTE.png" alt="" />
+      </div>
+      
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
         <p class="conta">Cadastre-se</p>
@@ -45,7 +47,7 @@ function processarForm() {
 
     <aside>
       <h1 id="h1">Faça seu login</h1>
-      <div class="container">
+      <div class="container"   !important>
 
         <div></div>
         <div> 
@@ -56,11 +58,13 @@ function processarForm() {
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
             <button id="enviar" type="submit">Concluir</button></form>
-        <div></div>
-       
+      </div>
+       <div>
+
+       </div>
           
         </div>
-      </div>
+      
     </aside>
   </main>
 </template>
@@ -69,9 +73,15 @@ function processarForm() {
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
+.img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
 .container{
   display: grid;
-  grid-template-columns: 20;
+  grid-template-columns: 25% 1fr 25%;
 }
 .pergunta{
 margin-top: 15%;
@@ -98,7 +108,7 @@ h1{
   text-align: center;
   margin-top: 2%;
 }
-.logo {
+.logo{
   display: flex;
 margin-top: 30%;
 align-items: center;
@@ -126,15 +136,18 @@ label{
 
 .conta{
   
-  background: #091D87;
+  background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 15px 40px;
   gap: 10px;
   width: 230px;
-  margin-left: 20%;
   font-size: 16px;
+  
 }
 
 section {
@@ -158,8 +171,9 @@ p {
 
 }
 
-.consta,
+.congmta,
 p {
-  font-family: 'Karla'; text-align: center;
+  font-family: 'Karla';
+   text-align: center;
 } 
 </style>
