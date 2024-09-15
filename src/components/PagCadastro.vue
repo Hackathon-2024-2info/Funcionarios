@@ -75,16 +75,18 @@ function processarForm() {
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
 
-/* #main {
+ #main {
   display: grid;
   grid-template-columns: 30% 70%;
-} */
+  margin: 0;
+} 
 
 .formularioo {
-  display: flex;
-  justify-content: center;
+
   width: 120%;
   margin-left: -26%;
+  display: grid;
+  grid-template-columns: 25% 1fr 25%
 }
 div .formularioo{
   max-width: 120%;;
@@ -188,7 +190,14 @@ div .formularioo{
 }
 
 input {
-  display: flex;
+  width: 578px;
+  height: 46px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+margin: 0;
+padding-left: 2%;
+  /* display: flex;
   justify-content: center;
   flex-direction: row;
   padding: 10px;
@@ -197,11 +206,21 @@ input {
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
-  margin-bottom: 4.5%;
+  margin-bottom: 4.5%; */
 }
 
 label {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
   display: flex;
+  color: #000000;
+  text-align: center;
+  margin-top: 6%;
+  margin-bottom: 4%;
+  /* display: flex;
   flex-direction: row;
   width: 578px;
   height: 1.5%;
@@ -211,7 +230,7 @@ label {
   font-size: 100%;
   display: flex;
   color: #000000;
-  padding-bottom: 3%;
+  padding-bottom: 3%; */
 }
 
 #enviar {
