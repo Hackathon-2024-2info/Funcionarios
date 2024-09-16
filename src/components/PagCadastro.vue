@@ -62,7 +62,7 @@ function processarForm() {
       </div>
       <p class="bemvinde">SEJA BEM-VINDO!</p>
       <p class="conta">Faça seu cadastro para ter acesso ao sistema</p>
-        <button id="voltar">Voltar a página de login</button>
+      <button id="voltar">Voltar a página de login</button>
     </div>
 
     <!-- Futuramente pra mandar pro banco aqui!!!! -->
@@ -85,7 +85,7 @@ function processarForm() {
 
 aside {
   margin-top: -5%;
-  margin-left: 15%;
+  margin-left: 25%;
 }
 
 .formularioo {
@@ -102,12 +102,10 @@ aside {
   color: #000000;
   text-align: center;
   margin-top: 10%;
-  margin-left: -28%;
+  margin-left: -40%;
   white-space: nowrap;
-  /* margin-top: 10%;
-  color: #000000;
-  font-family: 'Readex Pro';
-  text-align: center; */
+  margin-bottom: 5%;
+
 }
 
 .containerA {
@@ -117,138 +115,43 @@ aside {
 }
 
 #enviar {
-  margin-left: 80%;
+  margin-left: 70%;
 }
 
-/* .formularioo {
-
-  width: 120%;
-  margin-left: -26%;
-  display: grid;
-  grid-template-columns: 25% 1fr 25%
-}
-div .formularioo{
-  max-width: 120%;;
-
-} */
-
-/* .faca {
-  /* display: flex;
-  top: 10%;
-  margin-left: 26%; */
-/* font-family: 'Readex Pro';
-  color: #000000; */
-/* font-size: 36px; */
-/* margin-top: 15%;
-  font-size: 225%; */
-/* font-style: normal;
-  font-weight: 400;
-
-  color: #000000; */
-/* } */
-
-/* .containerA { */
-/* display: grid;
-  grid-template-columns: 20; */
-
-/* width: 29.15%;
-  height: 100%;
-  left: 70.85%;
-  background: #0f0541;
-  margin: 0; */
-
-
-/* }  */
 .img {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo{
+.logo {
   display: flex;
-margin-top: 30%;
-align-items: center;
-align-self: center;
+  margin-top: 30%;
+  align-items: center;
+  align-self: center;
 }
 
-.bemvinde{
+.bemvinde {
   font-family: 'Readex Pro';
   font-size: 32px;
   color: white;
-  margin-left: 13%;
+  margin-left: 24%;
   margin-top: 1%;
-}
-.conta{
-  font-family: 'Karla';
-  color: white;
-  font-weight: 100;
-  font-size: 175%;
-  text-align: center;
-}
-/* .logo {
-  display: flex;
-  position: absolute;
-  width: 40%;
-  height: 25%;
-  left: 30%;
-  top: 18%;
-}
-
-
-.bemvinde {
-  display: flex;
-  position: absolute;
-  height: 40%;
-  left: 19%;
-  top: 35%;
-  font-family: 'Readex Pro';
-  font-style: normal;
   font-weight: 500;
-  font-size: 225%;
-  color: #ffffff;
-  margin-top: 15%;
 }
 
 .conta {
-  display: flex;
-  
-} */
-
-/* .voltar { */
-/* display: flex;
   font-family: 'Karla';
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.1% 10%;
-  margin-top: -15%;
-  margin-left: 25%;
-  width: 30%;
-  position: absolute;
-  background: #091d87;
-  border-radius: 5px; */
-/* Button */
-
-/* Auto layout */
-/* font-family: 'Karla';
+  color: white;
+  font-weight: 120;
+  font-size: 150%;
+  text-align: center;
+  margin-top: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
   
-  display: flex;
-  flex-direction: row;
-  padding: 1% 10%;
-  background: #091d87;
-  border-radius: 5px;
-  color: #ffffff;
-  margin-left: 25%;
-  margin-top: -15%;
-  width: 30%;
-  border: none;
 }
 
-.voltar p {
-  color: #ffffff;
-  font-size: 90%;
-} */
 
 input {
   width: 578px;
@@ -258,17 +161,7 @@ input {
   border: none;
   margin: 0;
   margin-bottom: 5%;
-  /* Espaço abaixo do input */
-  /* display: flex;
-  justify-content: center;
-  flex-direction: row;
-  
-  width: 100%;
-  height: 4.5%;
-  background: rgba(217, 217, 217, 0.43);
-  border-radius: 5px;
-  border: none;
-  ; */
+
 }
 
 label {
@@ -278,28 +171,11 @@ label {
   font-size: 16px;
   display: block;
   margin-bottom: 5%;
-  /* Espaço entre o label e o input */
-  /* line-height: 19px;
-  display: flex;
-  color: #000000;
-  text-align: center;
-  margin-top: 6%;
-  margin-bottom: 4%; */
   white-space: nowrap;
-  /* display: flex;
-  flex-direction: row;
-  width: 578px;
-  height: 1.5%;
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 100%;
-  display: flex;
-  color: #000000;
-  padding-bottom: 3%; */
 }
 
 button {
+  margin: 0 30% 0 30%;
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
@@ -315,27 +191,11 @@ button {
   white-space: nowrap;
 }
 
-#voltar{
-  margin-left: 20%;
-  text-align: center;
-}
-
-/* button{
-  margin: 0 30% 0 30%;
-  background-color: #091D87;
-  border-radius: 5px;
-  font-family: 'Karla';
-  display: inline;
+#voltar {
+  display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 15px 40px;
-  gap: 10px;
-  width: 230px;
-  font-size: 16px;
-  color: white;
-  margin-top: 3rem;
-  border: none;
-  text-align: center;
-} */
+  margin-top: 13%;
+
+}
 </style>
