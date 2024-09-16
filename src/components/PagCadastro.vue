@@ -1,6 +1,5 @@
 <script setup>
 import { reactive, ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
 const mostrarResultado = ref(false)
 const info = reactive({
   nome: '',
@@ -63,7 +62,7 @@ function processarForm() {
       </div>
       <p class="bemvinde">SEJA BEM-VINDO!</p>
       <p class="conta">Faça seu cadastro para ter acesso ao sistema</p>
-      <RouterLink to="/login"><button id="voltar">Voltar a página de login</button></RouterLink>
+      <button id="voltar">Voltar a página de login</button>
     </div>
 
     <!-- Futuramente pra mandar pro banco aqui!!!! -->
@@ -111,7 +110,7 @@ aside {
 
 .containerA {
   background-color: #0F0541;
-  height: 100vh;
+  height: 125vh;
   width: 100%;
 }
 
