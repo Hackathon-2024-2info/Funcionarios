@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, ref } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 const mostrarResultado = ref(false)
 const info = reactive({
   nome: '',
@@ -62,7 +63,7 @@ function processarForm() {
       </div>
       <p class="bemvinde">SEJA BEM-VINDO!</p>
       <p class="conta">Faça seu cadastro para ter acesso ao sistema</p>
-      <button id="voltar">Voltar a página de login</button>
+      <RouterLink to="/login"><button id="voltar">Voltar a página de login</button></RouterLink>
     </div>
 
     <!-- Futuramente pra mandar pro banco aqui!!!! -->
