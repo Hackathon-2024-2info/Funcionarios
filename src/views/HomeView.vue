@@ -1,3 +1,5 @@
-<script setup></script>
+<script setup>
+import PagLogin from "../components/PagLogin.vue";
+</script>
 
-<template> teste</template>
+<template> <PagLogin></PagLogin>></template>
