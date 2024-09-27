@@ -1,5 +1,6 @@
 <script setup>
-import PagLogin from "../components/PagLogin.vue";
+import boxinfo from "../components/boxinfo.vue";
+
 </script>
 
-<template> <PagLogin></PagLogin>></template>
+<template> <boxinfo></boxinfo></template>
