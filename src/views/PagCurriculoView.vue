@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import ArchiveInput from '@/components/ArchiveInput.vue';
 
 const cargos=[
  {nome: "eletrecista", id:1},
@@ -27,16 +28,16 @@ const cargos=[
       <input type="text" placeholder="Insira seu nome completo">
       <label for="">SELECIONE O CARGO</label>
       <select v-model="cargos.nome">
-          <option value=""> Selecione o cargo que deseja se candidatar</option>
-          <option v-for="cargo in cargos" :key="cargos.id" :value="cargos.nome">
+          <option disabled value="">Selecione o cargo que deseja se candidatar</option>
+          <option v-for="cargo in cargos" :key="cargo.id" :value="cargo.nome">
             {{ cargo.nome }} </option>
         </select>
-
-        <fieldset class="arquivo">
+    <ArchiveInput />
+        <!-- <fieldset class="arquivo">
           <img src="@/assets/iconimage.png" alt="" id="imagelogo">
           <h6>INSIRA SEU CURRÍCULO</h6>
           <h4>Insira o arquivo do seu currículo</h4>
-        </fieldset>
+        </fieldset> -->
 </aside>
 
 <section>
