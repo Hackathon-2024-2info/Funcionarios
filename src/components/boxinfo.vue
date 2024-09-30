@@ -22,8 +22,9 @@
                 </div>
             </div>
         </div>
-        <div>
-
+        <div class="ferramentas-necessarias">
+            <p class="titulo-lista">ferramentas necessarias</p>
+            
         </div>
     </main>
 </template>
@@ -46,12 +47,11 @@ main{
 }
 
 .box {
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     width: 60%;
     height: 100%;
-    left: 332px;
-    top: 178px;
     background: #ffffff;
     border-radius: 10px;
 
