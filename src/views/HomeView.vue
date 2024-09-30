@@ -1,5 +1,5 @@
 <script setup>
-import boxinfo from "../components/boxinfo.vue";
+import boxinfo from "./boxinfoView.vue";
 
 </script>
 
