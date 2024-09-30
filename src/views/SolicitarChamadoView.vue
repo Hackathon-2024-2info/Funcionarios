@@ -132,14 +132,6 @@ button {
 
   color: #FFFFFF;
 
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-
-  
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 15px 40px;
@@ -147,7 +139,7 @@ button {
 
 
   height: 49px;
-  margin-left: -95%;
+  margin-left: 36%;
   right: 807px;
 
 
