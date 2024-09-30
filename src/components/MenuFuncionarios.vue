@@ -8,10 +8,11 @@
         <button class="btn-branco">Estoque</button>
         <button class="btn-azul">Serviço</button>
         <button class="btn-branco">Relatório</button>
-    <img src="../assets/Question.png" alt="" class="warning">
+     <img src="../assets/Question.png" alt="" class="warning">
         <div class="box">
+           
         <p class="title">Abra um chamado</p>
-        <p>Dúvidas ou problemas, abra um chamado ao administrador.</p>
+        <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
         <button>Abrir chamado</button>
         </div>
     </nav>
@@ -19,6 +20,7 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 .menu{
@@ -41,9 +43,14 @@ nav{
     width: 14vh;
     height: 14vh;
     margin-top: 10%;
-  align-items: center;
-}
 
+}
+img{
+      display: grid ;
+  place-items: center;
+ padding: -12356px;
+
+}
 .btn-azul{
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: #384DBB;
@@ -70,21 +77,39 @@ nav{
     font-weight: 600;
     margin: 4vh;
 } 
+.frase-box{
+    font-size: 90%;
+    margin: 10%;
+    text-align: center;
+    font-family: 'Karla';
+    ;
+}
+
+button{
+    border-radius: 10px;
+    height: 15%;
+    width: 90%;
+    border: none;
+    display: grid;
+    place-items: center;
+}
+
 
 .box{
     background-color: #384DBB;
     color: white;
-    font-family: "Kantumruy Pro", sans-serif;
     font-weight: 400;
     border-radius: 10px;
     margin-left: 15%;
     margin-right: 15% ;
     height: 30%;
-    padding-top: 30%;
+ 
 }
 
 .title{
-    font-size: 128%;
+    font-size: 125%;
     text-align: center;
+    font-family: "Kantumruy Pro", sans-serif;
+    margin-top: 30%;
 }
 </style>
