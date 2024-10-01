@@ -58,7 +58,8 @@ function processarForm() {
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <button id="enviar" type="submit">Concluir</button></form>
+            <RouterLink to="/solicitarestoque"><button id="enviar" type="submit">Concluir</button></RouterLink>
+            </form>
       </div>
        <div>
 
