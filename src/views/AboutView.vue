@@ -1,8 +1,8 @@
 <script setup>
-import PagCadastro from '../components/PagCadastro.vue'
+import PagPerfil from '../components/pagPerfil.vue';
 
 </script>
 
 <template> 
-<PagCadastro></PagCadastro>
+<PagPerfil></PagPerfil>
 </template>
