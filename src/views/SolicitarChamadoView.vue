@@ -8,12 +8,13 @@
 
       <h1 class="solicitar">SOLICITAR CHAMADO</h1>
       <label for="">Motivo </label>
-      <input type="text" class="input1" placeholder="Insira o motivo do chamado">
+      <textarea class="input1" name="input1" rows="4" cols="50"placeholder="Insira o motivo do chamado"></textarea><br>
+  
     </div>
     <div class="espacamento"></div>
     <div class="descricao">
       <label for="">Descrição </label>
-      <input type="text" class="input2" placeholder="Insira a decriçâo">
+      <textarea class="input2" name="input2" rows="4" cols="50" placeholder="Insira a decriçâo"></textarea><br>
       <button id="enviar" type="submit">Enviar</button>
     </div>
 
@@ -27,7 +28,7 @@
 #main {
   width: 564px;
   height: 734px;
-  margin-left: 326px;
+  margin-left: 28%; 
   margin-top: 8%;
 
 
@@ -46,14 +47,19 @@
 
 }
 
+.espacamento{
+  margin-top: 11%;
+  
+}
 
-
+textarea {
+    white-space: pre-wrap;
+    text-align: center; /* Mantém quebras de linha e espaços */
+    text-align: left ;
+    
+  }
 
 .input1 {
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: 10px 16px;
   gap: 10px;
   width: 465px;
@@ -69,27 +75,30 @@
 }
 
 .input2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: 10px 16px;
-  gap: 10px;
   width: 465px;
   height: 380px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
-  flex: none;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
   border: none;
+  outline: none ;
 
 
 }
 
+textarea {
+    white-space: pre-wrap; 
+    font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  }
+
 label {
-  width: 465px;
-  height: 18px;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
