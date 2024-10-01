@@ -4,17 +4,17 @@
 
 <template>
   <main id="main">
-    <div class="Chamado">
+    <div>
 
       <h1 class="solicitar">SOLICITAR CHAMADO</h1>
-      <label for="">Motivo </label>
-      <textarea class="input1" name="input1" rows="4" cols="50"placeholder="Insira o motivo do chamado"></textarea><br>
-  
+      <label for=""> Motivo </label>
+      <input class="input1" placeholder="Insira o motivo do chamado">
+
     </div>
     <div class="espacamento"></div>
-    <div class="descricao">
-      <label for="">Descrição </label>
-      <textarea class="input2" name="input2" rows="4" cols="50" placeholder="Insira a decriçâo"></textarea><br>
+    <div>
+      <label for=""> Descrição </label>
+      <input class="input2" placeholder="Insira a decriçâo">
       <button id="enviar" type="submit">Enviar</button>
     </div>
 
@@ -28,10 +28,8 @@
 #main {
   width: 564px;
   height: 734px;
-  margin-left: 28%; 
+  margin-left: 28%;
   margin-top: 8%;
-
-
 }
 
 
@@ -44,34 +42,21 @@
   color: #180577;
   padding: 53px;
   margin-left: -9%;
-
 }
 
-.espacamento{
+.espacamento {
   margin-top: 11%;
-  
 }
-
-textarea {
-    white-space: pre-wrap;
-    text-align: center; /* Mantém quebras de linha e espaços */
-    text-align: left ;
-    
-  }
 
 .input1 {
   padding: 10px 16px;
   gap: 10px;
   width: 465px;
-  height: 46px;
+  height: 39px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
   border: none;
-
+  outline: none;
 }
 
 .input2 {
@@ -81,22 +66,11 @@ textarea {
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   order: 1;
-  align-self: stretch;
   flex-grow: 0;
   border: none;
-  outline: none ;
-
-
+  outline: none;
 }
 
-textarea {
-    white-space: pre-wrap; 
-    font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  }
 
 label {
   font-family: 'Karla';
@@ -113,49 +87,24 @@ label {
   flex-grow: 0;
   padding: 15px;
   margin-left: -2.1%;
-
-
 }
 
+
 button {
-  padding: 15px 40px;
-  height: 49px;
-  margin-left: 485px;
-  right: 807px;
-  background: #091D87;
+  background-color: #091D87;
   border-radius: 5px;
-  border: none;
-  width: 49px;
-  height: 19px;
   font-family: 'Karla';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-
-  display: grid;
-  place-items: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 63px;
-
-  color: #FFFFFF;
-
+  display: inline;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 15px 40px;
-
-
-
-  height: 49px;
-  margin-left: 36%;
-  right: 807px;
-
-
-  background: #091D87;
-  border-radius: 5px;
-
-
-
+  width: 148px;
+  font-size: 16px;
+  color: white;
+  margin-top: 3rem;
+  border: none;
+  text-align: center;
+  margin-left: 29%
 }
 </style>
