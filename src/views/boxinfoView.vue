@@ -21,11 +21,11 @@
       </div>
     </div>
     <div class="espaçamento-lista">
-      <h1 class="titulo-lista">ferramentas necessárias:</h1>
-      <div class="lista">
+      <h1 class="titulo-lista">Ferramentas necessárias:</h1>
+      <ul class="lista">
         <li>hrtfher</li>
         <li>hrtfher</li>
-      </div>
+      </ul>
     </div>
   </main>
 </template>
@@ -109,35 +109,67 @@ main {
   justify-content: center;
   color: black;
 }
+
 .espaçamento-lista {
   display: grid;
   place-items: end;
 }
+
 .titulo-lista {
   display: flex;
-      list-style: none;
+  list-style: none;
   position: absolute;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   align-items: center;
   color: #091d87;
   background: rgba(84, 111, 255, 0.32);
-  border-radius: 10px;
+  border-radius: 15px;
+  padding-bottom: 0.1%;
+  padding-top: 0.1%;
+  padding-left: 0.1%;
+  width: 25%;
   top: 10%;
-  left: 77%;
+  left: 71%;
 }
-.lista{
-    display: flex;
+
+.lista {
+  list-style-position: outside;
+  display: block;
   position: absolute;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   align-items: center;
-  background: rgba(84, 111, 255, 0.32);
   font-size: 16px;
   font-weight: 400;
   top: 20%;
-  left: 77%;
+  left: 70%;
+  width: 20%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 40px;
+  width: 300px;
+}
+
+ul li {
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 20px;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "•";
+  color: rgba(84, 111, 255, 0.32);
+  font-size: 40px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-60%);
 }
 </style>
