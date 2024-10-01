@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
   <main>
@@ -85,9 +87,11 @@ main {
 }
 
 .minicontainer p {
+  display: flex;
   object-fit: contain;
-  text-align: center;
   font-family: 'Readex Pro';
+  padding-top: 0.7%;
+  padding-left: 35%;
 }
 
 .infos {
