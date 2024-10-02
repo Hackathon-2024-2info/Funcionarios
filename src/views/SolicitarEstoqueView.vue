@@ -29,6 +29,10 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
+*{
+    background-color: #F5F5F7;
+}
+
 #form{
     display: flex;
     flex-direction: column;
