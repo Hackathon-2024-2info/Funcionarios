@@ -8,6 +8,10 @@
         <button class="btn-branco">Estoque</button>
         <button class="btn-azul">Serviço</button>
         <button class="btn-branco">Relatório</button>
+
+        <div class="vazio">
+
+        </div>
      <img src="../assets/Question.png" alt="" class="warning">
         <div class="box">
            
@@ -25,11 +29,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 .menu{
     display: grid;
-    grid-template-columns: 17% 1fr;
+    grid-template-columns: 16% 1fr;
 }
 nav{
     background: #0F0541;
-    height: 100vh;
+    height: 100vh;  margin-bottom: -10%;
     width: 100%;
 
     display: flex;
@@ -48,8 +52,7 @@ nav{
 img{
       display: grid ;
   place-items: center;
- padding: -12356px;
-
+    position: relative;
 }
 .btn-azul{
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -66,6 +69,9 @@ img{
 
 }
 
+.vazio{
+    padding: 16%;
+}
 .btn-branco{
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: white;
@@ -82,16 +88,21 @@ img{
     margin: 10%;
     text-align: center;
     font-family: 'Karla';
-    ;
+    margin-top: 20%;
 }
 
 button{
     border-radius: 10px;
     height: 15%;
-    width: 90%;
+    width: 85%;
     border: none;
     display: grid;
     place-items: center;
+    color: #546FFF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-left: 7%;
+    margin-top: 18%;
+
 }
 
 
@@ -102,7 +113,8 @@ button{
     border-radius: 10px;
     margin-left: 15%;
     margin-right: 15% ;
-    height: 30%;
+    height: 32%;
+    margin-top: -15%;
  
 }
 
@@ -110,6 +122,6 @@ button{
     font-size: 125%;
     text-align: center;
     font-family: "Kantumruy Pro", sans-serif;
-    margin-top: 30%;
+    margin-top: 40%;
 }
 </style>
