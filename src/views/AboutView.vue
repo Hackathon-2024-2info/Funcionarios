@@ -1,8 +1,8 @@
 <script setup>
-import PagPerfil from '../components/pagPerfil.vue';
+import PagHeader from '../components/pagHeader.vue';
 
 </script>
 
 <template> 
-<PagPerfil></PagPerfil>
+<PagHeader></PagHeader>
 </template>
