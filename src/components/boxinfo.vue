@@ -1,5 +1,22 @@
 <script setup>
 
+const itens = [
+  {
+    nome: 'fjfjsjf'
+  },
+  {
+    nome: 'fhhfuih'
+  },
+  {
+    nome: 'rngbjkrengjre'
+  },
+  {
+    nome: 'fefhuifj'
+  },
+  {
+    nome: 'fhfhfui'
+  }
+]
 </script>
 
 <template>
@@ -25,8 +42,9 @@
     <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
       <ul class="lista">
-        <li>hrtfher</li>
-        <li>hrtfher</li>
+        <li v-for="item in itens">
+          {{ item.nome }}
+        </li>
       </ul>
     </div>
   </main>
@@ -40,6 +58,7 @@
 
 main {
   background-color: #f5f5f5;
+  height: 100vh;
 }
 
 .espaçamento {
