@@ -2,18 +2,23 @@
 
 
 <template>
+    <main>
     <header>
         <p>Olá, Edson!</p>
         <img src="../assets/foto-perfil.png" alt="">
     </header>
+</main>
 </template>
 
 <style scoped>
+
+
 header {
+    display: flex;
     margin-left: 17%;
     position: absolute;
     width: 83%;
-    height: 20%;
+    height: 20vh;
     background-color: #D9D9D9;
 }
 
