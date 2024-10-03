@@ -12,13 +12,16 @@
         <div class="vazio">
 
         </div>
-     <img src="../assets/Question.png" alt="" class="warning">
+   
+         <img src="../assets/Question.png" alt="" class="warning">
         <div class="box">
            
         <p class="title">Abra um chamado</p>
         <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-        <button>Abrir chamado</button>
+        <button class="button">Abrir chamado</button>
+            
         </div>
+    
     </nav>
 </div>
 </template>
@@ -27,25 +30,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+.warning{
+    margin-bottom: -10%;
+}
 .menu{
     display: grid;
-    grid-template-columns: 16% 1fr;
+    grid-template-columns: 18% 1fr;
+}
+template{
+    margin: 0;
+    height: 100%;
 }
 nav{
+   
+    height: 100%;
+    margin: 0;
+    padding-bottom: 15%;
     background: #0F0541;
-    height: 100vh;  margin-bottom: -10%;
+    
     width: 100%;
 
     display: flex;
     flex-direction: column;
-    
+    flex: 1;
     justify-content: start;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .img{
-    width: 14vh;
-    height: 14vh;
+    width: 17vh;
+    height: 17vh;
     margin-top: 10%;
 
 }
@@ -59,49 +77,57 @@ img{
     background-color: #384DBB;
     border-radius: 10px;
     border: none;
-    width: 24vh;
-    height: 6%;
+    width: 85%;
+   
     color: white;
 
-    font-size: 14px;
+
+    font-size: 90%;
     font-weight: 600;
     margin: 2vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
 
 }
 
 .vazio{
-    padding: 16%;
+    padding: 75%;
 }
 .btn-branco{
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: white;
     border: none;
     border-radius: 20px;
-    width: 20vh;
-    height:  5%;
+    width: 70%;
+    height: 6%;
+ padding-top: 5%;
+ padding-bottom: 5%;
     font-size: 14px;
     font-weight: 600;
     margin: 4vh;
 } 
 .frase-box{
-    font-size: 90%;
+    font-size: 80%;
     margin: 10%;
     text-align: center;
     font-family: 'Karla';
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
-button{
+.button{
     border-radius: 10px;
     height: 15%;
     width: 85%;
     border: none;
-    display: grid;
+
+    text-align: center;
     place-items: center;
     color: #546FFF;
     font-family: "Plus Jakarta Sans", sans-serif;
     margin-left: 7%;
-    margin-top: 18%;
+    margin-top: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 
 }
 
@@ -111,17 +137,17 @@ button{
     color: white;
     font-weight: 400;
     border-radius: 10px;
-    margin-left: 15%;
-    margin-right: 15% ;
-    height: 32%;
+    margin-left: 10%;
+    margin-right: 10% ;
+    height: 60%;
     margin-top: -15%;
- 
+    padding-bottom: 10%;
 }
 
 .title{
-    font-size: 125%;
+    font-size: 100%;
     text-align: center;
     font-family: "Kantumruy Pro", sans-serif;
-    margin-top: 40%;
+    margin-top: 35%;
 }
 </style>
