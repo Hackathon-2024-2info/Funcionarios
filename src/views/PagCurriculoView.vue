@@ -1,6 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { reactive } from 'vue';
+
 import ArchiveInput from '@/components/ArchiveInput.vue';
+
+const pessoa = reactive({
+  cargo: ""
+})
 
 const cargos=[
  {nome: "eletrecista", id:1},
@@ -11,12 +16,6 @@ const cargos=[
  {nome: "técnico em manutenção", id:6},
  {nome: "auxiliar administrativo", id:7},
  {nome: "supervisor de manutenção", id:8},
-
-
-
-
-
-
 ]
 </script>
 
@@ -27,7 +26,7 @@ const cargos=[
       <label for="">SEU NOME</label>
       <input type="text" placeholder="Insira seu nome completo">
       <label for="">SELECIONE O CARGO</label>
-      <select v-model="cargos.nome">
+      <select v-model="pessoa.cargo">
           <option disabled value="">Selecione o cargo que deseja se candidatar</option>
           <option v-for="cargo in cargos" :key="cargo.id" :value="cargo.nome">
             {{ cargo.nome }} </option>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="espacing" @click="openFileSelection">
         <fieldset class="arquivo">
             <div class="archive-input">
                 <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
@@ -15,57 +15,37 @@
     </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      fileName: ''
-    };
-  },
-  methods: {
-    handleFileChange(event) {
+<script setup>
+  import { ref } from 'vue'
+
+  const fileName = ref('')
+  const fileInput = ref(null)
+
+  function openFileSelection() {
+    fileInput.value.click()
+  }
+
+  function handleFileChange(event) {
       const file = event.target.files[0];
       if (file) {
-        this.fileName = file.name;
+        fileName.value = file.name;
       }
-    },
-    triggerFileInput() {
-      this.$refs.fileInput.click(); // Trigger the hidden file input
     }
-  }
-};
-// enviar arquivo pro banco:
-// methods: {
-//   handleFileChange(event) {
-//     const file = event.target.files[0];
-//     if (file) {
-//       this.fileName = file.name;
-//       const formData = new FormData();
-//       formData.append('file', file);
-
-//       // Replace with your API endpoint
-//       fetch('https://your-api-endpoint.com/upload', {
-//         method: 'POST',
-//         body: formData
-//       })
-//       .then(response => response.json())
-//       .then(data => {
-//         console.log('File uploaded successfully', data);
-//       })
-//       .catch(error => {
-//         console.error('Error uploading file', error);
-//       });
-//     }
-//   }
-// }
+  function triggerFileInput() {
+      fileInput.value.click(); // Trigger the hidden file input
+    }
 </script>
 
 <style scoped>
 
 .icon-button{
-    background-color: #D9D9D9;
-    border: 0px;
-    padding: 2%;
+  background-color: #d9d9d9;
+  border: 0px;
+  margin-top: 2%;
+}
+
+.espacing{
+  height: 2vh;
 }
 
 
