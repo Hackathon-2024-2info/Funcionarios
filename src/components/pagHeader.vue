@@ -18,7 +18,7 @@ header {
     margin-left: 17%;
     position: absolute;
     width: 83%;
-    height: 20vh;
+    height: 18vh;
     background-color: #D9D9D9;
 }
 
