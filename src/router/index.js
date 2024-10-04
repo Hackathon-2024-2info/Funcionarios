@@ -22,7 +22,14 @@ const router = createRouter({
       name: 'servicos',
       component: () => import('../views/ServicosView.vue')
     },
-  ]
+    {
+      path: '/relatorios',
+      name: 'relatorios',
+      component: () => import('../views/RelatoriosView.vue')
+    }
+  ],
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact-active",
 })
 
 export default router
