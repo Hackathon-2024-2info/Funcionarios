@@ -57,6 +57,14 @@
   border-radius: 5px;
   border: none;
   outline: none;
+
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
 }
 
 .input2 {
@@ -69,6 +77,13 @@
   flex-grow: 0;
   border: none;
   outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
 }
 
 
@@ -104,7 +119,10 @@ button {
   color: white;
   margin-top: 3rem;
   border: none;
-  text-align: center;
-  margin-left: 29%
+  margin-left: 29%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+
 }
 </style>
