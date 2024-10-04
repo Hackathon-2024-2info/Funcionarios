@@ -32,7 +32,7 @@ const itens = [
           <p>Prestadores: Edson e Fulano</p>
           <p>Previsão de duração: 2 dias</p>
           <p>Contato do responsável pela máquina: (47) 99012-9302</p>
-          <p>
+          <p class="descricao">
             Descrição: Manutenção de máquina injetora tipo xxxxxxxxxx lalalalaal cucucucu
             suqwbuqhuie3uiwri32 relatados ruídos na máquina
           </p>
@@ -58,7 +58,7 @@ const itens = [
 
 main {
   background-color: #f5f5f5;
-  height: 100vh;
+  height: 120vh;
 }
 
 .espaçamento {
@@ -87,7 +87,8 @@ main {
 .titulo {
   object-fit: contain;
   white-space: nowrap;
-  margin-top: 2%;
+  margin-top: 3.5%;
+  margin-bottom: 2%;
   font-family: 'Kantumruy Pro';
   font-weight: 700;
   margin-left: 5%;
@@ -97,12 +98,12 @@ main {
 }
 
 .minicontainer {
-  margin-top: 2%;
   width: 50%;
   margin-left: 5%;
   height: 3.5%;
   background: rgba(56, 77, 187, 0.4);
   border-radius: 20px;
+  margin-bottom: 2%;
 }
 
 .minicontainer p {
@@ -124,13 +125,16 @@ main {
   padding-right: 10%;
 }
 
-.info p {
-  margin-left: 3%;
+.infos p {
   object-fit: contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: black;
+  margin-bottom: 2%;
+}
+.infos .descricao{
+  line-height: 110%;
 }
 
 .espaçamento-lista {
@@ -144,7 +148,7 @@ main {
   position: absolute;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 22px;
   align-items: center;
   color: #091d87;
@@ -156,6 +160,7 @@ main {
   width: 25%;
   top: 10%;
   left: 71%;
+  height: 2.5%;
 }
 
 .lista {
@@ -169,8 +174,10 @@ main {
   font-weight: 400;
   top: 20%;
   left: 70%;
-  width: 20%;
+  width: 23.5%;
 }
+
+
 
 ul {
   list-style-type: none;
@@ -184,6 +191,7 @@ ul li {
   font-size: 16px;
   position: relative;
   margin-bottom: 10px;
+  margin-bottom: 10%;
 }
 
 ul li::before {
