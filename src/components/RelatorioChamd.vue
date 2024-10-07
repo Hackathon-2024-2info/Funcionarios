@@ -25,7 +25,7 @@
     <div>
       <label for=""> Colaboração da empresa que recebeu o serviço</label>
       <select id="opcoes" name="opcoes" required>
-        <option value="" disabled selected>Selecione</option>
+        <option value="cor" disabled selected>Selecione</option>
       </select>
     </div>
 
@@ -36,18 +36,7 @@
       <input class="input2" placeholder="Insira possíveis pendências">
     </div>
 
-
-
-
-
-
-
-
-
-
-    <div>
-      <button id="enviar" type="submit">Enviar</button>
-    </div>
+    
 
 
     <div class="espacing" @click="openFileSelection">
@@ -66,6 +55,16 @@
       </fieldset>
     </div>
 
+
+
+
+  </main>
+
+  <main id="mainn">
+    <div>
+      <label for="">Descrição da máquina e da realização do serviço</label>
+      <input class="input3" placeholder="Insira a descrição">
+    </div>
     <div class="espacing" @click="openFileSelection">
       <fieldset class="arquivo">
         <div class="archive-input">
@@ -82,13 +81,9 @@
       </fieldset>
     </div>
   </main>
-
-  <main id="mainn">
-    <div>
-      <label for="">Descrição da máquina e da realização do serviço</label>
-      <input class="input3" placeholder="Insira a descrição">
+  <div>
+      <button id="enviar" type="submit">Enviar</button>
     </div>
-  </main>
 </template>
 
 <script setup>
@@ -127,7 +122,7 @@
   width: 564px;
   height: 734px;
   margin-left: 62%;
-  margin-top: -33.2%;
+  margin-top: -39.9%;
 }
 
 
@@ -151,57 +146,30 @@
 }
 
 .espacamento {
-  margin-top: 6.6%;
+  margin-top: 2.8%;
 }
 
 
 #opcoes {
-  display: flex;
-
-  align-items: flex-start;
-  padding: 10px 16px;
   width: 465px;
-  height: 44px;
+  height: 53px;
   background: rgba(217, 217, 217, 0.43);
-  border-radius: 8px;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+  border-radius: 5px;
   border: none;
-  outline: none;
-
-
-
+  outline: none; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-size: 14px;
+  color: #687C94;
 }
 
-option {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  background: rgba(217, 217, 217, 0.43);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  width: 465px;
-  height: 403px;
-  left: 896px;
-  top: 236px;
-
-
-
-}
 
 
 .input1 {
   padding: 10px 16px;
   gap: 10px;
-  width: 465px;
-  height: 39px;
+  width: 430px;
+  height: 34px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
@@ -213,25 +181,18 @@ option {
   line-height: 14px;
   color: #687C94;
   color: #000000;
+  
 }
 
 
 
 
 .input2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: 10px 16px;
-  width: 465px;
-  height: 46px;
+  width: 430px;
+  height: 34px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
-
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
@@ -246,17 +207,8 @@ option {
 
 
 .input3 {
-
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 16px;
-  gap: 10px;
-
   width: 465px;
-  height: 380px;
-
+  height: 403px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   font-family: 'Karla';
@@ -268,10 +220,6 @@ option {
   color: #000000;
   border: none;
   outline: none;
-
-
-
-
 
 }
 
@@ -295,36 +243,20 @@ label {
 }
 
 
-button {
+#enviar{
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
-  display: inline;
-  display: grid;
-  place-items: center;
-  align-items: center;
-  text-align: center;
   padding: 15px 40px;
   width: 148px;
+  font-weight: 700;
   font-size: 16px;
   color: white;
   margin-top: 3rem;
   border: none;
   text-align: center;
-  margin-left: 29%
+  margin-left: 56%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #arquive-selected {
@@ -336,9 +268,10 @@ button {
 }
 
 .arquivo {
-  width: 50%;
+  width: 63%;
   height: 6vh;
-  background-color: #D9D9D9;
+  margin-left: -1%;
+ 
   border-radius: 20px;
   border-color: rgba(217, 217, 217, 0.43);
   margin-top: 10%;
@@ -370,6 +303,6 @@ h6 {
   background-image: ("@/assets/iconimage.png");
   width: 34px;
   height: 34px;
-  padding: 3%;
+  
 }
 </style>
