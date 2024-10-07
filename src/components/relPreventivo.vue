@@ -1,4 +1,48 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+const servicos = ref([
+  {
+    id: 1,
+    texto: 'Limpeza e organização dos equipamentos',
+    valor: false
+  },
+  {
+    id: 2,
+    texto: 'Testes dos movimentos (injeção, dosagem, fechamento, extrator)',
+    valor: false
+  },
+  {
+    id: 3,
+    texto: 'Funcionamento da segurança (NR12)',
+    valor: false
+  },
+  {
+    id: 4,
+    texto: 'Funcionamento do manipulador',
+    valor: false
+  },
+  {
+    id: 5,
+    texto: 'Funcionamento do alimentador',
+    valor: false
+  },
+  {
+    id: 6,
+    texto: 'Existe ruído anormal no aparelho?',
+    valor: false
+  },
+  {
+    id: 7,
+    texto: 'Aparelho em condições seguras para operar',
+    valor: false
+  },
+  {
+    id: 8,
+    texto: 'Aquecimento conforme programado',
+    valor: false
+  }
+])
+</script>
 
 <template>
   <main>
@@ -25,62 +69,17 @@
         </div>
       </div>
       <div class="container-checkbox">
-        <div class="checkbox">
-          <label for="">Limpeza e organização dos equipamentos:</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Testes dos movimentos (injeção, dosagem, fechamento, extrator):</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Funcionamento da segurança (NR12):</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Funcionamento do manipulador:</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Funcionamento do alimentador:</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Existe ruído anormal no aparelho?:</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Aparelho em condições seguras para operar:</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
-        <div class="checkbox">
-          <label for="">Aquecimento conforme programado:</label>
-          <input type="checkbox" />
-          <span>Sim</span>
-          <input type="checkbox" />
-          <span>Não</span>
-        </div>
+        <template v-for="servico in servicos" :key="servico.id">
+          <label class="label-pergunta" for="">{{ servico.texto }}:</label>
+          <span>
+            <input type="radio" id="ok" v-model="servico.valor" :value="true" />
+            <label for="ok">Sim</label>
+          </span>
+          <span>
+            <input type="radio" id="nok" v-model="servico.valor" :value="false" />
+            <label for="nok">Não</label>
+          </span>
+        </template>
       </div>
       <button>Próximo</button>
     </div>
@@ -92,13 +91,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 main {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   height: 100vh;
 }
 
 .espaçamento {
   margin-left: 20%;
   margin-top: 10%;
+}
+
+.label-pergunta {
+  margin-bottom: 10%;
+}
+
+span {
+  margin-top: -16%;
+}
+
+span label {
+  margin-left: 10%;
+  gap: 10%;
 }
 
 h1 {
@@ -128,7 +140,7 @@ h1 {
   row-gap: 2%;
 }
 
-input[type="number"] {
+input[type='number'] {
   height: 56px;
   border: none;
   background: rgba(217, 217, 217, 0.43);
@@ -146,32 +158,30 @@ span {
   color: #666666;
 }
 
-.checkbox label {
-  display: flex;
-  max-width: 30%;
-  display: inline-block;
-  vertical-align: top;
-  /* Garante que o input não seja afetado pela quebra de linha */
-}
-
 .checkbox {
   margin-bottom: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-input[type="checkbox"] {
+input[type='radio'] {
   margin-left: 5%;
-  width: 18px;
-  height: 18px;
-}
+  width: 24px;
+  height: 24px;
 
-span {
-  margin-left: 1%;
 }
 
 .container-checkbox {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  /* flex-direction: column; */
   margin-top: 3%;
+  width: 50%;
+}
+
+.container-checkbox span {
+  display: flex;
+  align-items: center;
 }
 
 button {
@@ -180,10 +190,11 @@ button {
   justify-content: center;
   align-items: center;
   padding: 1% 5%;
-  background: #091D87;
+  background: #091d87;
   border-radius: 5px;
   border: none;
   color: white;
   margin-bottom: 2%;
+  margin-top: 3%;
 }
 </style>
