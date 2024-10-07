@@ -1,5 +1,5 @@
 <script setup>
-import PagEstoque from '../components/PagEstoque.vue'
+import PagEstoque from '@/components/PagEstoque.vue'
 
 </script>
 
