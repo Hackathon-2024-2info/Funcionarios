@@ -22,20 +22,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
-header {
-    position: absolute;
-    background-color: #0F0541;
-    height: 30%;
-    width: 100%;
-    margin-top: 0;
-}
 
-.foto-perfil {
-    position: relative;
-    margin-top: 5%; /* Ajusta a imagem para ficar "meio a meio" */
-    margin-left: 47%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Centraliza de forma perfeita */
-}
 
 .infos{
     display: flex;
@@ -117,4 +104,41 @@ button {
     margin-bottom: 5%;
     margin-left: 1%;
 }
+
+@media only screen and (max-device-width: 1500px) {
+    
+    header {
+    position: absolute;
+    background-color: #0F0541;
+    height: 30%;
+    width: 100%;
+    margin-top: 0;
+}
+
+.foto-perfil {
+    position: relative;
+    margin-top: 5%; /* Ajusta a imagem para ficar "meio a meio" */
+    margin-left: 47%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza de forma perfeita */
+}
+    }
+    
+    @media only screen and (max-device-width: 2000px) {
+        
+        header {
+    position: absolute;
+    background-color: #0F0541;
+    height: 30%;
+    width: 100%;
+    margin-top: 0;
+}
+
+.foto-perfil {
+    position: relative;
+    margin-top: 8.5%; /* Ajusta a imagem para ficar "meio a meio" */
+    margin-left: 47%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza de forma perfeita */
+}
+        }
+        
 </style>
