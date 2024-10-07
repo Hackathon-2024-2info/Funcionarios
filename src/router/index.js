@@ -22,6 +22,11 @@ const router = createRouter({
       name: 'curriculo',
       component: () => import('@/views/PagCurriculoView.vue')
     },
+    {
+      path: '/detalhechamado',
+      name: 'detalhechamado',
+      component: () => import('@/views/DetalhesChamadoAdminView.vue')
+    }
   ]
 })
 
