@@ -93,6 +93,7 @@
 
 main {
   background-color: #F5F5F5;
+  height: 100vh;
 }
 
 .espaçamento {
@@ -181,8 +182,8 @@ button {
   padding: 1% 5%;
   background: #091D87;
   border-radius: 5px;
-  margin-top: 3%;
   border: none;
   color: white;
+  margin-bottom: 2%;
 }
 </style>
