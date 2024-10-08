@@ -1,5 +1,6 @@
 <script setup>
 import "@/assets/main.css"
+import "@/assets/inputAdd.css"
 import { reactive } from "vue";
 const TipoServicos = [
     {
