@@ -1,22 +1,92 @@
 <script setup></script>
 
 <template>
-    <div class="botaozinho">
-        <img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
+    <main>
+        <div class="botaozinho">
+            <img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
+        </div>
+        <div class="texts">
+            <h1> Título do chamado</h1>
+            <p>Remetente: Edson</p>
+            <p class="chamado">Chamado aberto em: 13/09/2024</p>
+            <p class="descricao">Descrição:
+                bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccwijedoiewjdewoidhewudhewyifgewufeiocjjkgeweydw8oueroifhewyydg379uwrfh4ury3279ew09fuhwiudjewifuewygdqwudhewifu8yqwuhdewdjopwefiuoeruquiegqwjbdewiofjewoiwoieyuiqwhdjkdneijewihwyvdjhwbewdewijduwweidhnewoidewopdkewpduewouhdwoudhewiodjiwejdoiwjdwqdbwuihdwoidhoiqwhdwihdwiohdwodhoidqwhdiwhdoiwqdhiowhdoiqwhdqwoidhwoidhoidhqwihdwoiqhdoiqwhdoiwqhxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            </p>
+        </div>
+        <div>
+        <button>Marcar como conluído</button>
     </div>
+</main>
 
 </template>
 
 <style scoped>
-.botaozinho{
-width: 51px;
-height: 43px;
-left: 326px;
-top: 175px;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
-background: rgba(84, 111, 255, 0.32);
-border-radius: 10px;
+.botaozinho {
+    position: absolute;
+    top: 28%;
+    left: 20%;
+    width: 51px;
+    height: 43px;
+    background: rgba(84, 111, 255, 0.32);
+    border-radius: 10px;
 }
 
+img {
+    position: relative;
+    display: flex;
+    margin-left: 33%;
+    margin-top: 21%;
+}
 
+h1 {
+    display: flex;
+    position: absolute;
+    top: 29%;
+    left: 37%;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.texts {
+    width: 50%;
+    height: 30%;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+p {
+    font-family: 'Karla';
+    line-height: 400%;
+    color: #000000;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.texts .descricao {
+    line-height: 110%;
+    word-wrap: break-word
+}
+.chamado{
+    margin-bottom: 2.5%;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 2%;
+  background: #091d87;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-left: 37%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 </style>
