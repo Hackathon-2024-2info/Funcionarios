@@ -22,6 +22,11 @@ const router = createRouter({
       name: 'curriculo',
       component: () => import('@/views/PagCurriculoView.vue')
     },
+    {
+      path: '/orcamento',
+      name: 'orcamento',
+      component: () => import('@/views/AdmOrcamentoView.vue')
+    }
   ]
 })
 
