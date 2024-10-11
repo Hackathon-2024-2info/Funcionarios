@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/relatorios',
       name: 'relatorios',
       component: () => import('../views/RelatoriosFuncionariosView.vue')
+    }, 
+    {
+      path: '/estoqueadmin',
+      name: 'estoqueadmin',
+      component: () => import('@/views/PagEstoqueAdminView.vue')
     }
   ],
   linkActiveClass: "active",

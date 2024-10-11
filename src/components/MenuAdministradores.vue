@@ -4,23 +4,32 @@
   <div class="menu">
     <nav>
       <img src="../assets/logo AVANTE.png" alt="" class="img" />
-  <router-link to="/about" >
+  <router-link to="/estoqueadmin" >
         Estoque
       </router-link>
       <router-link to="/servicos" >
-        Servico
+        Serviços
       </router-link>
       <router-link to="/relatorios">
-        Relatório
+        Relatórios
+      </router-link>
+      <router-link to="/" >
+        Chamados
+      </router-link>
+      <router-link to="/" >
+        Orçamentos
+      </router-link>
+      <router-link to="/" >
+        Currículos
       </router-link>
 
       <div class="vazio"></div>
 
       <img src="../assets/Question.png" alt="" class="warning" />
       <div class="box">
-        <p class="title">Abra um chamado</p>
-        <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-        <button class="button">Abrir chamado</button>
+        <p class="title">Remover acesso</p>
+        <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
+        <button class="button">Clique aqui</button>
       </div>
     </nav>
   </div>
@@ -104,7 +113,7 @@ nav a.exact-active {
 }
 
 .vazio {
-  padding: 75%;
+  padding: 40%;
 }
 .btn-branco {
   font-family: 'Plus Jakarta Sans', sans-serif;
