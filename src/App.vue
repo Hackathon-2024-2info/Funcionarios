@@ -1,10 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-
 import './assets/main.css'
+import MenuFuncionarios from "@/components/MenuFuncionarios.vue";
 </script>
+
 <template>
-   
+  <MenuFuncionarios></MenuFuncionarios>
   <RouterView />
   <HomeView></HomeView>
 </template>
