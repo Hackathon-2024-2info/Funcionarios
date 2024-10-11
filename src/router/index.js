@@ -26,10 +26,16 @@ const router = createRouter({
       path: '/relatorios',
       name: 'relatorios',
       component: () => import('../views/RelatoriosView.vue')
+    },
+     {
+      path: '/curriculo',
+      name: 'curriculo',
+      component: () => import('@/views/PagCurriculoView.vue')
     }
   ],
   linkActiveClass: "active",
   linkExactActiveClass: "exact-active",
+  ]
 })
 
 export default router
