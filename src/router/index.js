@@ -20,12 +20,17 @@ const router = createRouter({
     {
       path: '/servicos',
       name: 'servicos',
-      component: () => import('../views/ServicosView.vue')
+      component: () => import('../views/ServicosFuncionariosView.vue')
     },
     {
       path: '/relatorios',
       name: 'relatorios',
-      component: () => import('../views/RelatoriosView.vue')
+      component: () => import('../views/RelatoriosFuncionariosView.vue')
+    }, 
+    {
+      path: '/estoqueadmin',
+      name: 'estoqueadmin',
+      component: () => import('@/views/PagEstoqueAdminView.vue')
     },
      {
       path: '/curriculo',
