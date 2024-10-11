@@ -79,32 +79,96 @@ const itens = [
     </div>
   </main>
 
-   <div class="tabela">
-    <div><ul>Código do item</ul>
-      <li v-for="item in itens" :key="item.id">{{ item.id }} <hr></li></div>
-    <div> <ul>Nome do item</ul>
-      <li v-for="item in itens" :key="item.nome">{{ item.nome }} <hr></li></div>
-    <div> <ul>Quantidade</ul>
-      <li v-for="item in itens" :key="item.quantidade">{{ item.quantidade }} <hr></li></div>
-    <div>   <ul>Marca do item</ul>
-      <li v-for="item in itens" :key="item.marca">{{ item.marca }} <hr></li>
-   </div>
-  </div>
-      
-     
-     
-   
+  <table class="tabela-itens">
+    <thead>
+      <tr>
+        <th>
+          <section class="order-icons">
+            <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
+          </section>
+          <span> Código do item </span>
+        </th>
+        <th>
+          <section class="order-icons">
+            <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
+          </section>
+          <span> Nome do item </span>          
+        </th>
+        <th>
+          <section class="order-icons">
+            <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
+          </section>
+          <span> Quantidade </span>
+        </th>
+        <th>
+          <section class="order-icons">
+            <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
+          </section>
+          <span> Marca do item </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="item in itens" :key="item.id">
+        <td>{{ item.id }}</td>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.quantidade }}</td>
+        <td>{{ item.marca }}</td>
+      </tr>
+    </tbody>
 
-    
+  </table>
+
+
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.tabela{
+.tabela {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  margin-left: 5%;
+  padding-right: 10%;
+}
+
+.tabela-itens {
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 450;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+    margin-left: 5%;
+  line-height: 2.5rem;
+
+  & td {
+    border-bottom: 0.5px solid #d4d2d2;    
+    margin: 2%;
+  }
+
+  & th {
+    text-align: start;
+    vertical-align: center;    
+  }
+}
+
+/* .icons-and-text {
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  gap: 2%;
+} */
+
+.order-icons {
+  display: flex;
+  flex-direction: column;  
+
+  & img {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .btn-azul {
@@ -180,17 +244,34 @@ main {
   font-size: 17%;
 }
 
-ul, li{
+ul,
+li {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-
+  font-weight: 500;
 }
-li{
-
+li {
   list-style: none;
-}
-.filtrar, .setas{
+  padding: 5%;
   margin-bottom: 5%;
 }
+.filtrar,
+.setas {
+  margin-top: 1%;
+}
 
+
+.linha {
+  width: 150%;
+  margin-top: 5%;
+  margin-bottom: -10%;
+}
+#ultimalinha {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: -10%;
+}
+
+/* img {
+  display:;
+} */
 </style>
