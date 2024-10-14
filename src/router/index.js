@@ -82,6 +82,11 @@ const router = createRouter({
       name: 'detalheservico',
       component: () => import('@/views/DetalhesServicoAdminView.vue'),
       props: true,
+    },
+    {
+      path: '/additem',
+      name: 'additem',
+      component: () => import('../components/AddEstoqueAdministradores.vue')
     }
   ],
   linkActiveClass: 'active',
