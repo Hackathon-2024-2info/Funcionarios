@@ -1,4 +1,8 @@
 <script setup>
+
+import { useAuthStore } from '@/stores/auth';
+const authStore = useAuthStore()
+
 const itens = [
   {
     nome: 'fjfjsjf'
@@ -16,7 +20,7 @@ const itens = [
     nome: 'fhfhfui'
   }
 ]
-
+defineProps(['produtos']);
 // import { useProductsStore } from '../stores/products';
 // const productStore = useProductsStore();
 </script>
@@ -32,12 +36,18 @@ const itens = [
         </div>
         <div class="infos">
           <p>Prestadores: Edson e Fulano</p>
-          <p>Previsão de duração: 2 dias</p>
-          <p>Contato do responsável pela máquina: (47) 99012-9302</p>
-          <p class="descricao">
+          <p v-if="!authStore.user.is_admin">Previsão de duração: 2 dias</p>
+          <p v-if="!authStore.user.is_admin">Contato do responsável pela máquina: (47) 99012-9302</p>
+          <p class="descricao" v-if="!authStore.user.is_admin">
             Descrição: Manutenção de máquina injetora tipo xxxxxxxxxx lalalalaal cucucucu
             suqwbuqhuie3uiwri32 relatados ruídos na máquina
           </p>
+          <p v-if="authStore.user.is_admin">Data de início: 13/09/2024</p>
+          <p v-if="authStore.user.is_admin">Data de finalização: 13/09/2024</p>
+          <p v-if="authStore.user.is_admin">Pendências: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          <div class="teste">
+          <button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button>
+        </div>
         </div>
       </div>
     </div>
@@ -58,6 +68,24 @@ const itens = [
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+#visurelatorio{
+  font-family: 'Karla';
+  color: white;
+  background-color: #180577;
+  width: 35%;
+  height: 6vh;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 20px;
+  border-color: rgba(217, 217, 217, 0);
+}
+
+.teste{
+  display: flex;
+  justify-content: end;
+  margin-top: -30%;
+  margin-bottom: 30%;
+}
 
 main {
   background-color: #f5f5f5;

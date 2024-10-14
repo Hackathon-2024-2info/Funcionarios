@@ -5,9 +5,9 @@ import boxinfo from '@/components/boxinfo.vue';
 </script>
 
 <template>
-   <MenuAdministradores></MenuAdministradores>
-   <pagHeader></pagHeader>
-   <boxinfo></boxinfo>
+<pagHeader></pagHeader>
+<MenuAdministradores></MenuAdministradores>
+<boxinfo></boxinfo>
 </template>
 
 <style scoped></style>

@@ -1,11 +1,16 @@
-<script setup></script>
+<script setup>
+
+import { useAuthStore } from '@/stores/auth';
+const authStore = useAuthStore()
+
+</script>
 
 
 <template>
     <main>
     <header>
         <p>Olá, Edson!</p>
-        <img src="../assets/foto-perfil.png" alt="">
+        <img src="../assets/foto-perfil.png" alt="" @click="authStore.toggleAdmin">
     </header>
 </main>
 </template>
