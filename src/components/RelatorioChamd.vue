@@ -121,8 +121,8 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 1050px;
-  top: 260px;
+  left: 1030px;
+  top: 31%;
 
 }
 
@@ -211,6 +211,7 @@
 .input3 {
   width: 465px;
   height: 403px;
+  top: 177px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   font-family: 'Karla';
@@ -273,14 +274,13 @@ label {
   width: 63%;
   height: 6vh;
   margin-left: -1%;
-
   border-radius: 20px;
   border-color: rgba(217, 217, 217, 0.43);
   margin-top: 10%;
   display: grid;
-  place-self: center;
-  margin-left: 20%;
+  margin-left: 6%;
   grid-template-rows: 20% 40% 20%;
+  background-color: rgba(217, 217, 217, 0.43);;
 }
 
 h4 {
@@ -310,7 +310,6 @@ h6 {
 
 
 .icon-button{
-  background-color: #d9d9d9;
   border: 0px;
   margin-top: 2%;
 }
@@ -331,22 +330,6 @@ h6 {
 
 
 
-h4 {
-    font-size: 12px;
-    color: #555555;
-    font-family: 'Karla';
-    font-weight: 300;
-    padding-left: 20%;
-}
-
-h6 {
-    font-family: 'Karla';
-    font-size: 16px;
-    color: #091D87;
-    font-weight: 400;
-    padding-left: 20%;
-}
-
 #imagelogo {
     width: 24px;
     height: 24px;
@@ -355,13 +338,4 @@ h6 {
 
 }
 
-#file-input {
-    background-image: ("@/assets/iconimage.png");
-    width: 24cm;
-    height: 24px;
-    padding: 3%;
- 
-
-
-}
 </style>
