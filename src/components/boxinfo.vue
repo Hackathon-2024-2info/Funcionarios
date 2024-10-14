@@ -42,11 +42,11 @@ const itens = [
     <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
       <ul class="lista">
-        <li v-for="item in itens">
+        <li v-for="item in itens" :key="item.nome">
           {{ item.nome }}
         </li>
       </ul>
-    </div>
+    </div> 
   </main>
 </template>
 
@@ -56,27 +56,27 @@ const itens = [
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+
 main {
   background-color: #f5f5f5;
-  height: 120vh;
+  height: 154vh;
+  margin-top: -80%;
 }
 
 .espaçamento {
   display: grid;
-  place-items: start;
-  margin-left: 15%;
-  margin-right: 0;
+  margin-left: 20%;
+  margin-right: 0px;
 }
 
 .box {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-  height: 100%;
   background: #ffffff;
   border-radius: 10px;
-  margin-top: 1%;
-  margin-right: 0;
+  margin-top: 15%;
+  margin-right: 0px;
 }
 
 .box img {
@@ -122,7 +122,7 @@ main {
   line-height: 200%;
   margin-left: 5%;
   margin-bottom: 5%;
-  padding-right: 10%;
+  padding-right: 5%;
 }
 
 .infos p {
@@ -158,7 +158,7 @@ main {
   padding-top: 0.1%;
   padding-left: 0.1%;
   width: 25%;
-  top: 10%;
+  top: 30%;
   left: 71%;
   height: 2.5%;
 }
@@ -172,7 +172,7 @@ main {
   align-items: center;
   font-size: 16px;
   font-weight: 400;
-  top: 20%;
+  top: 40%;
   left: 70%;
   width: 23.5%;
 }
@@ -190,7 +190,6 @@ ul li {
   border-radius: 20px;
   font-size: 16px;
   position: relative;
-  margin-bottom: 10px;
   margin-bottom: 10%;
 }
 

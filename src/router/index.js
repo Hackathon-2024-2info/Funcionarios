@@ -41,6 +41,11 @@ const router = createRouter({
       path: '/perfil',
       name: 'perfil',
       component: () => import('../components/pagPerfil.vue')
+    },
+    {
+      path: '/detalheservico',
+      name: 'detalheservico',
+      component: () => import('@/views/DetalhesServicoAdminView.vue')
     }
   ],
   linkActiveClass: "active",
