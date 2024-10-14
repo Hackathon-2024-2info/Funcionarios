@@ -36,8 +36,6 @@
       <input class="input2" placeholder="Insira possíveis pendências">
     </div>
 
-    
-
 
     <div class="espacing" @click="openFileSelection">
       <fieldset class="arquivo">
@@ -60,30 +58,29 @@
 
   </main>
 
-  <main id="mainn">
-    <div>
-      <label for="">Descrição da máquina e da realização do serviço</label>
-      <input class="input3" placeholder="Insira a descrição">
-    </div>
-    <div class="espacing" @click="openFileSelection">
-      <fieldset class="arquivo">
-        <div class="archive-input">
-          <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
-            style="display: none" />
-          <button @click="triggerFileInput" class="icon-button">
-            <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
-            <!-- Example icon -->
-          </button>
-          <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
-        </div>
-        <h6>INSIRA AQUI</h6>
-        <h4>Imagens da máquina DEPOIS do serviço</h4>
-      </fieldset>
-    </div>
-  </main>
+  <div class="container">
+    <label for="">Descrição da máquina e da realização do serviço</label>
+    <input class="input3" placeholder="Insira a descrição">
+  <div class="espacing" @click="openFileSelection">
+    <fieldset class="arquivo">
+      <div class="archive-input">
+        <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+          style="display: none" />
+        <button @click="triggerFileInput" class="icon-button">
+          <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
+          <!-- Example icon -->
+        </button>
+        <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
+      </div>
+      <h6>INSIRA AQUI</h6>
+      <h4>Imagens da máquina DEPOIS do serviço</h4>
+    </fieldset>
+  </div> 
+   </div>
+
   <div>
-      <button id="enviar" type="submit">Enviar</button>
-    </div>
+    <button id="enviar" type="submit">Enviar</button>
+  </div>
 </template>
 
 <script setup>
@@ -118,17 +115,22 @@
   margin-top: 8%;
 }
 
-#mainn {
-  width: 564px;
-  height: 734px;
-  margin-left: 62%;
-  margin-top: -39.9%;
+.container {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 1050px;
+  top: 260px;
+
 }
 
 
 
 .espacing {
   height: 2vh;
+
 }
 
 .relatorio {
@@ -156,7 +158,7 @@
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
-  outline: none; 
+  outline: none;
   font-family: 'Karla';
   font-style: normal;
   font-size: 14px;
@@ -181,7 +183,7 @@
   line-height: 14px;
   color: #687C94;
   color: #000000;
-  
+
 }
 
 
@@ -243,7 +245,7 @@ label {
 }
 
 
-#enviar{
+#enviar {
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
@@ -255,7 +257,7 @@ label {
   margin-top: 3rem;
   border: none;
   text-align: center;
-  margin-left: 56%;
+  margin-left: 51%;
 }
 
 
@@ -271,7 +273,7 @@ label {
   width: 63%;
   height: 6vh;
   margin-left: -1%;
- 
+
   border-radius: 20px;
   border-color: rgba(217, 217, 217, 0.43);
   margin-top: 10%;
@@ -303,6 +305,63 @@ h6 {
   background-image: ("@/assets/iconimage.png");
   width: 34px;
   height: 34px;
-  
+
+}
+
+
+.icon-button{
+  background-color: #d9d9d9;
+  border: 0px;
+  margin-top: 2%;
+}
+
+.espacing{
+  height: 2vh;
+}
+
+
+#arquive-selected{
+    font-size: 12px;
+    color: #000000;
+    font-family: 'Karla';
+    font-weight: 300;
+    margin-top: 4%;
+    margin-left: 2px;
+}
+
+
+
+h4 {
+    font-size: 12px;
+    color: #555555;
+    font-family: 'Karla';
+    font-weight: 300;
+    padding-left: 20%;
+}
+
+h6 {
+    font-family: 'Karla';
+    font-size: 16px;
+    color: #091D87;
+    font-weight: 400;
+    padding-left: 20%;
+}
+
+#imagelogo {
+    width: 24px;
+    height: 24px;
+    padding: 3%;
+    left: 12%;
+
+}
+
+#file-input {
+    background-image: ("@/assets/iconimage.png");
+    width: 24cm;
+    height: 24px;
+    padding: 3%;
+ 
+
+
 }
 </style>
