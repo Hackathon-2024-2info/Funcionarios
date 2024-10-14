@@ -45,12 +45,12 @@ const tiposervico = [
         </select>
       </div>
       <div class="row">
-        <label class="tipo-label-dois" for="">Valor adicional (opcional):</label>
+        <label class="tipo-label-dois"  for="">Valor adicional <br>(opcional):</label>
         <input class="tipo-input-dois" type="num" placeholder="Insira aqui" />
       </div>
       <div class="row">
-        <label class="tipo-label-dois" for="">Desconto (opcional):</label>
-        <input class="tipo-input-dois" type="num" placeholder="Insira aqui" />
+        <label class="tipo-label-dois"  for="">Desconto<br> (opcional):</label>
+        <input class="tipo-input-dois"  type="num" placeholder="Insira aqui" />
       </div>
       <p class="num-dois">R$2,478</p>
       <button>Calcular</button>
@@ -64,12 +64,6 @@ const tiposervico = [
 
 main {
   height: 130vh;
-}
-
-select {
-  background: rgba(84, 111, 255, 0.32);
-  border-radius: 20px;
-  border: none;
 }
 
 .container-um {
@@ -141,12 +135,13 @@ select {
 .num-dois {
   display: flex;
   justify-content: end;
-  margin-top: 6%;
+  margin-top: -20%;
   margin-right: 5%;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
+  margin-bottom: 15%;
 }
 
 p,
@@ -178,13 +173,14 @@ h1 {
   border-radius: 5px;
   border: none;
 }
-::placeholder {
+.tipo-input-um ::placeholder {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   color: #180577;
+
 }
 
 .botaozinho {
@@ -213,12 +209,38 @@ img {
   margin-bottom: 7%;
 }
 
-.tipo-input-dois {
+.tipo-input-dois{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5% 7%;
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 5px;
+  border: none;
   width: 148px;
   height: 16px;
   background: rgba(217, 217, 217, 0.38);
   border-radius: 20px;
   border: none;
+  margin-left: 20%;
+  margin-top: -5%;
+}
+
+select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2% 20.5%;
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 5px;
+  border: none;
+  width: 148px;
+  height: 16px;
+  background: rgba(217, 217, 217, 0.38);
+  border-radius: 20px;
+  border: none;
+  margin-left: 20%;
+  margin-top: -3%;
 }
 
 .tipo-label-dois {
@@ -227,7 +249,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
-  word-wrap: break-word
+  margin-bottom: 2%;
 }
 
 .row {
@@ -254,22 +276,6 @@ button {
   font-weight: 700;
   font-size: 14px;
   margin-left: 25%;
-  margin-top: -5%;
-}
-
-.tipo-input-dois, select{
-  display: flex;
-  margin-left: 30%;
-}
-::placeholder {
-font-family: 'Karla';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-display: flex;
-align-items: center;
-text-align: center;
-color: #A6A6FF;
 }
 
 </style>
