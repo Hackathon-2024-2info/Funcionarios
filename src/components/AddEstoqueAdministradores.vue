@@ -5,7 +5,6 @@
 <template>
     <main id="main">
         <div>
-
             <h1 class="add">ADICIONAR ITEM AO ESTOQUE</h1>
             <label for=""> Nome do item </label>
             <input class="input1" placeholder="Insira o nome do item a ser adicionado">
@@ -22,23 +21,57 @@
         <div>
             <label for="">Quantidade do item </label>
             <input class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item">
-            <button id="Adicionar" type="submit">Enviar</button>
+            <button id="Adicionar" type="submit">Adicionar</button>
         </div>
 
     </main>
+
+    <div>
+        <h1 class="adds">SOLICITAÇÕES DE ITENS</h1>
+        <div class="container"> </div>
+    </div>
 </template>
+
+
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
+
+
 #main {
     width: 564px;
     height: 734px;
-    margin-left: 28%;
-    margin-top: 8%;
+    margin-left: 24%;
+    margin-top: 7%;
+
 }
 
+.container {
+    position: absolute;
+    width: 413px;
+    height: 759px;
+    left: 934px;
+    top: 27%;
+    background: #ececec;
+    border-radius: 20px;
+
+}
+
+.adds {
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 18px;
+    color: #180577;
+    padding: 53px;
+    margin-left: 60%;
+    margin-top: -48%;
+
+}
 
 .add {
     font-family: 'Readex Pro';
@@ -52,7 +85,7 @@
 }
 
 .espacamento {
-    margin-top: 11%;
+    margin-top: 23px;
 }
 
 .input1 {
@@ -64,7 +97,6 @@
     border-radius: 5px;
     border: none;
     outline: none;
-
     font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
@@ -76,11 +108,14 @@
 
 .input2 {
     padding: 10px 16px;
+    gap: 10px;
     width: 465px;
-    height: 380px;
+    height: 46px;
     background: rgba(217, 217, 217, 0.43);
     border-radius: 5px;
+    flex: none;
     order: 1;
+    align-self: stretch;
     flex-grow: 0;
     border: none;
     outline: none;
@@ -91,16 +126,20 @@
     line-height: 14px;
     color: #687C94;
     color: #000000;
+
 }
 
 
 .input3 {
     padding: 10px 16px;
+    gap: 10px;
     width: 465px;
-    height: 380px;
+    height: 46px;
     background: rgba(217, 217, 217, 0.43);
     border-radius: 5px;
+    flex: none;
     order: 1;
+    align-self: stretch;
     flex-grow: 0;
     border: none;
     outline: none;
