@@ -18,14 +18,28 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/servico',
-      name: 'servico',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../components/boxinfo.vue')
+      path: '/servicos',
+      name: 'servicos',
+      component: () => import('../views/ServicosFuncionariosView.vue')
+    },
+    {
+      path: '/relatorios',
+      name: 'relatorios',
+      component: () => import('../views/RelatoriosFuncionariosView.vue')
+    }, 
+    {
+      path: '/estoqueadmin',
+      name: 'estoqueadmin',
+      component: () => import('@/views/PagEstoqueAdminView.vue')
+    },
+     {
+      path: '/curriculo',
+      name: 'curriculo',
+      component: () => import('@/views/PagCurriculoView.vue')
     }
-  ]
+  ],
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact-active",
 })
 
 export default router
