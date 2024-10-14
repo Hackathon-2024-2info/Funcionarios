@@ -36,6 +36,11 @@ const router = createRouter({
       path: '/curriculo',
       name: 'curriculo',
       component: () => import('@/views/PagCurriculoView.vue')
+    },
+      {
+      path: '/perfil',
+      name: 'perfil',
+      component: () => import('../components/pagPerfil.vue')
     }
   ],
   linkActiveClass: "active",
