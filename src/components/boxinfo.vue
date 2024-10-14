@@ -1,5 +1,4 @@
 <script setup>
-
 const itens = [
   {
     nome: 'fjfjsjf'
@@ -17,6 +16,9 @@ const itens = [
     nome: 'fhfhfui'
   }
 ]
+
+// import { useProductsStore } from '../stores/products';
+// const productStore = useProductsStore();
 </script>
 
 <template>
