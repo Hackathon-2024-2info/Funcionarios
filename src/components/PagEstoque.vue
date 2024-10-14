@@ -83,28 +83,36 @@ const itens = [
     <thead>
       <tr>
         <th>
-          <section class="order-icons">
-            <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
-          </section>
-          <span> Código do item </span>
+          <div class="th-content">
+            <section class="order-icons">
+              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
+            </section>
+            <span> Código do item </span>
+          </div>
         </th>
         <th>
+          <div class="th-content">
           <section class="order-icons">
             <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
           </section>
           <span> Nome do item </span>          
+        </div>
         </th>
         <th>
+          <div class="th-content">
           <section class="order-icons">
             <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
           </section>
           <span> Quantidade </span>
+        </div>
         </th>
         <th>
+          <div class="th-content">
           <section class="order-icons">
             <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
           </section>
           <span> Marca do item </span>
+        </div>
         </th>
       </tr>
     </thead>
@@ -125,7 +133,9 @@ const itens = [
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+body{
+  color: #F5F5F5;
+}
 .tabela {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -145,14 +155,18 @@ const itens = [
 
   & td {
     border-bottom: 0.5px solid #d4d2d2;    
-    margin: 2%;
+   
   }
 
-  & th {
-    text-align: start;
-    vertical-align: center;    
+  & .th-content { 
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: flex-start; /* Se quiser espaçar igualmente */
   }
 }
+
+span{
+  margin-left: 5%;}
 
 /* .icons-and-text {
   display: flex;
@@ -168,6 +182,7 @@ const itens = [
   & img {
     width: 8px;
     height: 8px;
+  
   }
 }
 
@@ -187,6 +202,7 @@ const itens = [
 
 main {
   display: flex;
+  margin-bottom: 3%;
 }
 
 .setas {
@@ -258,6 +274,7 @@ li {
 .setas {
   margin-top: 1%;
 }
+
 
 
 .linha {
