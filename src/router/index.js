@@ -24,8 +24,35 @@ const router = createRouter({
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import('@/views/EstoqueView.vue')
-  }
-  ]
+  }, 
+    {
+      path: '/servicos',
+      name: 'servicos',
+      component: () => import('../views/ServicosFuncionariosView.vue')
+    },
+    {
+      path: '/relatorios',
+      name: 'relatorios',
+      component: () => import('../views/RelatoriosFuncionariosView.vue')
+    }, 
+    {
+      path: '/estoqueadmin',
+      name: 'estoqueadmin',
+      component: () => import('@/views/PagEstoqueAdminView.vue')
+    },
+     {
+      path: '/curriculo',
+      name: 'curriculo',
+      component: () => import('@/views/PagCurriculoView.vue')
+    },
+      {
+      path: '/perfil',
+      name: 'perfil',
+      component: () => import('../components/pagPerfil.vue')
+    }
+  ],
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact-active",
 })
 
 export default router
