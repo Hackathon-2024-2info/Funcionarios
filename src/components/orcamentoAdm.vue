@@ -46,11 +46,11 @@ const tiposervico = [
       </div>
       <div class="row">
         <label class="tipo-label-dois" for="">Valor adicional (opcional):</label>
-        <input class="tipo-input-dois" type="num" placeholder="Insira o valor aqui" />
+        <input class="tipo-input-dois" type="num" placeholder="Insira aqui" />
       </div>
       <div class="row">
         <label class="tipo-label-dois" for="">Desconto (opcional):</label>
-        <input class="tipo-input-dois" type="num" placeholder="Insira o valor aqui" />
+        <input class="tipo-input-dois" type="num" placeholder="Insira aqui" />
       </div>
       <p class="num-dois">R$2,478</p>
       <button>Calcular</button>
@@ -226,8 +226,8 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
+  word-wrap: break-word
 }
 
 .row {
@@ -256,4 +256,20 @@ button {
   margin-left: 25%;
   margin-top: -5%;
 }
+
+.tipo-input-dois, select{
+  display: flex;
+  margin-left: 30%;
+}
+::placeholder {
+font-family: 'Karla';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #A6A6FF;
+}
+
 </style>
