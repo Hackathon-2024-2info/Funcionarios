@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useServicoStore = defineStore('servicos', () => {
+export const useServicoStore = defineStore('servico', () => {
   const servicos = ref([
     {
       id: 1,
@@ -13,13 +13,36 @@ export const useServicoStore = defineStore('servicos', () => {
       descrição:
         'dhwudhwuidhweuidhwuiedhweuidhewuihdwieudhiudhweuidhewudhweuhdewuihdiewuhdeuhduwehduwehdeuiwhdewuihdewuidheuhdwuehdeuihdeuhduewdhweuhweuhdweuh'
     },
-    { id: 2, nome: 'Produto 2', price: 29.99 },
-    { id: 3, nome: 'Produto 3', price: 39.99 }
+    { id: 2,
+      nome: 'Manutenção preditiva',
+      cliente: 'Focus',
+      prestadores: 'Ciclano e fulano',
+      prevduração: '4 dias',
+      contatoresponsavel: '(47) 997012881',
+      descrição:
+        'dhwudhwuidhweuidhwuiedhweuidhewuihdwieudhiudhweuidhewudhweuhdewuihdiewuhdeuhduwehduwehdeuiwhdewuihdewuidheuhdwuehdeuihdeuhduewdhweuhweuhdweuh' },
+    { id: 3,
+      nome: 'Manutenção corretiva',
+      cliente: 'Plasvale',
+      prestadores: 'Edson e Ciclano',
+      prevduração: '7 dias',
+      contatoresponsavel: '(47) 997012881',
+      descrição:
+        'dhwudhwuidhweuidhwuiedhweuidhewuihdwieudhiudhweuidhewudhweuhdewuihdiewuhdeuhduwehduwehdeuiwhdewuihdewuidheuhdwuehdeuihdeuhduewdhweuhweuhdweuh' }
   ])
 
   //   function removeProduct(id) {
   //     const index = products.value.findIndex((product) => product.id === id);
   //     products.value.splice(index, 1);
   //   }
-  return { servicos }
+
+
+  function getProductById(id) {
+    const foundServico = servicos.value.find((servico) => servico.id == id);
+    if (!foundServico) {
+      console.log("Service not found");
+    }
+    return foundServico || null;
+  }
+  return { servicos, getProductById }
 })

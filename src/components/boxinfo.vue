@@ -1,7 +1,17 @@
 <script setup>
-
+import { onMounted, ref } from 'vue'
 import { useAuthStore } from '@/stores/auth';
+import { useServicoStore } from '../stores/products';
+
+const props = defineProps(['id']);
+const servicoStore = useServicoStore();
 const authStore = useAuthStore()
+const servico = ref({})
+
+
+onMounted(() => {
+  servico.value = servicoStore.getProductById(props.id)
+})
 
 const itens = [
   {
@@ -20,9 +30,7 @@ const itens = [
     nome: 'fhfhfui'
   }
 ]
-defineProps(['produtos']);
-// import { useProductsStore } from '../stores/products';
-// const productStore = useProductsStore();
+
 </script>
 
 <template>
@@ -30,8 +38,8 @@ defineProps(['produtos']);
     <div class="espaçamento">
       <div class="box">
         <img src="../assets/Video Task.png" alt="mapaDps" />
-        <p class="titulo">MANUTENÇÃO PREVENTIVA</p>
-        <div class="minicontainer">
+        <p class="titulo"  :servicos="servicoStore.servicos">nao aguento mais sor me ajuda {{ servico }}</p>
+          <div class="minicontainer">
           <p>Cliente: Krona</p>
         </div>
         <div class="infos">
