@@ -28,8 +28,16 @@
 
     <div>
         <h1 class="adds">SOLICITAÇÕES DE ITENS</h1>
-        <div class="container"> </div>
-    </div>
+        <section class="container">
+            <div class="container-carrosel">
+                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
+                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
+                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
+                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
+                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
+            </div>
+        </section>
+        </div>
 </template>
 
 
@@ -46,19 +54,50 @@
     height: 734px;
     margin-left: 24%;
     margin-top: 7%;
-
 }
 
 .container {
     position: absolute;
-    width: 413px;
-    height: 759px;
-    left: 934px;
+    width: 400px;
+    right: 11%;
     top: 27%;
-    background: #ececec;
+    padding: 10px;
+    background-color: #ececec;
     border-radius: 20px;
+}
+
+.container-carrosel {
+    margin-top: 20px;
+    width: 320px;
+    height: 680px;
+    overflow-y: scroll;
+    background: #ececec;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.container-carrosel::-webkit-scrollbar {
+    width: 0.7vw;
+    
+}
+
+.container-carrosel::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  
 
 }
+
+
+.container-carrosel::-webkit-scrollbar-thumb {
+    background-color: #6e78ff;
+    width: 3px;
+    border-radius: 4px;
+ 
+}
+
+
 
 .adds {
     font-family: 'Readex Pro';
