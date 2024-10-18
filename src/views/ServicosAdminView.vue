@@ -1,7 +1,11 @@
 <script setup>
-import EstoqueAdmin from '@/components/ServicosAdmin.vue';
+import ServicosAdmin from '@/components/ServicosAdmin.vue';
+import MenuAdministradores from '@/components/MenuAdministradores.vue';
+import pagHeader from '@/components/pagHeader.vue';
 </script>
 
 <template>
-   <EstoqueAdmin></EstoqueAdmin>
+   <MenuAdministradores></MenuAdministradores>
+   <pagHeader></pagHeader>
+   <ServicosAdmin></ServicosAdmin>
 </template>

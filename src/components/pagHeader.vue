@@ -11,7 +11,11 @@
 </template>
 
 <style scoped>
-
+main{
+    margin-top: -88.5%;
+    padding-left: 1%;
+    padding-bottom: 10%;
+}
 
 header {
     display: flex;
