@@ -49,10 +49,16 @@ const router = createRouter({
       path: '/perfil',
       name: 'perfil',
       component: () => import('../components/pagPerfil.vue')
+    },
+    {
+      path: '/chamadosadmin',
+      name: 'chamadosadmin',
+      component: () => import('@/views/ChamadosAdminView.vue')
     }
   ],
   linkActiveClass: "active",
   linkExactActiveClass: "exact-active",
+  
 })
 
 export default router
