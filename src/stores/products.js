@@ -34,7 +34,7 @@ export const useServicoStore = defineStore('servico', () => {
       prevduracao: '7 dias',
       contatoresponsavel: '(47) 997012881',
       descricao:
-        'dhwudhwuidhweuidhwuiedhweuidhewuihdwieudhiudhweuidhewudhweuhdewuihdiewuhdeuhduwehduwehdeuiwhdewuihdewuidheuhdwuehdeuihdeuhduewdhweuhweuhdweuh',
+        'dhwudhwuidhweuidhwuiedhweuidhewuihd wieudhiudhweuidhewudhweuhd ewuihdiewuhdeuhduwehduwehdeuiwhdewuihdewui dheuhdwuehdeuihdeuhduewdhweuhweuhdweuh',
         datainicio: '18/09/2024',
         datafinal: '20/09/2024',
         pendencias: 'wdnwuheijfvjjrevinfdjklvcnweiofjweqiocjioejwioe  fj' }

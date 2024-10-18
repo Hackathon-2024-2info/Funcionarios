@@ -149,7 +149,7 @@ main {
   object-fit: contain;
   font-family: 'Readex Pro';
   padding-top: 0.7%;
-  padding-left: 35%;
+  padding-left: 40%;
 }
 
 .infos {
