@@ -1,7 +1,7 @@
 <script setup>
 import MenuAdministradores from '@/components/MenuAdministradores.vue';
 import pagHeader from '@/components/pagHeader.vue';
-import boxinfo from '@/components/boxinfo.vue';
+import boxinfo from '@/components/BoxInfo.vue';
 
 defineProps(['id'])
 </script>
