@@ -38,21 +38,20 @@ const itens = [
     <div class="espaçamento">
       <div class="box">
         <img src="../assets/Video Task.png" alt="mapaDps" />
-        <p class="titulo"  :servicos="servicoStore.servicos">nao aguento mais sor me ajuda {{ servico }}</p>
+        <p class="titulo">{{ servico.nome }}</p>
           <div class="minicontainer">
-          <p>Cliente: Krona</p>
+          <p>{{servico.cliente}}</p>
         </div>
         <div class="infos">
-          <p>Prestadores: Edson e Fulano</p>
-          <p v-if="!authStore.user.is_admin">Previsão de duração: 2 dias</p>
-          <p v-if="!authStore.user.is_admin">Contato do responsável pela máquina: (47) 99012-9302</p>
+          <p>Prestadores: {{servico.prestadores}}</p>
+          <p v-if="!authStore.user.is_admin">Previsão de duração: {{servico.prevduracao}}</p>
+          <p v-if="!authStore.user.is_admin">Contato do responsável pela máquina: {{ servico.contatoresponsavel }}</p>
           <p class="descricao" v-if="!authStore.user.is_admin">
-            Descrição: Manutenção de máquina injetora tipo xxxxxxxxxx lalalalaal cucucucu
-            suqwbuqhuie3uiwri32 relatados ruídos na máquina
+            Descrição: {{ servico.descricao }}
           </p>
-          <p v-if="authStore.user.is_admin">Data de início: 13/09/2024</p>
-          <p v-if="authStore.user.is_admin">Data de finalização: 13/09/2024</p>
-          <p v-if="authStore.user.is_admin">Pendências: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          <p v-if="authStore.user.is_admin">Data de início: {{ servico.datainicio }}</p>
+          <p v-if="authStore.user.is_admin">Data de finalização: {{servico.datafinal}}</p>
+          <p v-if="authStore.user.is_admin">Pendências: {{servico.pendencias}}</p>
           <div class="teste">
           <button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button>
         </div>
@@ -98,7 +97,7 @@ const itens = [
 main {
   background-color: #f5f5f5;
   height: 154vh;
-  margin-top: -80%;
+  margin-top: -82%;
 }
 
 .espaçamento {
@@ -113,7 +112,7 @@ main {
   width: 60%;
   background: #ffffff;
   border-radius: 10px;
-  margin-top: 15%;
+  margin-top: 7%;
   margin-right: 0px;
 }
 
@@ -133,6 +132,7 @@ main {
   font-size: 32px;
   display: flex;
   color: #091d87;
+  text-transform: uppercase;
 }
 
 .minicontainer {
@@ -171,8 +171,9 @@ main {
   color: black;
   margin-bottom: 2%;
 }
-.infos .descricao{
+.descricao{
   line-height: 110%;
+  width: 100px;
 }
 
 .espaçamento-lista {
