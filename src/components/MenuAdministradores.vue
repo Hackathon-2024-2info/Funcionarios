@@ -13,7 +13,7 @@
       <router-link to="/relatorios">
         Relatórios
       </router-link>
-      <router-link to="/" >
+      <router-link to="/chamadosadmin" >
         Chamados
       </router-link>
       <router-link to="/" >

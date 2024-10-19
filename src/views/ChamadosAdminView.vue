@@ -9,3 +9,10 @@ import ChamadosAdmin from '@/components/ChamadosAdmin.vue';
     <MenuAdministradores></MenuAdministradores>
     <ChamadosAdmin></ChamadosAdmin>
 </template>
+
+<style scoped>
+*{
+        background-color: #F5F5F5;
+}
+
+</style>
