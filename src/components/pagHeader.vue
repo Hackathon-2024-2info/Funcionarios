@@ -1,11 +1,16 @@
-<script setup></script>
+<script setup>
+
+import { useAuthStore } from '@/stores/auth';
+const authStore = useAuthStore()
+
+</script>
 
 
 <template>
     <main>
     <header>
         <p>Olá, Edson!</p>
-        <img src="../assets/foto-perfil.png" alt="">
+        <img src="../assets/foto-perfil.png" alt="" @click="authStore.toggleAdmin">
     </header>
 </main>
 </template>
@@ -19,9 +24,9 @@ main{
 
 header {
     display: flex;
-    margin-left: 17%;
+    margin-left: 18%;
     position: absolute;
-    width: 83%;
+    width: 82%;
     height: 18vh;
     background-color: #D9D9D9;
 }

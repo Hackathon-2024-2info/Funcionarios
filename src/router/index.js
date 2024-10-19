@@ -26,10 +26,17 @@ const router = createRouter({
     component: () => import('@/views/EstoqueView.vue')
   }, 
     {
-      path: '/servicos',
+      path: '/servicos/:id',
       name: 'servicos',
-      component: () => import('../views/ServicosFuncionariosView.vue')
+      component: () => import('../views/ServicosFuncionariosView.vue'),
+      props: true
     },
+    // {
+    //   path: '/servicos',
+    //   name: 'servicos',
+    //   component: () => import('../views/ServicosAdminView.vue'),
+    //   props: true
+    // },
     {
       path: '/servicosadmin',
       name: 'servicosadmin',
@@ -59,6 +66,12 @@ const router = createRouter({
       path: '/perfil',
       name: 'perfil',
       component: () => import('../components/pagPerfil.vue')
+    },
+    {
+      path: '/detalheservico/:id',
+      name: 'detalheservico',
+      component: () => import('@/views/DetalhesServicoAdminView.vue'),
+      props: true,
     }
   ],
   linkActiveClass: "active",
