@@ -15,8 +15,16 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('@/components/editarInfos.vue')
     },
+    {
+    path: '/estoque',
+    name: 'estoque',
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('@/views/EstoqueView.vue')
+  }, 
     {
       path: '/servicos/:id',
       name: 'servicos',
@@ -29,6 +37,16 @@ const router = createRouter({
     //   component: () => import('../views/ServicosAdminView.vue'),
     //   props: true
     // },
+    {
+      path: '/servicosadmin',
+      name: 'servicosadmin',
+      component: () => import('../views/ServicosAdminView.vue')
+    },
+    {
+      path: '/relatoriosadmin',
+      name: 'relatoriosadmin',
+      component: () => import('../views/RelatoriosView.vue')
+    },
     {
       path: '/relatorios',
       name: 'relatorios',
