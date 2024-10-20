@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     gap: 5%;
+    margin-left: 10%;
 }
 
 .container-carrosel::-webkit-scrollbar {
