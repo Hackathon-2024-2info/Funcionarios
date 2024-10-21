@@ -162,7 +162,8 @@ span {
 
   & img {
     width: 8px;
-    height: 8px;
+    height: 8px;  padding: 10%;
+
 
   }
 }
@@ -205,6 +206,7 @@ label {
   flex-wrap: nowrap;
   width: 50%;
   margin-left: 32%;
+  padding-top: 1%;
 }
 
 label,
