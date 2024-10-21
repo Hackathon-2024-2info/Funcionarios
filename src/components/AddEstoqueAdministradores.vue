@@ -30,6 +30,7 @@
         <h1 class="adds">SOLICITAÇÕES DE ITENS</h1>
         <section class="container">
             <div class="container-carrosel">
+            <div class="espaco"> </div>
                 <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
                 <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
                 <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
@@ -56,6 +57,10 @@
     margin-top: 7%;
 }
 
+.container-carrosel{
+    margin-left: 4%;
+}
+
 .container {
     position: absolute;
     width: 400px;
@@ -75,26 +80,27 @@
     display: flex;
     flex-direction: column;
     gap: 5%;
+    
 }
 
 .container-carrosel::-webkit-scrollbar {
     width: 0.7vw;
+    width: 10px;
+    height: 15px;
     
 }
 
 .container-carrosel::-webkit-scrollbar-track {
     background-color: #f5f5f5;
     border-radius: 4px;
-  
-
 }
 
 
 .container-carrosel::-webkit-scrollbar-thumb {
     background-color: #6e78ff;
-    width: 3px;
-    border-radius: 4px;
- 
+    border-radius: 10px;
+    width: 10px;
+    height: 15px;
 }
 
 
@@ -106,8 +112,8 @@
     font-size: 26px;
     line-height: 18px;
     color: #180577;
-    padding: 53px;
-    margin-left: 60%;
+    padding: 200px;
+    margin-left: 57%;
     margin-top: -48%;
 
 }
