@@ -15,11 +15,12 @@
 
 header {
     display: flex;
-    margin-left: 17%;
+    margin-left: 18%;
     position: absolute;
     width: 83%;
     height: 18vh;
     background-color: #D9D9D9;
+    margin-top: -85.9%;
 }
 
 p {

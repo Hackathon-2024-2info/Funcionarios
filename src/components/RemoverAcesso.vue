@@ -1,4 +1,5 @@
 <script setup>
+
 const itens = [
   {
     nome: 'Edson',
@@ -63,7 +64,7 @@ const itens = [
     </div>
     <div class="setas">
       <button><img src="../assets/esquerda.png" alt="" /></button>
-      <p>1</p>
+      <p class="pe">1</p>
       <button><img src="../assets/direita.png" alt="" /></button>
     </div>
   </main>
@@ -110,7 +111,7 @@ const itens = [
         <td>{{ item.nome }}</td>
         <td>{{ item.usuario }}</td>
         <td>{{ item.cargo }}</td>
-        <td> <button class="remover">Remover Acesso</button> </td>
+        <div><td> <button class="remover"><p>Remover Acesso</p></button></td> </div>
       </tr>
     </tbody>
 
@@ -122,41 +123,34 @@ const itens = [
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-body{
-  color: #F5F5F5;
-}
+
+
 
 .remover{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 2% 5%;
-gap: 10px;
-height: 28px;
-left: 722px;
-right: 81px;
-top: calc(50% - 28px/2 - 226px);
+padding-top: 5%;
+padding-bottom: 5%;
 background: #091D87;
 border-radius: 5px;
 color: white;
+text-align: center;
 }
 .tabela {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   margin-left: 5%;
   padding-right: 10%;
+  width: 100%;
 }
 
 .tabela-itens {
 
   font-family: 'Roboto', sans-serif;
   font-weight: 450;
-  width: 80%;
+  width: 70%;
   border-collapse: collapse;
   margin: 0 auto;
-    margin-left: 5%;
   line-height: 2.5rem;
+  margin-left: 25%;
 
   & td {
     border-bottom: 0.5px solid #d4d2d2;    
@@ -201,17 +195,18 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  margin-left: -20%;
+  margin-left: -15%;
   margin-top: -5%;
 }
 
 label {
   margin-right: 3%;
+  color: black;
 }
 .filtrar {
-  flex-wrap: nowrap;
-  width: 100%;
+  width: 80%;
   margin-left: 40%;
+  padding-top: 1%;
 }
 
 label,
@@ -219,7 +214,7 @@ select,
 option {
   font-family: 'Karla';
 }
-p {
+.pe{
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -228,6 +223,7 @@ p {
   background: rgb(84, 111, 255, 0.32);
   padding: 1.9%;
   border-radius: 10px;
+  color: black;
 }
 
 button {
@@ -241,8 +237,8 @@ select {
   background: rgb(84, 111, 255, 0.32);
   color: #8787c7;
   padding: 0.2%;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 main {

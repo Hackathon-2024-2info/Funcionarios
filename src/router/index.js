@@ -53,7 +53,7 @@ const router = createRouter({
     {
       path: '/removeracesso',
       name: 'removeracesso',
-      component: () => import('../components/RemoverAcesso.vue')
+      component: () => import('@/views/RemoverAcessoView.vue')
     },
   ],
   linkActiveClass: 'active',
