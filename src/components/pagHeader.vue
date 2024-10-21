@@ -17,10 +17,10 @@ header {
     display: flex;
     margin-left: 18%;
     position: absolute;
-    width: 83%;
+    width: 82%;
     height: 18vh;
     background-color: #D9D9D9;
-    margin-top: -85.9%;
+    margin-top: -89.5%;
 }
 
 p {

@@ -55,7 +55,7 @@ const itens = [
 </script>
 
 <template>
-  <main>
+  <main id="main">
     <div class="filtrar">
       <label for="">Filtrar:</label>
       <select name="Selecione" id="Selecione">
@@ -150,7 +150,7 @@ text-align: center;
   border-collapse: collapse;
   margin: 0 auto;
   line-height: 2.5rem;
-  margin-left: 25%;
+  margin-left: 30%;
 
   & td {
     border-bottom: 0.5px solid #d4d2d2;    
@@ -185,10 +185,11 @@ span{
   }
 }
 
-
-main {
+#main {
   display: flex;
   margin-bottom: 3%;
+  margin-top: -77%;
+  margin-left: 10%;
 }
 
 .setas {
