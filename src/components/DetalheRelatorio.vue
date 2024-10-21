@@ -59,7 +59,7 @@
 .container {
     position: absolute;
     width: 400px;
-    right: 10px;
+    right: 2%;
     top: 27%;
     padding: 10px;
     background-color: #ececec;
