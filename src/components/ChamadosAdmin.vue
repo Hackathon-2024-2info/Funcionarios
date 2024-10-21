@@ -91,7 +91,12 @@ const relatorios = [
         <td>{{ relatorio.status }}</td>
         <td>{{ relatorio.data }}</td>
         <td>{{ relatorio.solicitador }}</td>
-        <div id="path-detail"><img src="@/assets/Group 37329.png" alt=""></div>
+        <td>
+        <div class="path-detail">
+          <img src="@/assets/Group 37329.png" alt="" id="path-detail">
+
+        </div>
+        </td>
       </tr>
     </tbody>
 
@@ -122,9 +127,17 @@ const relatorios = [
   line-height: 2.5rem;
 
   & td {
-    border-bottom: 0.5px solid #d4d2d2;
-
+    border-bottom: 0.5px solid #d4d2d2;    
+    
   }
+
+  & td .path-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 50%;
+    margin-bottom: 100px; */
+  } 
 
   & .th-content {
     display: flex;
@@ -135,8 +148,8 @@ const relatorios = [
   }
 }
 
-/* ja tentei botar essa porra dentro de td, fora, dentro da chave amarela ali em cima, display flex com justify-content, 
-display grid com aling itens e NADA FUNCIONAAAAAAAAAAAAAA
+/* ja tentei botar essa coisa dentro de td, fora, dentro da chave amarela ali em cima, display flex com justify-content, 
+display grid com align itens e NADA FUNCIONAAAAAAAAAAAAAA
 .path-detail{
 display: block;
 margin-left: auto;
