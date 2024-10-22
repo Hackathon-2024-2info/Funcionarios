@@ -4,7 +4,7 @@ import './assets/main.css'
 
 <template>
   <RouterView />
-  <HomeView></HomeView>
+  <!-- <HomeView></HomeView> -->
 </template>
 
 <style scoped>

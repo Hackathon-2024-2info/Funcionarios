@@ -1,4 +1,17 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import { useAuthStore } from '@/stores/auth';
+import { useServicoStore } from '../stores/products';
+
+const props = defineProps(['id']);
+const servicoStore = useServicoStore();
+const authStore = useAuthStore()
+const servico = ref({})
+
+
+onMounted(() => {
+  servico.value = servicoStore.getProductById(props.id)
+})
 
 const itens = [
   {
@@ -17,6 +30,7 @@ const itens = [
     nome: 'fhfhfui'
   }
 ]
+
 </script>
 
 <template>
@@ -24,29 +38,34 @@ const itens = [
     <div class="espaçamento">
       <div class="box">
         <img src="../assets/Video Task.png" alt="mapaDps" />
-        <p class="titulo">MANUTENÇÃO PREVENTIVA</p>
-        <div class="minicontainer">
-          <p>Cliente: Krona</p>
+        <p class="titulo">{{ servico.nome }}</p>
+          <div class="minicontainer">
+          <p>{{servico.cliente}}</p>
         </div>
         <div class="infos">
-          <p>Prestadores: Edson e Fulano</p>
-          <p>Previsão de duração: 2 dias</p>
-          <p>Contato do responsável pela máquina: (47) 99012-9302</p>
-          <p class="descricao">
-            Descrição: Manutenção de máquina injetora tipo xxxxxxxxxx lalalalaal cucucucu
-            suqwbuqhuie3uiwri32 relatados ruídos na máquina
+          <p>Prestadores: {{servico.prestadores}}</p>
+          <p v-if="!authStore.user.is_admin">Previsão de duração: {{servico.prevduracao}}</p>
+          <p v-if="!authStore.user.is_admin">Contato do responsável pela máquina: {{ servico.contatoresponsavel }}</p>
+          <p class="descricao" v-if="!authStore.user.is_admin">
+            Descrição: {{ servico.descricao }}
           </p>
+          <p v-if="authStore.user.is_admin">Data de início: {{ servico.datainicio }}</p>
+          <p v-if="authStore.user.is_admin">Data de finalização: {{servico.datafinal}}</p>
+          <p v-if="authStore.user.is_admin">Pendências: {{servico.pendencias}}</p>
+          <div class="teste">
+          <button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button>
+        </div>
         </div>
       </div>
     </div>
     <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
       <ul class="lista">
-        <li v-for="item in itens">
+        <li v-for="item in itens" :key="item.nome">
           {{ item.nome }}
         </li>
       </ul>
-    </div>
+    </div> 
   </main>
 </template>
 
@@ -56,27 +75,45 @@ const itens = [
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+#visurelatorio{
+  font-family: 'Karla';
+  color: white;
+  background-color: #180577;
+  width: 35%;
+  height: 6vh;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 20px;
+  border-color: rgba(217, 217, 217, 0);
+}
+
+.teste{
+  display: flex;
+  justify-content: end;
+  margin-top: -30%;
+  margin-bottom: 30%;
+}
+
 main {
   background-color: #f5f5f5;
-  height: 120vh;
+  height: 154vh;
+  margin-top: -82%;
 }
 
 .espaçamento {
   display: grid;
-  place-items: start;
-  margin-left: 15%;
-  margin-right: 0;
+  margin-left: 20%;
+  margin-right: 0px;
 }
 
 .box {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-  height: 100%;
   background: #ffffff;
   border-radius: 10px;
-  margin-top: 1%;
-  margin-right: 0;
+  margin-top: 7%;
+  margin-right: 0px;
 }
 
 .box img {
@@ -95,6 +132,7 @@ main {
   font-size: 32px;
   display: flex;
   color: #091d87;
+  text-transform: uppercase;
 }
 
 .minicontainer {
@@ -111,7 +149,7 @@ main {
   object-fit: contain;
   font-family: 'Readex Pro';
   padding-top: 0.7%;
-  padding-left: 35%;
+  padding-left: 40%;
 }
 
 .infos {
@@ -122,7 +160,7 @@ main {
   line-height: 200%;
   margin-left: 5%;
   margin-bottom: 5%;
-  padding-right: 10%;
+  padding-right: 5%;
 }
 
 .infos p {
@@ -133,8 +171,9 @@ main {
   color: black;
   margin-bottom: 2%;
 }
-.infos .descricao{
+.descricao{
   line-height: 110%;
+  width: 100px;
 }
 
 .espaçamento-lista {
@@ -158,7 +197,7 @@ main {
   padding-top: 0.1%;
   padding-left: 0.1%;
   width: 25%;
-  top: 10%;
+  top: 30%;
   left: 71%;
   height: 2.5%;
 }
@@ -172,7 +211,7 @@ main {
   align-items: center;
   font-size: 16px;
   font-weight: 400;
-  top: 20%;
+  top: 40%;
   left: 70%;
   width: 23.5%;
 }
@@ -190,7 +229,6 @@ ul li {
   border-radius: 20px;
   font-size: 16px;
   position: relative;
-  margin-bottom: 10px;
   margin-bottom: 10%;
 }
 

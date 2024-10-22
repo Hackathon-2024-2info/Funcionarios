@@ -15,7 +15,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('@/components/editarInfos.vue')
     },
     {
       path: '/estoque',
@@ -26,9 +26,26 @@ const router = createRouter({
       component: () => import('@/views/EstoqueView.vue')
     },
     {
-      path: '/servicos',
+      path: '/servicos/:id',
       name: 'servicos',
-      component: () => import('../views/ServicosFuncionariosView.vue')
+      component: () => import('../views/ServicosFuncionariosView.vue'),
+      props: true
+    },
+    // {
+    //   path: '/servicos',
+    //   name: 'servicos',
+    //   component: () => import('../views/ServicosAdminView.vue'),
+    //   props: true
+    // },
+    {
+      path: '/servicosadmin',
+      name: 'servicosadmin',
+      component: () => import('../views/ServicosAdminView.vue')
+    },
+    {
+      path: '/relatoriosadmin',
+      name: 'relatoriosadmin',
+      component: () => import('../views/RelatoriosView.vue')
     },
     {
       path: '/relatorios',
@@ -55,6 +72,11 @@ const router = createRouter({
       name: 'removeracesso',
       component: () => import('@/views/RemoverAcessoView.vue')
     },
+      path: '/detalheservico/:id',
+      name: 'detalheservico',
+      component: () => import('@/views/DetalhesServicoAdminView.vue'),
+      props: true,
+    }
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'

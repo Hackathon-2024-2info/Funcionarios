@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="menu">
+
+  <body>
+      <div class="menu">
     <nav>
       <img src="../assets/logo AVANTE.png" alt="" class="img" />
   <router-link to="/about" >
@@ -24,6 +26,8 @@
       </div>
     </nav>
   </div>
+  </body>
+
 </template>
 
 <style scoped>
@@ -31,7 +35,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
-
+body{
+  background: #f5f5f5;
+}
 .menu {
   display: grid;
   grid-template-columns: 18% 1fr;
