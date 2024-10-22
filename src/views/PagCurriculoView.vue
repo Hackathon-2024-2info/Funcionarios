@@ -55,33 +55,98 @@ const cargos=[
 
   <style scoped>
 
-  .espacamento{
-    margin-top: 15%;
+ 
+.espacamento {
+  margin-top: 15%;
+}
+
+option {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  color: #555555;
+  margin-top: 6%;
+  margin-bottom: 1%;
+}
+
+select {
+  background: rgba(217, 217, 217, 0.43);
+  width: 588px;
+  height: 46px;
+  border-radius: 5px;
+  border-style: none;
+  padding-left: 2%;
+}
+
+label {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  color: #000000;
+  text-align: center;
+  margin-top: 6%;
+  margin-bottom: 1%;
+}
+
+input {
+  width: 578px; 
+  height: 46px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  margin: 0;
+  padding-left: 2%;
+}
+
+aside {
+  margin: 5%;
+  display: grid; 
+  place-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .espacamento {
+    margin-top: 10%;
   }
 
-
-  select{
-    background: rgba(217, 217, 217, 0.43);
-    width: 588px;
-    height: 46px;
-    border-radius: 5px;
-    border-style: none;
-    padding-left: 2%;
-
+  select,
+  input {
+    width: 90%; 
+    height: 40px; 
+    margin: 0 auto;
   }
 
-  option{
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    color: #555555;
-    margin-top: 6%;
-    margin-bottom: 1%;
-
+  label {
+    font-size: 14px; 
   }
+
+  option {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .espacamento {
+    margin-top: 5%;
+  }
+
+  select,
+  input {
+    height: 38px;
+  }
+
+  label {
+    font-size: 12px; 
+  }
+}
+
+ 
 
   h4{
     font-size: 12px;
@@ -92,9 +157,10 @@ const cargos=[
   }
 
   #imagelogo{
-    width: 34px;
-    height: 34px;
-    padding: 3%;
+    width: 4.25%; 
+  margin-left: 4.25%;
+  height: 5.67%; 
+  padding: 3%;
   }
   .arquivo{
       width: 50%;
@@ -125,11 +191,7 @@ const cargos=[
       justify-content: center;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: 25% 1fr 25%;
-      place-items: center;
-    }
+    
 
     .pergunta {
       margin-top: 3rem;
@@ -170,30 +232,7 @@ const cargos=[
       align-self: center;
     }
 
-    input {
-      width: 578px;
-      height: 46px;
-      background: rgba(217, 217, 217, 0.43);
-      border-radius: 5px;
-      border: none;
-      margin: 0;
-      padding-left: 2%;
-
-    }
-
-    label {
-      font-family: 'Karla';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-      display: flex;
-      color: #000000;
-      text-align: center;
-      margin-top: 6%;
-      margin-bottom: 1%;
-
-    }
+  
 
     button {
       margin: 0 30% 0 30%;
@@ -218,12 +257,6 @@ const cargos=[
       background: #0f0541;
       height: 100vh;
       width: 100%;
-    }
-
-    aside {
-      margin: 5%;
-      display: grid; 
-      place-content: center;
     }
 
     .bemvindo,
