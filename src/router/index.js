@@ -68,6 +68,11 @@ const router = createRouter({
       component: () => import('../components/pagPerfil.vue')
     },
     {
+      path: '/chamadosadmin',
+      name: 'chamadosadmin',
+      component: () => import('@/views/ChamadosAdminView.vue')
+    },
+   {
       path: '/removeracesso',
       name: 'removeracesso',
       component: () => import('@/views/RemoverAcessoView.vue')
