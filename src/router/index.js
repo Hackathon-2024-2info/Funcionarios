@@ -55,7 +55,7 @@ const router = createRouter({
     {
       path: '/estoqueadmin',
       name: 'estoqueadmin',
-      component: () => import('@/views/PagEstoqueAdminView.vue')
+      component: () => import('@/views/EstoqueAdminView.vue')
     },
     {
       path: '/curriculo',
