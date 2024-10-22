@@ -72,6 +72,7 @@ const router = createRouter({
       name: 'removeracesso',
       component: () => import('@/views/RemoverAcessoView.vue')
     },
+    {
       path: '/detalheservico/:id',
       name: 'detalheservico',
       component: () => import('@/views/DetalhesServicoAdminView.vue'),
