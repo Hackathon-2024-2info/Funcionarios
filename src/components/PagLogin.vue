@@ -42,7 +42,7 @@ function processarForm() {
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/about"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>
+        <RouterLink to="/removeracesso"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>
      
     </section>
 
@@ -58,7 +58,7 @@ function processarForm() {
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <RouterLink to="/servicos"><button id="enviar" type="submit">Concluir</button></RouterLink>
+            <RouterLink to="/estoque"><button id="enviar" type="submit">Concluir</button></RouterLink>
             </form>
       </div>
        <div>
