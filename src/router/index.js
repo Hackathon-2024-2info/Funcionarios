@@ -79,6 +79,11 @@ const router = createRouter({
       component: () => import('@/views/PagCurriculoView.vue')
     },
     {
+      path: '/detalhechamado',
+      name: 'detalhechamado',
+      component: () => import('@/views/DetalhesChamadoAdminView.vue')
+    }
+    {
       path: '/perfil',
       name: 'perfil',
       component: () => import('../components/pagPerfil.vue')
@@ -103,11 +108,6 @@ const router = createRouter({
       path: '/orcamento',
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
-    },
-    {
-      path:'/editarperfil',
-      name: 'editarperfil'
-      component: () => import('@/components/editarInfos.vue')
     }
   ],
   linkActiveClass: 'active',
