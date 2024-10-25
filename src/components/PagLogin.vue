@@ -1,6 +1,5 @@
 <script setup>
 import { reactive, ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
 const mostrarResultado = ref(false)
 const info = reactive({
   nome: '',
@@ -42,9 +41,7 @@ function processarForm() {
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/about"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>
-     
-    </section>
+        <RouterLink to="/about"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>    </section>
 
     <aside>
       <h1 id="h1">Faça seu login</h1>
@@ -58,7 +55,7 @@ function processarForm() {
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <RouterLink to="/detalherelatorio"><button id="enviar" type="submit">Concluir</button></RouterLink>
+            <RouterLink to="/estoque"><button id="enviar" type="submit">Concluir</button></RouterLink>
             </form>
       </div>
        <div>
