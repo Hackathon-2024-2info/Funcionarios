@@ -78,11 +78,16 @@ const router = createRouter({
       component: () => import('@/views/RemoverAcessoView.vue')
     },
     {
+      path: '/menu',
+      name: 'menu',
+      component: () => import('@/views/MenuFuncView.vue')
+    },
+    {
       path: '/detalheservico/:id',
       name: 'detalheservico',
       component: () => import('@/views/DetalhesServicoAdminView.vue'),
       props: true,
-    }
+    },
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'
