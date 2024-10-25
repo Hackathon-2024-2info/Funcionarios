@@ -37,7 +37,7 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('@/components/editarInfos.vue')
-    }
+    },
     {
       path: '/relpreventivo',
       name: 'relpreventivo',
@@ -95,12 +95,12 @@ const router = createRouter({
       path: '/detalherelatorio',
       name: 'detalherelatorio',
       component: () => import('@/views/DetalheRelatorioView.vue')
-    }
+    },
     {
       path: '/detalhechamado',
       name: 'detalhechamado',
       component: () => import('@/views/DetalhesChamadoAdminView.vue')
-    }
+    },
     {
       path: '/perfil',
       name: 'perfil',
