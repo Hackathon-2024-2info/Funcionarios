@@ -123,6 +123,11 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/additem',
+      name: 'additem',
+      component: () => import('../components/AddEstoqueAdministradores.vue')
+    },
+    {
       path: '/orcamento',
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
