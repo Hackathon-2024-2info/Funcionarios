@@ -338,4 +338,29 @@ h6 {
 
 }
 
+@media (max-width: 480px) {
+  
+  .relatorio {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 18px;
+  color: #180577;
+  padding: 53px;
+  margin-left: -9%;
+  width: 564px;
+  height: 24px;
+  top: 177px;
+}
+
+
+
+
+
+
+
+
+}
+
 </style>
