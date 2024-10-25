@@ -15,7 +15,36 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/solicitarchamado',
+      name: 'solicitarchamado',
+      component: () => import('../views/SolicitarChamadoView.vue')
+    },   
+    {
+      path: '/relatoriochamado',
+      name: 'relatoriochamado',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('@/components/RelatorioChamd.vue')
+    },
+    {
+      path: '/editperfil',
+      name: 'editperfil',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
       component: () => import('@/components/editarInfos.vue')
+    }
+    {
+      path: '/relpreventivo',
+      name: 'relpreventivo',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('@/components/relPreventivo.vue')
     },
     {
       path: '/estoque',
@@ -63,6 +92,16 @@ const router = createRouter({
       component: () => import('@/views/PagCurriculoView.vue')
     },
     {
+      path: '/detalherelatorio',
+      name: 'detalherelatorio',
+      component: () => import('@/views/DetalheRelatorioView.vue')
+    }
+    {
+      path: '/detalhechamado',
+      name: 'detalhechamado',
+      component: () => import('@/views/DetalhesChamadoAdminView.vue')
+    }
+    {
       path: '/perfil',
       name: 'perfil',
       component: () => import('../components/pagPerfil.vue')
@@ -87,6 +126,11 @@ const router = createRouter({
       path: '/additem',
       name: 'additem',
       component: () => import('../components/AddEstoqueAdministradores.vue')
+    },
+    {
+      path: '/orcamento',
+      name: 'orcamento',
+      component: () => import('@/views/AdmOrcamentoView.vue')
     }
   ],
   linkActiveClass: 'active',
