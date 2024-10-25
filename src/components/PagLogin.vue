@@ -42,7 +42,7 @@ function processarForm() {
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/about"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>
+        <RouterLink to="/perfil"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>
      
     </section>
 
