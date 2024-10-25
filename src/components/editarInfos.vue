@@ -13,64 +13,66 @@
         <input class="confirmar-senha" placeholder="confirme sua nova senha" />
       </form>
     </div>
-    <button>concluir</button>
+      <button>concluir</button>
   </div>
+
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 .espaçamento {
-  margin-left: 27%;
-  margin-top: 20%;
+  margin-left: 10%;
+  margin-top: 50%;
 }
+
 .formulario {
   display: grid;
   grid-template-columns: 25% 1fr 25%;
 }
 
 input {
-  width: 578px;
-  height: 46px;
+  display: flex;
+  width: 350%;
+  height: 30%;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: none;
   margin: 0;
   padding-left: 2%;
+  margin-right: 10%;
 }
 
 label {
+  display: flex;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 12px;
   display: flex;
   color: #000000;
   text-align: center;
-  margin-top: 6%;
-  margin-bottom: 4%;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .confirmar-senha {
-  margin-top: 5%;
+  display: flex;
+  margin-top: 15%;
 }
 
-button {
-  display: flex;
-  background-color: #091d87;
-  border-radius: 5px;
-  font-family: 'Karla';
-  display: inline;
-  padding: 1% 2%;
-  width: 230px;
-  font-size: 16px;
-  color: white;
-  border: none;
-  white-space: nowrap;
-  text-decoration: none;
-  margin-top: 4%;
-  margin-bottom: 2%;
-  margin-left: 15%;
+button{
+  margin-left: 8%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #091D87;
+border-radius: 5px;
+border: none;
+color: white;
+margin-top: 65%;
+margin-bottom: 20%;
+width: 70%;
+padding: 3%;
 }
 </style>
