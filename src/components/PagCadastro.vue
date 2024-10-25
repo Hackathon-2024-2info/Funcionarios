@@ -191,6 +191,7 @@ button {
   margin-bottom: 2rem;
   border: none;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 #voltar {
