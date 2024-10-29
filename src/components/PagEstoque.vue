@@ -66,7 +66,6 @@ const itens = [
 <template>
   <div class="small">
     <main>
-      <button class="btn-azul">SOLICITAR ITEM PARA O ESTOQUE</button>
       <div class="filtrar">
         <label for="">Filtrar:</label>
 
@@ -120,7 +119,6 @@ const itens = [
   <div class="large">
     <main>
       <div class="filtrar">
-        <button class="btn-azul">SOLICITAR ITEM PARA O ESTOQUE</button>
         <label for="">Filtrar:</label>
         <select name="Selecione" id="Selecione">
           <option value="" class="option">SELECIONE</option>
@@ -190,9 +188,12 @@ const itens = [
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@media only screen and (max-device-width: 800px) {
+@media only screen and (max-device-width: 1000px) {
 
- 
+ body{
+  margin: 0;
+  width: 100%;
+ }
   .large {
     display: none;
   }
@@ -204,36 +205,26 @@ const itens = [
   .tabela-itens {
     font-family: 'Roboto', sans-serif;
     font-weight: 450;
-    width: 100%;
+    height: 100%;
     border-collapse: collapse;
     margin: 0 ;
     margin-left: 5%;
-    line-height: 1.5rem;
-    font-size: 80%;
+    line-height: 2rem;
+    font-size: 85%;
+    margin: 10%;
 
     & td {
       border-bottom: 0.5px solid #d4d2d2;
-      padding-left: 5%
+padding-left: 2%;
+   
     }
 
     & .th-content {
       display: flex;
       align-items: center; /* Alinha o conteúdo verticalmente */
       justify-content: flex-start; /* Se quiser espaçar igualmente */
-      
-    }
-  }
 
-  .btn-azul {
-    margin-top: 5%;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Karla';
-    background-color: #091d87;
-    padding: 1.5%;
-    margin-left: 20%;
-    font-weight: 700;
+    }
   }
 
   .setas {
@@ -289,11 +280,12 @@ const itens = [
   }
 
   span{
-    margin-left: 10%;
+    margin-left: 5%;
+  
   }
 }
 
-@media only screen and (min-device-width: 701px) {
+@media only screen and (min-device-width: 1001px) {
   .small {
     display: none;
   }
@@ -341,26 +333,12 @@ const itens = [
   .order-icons {
     display: flex;
     flex-direction: column;
-
     & img {
       width: 8px;
       height: 8px;
     }
   }
 
-  .btn-azul {
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Karla';
-    background-color: #091d87;
-    padding: 1.5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-weight: 700;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 
   main {
     display: flex;
@@ -381,6 +359,7 @@ const itens = [
   .filtrar {
     flex-wrap: nowrap;
     width: 100%;
+    margin-left: 20%;
   }
 
   label,

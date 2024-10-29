@@ -6,3 +6,10 @@ import PagEstoque from '@/components/PagEstoque.vue'
 <template> 
 <PagEstoque></PagEstoque>
 </template>
+
+<style scoped>
+*{
+    background-color: #f5f5f5f5;
+}
+
+</style>
