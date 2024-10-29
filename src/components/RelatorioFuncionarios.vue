@@ -140,9 +140,11 @@
   line-height: 18px;
   color: #180577;
   padding: 53px;
-  margin-left: -9%
+  margin-left: -9%;
+  width: 564px;
+  height: 24px;
+  top: 177px;
 }
-
 .espacamento {
   margin-top: 2.8%;
 }
@@ -219,7 +221,6 @@
   color: #000000;
   border: none;
   outline: none;
-
 }
 
 
@@ -388,7 +389,7 @@ h6 {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   color: #687C94;
   color: #000000;
@@ -407,7 +408,7 @@ h6 {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   color: #687C94;
   color: #000000;
@@ -418,15 +419,15 @@ h6 {
 
 
 .input3 {
-  width: 465px;
-  height: 403px;
+  width: 263px;
+  height: 100px;
   top: 177px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   color: #687C94;
   color: #000000;
@@ -455,13 +456,13 @@ label {
   font-family: 'Karla';
   padding: 15px 40px;
   width: 148px;
+  height: 35px;
   font-weight: 700;
   font-size: 16px;
   color: white;
   margin-top: 3rem;
   border: none;
   text-align: center;
-  margin-left: 51%;
 }
 
 
