@@ -6,7 +6,7 @@
   <main id="main">
 
     <div>
-      <h1 class="relatorio">RELÁTORIO DE CONCLUSÃO DE SERVIÇO</h1>
+      <h1 class="relatorio">RELATÓRIO DE CONCLUSÃO DE SERVIÇO</h1>
       <label for=""> Dificuldade do serviço</label>
       <select id="opcoes" name="opcoes" required>
         <option value="" disabled selected>Selecione</option>
@@ -123,7 +123,6 @@
   position: absolute;
   left: 1030px;
   top: 31%;
-
 }
 
 
@@ -141,10 +140,7 @@
   line-height: 18px;
   color: #180577;
   padding: 53px;
-  margin-left: -9%;
-  width: 564px;
-  height: 24px;
-  top: 177px;
+  margin-left: -9%
 }
 
 .espacamento {
@@ -340,18 +336,210 @@ h6 {
 
 @media (max-width: 480px) {
   
-  .relatorio {
+  #main {
+  width: 480px;
+  height: 734px;
+  margin-left: 2%;
+  margin-top: 8%;
+}
+
+.container {
+ width: fit-content;
+ position: relative;
+ left: 0px;
+}
+
+
+.relatorio {
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 18px;
   color: #180577;
-  padding: 53px;
-  margin-left: -9%;
-  width: 564px;
-  height: 24px;
+  margin-left: -11%;
+  width: 273px;
+}
+
+#opcoes {
+  width: 297px;
+  height: 44px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-size: 12px;
+  color: #687C94;
+}
+
+
+
+.input1 {
+  padding: 10px 16px;
+  gap: 10px;
+  width: 325px;
+  height: 34px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+
+}
+
+
+
+
+.input2 {
+  padding: 10px 16px;
+  width: 430px;
+  height: 34px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+  border: none;
+  outline: none;
+
+}
+
+
+.input3 {
+  width: 465px;
+  height: 403px;
   top: 177px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+  border: none;
+  outline: none;
+
+}
+
+
+
+label {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+
+
+#enviar {
+  background-color: #091D87;
+  border-radius: 5px;
+  font-family: 'Karla';
+  padding: 15px 40px;
+  width: 148px;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  margin-top: 3rem;
+  border: none;
+  text-align: center;
+  margin-left: 51%;
+}
+
+
+#arquive-selected {
+  font-size: 12px;
+  color: #000000;
+  font-family: 'Karla';
+  font-weight: 300;
+  margin-top: 4%;
+}
+
+.arquivo {
+  width: 63%;
+  height: 6vh;
+  margin-left: -1%;
+  border-radius: 20px;
+  border-color: rgba(217, 217, 217, 0.43);
+  margin-top: 10%;
+  display: grid;
+  margin-left: 6%;
+  grid-template-rows: 20% 40% 20%;
+  background-color: rgba(217, 217, 217, 0.43);;
+}
+
+h4 {
+  font-size: 12px;
+  color: #555555;
+  font-family: 'Karla';
+  font-weight: 300;
+  padding-left: 20%;
+}
+
+h6 {
+  font-family: 'Karla';
+  font-size: 16px;
+  color: #091D87;
+  font-weight: 400;
+  padding-left: 20%;
+}
+
+
+
+#file-input {
+  background-image: ("@/assets/iconimage.png");
+  width: 34px;
+  height: 34px;
+
+}
+
+
+.icon-button{
+  border: 0px;
+  margin-top: 2%;
+}
+
+.espacing{
+  height: 2vh;
+}
+
+
+#arquive-selected{
+    font-size: 12px;
+    color: #000000;
+    font-family: 'Karla';
+    font-weight: 300;
+    margin-top: 4%;
+    margin-left: 2px;
+}
+
+
+
+#imagelogo {
+    width: 24px;
+    height: 24px;
+    padding: 3%;
+    left: 12%;
+
+}
 }
 
 
@@ -361,6 +549,6 @@ h6 {
 
 
 
-}
+
 
 </style>
