@@ -128,7 +128,7 @@ button {
 @media (max-width:480px) {
   #main {
   width: fit-content;
-  height: fit-content;
+  height: 917px;
   margin-left: 5%;
   margin-top: 8%;
 }
