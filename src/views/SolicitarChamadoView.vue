@@ -45,7 +45,7 @@
 }
 
 .espacamento {
-  margin-top: 11%;
+  margin-top: 8%;
 }
 
 .input1 {
@@ -123,6 +123,106 @@ button {
   font-style: normal;
   font-weight: 700;
   line-height: 19px;
+}
+
+@media (max-width:480px) {
+  #main {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 5%;
+  margin-top: 8%;
+}
+
+
+.solicitar {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0px;
+  color: #180577;
+  padding: 40px;
+}
+
+.espacamento {
+  margin-top: 5%;
+}
+
+.input1 {
+  padding: 10px 16px;
+  gap: 10px;
+  width: 320px;
+  height: 46px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+}
+
+.input2 {
+  padding: 10px 16px;
+  width: 320px;
+  height: 296px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  order: 1;
+  flex-grow: 0;
+  border: none;
+  outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+}
+
+
+label {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #666666;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  padding: 15px;
+  margin-left: -2.1%;
+}
+
+
+button {
+  background-color: #091D87;
+  border-radius: 5px;
+  font-family: 'Karla';
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 40px;
+  width: 148px;
+  font-size: 16px;
+  color: white;
+  margin-top: 3rem;
+  border: none;
+  margin-left: 27%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10px;
+}
 
 }
 </style>
