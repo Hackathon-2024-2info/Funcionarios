@@ -92,6 +92,11 @@ const router = createRouter({
       component: () => import('@/views/PagCurriculoView.vue')
     },
     {
+      path: '/addservico',
+      name: 'addservico',
+      component: () => import('@/views/AddServicoAdminView.vue')
+    },
+    {
       path: '/detalherelatorio',
       name: 'detalherelatorio',
       component: () => import('@/views/DetalheRelatorioView.vue')
