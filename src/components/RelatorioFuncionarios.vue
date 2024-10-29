@@ -17,7 +17,7 @@
 
     <div id="block">
       <label for=""> Tempo de realização do serviço</label>
-      <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
+      <input type="number" class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
     </div>
 
     <div class="espacamento"></div>
@@ -33,7 +33,7 @@
 
     <div id="block">
       <label for=""> Possíveis pendências que ficaram na máquina </label>
-      <input class="input2" placeholder="Insira possíveis pendências">
+      <input type="text" class="input2" placeholder="Insira possíveis pendências">
     </div>
 
 
@@ -109,8 +109,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
 #main {
-  width: 564px;
-  height: 734px;
+  width: 39%;
   margin-left: 28%;
   margin-top: 8%;
 }
@@ -121,8 +120,8 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 1030px;
-  top: 31%;
+  left: 65%;
+  top: 38.5%;
 }
 
 
@@ -139,11 +138,10 @@
   font-size: 26px;
   line-height: 18px;
   color: #180577;
-  padding: 53px;
+  padding: 10%;
   margin-left: -9%;
-  width: 564px;
-  height: 24px;
-  top: 177px;
+  width: 99%;
+  top: 59%;
 }
 .espacamento {
   margin-top: 2.8%;
@@ -166,7 +164,7 @@
 
 
 .input1 {
-  padding: 10px 16px;
+  padding: 2% 3%;
   gap: 10px;
   width: 430px;
   height: 34px;
@@ -188,7 +186,7 @@
 
 
 .input2 {
-  padding: 10px 16px;
+  padding: 2% 3%;
   width: 430px;
   height: 34px;
   background: rgba(217, 217, 217, 0.43);
@@ -208,8 +206,8 @@
 
 .input3 {
   width: 465px;
-  height: 403px;
-  top: 177px;
+  height: 430px;
+  top: 59%;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   font-family: 'Karla';
@@ -238,7 +236,7 @@ label {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  padding: 15px;
+  padding: 3%;
   margin-left: -2.1%;
 }
 
@@ -247,7 +245,7 @@ label {
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
-  padding: 15px 40px;
+  padding: 1% 1%;
   width: 148px;
   font-weight: 700;
   font-size: 16px;
@@ -255,7 +253,8 @@ label {
   margin-top: 3rem;
   border: none;
   text-align: center;
-  margin-left: 51%;
+  margin-left: 57%;
+  margin-top: 7%;
 }
 
 
@@ -271,7 +270,7 @@ label {
   width: 63%;
   height: 6vh;
   margin-left: -1%;
-  border-radius: 20px;
+  border-radius: 15px;
   border-color: rgba(217, 217, 217, 0.43);
   margin-top: 10%;
   display: grid;
@@ -309,6 +308,7 @@ h6 {
 .icon-button{
   border: 0px;
   margin-top: 2%;
+  margin-left: 5%;
 }
 
 .espacing{
@@ -322,7 +322,7 @@ h6 {
     font-family: 'Karla';
     font-weight: 300;
     margin-top: 4%;
-    margin-left: 2px;
+    margin-left: 2%;
 }
 
 
