@@ -5,7 +5,7 @@
 <template>
   <main id="main">
 
-    <div>
+    <div id="block">
       <h1 class="relatorio">RELATÓRIO DE CONCLUSÃO DE SERVIÇO</h1>
       <label for=""> Dificuldade do serviço</label>
       <select id="opcoes" name="opcoes" required>
@@ -15,14 +15,14 @@
 
     <div class="espacamento"></div>
 
-    <div>
-      <label for="opções"> Tempo de realização do serviço</label>
+    <div id="block">
+      <label for=""> Tempo de realização do serviço</label>
       <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
     </div>
 
     <div class="espacamento"></div>
 
-    <div>
+    <div id="block">
       <label for=""> Colaboração da empresa que recebeu o serviço</label>
       <select id="opcoes" name="opcoes" required>
         <option value="cor" disabled selected>Selecione</option>
@@ -31,7 +31,7 @@
 
     <div class="espacamento"></div>
 
-    <div>
+    <div id="block">
       <label for=""> Possíveis pendências que ficaram na máquina </label>
       <input class="input2" placeholder="Insira possíveis pendências">
     </div>
@@ -337,15 +337,12 @@ h6 {
 
 @media (max-width: 480px) {
   
-  #main {
-  width: 480px;
-  height: 734px;
-  margin-left: 2%;
-  margin-top: 8%;
+#main {
+  display: grid;
+  align-items: center;
 }
 
 .container {
- width: fit-content;
  position: relative;
  left: 0px;
 }
@@ -373,6 +370,7 @@ h6 {
   font-style: normal;
   font-size: 12px;
   color: #687C94;
+  padding-left: 3%;
 }
 
 
@@ -380,7 +378,7 @@ h6 {
 .input1 {
   padding: 10px 16px;
   gap: 10px;
-  width: 325px;
+  width: 263px;
   height: 34px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
@@ -392,8 +390,8 @@ h6 {
   font-size: 12px;
   line-height: 14px;
   color: #687C94;
-  color: #000000;
-
+  display: grid;
+  align-self: center;
 }
 
 
@@ -401,7 +399,7 @@ h6 {
 
 .input2 {
   padding: 10px 16px;
-  width: 430px;
+  width: 263px;
   height: 34px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
@@ -411,9 +409,10 @@ h6 {
   font-size: 12px;
   line-height: 14px;
   color: #687C94;
-  color: #000000;
   border: none;
   outline: none;
+  display: grid;
+  align-self: center;
 
 }
 
@@ -421,7 +420,6 @@ h6 {
 .input3 {
   width: 263px;
   height: 100px;
-  top: 177px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   font-family: 'Karla';
@@ -430,10 +428,10 @@ h6 {
   font-size: 12px;
   line-height: 14px;
   color: #687C94;
-  color: #000000;
   border: none;
   outline: none;
-
+  display: grid;
+  align-self: center;
 }
 
 
@@ -443,10 +441,10 @@ label {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
+  margin-left: 2%;
   color: #666666;
+  display: grid;
+  align-self: center;
 }
 
 
