@@ -58,14 +58,14 @@ const itens = [
         </div>
       </div>
     </div>
-    <div class="espaçamento-lista">
+    <!-- <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
       <ul class="lista">
         <li v-for="item in itens" :key="item.nome">
           {{ item.nome }}
         </li>
       </ul>
-    </div> 
+    </div>  ARRUMAREI EM CASA POIS NA ESCOLA NAO VAI TA DANDO-->
   </main>
 </template>
 
@@ -97,13 +97,14 @@ const itens = [
 main {
   background-color: #f5f5f5;
   height: 154vh;
-  margin-top: -82%;
+  margin-top: 20%;
 }
 
 .espaçamento {
   display: grid;
   margin-left: 20%;
   margin-right: 0px;
+  margin-top: -15%;
 }
 
 .box {
@@ -181,7 +182,7 @@ main {
   place-items: end;
 }
 
-.titulo-lista {
+/* .titulo-lista {
   display: flex;
   list-style: none;
   position: absolute;
@@ -216,8 +217,6 @@ main {
   width: 23.5%;
 }
 
-
-
 ul {
   list-style-type: none;
   padding-left: 40px;
@@ -240,5 +239,66 @@ ul li::before {
   left: -30px;
   top: 50%;
   transform: translateY(-60%);
+}  ARRUMAREI EM CASA POIS NA ESCOLA NAO VAI TA DANDO*/
+
+@media only screen and (max-device-width: 480px) {
+  .box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 150%;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-right: 0px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.espaçamento {
+  display: grid;
+  margin-left: 5%;
+  margin-right: 0px;
+  margin-top: -15%;
+}
+.titulo {
+  margin-top: 10%;
+  font-size: 26px;
+}
+
+.minicontainer {
+  width: 70%;
+  margin-left: 5%;
+  height: 2.5%;
+  margin-top: -18%;
+}
+
+.minicontainer p {
+  margin-top: -0.5%;
+}
+
+.infos {
+  line-height: 200%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding-right: 5%;
+  margin-top: -20%;
+}
+
+.infos p {
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  margin-bottom: 2%;
+}
+.descricao{
+  line-height: 110%;
+  width: 100px;
+}
+
 }
 </style>
