@@ -37,10 +37,11 @@
 
 body{
   background: #f5f5f5;
+
 }
 .menu {
   display: grid;
-  grid-template-columns: 18% 1fr;
+  width: 18%;
 }
 template {
   margin: 0;
