@@ -1,32 +1,56 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const isOpen = ref(false);
+
+const toggleDropdown = () => {
+  isOpen.value = !isOpen.value;
+};
+</script>
 
 <template>
+
   <body>
     <div class="menu-sm">
+      <header>
+        <h1>Olá, Edson!</h1>
+      </header>
       <nav>
-        <button></button>
-        <div class="dropdown-content">
-          <router-link to="/about"> Estoque </router-link>
-          <router-link to="/servicos"> Servico </router-link>
-          <router-link to="/relatorios"> Relatório </router-link>
+        <div class="menu">
+<div class="barra">
+  <div>
+      <button class="dropdown-btn" @click="toggleDropdown">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </button>
+  </div>
+     
+ <div class="vazio">
+
+ </div>
+</div>
+   
+
+
+          <div class="dropdown-content" v-if="isOpen">
+            <a><router-link to="/about"> Estoque </router-link></a>
+            <a><router-link to="/servicos"> Servico </router-link></a>
+            <a><router-link to="/relatorios"> Relatório </router-link></a>
+          </div>
         </div>
-
-        
-
-  
       </nav>
     </div>
 
     <div class="menu-lg">
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
-      
-          <router-link to="/about"> Estoque </router-link>
-          <router-link to="/servicos"> Servico </router-link>
-          <router-link to="/relatorios"> Relatório </router-link>
-  
 
-        
+        <router-link to="/about"> Estoque </router-link>
+        <router-link to="/servicos"> Servico </router-link>
+        <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
 
@@ -45,14 +69,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
 body {
   background: #f5f5f5;
 }
-@media only screen and (max-device-width: 1500px) {
-  .menu-sm{
+
+@media only screen and (min-device-width: 601px) {
+  .menu-sm {
     display: none;
   }
+
   .box {
     background-color: #384dbb;
     color: white;
@@ -68,130 +95,137 @@ body {
   .warning {
     margin-bottom: -10%;
   }
-.menu-lg {
-  display: grid;
-  grid-template-columns: 18% 1fr;
+
+  .menu-lg {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+  }
+
+  template {
+    margin: 0;
+    height: 100%;
+  }
+
+  nav {
+    height: 100%;
+    margin: 0;
+    padding-bottom: 15%;
+    background: #0f0541;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .img {
+    width: 17vh;
+    height: 17vh;
+    margin-top: 10%;
+  }
+
+  img {
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: white;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    height: 6%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4vh;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a.active,
+  nav a.exact-active {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #384dbb;
+    border-radius: 10px;
+    border: none;
+    width: 85%;
+
+    color: white;
+
+    font-size: 90%;
+    font-weight: 600;
+    margin: 4vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .vazio {
+    padding: 75%;
+  }
+
+  .btn-branco {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    height: 6%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4vh;
+  }
+
+  .frase-box {
+    font-size: 80%;
+    margin: 10%;
+    text-align: center;
+    font-family: 'Karla';
+    margin-top: 15%;
+  }
+
+  .button {
+    border-radius: 10px;
+    height: 15%;
+    width: 85%;
+    border: none;
+
+    text-align: center;
+    place-items: center;
+    color: #546fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-left: 7%;
+    margin-top: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .title {
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Kantumruy Pro', sans-serif;
+    margin-top: 35%;
+  }
+
 }
-template {
-  margin: 0;
-  height: 100%;
-}
-nav {
-  height: 100%;
-  margin: 0;
-  padding-bottom: 15%;
-  background: #0f0541;
 
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.img {
-  width: 17vh;
-  height: 17vh;
-  margin-top: 10%;
-}
-img {
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-
-nav a {
-  text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: white;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  width: 70%;
-  height: 6%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 4vh;
-
-  display: flex;
-  justify-content: center;
-}
-
-nav a.active,
-nav a.exact-active {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #384dbb;
-  border-radius: 10px;
-  border: none;
-  width: 85%;
-
-  color: white;
-
-  font-size: 90%;
-  font-weight: 600;
-  margin: 4vh;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.vazio {
-  padding: 75%;
-}
-.btn-branco {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: white;
-  border: none;
-  border-radius: 20px;
-  width: 70%;
-  height: 6%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 4vh;
-}
-.frase-box {
-  font-size: 80%;
-  margin: 10%;
-  text-align: center;
-  font-family: 'Karla';
-  margin-top: 15%;
-}
-
-.button {
-  border-radius: 10px;
-  height: 15%;
-  width: 85%;
-  border: none;
-
-  text-align: center;
-  place-items: center;
-  color: #546fff;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  margin-left: 7%;
-  margin-top: 8%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-
-.title {
-  font-size: 100%;
-  text-align: center;
-  font-family: 'Kantumruy Pro', sans-serif;
-  margin-top: 35%;
-}
-
-}
-
-@media only screen and (max-device-width: 2000px) {
-  .menu-sm{
+@media only screen and (min-device-width: 1500px) {
+  .menu-sm {
     display: none;
   }
+
   .box {
     background-color: #384dbb;
     color: white;
@@ -209,127 +243,211 @@ nav a.exact-active {
   }
 
   .menu-lg {
-  display: grid;
-  grid-template-columns: 18% 1fr;
-}
-template {
-  margin: 0;
-  height: 100%;
-}
-nav {
-  height: 100%;
-  margin: 0;
-  padding-bottom: 15%;
-  background: #0f0541;
+    display: grid;
+    grid-template-columns: 18% 1fr;
+  }
 
-  width: 100%;
+  template {
+    margin: 0;
+    height: 100%;
+  }
 
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
+  nav {
+    height: 100%;
+    margin: 0;
+    padding-bottom: 15%;
+    background: #0f0541;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  white .img {
+    width: 17vh;
+    height: 17vh;
+    margin-top: 10%;
+  }
+
+  img {
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: white;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    height: 6%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4vh;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a.active,
+  nav a.exact-active {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #384dbb;
+    border-radius: 10px;
+    border: none;
+    width: 85%;
+
+    color: white;
+
+    font-size: 90%;
+    font-weight: 600;
+    margin: 4vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .vazio {
+    padding: 75%;
+  }
+
+  .btn-branco {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    height: 6%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4vh;
+  }
+
+  .frase-box {
+    font-size: 80%;
+    margin: 10%;
+    text-align: center;
+    font-family: 'Karla';
+    margin-top: 15%;
+  }
+
+  .button {
+    border-radius: 10px;
+    height: 15%;
+    width: 85%;
+    border: none;
+
+    text-align: center;
+    place-items: center;
+    color: #546fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-left: 7%;
+    margin-top: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .title {
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Kantumruy Pro', sans-serif;
+    margin-top: 35%;
+  }
 }
 
-.img {
-  width: 17vh;
-  height: 17vh;
-  margin-top: 10%;
-}
-img {
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-
-nav a {
-  text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: white;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  width: 70%;
-  height: 6%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 4vh;
-
-  display: flex;
-  justify-content: center;
-}
-
-nav a.active,
-nav a.exact-active {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #384dbb;
-  border-radius: 10px;
-  border: none;
-  width: 85%;
-
-  color: white;
-
-  font-size: 90%;
-  font-weight: 600;
-  margin: 4vh;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.vazio {
-  padding: 75%;
-}
-.btn-branco {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: white;
-  border: none;
-  border-radius: 20px;
-  width: 70%;
-  height: 6%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 4vh;
-}
-.frase-box {
-  font-size: 80%;
-  margin: 10%;
-  text-align: center;
-  font-family: 'Karla';
-  margin-top: 15%;
-}
-
-.button {
-  border-radius: 10px;
-  height: 15%;
-  width: 85%;
-  border: none;
-
-  text-align: center;
-  place-items: center;
-  color: #546fff;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  margin-left: 7%;
-  margin-top: 8%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-
-.title {
-  font-size: 100%;
-  text-align: center;
-  font-family: 'Kantumruy Pro', sans-serif;
-  margin-top: 35%;
-}
-}
-
-@media only screen and (max-device-width: 900px) {
-  .menu-lg{
+@media only screen and (max-device-width: 600px) {
+  .menu-lg {
     display: none;
   }
+
+  header {
+    background: #D9D9D9;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    font-family: 'Readex Pro';
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #180577;
+
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black ;
+
+  }
+
+  .dropdown-content {
+    display: block;
+  }
+
+
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  .mobile-menu {
+    display: block;
+
+
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  .dropdown-btn {
+    background: #180577;
+    border: none;
+    max-width: fit-content;
+  }
+
+  .menu {
+   
+
+  }
+
+  .barra{
+    display: grid;
+    grid-template-columns: 18% 1fr;
+  }
+
 }
 </style>
