@@ -37,6 +37,7 @@
 
 body{
   background: #f5f5f5;
+  margin-top: -10%;
 }
 .menu {
   display: grid;

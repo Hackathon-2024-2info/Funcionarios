@@ -71,17 +71,19 @@ const servicos = ref([
       <div class="container-checkbox">
         <template v-for="servico in servicos" :key="servico.id">
           <label class="label-pergunta" for="">{{ servico.texto }}:</label>
-          <span>
+          <span class="teste">
             <input type="radio" id="ok" v-model="servico.valor" :value="true" />
             <label for="ok">Sim</label>
           </span>
-          <span>
+          <span class="teste">
             <input type="radio" id="nok" v-model="servico.valor" :value="false" />
             <label for="nok">Não</label>
           </span>
         </template>
       </div>
+      <div class="botao">
       <button>Próximo</button>
+    </div>
     </div>
   </main>
 </template>
@@ -92,11 +94,11 @@ const servicos = ref([
 
 main {
   background-color: #f5f5f5;
+  margin-top: -65%;
 }
 
 .espaçamento {
-  margin-left: 40%;
-  margin-top: 10%;
+  margin-left: 25%;
 }
 
 .label-pergunta {
@@ -195,5 +197,124 @@ button {
   color: white;
   margin-bottom: 2%;
   margin-top: 3%;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  main {
+  background-color: #f5f5f5;
+  margin-top: 10%;
+}
+
+.espaçamento {
+  margin-left: 5%;
+}
+.label-pergunta {
+  margin-bottom: 10%;
+  width:200%;
+}
+
+span {
+  margin-top: -16%;
+  margin-left: 150px;
+}
+
+span label {
+
+}
+
+h1 {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26.5px;
+  color: #180577;
+  margin-bottom: 3%;
+  margin-left: 5%;
+}
+
+.container-inputs-num {
+  display: flex;
+  gap: 20%;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+.num {
+  display: inline-block;
+}
+
+.input-num {
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  /* Duas colunas de 10px cada */
+  column-gap: 2%;
+  row-gap: 2%;
+  margin-top: 10%;
+}
+
+input[type='number'] {
+  height: 60px;
+  border: none;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  text-align: center;
+}
+
+label,
+span {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #666666;
+  
+}
+
+.checkbox {
+  margin-bottom: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+input[type='radio'] {
+  margin-left: 5%;
+  width: 24px;
+  height: 24px;
+
+}
+
+.container-checkbox {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  /* flex-direction: column; */
+  margin-top: 3%;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.container-checkbox span {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 10%;
+  background: #091d87;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-bottom: 2%;
+  margin-top: 3%;
+}
+.botao{
+  display: flex;
+  justify-content: center;
+}
 }
 </style>
