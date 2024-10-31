@@ -40,7 +40,8 @@ body{
 }
 .menu {
   display: grid;
-  grid-template-columns: 18% 1fr;
+  grid-template-columns: 100%;
+  width: 18%;
 }
 template {
   margin: 0;

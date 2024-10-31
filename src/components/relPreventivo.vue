@@ -92,11 +92,10 @@ const servicos = ref([
 
 main {
   background-color: #f5f5f5;
-  height: 100vh;
 }
 
 .espaçamento {
-  margin-left: 20%;
+  margin-left: 40%;
   margin-top: 10%;
 }
 
