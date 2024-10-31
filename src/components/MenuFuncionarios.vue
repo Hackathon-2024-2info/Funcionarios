@@ -14,30 +14,30 @@ const toggleDropdown = () => {
     <div class="menu-sm">
       <header>
         <h1>Olá, Edson!</h1>
+        <img src="../assets/Group 37322.png" alt="">
+    
       </header>
       <nav>
         <div class="menu">
-<div class="barra">
-  <div>
-      <button class="dropdown-btn" @click="toggleDropdown">
-            <div class="mobile-menu">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
-          </button>
-  </div>
-     
- <div class="vazio">
+        <div class="container-nav">
+          <div>
+            <button class="dropdown-btn" @click="toggleDropdown">
+              <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
+            </button>
+          </div>
+          <div class="nav">
 
- </div>
-</div>
-   
-
-
+          </div>
+        </div>
           <div class="dropdown-content" v-if="isOpen">
             <a><router-link to="/about"> Estoque </router-link></a>
+            <hr>
             <a><router-link to="/servicos"> Servico </router-link></a>
+            <hr>
             <a><router-link to="/relatorios"> Relatório </router-link></a>
           </div>
         </div>
@@ -219,6 +219,10 @@ body {
     margin-top: 35%;
   }
 
+  .barra {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+  }
 }
 
 @media only screen and (min-device-width: 1500px) {
@@ -268,7 +272,7 @@ body {
     box-sizing: border-box;
   }
 
-  white .img {
+ .img {
     width: 17vh;
     height: 17vh;
     margin-top: 10%;
@@ -371,17 +375,22 @@ body {
     display: none;
   }
 
+
   header {
-    background: #D9D9D9;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 5%;
+    background: rgba(217, 217, 217, 0.38);
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-left: 10%;
     font-family: 'Readex Pro';
+    display: flex;
   }
 
+  h1{
+     font-weight: 600;
+  }
 
   body {
-    font-family: Arial, sans-serif;
+    width: 100%;
   }
 
   .menu {
@@ -393,30 +402,56 @@ body {
     position: absolute;
     background-color: #180577;
 
-    min-width: 160px;
-    z-index: 1;
+    min-width: 500%;
+   
   }
 
   .dropdown-content a {
     color: white;
-    padding: 12px 16px;
+    padding: 2%;
+
+    text-align: center;
     text-decoration: none;
     display: block;
+    font-weight: 600;
   }
 
   .dropdown-content a:hover {
     background-color: #f1f1f1;
-    color: black ;
+    color: black;
 
   }
 
   .dropdown-content {
     display: block;
+    font-family: 'Plus Jakarta Sans';
+    padding-left: 20%;
+    padding-right: 20%;
+    width: 209px;
   }
 
+  hr{
 
-  .mobile-menu div {
-    width: 32px;
+  }
+
+  .line1{
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  .line2{
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  .line3{
+    width: 25px;
     height: 2px;
     background: #fff;
     margin: 8px;
@@ -425,8 +460,8 @@ body {
 
   .mobile-menu {
     display: block;
-
-
+    padding-left: 50%;
+    padding-top: 10%;
   }
 
   .nav-list.active {
@@ -439,15 +474,17 @@ body {
     max-width: fit-content;
   }
 
-  .menu {
-   
-
+  .container-nav{
+    display: flex;
   }
 
-  .barra{
-    display: grid;
-    grid-template-columns: 18% 1fr;
+  nav{
+    background-color: #180577;
   }
+
+img{
+  margin-left: 30%;
+}
 
 }
 </style>
