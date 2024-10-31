@@ -1,5 +1,5 @@
 <script setup>
-import MenuFuncionarios from '@/components/MenuFuncionarios.vue'
+import MenuFuncionarios from '@/components/MenuAdministradores.vue'
 
 </script>
 
