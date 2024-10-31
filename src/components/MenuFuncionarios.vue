@@ -36,7 +36,7 @@ const toggleDropdown = () => {
           <div class="dropdown-content" v-if="isOpen">
             <a><router-link to="/about"> Estoque </router-link></a>
             <hr>
-            <a><router-link to="/servicos"> Servico </router-link></a>
+            <a><router-link to="/servicos"> Serviço </router-link></a>
             <hr>
             <a><router-link to="/relatorios"> Relatório </router-link></a>
           </div>
@@ -419,7 +419,10 @@ body {
   .dropdown-content a:hover {
     background-color: #f1f1f1;
     color: black;
+margin-left: -3.69%;
+    width: 209px;
 
+    padding-right:15px;
   }
 
   .dropdown-content {
@@ -431,7 +434,9 @@ body {
   }
 
   hr{
-
+padding-left: 103%;
+padding-right: 50%;
+margin-left: -50%;
   }
 
   .line1{
@@ -484,7 +489,7 @@ body {
 
 img{
   margin-left: 30%;
-}
 
+}
 }
 </style>
