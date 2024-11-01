@@ -107,7 +107,7 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
-
+@media only screen and (min-device-width: 601px) {
 #main {
   width: 39%;
   margin-left: 25%;
@@ -533,5 +533,238 @@ h6 {
     left: 12%;
 
   }
+}
+}
+
+@media only screen and (max-device-width: 600px) {
+  h6 {
+  font-family: 'Karla';
+  font-size: 15px;
+  color: #091D87;
+  font-weight: 400;
+  padding-left: 20%;
+}
+
+#main {
+
+}
+
+.container {
+margin: 50%;
+
+}
+
+
+
+.espacing {
+  height: 2vh;
+
+}
+
+.relatorio {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 170%;
+  color: #180577;
+
+  margin-left: 15%;
+  margin-top: 7%;
+}
+
+.espacamento {
+  margin-top: 2.8%;
+}
+
+
+#opcoes {
+  width: 465px;
+  height: 53px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-size: 14px;
+  color: #687C94;
+}
+
+
+
+.input1 {
+  padding: 10px 16px;
+  gap: 10px;
+  width: 430px;
+  height: 34px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+
+}
+
+
+
+
+.input2 {
+  padding: 10px 16px;
+  width: 430px;
+  height: 34px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+  border: none;
+  outline: none;
+
+}
+
+
+.input3 {
+  width: 465px;
+  height: 403px;
+  top: 177px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #687C94;
+  color: #000000;
+  border: none;
+  outline: none;
+
+}
+
+
+
+label {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #666666;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  padding: 15px;
+  margin-left: -2.1%;
+}
+
+
+#enviar {
+  background-color: #091D87;
+  border-radius: 5px;
+  font-family: 'Karla';
+  padding: 15px 40px;
+  width: 148px;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  margin-top: 3rem;
+  border: none;
+  text-align: center;
+  margin-left: 51%;
+}
+
+
+#arquive-selected {
+  font-size: 12px;
+  color: #000000;
+  font-family: 'Karla';
+  font-weight: 300;
+  margin-top: 4%;
+}
+
+.arquivo {
+  width: 63%;
+  height: 6vh;
+  margin-left: -1%;
+  border-radius: 20px;
+  border-color: rgba(217, 217, 217, 0.43);
+  margin-top: 10%;
+  display: grid;
+  margin-left: 6%;
+  grid-template-rows: 20% 40% 20%;
+  background-color: rgba(217, 217, 217, 0.43);;
+}
+
+h4 {
+  font-size: 12px;
+  color: #555555;
+  font-family: 'Karla';
+  font-weight: 300;
+  padding-left: 20%;
+}
+
+h6 {
+  font-family: 'Karla';
+  font-size: 16px;
+  color: #091D87;
+  font-weight: 400;
+  padding-left: 20%;
+}
+
+
+
+#file-input {
+  background-image: ("@/assets/iconimage.png");
+  width: 34px;
+  height: 34px;
+
+}
+
+
+.icon-button{
+  border: 0px;
+  margin-top: 2%;
+}
+
+.espacing{
+  height: 2vh;
+}
+
+
+#arquive-selected{
+    font-size: 12px;
+    color: #000000;
+    font-family: 'Karla';
+    font-weight: 300;
+    margin-top: 4%;
+    margin-left: 2px;
+}
+
+
+
+#imagelogo {
+    width: 24px;
+    height: 24px;
+    padding: 3%;
+    left: 12%;
+
+}
+.box{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 }
 </style>
