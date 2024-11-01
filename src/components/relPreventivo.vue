@@ -71,11 +71,11 @@ const servicos = ref([
       <div class="container-checkbox">
         <template v-for="servico in servicos" :key="servico.id">
           <label class="label-pergunta" for="">{{ servico.texto }}:</label>
-          <span class="teste">
+          <span>
             <input type="radio" id="ok" v-model="servico.valor" :value="true" />
             <label for="ok">Sim</label>
           </span>
-          <span class="teste">
+          <span>
             <input type="radio" id="nok" v-model="servico.valor" :value="false" />
             <label for="nok">Não</label>
           </span>
@@ -94,7 +94,7 @@ const servicos = ref([
 
 main {
   background-color: #f5f5f5;
-  margin-top: -65%;
+  margin-top: 20%;
 }
 
 .espaçamento {
@@ -200,15 +200,16 @@ button {
 }
 
 
-@media only screen and (max-device-width: 480px) {
-  main {
+@media only screen and (max-device-width: 768px) {
+main {
   background-color: #f5f5f5;
   margin-top: 10%;
 }
 
 .espaçamento {
-  margin-left: 5%;
+  margin-left: 1%;
 }
+
 .label-pergunta {
   margin-bottom: 10%;
   width:200%;
@@ -216,26 +217,24 @@ button {
 
 span {
   margin-top: -16%;
-  margin-left: 150px;
-}
-
-span label {
-
+  /* margin-left: 120px; */
 }
 
 h1 {
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 26.5px;
+  font-size: 22px;
+  width: 100%;
   color: #180577;
   margin-bottom: 3%;
   margin-left: 5%;
 }
 
 .container-inputs-num {
+  width: 100%;
   display: flex;
-  gap: 20%;
+  gap: 15%;
   margin-left: 5%;
   margin-top: 10%;
 }
@@ -287,11 +286,16 @@ input[type='radio'] {
 
 .container-checkbox {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
   /* flex-direction: column; */
   margin-top: 3%;
-  width: 50%;
-  margin-left: 5%;
+  width: 100%;
+  padding: 5%;
+  /* margin-left: 5%; */
+}
+
+.container-checkbox label {
+  width: 100%;
 }
 
 .container-checkbox span {
