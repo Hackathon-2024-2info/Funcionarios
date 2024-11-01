@@ -1,9 +1,10 @@
 <script setup>
 import MenuFuncionarios from "@/components/MenuFuncionarios.vue";
 import pagHeader from "@/components/pagHeader.vue";
+import RelatorioChamd from "@/components/RelatorioChamd.vue";
 </script>
 
 <template> 
-<pagHeader></pagHeader>
-<MenuFuncionarios></MenuFuncionarios>
+
+<RelatorioChamd></RelatorioChamd>
 </template>

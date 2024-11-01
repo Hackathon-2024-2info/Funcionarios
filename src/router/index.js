@@ -141,8 +141,12 @@ const router = createRouter({
       path: '/orcamento',
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
+    },
+    {
+      path: '/relatorios',
+      name: 'relatorios',
+      component: () => import('@/views/RelatoriosFuncionariosView.vue')
     }
-
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'
