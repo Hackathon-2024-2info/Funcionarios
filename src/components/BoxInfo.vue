@@ -97,7 +97,7 @@ const itens = [
 main {
   background-color: #f5f5f5;
   height: 154vh;
-  margin-top: -82%;
+  margin-top: 10%;
 }
 
 .espaçamento {
