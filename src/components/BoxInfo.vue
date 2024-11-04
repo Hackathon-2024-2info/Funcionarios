@@ -58,14 +58,14 @@ const itens = [
         </div>
       </div>
     </div>
-    <!-- <div class="espaçamento-lista">
+    <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
       <ul class="lista">
         <li v-for="item in itens" :key="item.nome">
           {{ item.nome }}
         </li>
       </ul>
-    </div>  ARRUMAREI EM CASA POIS NA ESCOLA NAO VAI TA DANDO-->
+    </div>
   </main>
 </template>
 
@@ -104,7 +104,8 @@ main {
   display: grid;
   margin-left: 20%;
   margin-right: 0px;
-  margin-top: -15%;
+  /* margin-top: -95%; ESPAÇAMENTO COM OS COMPONENTES INCLUSOS!!!! VOU MUDAR PARA MEXER NA RESPONSIVIDADE P/ MOBILE*/
+  margin-top: -12%;
 }
 
 .box {
@@ -174,7 +175,8 @@ main {
 }
 .descricao{
   line-height: 110%;
-  width: 100px;
+  width: 500px;
+  word-wrap: break-word;
 }
 
 .espaçamento-lista {
@@ -182,7 +184,7 @@ main {
   place-items: end;
 }
 
-/* .titulo-lista {
+.titulo-lista {
   display: flex;
   list-style: none;
   position: absolute;
@@ -239,7 +241,7 @@ ul li::before {
   left: -30px;
   top: 50%;
   transform: translateY(-60%);
-}  ARRUMAREI EM CASA POIS NA ESCOLA NAO VAI TA DANDO*/
+} 
 
 @media only screen and (max-device-width: 480px) {
   .box {
