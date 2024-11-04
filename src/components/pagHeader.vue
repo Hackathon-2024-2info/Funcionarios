@@ -17,7 +17,7 @@ const authStore = useAuthStore()
 
 <style scoped>
 main{
-    padding-left: -1%;
+    padding-bottom: 10%;
 }
 
 header {
@@ -27,7 +27,6 @@ header {
     width: 82%;
     height: 18vh;
     background-color: #D9D9D9;
-    margin-top: -89.5%;
 }
 
 p {

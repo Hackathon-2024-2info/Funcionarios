@@ -48,12 +48,24 @@ const toggleDropdown = () => {
   <div class="menu-lg">
     <nav>
       <img src="../assets/logo AVANTE.png" alt="" class="img" />
-      <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicos"> Serviços </router-link>
-      <router-link to="/relatorios"> Relatórios </router-link>
-      <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/"> Orçamentos </router-link>
-      <router-link to="/"> Currículos </router-link>
+  <router-link to="/estoqueadmin" >
+        Estoque
+      </router-link>
+      <router-link to="/servicosadmin" >
+        Serviços
+      </router-link>
+      <router-link to="/relatoriosadmin">
+        Relatórios
+      </router-link>
+      <router-link to="/chamadosadmin" >
+        Chamados
+      </router-link>
+      <router-link to="/orcamentos" >
+        Orçamentos
+      </router-link>
+      <router-link to="/" >
+        Currículos
+      </router-link>
 
       <div class="vazio"></div>
 
