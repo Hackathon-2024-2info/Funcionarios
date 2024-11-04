@@ -53,7 +53,7 @@ const itens = [
           <p v-if="authStore.user.is_admin">Data de finalização: {{servico.datafinal}}</p>
           <p v-if="authStore.user.is_admin">Pendências: {{servico.pendencias}}</p>
           <div class="teste">
-          <button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button>
+          <RouterLink to="/detalherelatorio"><button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button></RouterLink>
         </div>
         </div>
       </div>
@@ -90,7 +90,6 @@ const itens = [
 .teste{
   display: flex;
   justify-content: end;
-  margin-top: -30%;
   margin-bottom: 30%;
 }
 

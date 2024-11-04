@@ -136,10 +136,14 @@ const itens = [
 body{
   color: #F5F5F5;
 }
+
+main{
+  margin-left: 25%;
+}
 .tabela {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  margin-left: 5%;
+  margin-left: 25%;
   padding-right: 10%;
 }
 
@@ -150,7 +154,7 @@ body{
   width: 80%;
   border-collapse: collapse;
   margin: 0 auto;
-    margin-left: 5%;
+    margin-left: 20%;
   line-height: 2.5rem;
 
   & td {
@@ -278,7 +282,7 @@ li {
 
 
 .linha {
-  width: 150%;
+  width: 100%;
   margin-top: 5%;
   margin-bottom: -10%;
 }

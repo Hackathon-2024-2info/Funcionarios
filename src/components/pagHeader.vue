@@ -10,15 +10,14 @@ const authStore = useAuthStore()
     <main>
     <header>
         <p>Olá, Edson!</p>
-        <img src="../assets/foto-perfil.png" alt="" @click="authStore.toggleAdmin">
+        <RouterLink to="/perfil"><img src="../assets/foto-perfil.png" alt=""></RouterLink>
+        <button @click="authStore.toggleAdmin">trocar p admin</button>
     </header>
 </main>
 </template>
 
 <style scoped>
 main{
-    margin-top: -88.5%;
-    padding-left: 1%;
     padding-bottom: 10%;
 }
 
@@ -29,7 +28,6 @@ header {
     width: 82%;
     height: 18vh;
     background-color: #D9D9D9;
-    margin-top: -89.5%;
 }
 
 p {
