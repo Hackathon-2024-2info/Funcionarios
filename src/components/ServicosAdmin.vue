@@ -7,7 +7,7 @@
       <div>
         <main>
           <div class="filtrar">
-            <button class="btn-azul">ADICIONAR NOVO SERVIÇO</button>
+            <RouterLink to="/addservico"><button class="btn-azul">ADICIONAR NOVO SERVIÇO</button></RouterLink>
             <label for="">Filtrar:</label>
             <select name="Selecione" id="Selecione">
               <option value="" class="option">SELECIONE</option>
