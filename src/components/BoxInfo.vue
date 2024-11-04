@@ -90,7 +90,6 @@ const itens = [
 .teste{
   display: flex;
   justify-content: end;
-  margin-top: -30%;
   margin-bottom: 30%;
 }
 
