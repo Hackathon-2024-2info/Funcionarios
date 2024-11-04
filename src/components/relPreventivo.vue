@@ -207,16 +207,17 @@ main {
 }
 
 .espaçamento {
-  margin-left: 1%;
+  margin-left: -2%;
 }
 
 .label-pergunta {
   margin-bottom: 10%;
-  width:200%;
+  width:150%;
+  font-size: 14px;
 }
 
 span {
-  margin-top: -16%;
+  margin-top: -30%;
   /* margin-left: 120px; */
 }
 
@@ -224,18 +225,18 @@ h1 {
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 24.5px;
   width: 100%;
   color: #180577;
   margin-bottom: 3%;
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 .container-inputs-num {
   width: 100%;
   display: flex;
   gap: 15%;
-  margin-left: 5%;
+  margin-left: 7%;
   margin-top: 10%;
 }
 
@@ -291,7 +292,7 @@ input[type='radio'] {
   margin-top: 3%;
   width: 100%;
   padding: 5%;
-  /* margin-left: 5%; */
+  margin-left: 2%;
 }
 
 .container-checkbox label {
