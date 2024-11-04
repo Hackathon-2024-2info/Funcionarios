@@ -13,7 +13,7 @@
         
 
         
-            <button>Editar perfil</button>
+            <RouterLink to="/editperfil"><button>Editar perfil</button></RouterLink>
         
     </div>
 </template>
