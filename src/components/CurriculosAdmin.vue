@@ -1,4 +1,5 @@
 <script setup>
+import AbrirCurriculo from '@/components/AbrirCurriculo.vue'
 const relatorios = [
   {
     id: 499,
@@ -93,8 +94,9 @@ const relatorios = [
 
         <td>{{ relatorio.data }}</td>
         <td>{{ relatorio.solicitador }}</td>
-
+ <AbrirCurriculo/>
         <div class="botoes">
+           
           <button class="x-btn">
             <img src="../assets/Icon.png" alt="" />
           </button>
