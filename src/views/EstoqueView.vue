@@ -12,3 +12,10 @@ import pagHeader from '@/components/pagHeader.vue';
 
 
 </template>
+
+<style scoped>
+*{
+    background-color: #f5f5f5f5;
+}
+
+</style>
