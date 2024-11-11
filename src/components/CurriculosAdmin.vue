@@ -1,35 +1,34 @@
 <script setup>
-import AbrirCurriculo from '@/components/AbrirCurriculo.vue'
 const relatorios = [
   {
     id: 499,
-    status: 'Em andamento',
+    cargo: 'Em andamento',
     data: '20/09/2024',
-    solicitador: 'Edson'
+    curriculo: 'Edson'
   },
   {
     id: 500,
-    status: 'Concluído',
+    cargo: 'Concluído',
     data: '20/09/2024',
-    solicitador: 'Ciclano'
+    curriculo: 'Ciclano'
   },
   {
     id: 501,
-    status: 'Concluído',
+    cargo: 'Concluído',
     data: '20/09/2024',
-    solicitador: 'Fulano'
+    curriculo: 'Fulano'
   },
   {
     id: 502,
-    status: 'Concluído',
+    cargo: 'Concluído',
     data: '20/09/2024',
-    solicitador: 'Ciclano'
+    curriculo: 'Ciclano'
   },
   {
     id: 503,
-    status: 'Em aberto',
+    cargo: 'Em aberto',
     data: '20/09/2024',
-    solicitador: 'Ciclano'
+    curriculo: 'Ciclano'
   }
 ]
 </script>
@@ -90,13 +89,20 @@ const relatorios = [
     <tbody>
       <tr v-for="relatorio in relatorios" :key="relatorio.id">
         <td>{{ relatorio.id }}</td>
-        <td>{{ relatorio.status }}</td>
+        <td>{{ relatorio.cargo }}</td>
 
         <td>{{ relatorio.data }}</td>
-        <td>{{ relatorio.solicitador }}</td>
- <AbrirCurriculo/>
+        <td>
+          <div class="abrir-curriculo">
+            <div>
+              <img src="@/assets/Icon2.png" alt="" id="imagelogo" class="img" />
+            </div>
+
+            <h6>ABRIR CURRÍCULO</h6>
+          </div>
+        </td>
+
         <div class="botoes">
-           
           <button class="x-btn">
             <img src="../assets/Icon.png" alt="" />
           </button>
@@ -111,12 +117,37 @@ const relatorios = [
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .botoes {
-margin-left: 10%;
+  margin-left: 10%;
 }
-.x-btn{
-    width: 24px;
-    height: 24px;
-    margin-top: 5%;
+.img {
+
+  float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 5px;
+  margin-top: 5%;
+}
+h6{
+  line-height: 110%;
+  text-align: left;
+padding-top: 8%;
+}
+.abrir-curriculo {
+  height: 45px;
+  font-family: 'Karla';
+  font-size: 110%;
+  width: 50%;
+  color: #091d87;
+  font-weight: 400;
+  display: block;
+  background-color: rgba(217, 217, 217, 0.2);
+  border-radius: 30px;
+  border: rgba(85, 85, 85, 0.5) 0.5px solid;
+}
+.x-btn {
+  width: 24px;
+  height: 24px;
+  margin-top: 5%;
 }
 .tabela {
   display: grid;
