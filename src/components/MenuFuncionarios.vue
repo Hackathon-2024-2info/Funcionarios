@@ -248,10 +248,6 @@ body {
     margin-bottom: -13%;
   }
 
-  .menu-lg {
-    display: grid;
-    grid-template-columns: 18% 1fr;
-  }
 
   template {
     margin: 0;
