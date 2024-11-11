@@ -60,6 +60,7 @@ const itens = [
     </div>
     <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
+      <br>
       <ul class="lista">
         <li v-for="item in itens" :key="item.nome">
           {{ item.nome }}
@@ -96,7 +97,8 @@ const itens = [
 
 main {
   background-color: #f5f5f5;
-  height: 154vh;
+  /* height: 154vh; */
+  height: 200vh;
   margin-top: 20%;
 }
 
@@ -253,6 +255,7 @@ ul li::before {
   border-radius: 10px;
   margin-top: 7%;
   margin-right: 0px;
+
 }
 
 img {
@@ -299,8 +302,47 @@ img {
 }
 .descricao{
   line-height: 110%;
-  width: 100px;
+  width: -600px;
+  word-wrap: break-word;
 }
 
+
+.espaçamento-lista {
+  width: 480px;
+  height: 50vh;
+  position: relative;
+  top: 15%;
+  margin-left: -70%;
+}
+.titulo-lista {
+  margin-bottom: 40px;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  color: #091d87;
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 15px;
+  width: 77.5%;
+  height: 5%;
+}
+
+.lista {
+  list-style-position: outside;
+  display: block;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  align-items: center;
+}
+ul li {
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 20px;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10%;
+  width: 300%;
+}
 }
 </style>
