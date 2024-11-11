@@ -1,5 +1,5 @@
 <script setup>
-import orcamentoAdm from '@/components/orcamentoAdm.vue';
+import FormAddServico from '@/components/FormAddServico.vue';
 import MenuAdministradores from '@/components/MenuAdministradores.vue';
 import pagHeader from '@/components/pagHeader.vue';
 </script>
@@ -7,5 +7,5 @@ import pagHeader from '@/components/pagHeader.vue';
 <template>
             <pagHeader></pagHeader>
             <MenuAdministradores></MenuAdministradores>
-    <orcamentoAdm></orcamentoAdm>
+    <FormAddServico></FormAddServico>
 </template>

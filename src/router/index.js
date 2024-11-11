@@ -23,14 +23,6 @@ const router = createRouter({
       component: () => import('../views/SolicitarChamadoView.vue')
     },   
     {
-      path: '/relatoriochamado',
-      name: 'relatoriochamado',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('@/components/RelatorioChamd.vue')
-    },
-    {
       path: '/editperfil',
       name: 'editperfil',
       // route level code-splitting
@@ -92,6 +84,11 @@ const router = createRouter({
       component: () => import('@/views/PagCurriculoView.vue')
     },
     {
+      path: '/addservico',
+      name: 'addservico',
+      component: () => import('@/views/AddServicoAdminView.vue')
+    },
+    {
       path: '/detalherelatorio',
       name: 'detalherelatorio',
       component: () => import('@/views/DetalheRelatorioView.vue')
@@ -132,6 +129,7 @@ const router = createRouter({
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
     }
+
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'

@@ -188,6 +188,7 @@ const itens = [
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
 @media only screen and (max-device-width: 700px) {
 
   body {
@@ -214,6 +215,7 @@ const itens = [
     line-height: 2rem;
     font-size: 85%;
     margin: 10%;
+
 
     & td {
       border-bottom: 0.5px solid #d4d2d2;
@@ -431,10 +433,13 @@ const itens = [
     margin-bottom: 5%;
   }
 
+
   .filtrar,
   .setas {
     margin-top: 1%;
   }
+
+
 
   .linha {
     width: 150%;

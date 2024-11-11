@@ -7,38 +7,25 @@
         <div>
             <h1 class="add">ADICIONAR ITEM AO ESTOQUE</h1>
             <label for=""> Nome do item </label>
-            <input class="input1" placeholder="Insira o nome do item a ser adicionado">
+            <input type="text" class="input1" placeholder="Insira o nome do item a ser adicionado">
         </div>
 
         <div class="espacamento"></div>
 
         <div>
             <label for=""> Marca do item </label>
-            <input class="input2" placeholder="Insira a marca do item">
+            <input type="text" class="input2" placeholder="Insira a marca do item">
         </div>
 
         <div class="espacamento"></div>
         <div>
             <label for="">Quantidade do item </label>
-            <input class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item">
+            <input type="text" class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item">
             <button id="Adicionar" type="submit">Adicionar</button>
         </div>
 
     </main>
 
-    <div>
-        <h1 class="adds">SOLICITAÇÕES DE ITENS</h1>
-        <section class="container">
-            <div class="container-carrosel">
-            <div class="espaco"> </div>
-                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
-                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
-                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
-                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
-                <img class="carrou-sel-img" src="@/assets/image 17.png" alt="">
-            </div>
-        </section>
-        </div>
 </template>
 
 
@@ -51,72 +38,13 @@
 
 
 #main {
-    width: 564px;
-    height: 734px;
+    width: 29%;
     margin-left: 24%;
     margin-top: 7%;
 }
 
-.container-carrosel{
-    margin-left: 4%;
-}
-
-.container {
-    position: absolute;
-    width: 400px;
-    right: 11%;
-    top: 27%;
-    padding: 10px;
-    background-color: #ececec;
-    border-radius: 20px;
-}
-
-.container-carrosel {
-    margin-top: 20px;
-    width: 320px;
-    height: 680px;
-    overflow-y: scroll;
-    background: #ececec;
-    display: flex;
-    flex-direction: column;
-    gap: 5%;
-    
-}
-
-.container-carrosel::-webkit-scrollbar {
-    width: 0.7vw;
-    width: 10px;
-    height: 15px;
-    
-}
-
-.container-carrosel::-webkit-scrollbar-track {
-    background-color: #f5f5f5;
-    border-radius: 4px;
-}
 
 
-.container-carrosel::-webkit-scrollbar-thumb {
-    background-color: #6e78ff;
-    border-radius: 10px;
-    width: 10px;
-    height: 15px;
-}
-
-
-
-.adds {
-    font-family: 'Readex Pro';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 18px;
-    color: #180577;
-    padding: 200px;
-    margin-left: 57%;
-    margin-top: -48%;
-
-}
 
 .add {
     font-family: 'Readex Pro';
@@ -125,19 +53,23 @@
     font-size: 26px;
     line-height: 18px;
     color: #180577;
-    padding: 53px;
+    padding: 10%;
     margin-left: -9%;
 }
 
+
+
 .espacamento {
-    margin-top: 23px;
+    margin-top: 5%;
 }
 
+
+
 .input1 {
-    padding: 10px 16px;
-    gap: 10px;
-    width: 465px;
-    height: 39px;
+    padding: 2% 3%;
+    gap: 1%;
+    width: 85%;
+    height: 46px;
     background: rgba(217, 217, 217, 0.43);
     border-radius: 5px;
     border: none;
@@ -152,9 +84,9 @@
 }
 
 .input2 {
-    padding: 10px 16px;
-    gap: 10px;
-    width: 465px;
+    padding: 2% 3%;
+    gap: 1%;
+    width: 85%;
     height: 46px;
     background: rgba(217, 217, 217, 0.43);
     border-radius: 5px;
@@ -176,9 +108,9 @@
 
 
 .input3 {
-    padding: 10px 16px;
-    gap: 10px;
-    width: 465px;
+    padding: 2% 3%;
+    gap: 1%;
+    width: 85%;
     height: 46px;
     background: rgba(217, 217, 217, 0.43);
     border-radius: 5px;
@@ -212,7 +144,7 @@ label {
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-    padding: 15px;
+    padding: 3%;
     margin-left: -2.1%;
 }
 
@@ -225,13 +157,12 @@ button {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 15px 40px;
-    width: 148px;
+    padding: 3% 5%;
     font-size: 16px;
     color: white;
     margin-top: 3rem;
     border: none;
-    margin-left: 29%;
+    margin-left: 32%;
     font-style: normal;
     font-weight: 700;
     line-height: 19px;
