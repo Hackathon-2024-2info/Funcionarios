@@ -7,31 +7,41 @@ export const useChamadoStore = defineStore('chamado', () => {
         id: 499,
         status: 'Em andamento',
         data: '20/09/2024',
-        solicitador: 'Edson'
+        solicitador: 'Edson',
+        descricao: 'djweifjeife wuoefjioefje wejfioefjioeqf uwejfowejfioeq',
+        titulo: 'faltando fita isolante'
       },
       {
         id: 500,
         status: 'Concluído',
         data: '20/09/2024',
-        solicitador: 'Ciclano'
+        solicitador: 'Ciclano',
+        descricao: 'djweifjeife wuoefjioefje wejfioefjioeqf uwejfowejfioeq',
+        titulo: 'faltando fita isolante'
       },
       {
         id: 501,
         status: 'Concluído',
         data: '20/09/2024',
-        solicitador: 'Fulano'
+        solicitador: 'Fulano',
+        descricao: 'djweifjeife wuoefjioefje wejfioefjioeqf uwejfowejfioeq',
+        titulo: 'faltando fita isolante'
       },
       {
         id: 502,
         status: 'Concluído',
         data: '20/09/2024',
-        solicitador: 'Ciclano'
+        solicitador: 'Ciclano',
+        descricao: 'djweifjeife wuoefjioefje wejfioefjioeqf uwejfowejfioeq',
+        titulo: 'faltando fita isolante'
       },
       {
         id: 503,
         status: 'Em aberto',
         data: '20/09/2024',
-        solicitador: 'Ciclano'
+        solicitador: 'Ciclano',
+        descricao: 'djweifjeife wuoefjioefje wejfioefjioeqf uwejfowejfioeq',
+        titulo: 'faltando fita isolante'
       }
   ])
 
@@ -41,13 +51,13 @@ export const useChamadoStore = defineStore('chamado', () => {
   //   }
 
 
-//   function getProductById(id) {
-//     console.log(id)
-//     const foundEstoque = estoques.value.find((estoque) => estoque.id == id);
-//     if (!foundEstoque) {
-//       console.log("Estoque not found");
-//     }
-//     return foundEstoque || null;
-//   }
-  return { chamados }
+  function getProductById(id) {
+    console.log(id)
+    const foundChamado = chamados.value.find((chamado) => chamado.id == id);
+    if (!foundChamado) {
+      console.log("Estoque not found: " + id);
+    }
+    return foundChamado || null;
+  }
+  return { chamados, getProductById }
 })

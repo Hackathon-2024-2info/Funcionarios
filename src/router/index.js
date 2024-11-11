@@ -94,9 +94,10 @@ const router = createRouter({
       component: () => import('@/views/DetalheRelatorioView.vue')
     },
     {
-      path: '/detalhechamado',
+      path: '/detalhechamado/:id',
       name: 'detalhechamado',
-      component: () => import('@/views/DetalhesChamadoAdminView.vue')
+      component: () => import('@/views/DetalhesChamadoAdminView.vue'),
+      props: true
     },
     {
       path: '/perfil',

@@ -7,5 +7,5 @@ import pagHeader from '@/components/pagHeader.vue';
 <template>
             <pagHeader></pagHeader>
             <MenuAdministradores></MenuAdministradores>
-    <DetalheRelatorio></DetalheRelatorio>
+     <DetalheRelatorio></DetalheRelatorio>
 </template>
