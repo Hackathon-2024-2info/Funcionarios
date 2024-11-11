@@ -93,13 +93,10 @@ const relatorios = [
 
         <td>{{ relatorio.data }}</td>
         <td>
-          <div class="abrir-curriculo">
-            <div>
-              <img src="@/assets/Icon2.png" alt="" id="imagelogo" class="img" />
-            </div>
-
-            <h6>ABRIR CURRÍCULO</h6>
-          </div>
+          <span class="abrir-curriculo">
+            <img src="@/assets/Icon2.png" alt="" id="imagelogo" class="img" />
+            <span class="curriculo">ABRIR CURRÍCULO</span>
+          </span>
         </td>
 
         <div class="botoes">
@@ -120,29 +117,27 @@ const relatorios = [
   margin-left: 10%;
 }
 .img {
-
   float: left;
-    border: transparent thin solid;
-    padding: 5px;
-    margin: 5px;
-  margin-top: 5%;
+  border: transparent thin solid;
+  padding: 5px;
+  margin: 5px;
+margin-bottom: 5%;
+  height: 60%;
+  width: 18%;
 }
-h6{
-  line-height: 110%;
-  text-align: left;
-padding-top: 8%;
-}
+
 .abrir-curriculo {
-  height: 45px;
+  height: 35px;
   font-family: 'Karla';
-  font-size: 110%;
+  font-size: 108%;
   width: 50%;
   color: #091d87;
   font-weight: 400;
-  display: block;
+  display: flex;  
   background-color: rgba(217, 217, 217, 0.2);
   border-radius: 30px;
   border: rgba(85, 85, 85, 0.5) 0.5px solid;
+  /* background-color: red; */
 }
 .x-btn {
   width: 24px;
@@ -325,7 +320,10 @@ li {
   margin-bottom: -10%;
 }
 
-/* img {
-  display:;
-} */
+.curriculo {
+  font-weight: 700;
+  line-height: 1rem;
+  font-size: 10px;
+  text-align: left;  
+}
 </style>
