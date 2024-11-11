@@ -1,36 +1,18 @@
 <script setup>
-const relatorios = [
-  {
-    id: 499,
-    status: 'Em andamento',
-    data: '20/09/2024',
-    solicitador: 'Edson'
-  },
-  {
-    id: 500,
-    status: 'Concluído',
-    data: '20/09/2024',
-    solicitador: 'Ciclano'
-  },
-  {
-    id: 501,
-    status: 'Concluído',
-    data: '20/09/2024',
-    solicitador: 'Fulano'
-  },
-  {
-    id: 502,
-    status: 'Concluído',
-    data: '20/09/2024',
-    solicitador: 'Ciclano'
-  },
-  {
-    id: 503,
-    status: 'Em aberto',
-    data: '20/09/2024',
-    solicitador: 'Ciclano'
-  }
-]
+import { onMounted, ref } from 'vue'
+import { useAuthStore } from '@/stores/auth';
+import { useChamadoStore } from '../stores/chamados.js';
+
+const props = defineProps(['id']);
+const chamadoStore = useChamadoStore();
+const authStore = useAuthStore()
+const chamado = ref({})
+
+
+// onMounted(() => {
+//   chamado.value = chamadoStore.getProductById(props.id)
+// })
+
 </script>
 
 <template>
@@ -56,7 +38,7 @@ const relatorios = [
             <section class="order-icons">
               <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
-            <span> Nº do relatório </span>
+            <span> Nº do chamado </span>
           </div>
         </th>
         <th>
@@ -64,7 +46,7 @@ const relatorios = [
             <section class="order-icons">
               <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
-            <span> Status do relaatório </span>
+            <span> Status do chamado </span>
           </div>
         </th>
         <th>
@@ -86,14 +68,14 @@ const relatorios = [
       </tr>
     </thead>
     <tbody>
-      <tr v-for="relatorio in relatorios" :key="relatorio.id">
-        <td>{{ relatorio.id }}</td>
-        <td>{{ relatorio.status }}</td>
-        <td>{{ relatorio.data }}</td>
-        <td>{{ relatorio.solicitador }}</td>
+      <tr v-for="chamado in chamadoStore.chamados" :key="chamado.id">
+        <td>{{ chamado.id }}</td>
+        <td>{{ chamado.status }}</td>
+        <td>{{ chamado.data }}</td>
+        <td>{{ chamado.solicitador }}</td>
         <td>
         <div class="path-detail">
-          <img src="@/assets/Group 37329.png" alt="" id="path-detail">
+          <RouterLink to="/detalhechamado"><img src="@/assets/Group 37329.png" alt="" id="path-detail"></RouterLink>
 
         </div>
         </td>

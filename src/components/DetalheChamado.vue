@@ -3,7 +3,7 @@
 <template>
     <main>
         <div class="botaozinho">
-            <img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
+            <RouterLink to="/chamadosadmin"><img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
         <div class="texts">
             <h1> Título do chamado</h1>

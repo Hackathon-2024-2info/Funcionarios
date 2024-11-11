@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useAuthStore } from '@/stores/auth';
-import { useServicoStore } from '../stores/products';
+import { useServicoStore } from '../stores/servicos.js';
 
 const props = defineProps(['id']);
 const servicoStore = useServicoStore();
