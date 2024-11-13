@@ -68,15 +68,15 @@ const relatorios = [
           </div>
         </th>
         <th>
-          <div class="th-content">
+          <div class="th-content" style="padding-left:25%;">
             <section class="order-icons">
               <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
-            <span> Data </span>
+            <span > Data </span>
           </div>
         </th>
         <th>
-          <div class="th-content">
+          <div class="th-content" style="padding-left:20%;">
             <section class="order-icons">
               <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
@@ -88,10 +88,9 @@ const relatorios = [
 
     <tbody>
       <tr v-for="relatorio in relatorios" :key="relatorio.id">
-        <td>{{ relatorio.id }}</td>
-        <td>{{ relatorio.cargo }}</td>
-
-        <td>{{ relatorio.data }}</td>
+        <td class="td">{{ relatorio.id }}</td>
+        <td class="td">{{ relatorio.cargo }}</td>
+        <td style="padding-left:7%;">{{ relatorio.data }}</td>
         <td>
           <span class="abrir-curriculo">
             <img src="@/assets/Icon2.png" alt="" id="imagelogo" class="img" />
@@ -113,36 +112,43 @@ const relatorios = [
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .botoes {
   margin-left: 10%;
 }
+td{
+  border-bottom: 0.5px solid #d4d2d2;
+}
+
 .img {
-  float: left;
-  border: transparent thin solid;
-  padding: 5px;
-  margin: 5px;
-margin-bottom: 5%;
-  height: 60%;
-  width: 18%;
+  padding-left: 5%;
+  padding-top: 4.5%;
+  padding-left: 10%;
+  width: 23px;
+  height: 22px;
 }
 
 .abrir-curriculo {
   height: 35px;
   font-family: 'Karla';
-  font-size: 108%;
+margin-left: 35%;
+  font-size: 140px;
   width: 50%;
   color: #091d87;
   font-weight: 400;
-  display: flex;  
+  display: flex;
   background-color: rgba(217, 217, 217, 0.2);
   border-radius: 30px;
   border: rgba(85, 85, 85, 0.5) 0.5px solid;
-  /* background-color: red; */
 }
+
 .x-btn {
   width: 24px;
   height: 24px;
   margin-top: 5%;
+}
+.td{
+  padding-left: 3%;
 }
 .tabela {
   display: grid;
@@ -160,9 +166,7 @@ margin-bottom: 5%;
   margin-left: 25%;
   line-height: 2.5rem;
 
-  & td {
-    border-bottom: 0.5px solid #d4d2d2;
-  }
+ 
 
   & td .path-detail {
     display: flex;
@@ -178,6 +182,8 @@ margin-bottom: 5%;
     /* Alinha o conteúdo verticalmente */
     justify-content: flex-start;
     /* Se quiser espaçar igualmente */
+    margin-left: 15%;
+
   }
 }
 
@@ -291,6 +297,7 @@ select {
   font-size: 17%;
 }
 
+
 ul,
 li {
   font-family: 'Roboto', sans-serif;
@@ -323,7 +330,9 @@ li {
 .curriculo {
   font-weight: 700;
   line-height: 1rem;
-  font-size: 10px;
-  text-align: left;  
+  font-size: 9.5%;
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 1%;
 }
 </style>
