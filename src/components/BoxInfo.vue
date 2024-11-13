@@ -249,7 +249,7 @@ ul li::before {
   .box {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 110%;
   height: 150%;
   background: #ffffff;
   border-radius: 10px;
@@ -264,24 +264,27 @@ img {
 }
 .espaçamento {
   display: grid;
-  margin-left: 5%;
+  margin-left: 2%;
   margin-right: 0px;
   margin-top: -15%;
 }
 .titulo {
-  margin-top: 10%;
+  margin-top: 4%;
   font-size: 26px;
+  font-family: 'Kantumruy Pro';
 }
 
 .minicontainer {
   width: 70%;
   margin-left: 5%;
-  height: 2.5%;
-  margin-top: -18%;
+  height: 3%;
+  margin-top: -14%;
 }
 
 .minicontainer p {
-  margin-top: -0.5%;
+  margin-top: -1%;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .infos {
@@ -298,7 +301,7 @@ img {
   flex-direction: column;
   justify-content: center;
   color: black;
-  margin-bottom: 2%;
+
 }
 .descricao{
   line-height: 110%;
@@ -312,7 +315,7 @@ img {
   height: 50vh;
   position: relative;
   top: 15%;
-  margin-left: -70%;
+  margin-left: -55%;
 }
 .titulo-lista {
   margin-bottom: 40px;
