@@ -7,16 +7,16 @@
   <router-link to="/estoqueadmin" >
         Estoque
       </router-link>
-      <router-link to="/servicos" >
+      <router-link to="/servicosadmin" >
         Serviços
       </router-link>
-      <router-link to="/relatorios">
+      <router-link to="/relatoriosadmin">
         Relatórios
       </router-link>
-      <router-link to="/" >
+      <router-link to="/chamadosadmin" >
         Chamados
       </router-link>
-      <router-link to="/" >
+      <router-link to="/orcamentos" >
         Orçamentos
       </router-link>
       <router-link to="/" >
