@@ -1,4 +1,19 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from 'vue'
+// import { useAuthStore } from '@/stores/auth';
+import { useServicoStore } from '../stores/servicos.js';
+
+const props = defineProps(['id']);
+const servicoStore = useServicoStore();
+// const authStore = useAuthStore()
+const servico = ref({})
+
+
+onMounted(() => {
+  servico.value = servicoStore.getProductById(props.id)
+})
+
+</script>
 
 <template>
  
@@ -23,13 +38,13 @@
         </main>
         <section>
           <div>
-            <div class="box">
+            <div class="box" :key="servico.id">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
+                <h3>{{servico.nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
+                  <P class="txt-box">{{servico.cliente}}</P>
+                  <p class="txt-box"> {{ servico.datainicio }}</p>
                 </div>
 
                 <RouterLink to="/detalheservico/:id"><button class="btn-box">Ver detalhes</button></RouterLink>

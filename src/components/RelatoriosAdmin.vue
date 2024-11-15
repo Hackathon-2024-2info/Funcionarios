@@ -31,7 +31,7 @@
                   <p class="txt-box">Data de início: 13/09/2024</p>
                 </div>
 
-                <button class="btn-box">Ver detalhes</button>
+                <RouterLink to="/detalherelatorio"><button class="btn-box">Ver detalhes</button></RouterLink>
               </div>
             </div>
             <div class="box">

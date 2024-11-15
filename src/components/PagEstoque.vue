@@ -1,12 +1,11 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-import { useAuthStore } from '@/stores/auth';
+// import { useAuthStore } from '@/stores/auth';
 import { useEstoqueStore } from '../stores/estoque.js';
 
-const props = defineProps(['id']);
+// const props = defineProps(['id']);
 const estoqueStore = useEstoqueStore();
-const authStore = useAuthStore();
-const estoque = ref({})
+// const authStore = useAuthStore();
+// const estoque = ref({});
 
 // console.log(estoqueStore.getProductById())
 // onMounted(() => {

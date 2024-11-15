@@ -1,4 +1,18 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from 'vue'
+// import { useAuthStore } from '@/stores/auth';
+import { useRelatorioStore } from '@/stores/relatorios.js';
+
+const props = defineProps(['id']);
+const relatorioStore = useRelatorioStore();
+// const authStore = useAuthStore()
+const relatorio = ref({})
+
+
+onMounted(() => {
+  relatorio.value = relatorioStore.getProductById(props.id)
+})
+</script>
 
 <template>
     <main>
@@ -6,18 +20,16 @@
             <img class="img" src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
         </div>
         <div class="texts">
-            <h1> Título do Relatório</h1>
-            <p>Remetente: Edson</p>
-            <p class="chamado">Chamado aberto em: 13/09/2024</p>
-            <p class="tempo">Tempo de realização do serviço: 12 horas</p>
-            <p class="dificuldade">Dificuldade do serviço: Média</p>
-            <p class="colaborar">Colaboração da empresa: Boa</p>
-            <p class="pendente">Possíveis pendências que ficaram na máquina:
-                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            <h1> {{relatorio.titulo}}</h1>
+            <p>Remetente: {{relatorio.remetente}}</p>
+            <p class="chamado">Relatório enviado em: {{relatorio.dataenvio}}</p>
+            <p class="tempo">Tempo de realização do serviço: {{relatorio.temporealizacao}}</p>
+            <p class="dificuldade">Dificuldade do serviço: {{relatorio.dificuldade}}</p>
+            <p class="colaborar">Colaboração da empresa: {{relatorio.colaboracao}}</p>
+            <p class="pendente">Possíveis pendências que ficaram na máquina: {{ relatorio.pendencias }}
             </p>
             <div class="espaco"></div>
-            <p class="descricao">Descrição:
-                bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccwijedoiewjdewoidhewudhewyifgewufeiocjjkgeweydw8oueroifhewyydg379uwrfh4ury3279ew09fuhwiudjewifuewygdqwudhewifu8yqwuhdewdjopwefiuoeruquiegqwjbdewiofjewoiwoieyuiqwhdjkdneijewihwyvdjhwbewdewijduwweidhnewoidewopdkewpduewouhdwoudhewiodjiwejdoiwjdwqdbwuihdwoidhoiqwhdwihdwiohdwodhoidqwhdiwhdoiwqdhiowhdoiqwhdqwoidhwoidhoidhqwihdwoiqhdoiqwhdoiwqh
+            <p class="descricao">Descrição: {{ relatorio.descricao }}
             </p>
 
         </div>

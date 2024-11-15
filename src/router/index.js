@@ -89,9 +89,10 @@ const router = createRouter({
       component: () => import('@/views/AddServicoAdminView.vue')
     },
     {
-      path: '/detalherelatorio',
+      path: '/detalherelatorio/:id',
       name: 'detalherelatorio',
-      component: () => import('@/views/DetalheRelatorioView.vue')
+      component: () => import('@/views/DetalheRelatorioView.vue'),
+      props: true
     },
     {
       path: '/detalhechamado/:id',
