@@ -277,5 +277,129 @@ button {
     margin-bottom: 15%;
 }
 
+@media only screen and (max-device-width: 480px) {
+    .container-um {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 14%;
+        background: #384dbb;
+        border-radius: 24px;
+        color: white;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
 
+    .container-um h1 {
+        display: flex;
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 22px;
+        margin-left: 7%;
+        margin-top: 10%;
+    }
+
+    .num {
+        display: flex;
+        justify-content: end;
+        margin-top: -9%;
+        margin-right: 5%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .quantia {
+        display: flex;
+        margin-left: 7%;
+        margin-top: 2%;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .container-input {
+        display: flex;
+        float: left;
+        flex-direction: column;
+        width: 40%;
+        background: #d9d9d9;
+        border-radius: 20px;
+        margin-right: 10%;
+        margin-bottom: 3.5%;
+        margin-top: 3.5%;
+        margin-left: 7%;
+    }
+    .container-dois {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 30%;
+    background: #384dbb;
+    border-radius: 24px;
+    color: white;
+    margin-left: 20%;
+}
+.tipo-input-dois {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5% 7%;
+    background: rgba(84, 111, 255, 0.32);
+    border-radius: 5px;
+    border: none;
+    width: 85px;
+    height: 20px;
+    background: rgba(217, 217, 217, 0.38);
+    border-radius: 20px;
+    border: none;
+    margin-left: 30%;
+    margin-top: -5%;
+}
+select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2% 20%;
+    background: rgba(84, 111, 255, 0.32);
+    border-radius: 5px;
+    border: none;
+    width: 120px;
+    height: 23px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 30%;
+    margin-top: -3%;
+}
+.num-dois {
+    display: flex;
+    justify-content: end;
+    margin-top: -30%;
+    margin-right: 2%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 30%;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    height: 28px;
+    top: calc(50% - 28px / 2 + 215px);
+    background: #091d87;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 25%
+}
+
+}
 </style>
