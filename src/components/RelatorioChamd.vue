@@ -3,87 +3,175 @@
 </script>
 
 <template>
-  <main id="main">
+  <div class="lg"><main id="main">
 
-    <div class="box">
-      <h1 class="relatorio">RELÁTORIO DE CONCLUSÃO DE SERVIÇO</h1>
-      <label for=""> Dificuldade do serviço</label>
-      <select id="opcoes" name="opcoes" required>
-        <option value="" disabled selected>Selecione</option>
-      </select>
+<div class="box">
+  <h1 class="relatorio">RELÁTORIO DE CONCLUSÃO DE SERVIÇO</h1>
+  <label for=""> Dificuldade do serviço</label>
+  <select id="opcoes" name="opcoes" required>
+    <option value="" disabled selected>Selecione</option>
+  </select>
+</div>
+
+<div class="espacamento"></div>
+
+<div class="box">
+  <label for="opções"> Tempo de realização do serviço</label>
+  <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
+</div>
+
+<div class="espacamento"></div>
+
+
+<div class="box">
+
+  <label for=""> Colaboração da empresa que recebeu o serviço</label>
+  <select id="opcoes" name="opcoes" required>
+    <option value="cor" disabled selected>Selecione</option>
+  </select>
+</div>
+
+<div class="espacamento"></div>
+
+<div class="box">
+
+  <label for=""> Possíveis pendências que ficaram na máquina </label>
+  <input class="input2" placeholder="Insira possíveis pendências">
+</div>
+
+
+<div class="espacing" @click="openFileSelection">
+  <fieldset class="arquivo">
+    <div class="archive-input">
+      <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+        style="display: none" />
+      <button @click="triggerFileInput" class="icon-button">
+        <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
+        <!-- Example icon -->
+      </button>
+      <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
     </div>
-
-    <div class="espacamento"></div>
-
-    <div class="box">
-      <label for="opções"> Tempo de realização do serviço</label>
-      <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
-    </div>
-
-    <div class="espacamento"></div>
-
-
-    <div class="box">
-
-      <label for=""> Colaboração da empresa que recebeu o serviço</label>
-      <select id="opcoes" name="opcoes" required>
-        <option value="cor" disabled selected>Selecione</option>
-      </select>
-    </div>
-
-    <div class="espacamento"></div>
-
-    <div class="box">
-
-      <label for=""> Possíveis pendências que ficaram na máquina </label>
-      <input class="input2" placeholder="Insira possíveis pendências">
-    </div>
-
-
-    <div class="espacing" @click="openFileSelection">
-      <fieldset class="arquivo">
-        <div class="archive-input">
-          <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
-            style="display: none" />
-          <button @click="triggerFileInput" class="icon-button">
-            <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
-            <!-- Example icon -->
-          </button>
-          <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
-        </div>
-        <h6>INSIRA AQUI</h6>
-        <h4>Imagens da máquina ANTES do serviço </h4>
-      </fieldset>
-    </div>
+    <h6>INSIRA AQUI</h6>
+    <h4>Imagens da máquina ANTES do serviço </h4>
+  </fieldset>
+</div>
 
 
 
 
-  </main>
+</main>
 
-  <div class="container">
-    <label for="">Descrição da máquina e da realização do serviço</label>
-    <input class="input3" placeholder="Insira a descrição">
-  <div class="espacing" @click="openFileSelection">
-    <fieldset class="arquivo">
-      <div class="archive-input">
-        <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
-          style="display: none" />
-        <button @click="triggerFileInput" class="icon-button">
-          <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
-          <!-- Example icon -->
-        </button>
-        <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
-      </div>
-      <h6>INSIRA AQUI</h6>
-      <h4>Imagens da máquina DEPOIS do serviço</h4>
-    </fieldset>
-  </div> 
-   </div>
-
-  <div>
-    <button id="enviar" type="submit">Enviar</button>
+<div class="container">
+<label for="">Descrição da máquina e da realização do serviço</label>
+<input class="input3" placeholder="Insira a descrição">
+<div class="espacing" @click="openFileSelection">
+<fieldset class="arquivo">
+  <div class="archive-input">
+    <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+      style="display: none" />
+    <button @click="triggerFileInput" class="icon-button">
+      <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
+      <!-- Example icon -->
+    </button>
+    <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
   </div>
+  <h6>INSIRA AQUI</h6>
+  <h4>Imagens da máquina DEPOIS do serviço</h4>
+</fieldset>
+</div> 
+</div>
+
+<div>
+<button id="enviar" type="submit">Enviar</button>
+</div></div>
+
+
+
+
+  <div class="sm">
+    <main id="main">
+
+<div class="box">
+  <h1 class="relatorio">RELÁTORIO DE CONCLUSÃO DE SERVIÇO</h1>
+  <label for=""> Dificuldade do serviço</label>
+  <select id="opcoes" name="opcoes" required>
+    <option value="" disabled selected>Selecione</option>
+  </select>
+</div>
+
+<div class="espacamento"></div>
+
+<div class="box">
+  <label for="opções"> Tempo de realização do serviço</label>
+  <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
+</div>
+
+<div class="espacamento"></div>
+
+
+<div class="box">
+
+  <label for=""> Colaboração da empresa que recebeu o serviço</label>
+  <select id="opcoes" name="opcoes" required>
+    <option value="cor" disabled selected>Selecione</option>
+  </select>
+</div>
+
+<div class="espacamento"></div>
+
+<div class="box">
+
+  <label for=""> Possíveis pendências que ficaram na máquina </label>
+  <input class="input2" placeholder="Insira possíveis pendências">
+</div>
+
+<div class="container">
+<label for="">Descrição da máquina e da realização do serviço</label>
+</div>
+<input class="input3" placeholder="Insira a descrição">
+<div class="espacing" @click="openFileSelection">
+  <fieldset class="arquivo">
+    <div class="archive-input">
+      <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+        style="display: none" />
+      <button @click="triggerFileInput" class="icon-button">
+        <i class="fas fa-file-archive"> <img src="@/assets/file-attach-01.png" alt="" id="imagelogo"></i>
+        <!-- Example icon -->
+      </button>
+      <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
+    </div>
+    <h6>INSIRA AQUI</h6>
+    <h4>Imagens da máquina ANTES do serviço </h4>
+  </fieldset>
+</div>
+
+
+
+
+</main>
+
+
+<div class="espacing" @click="openFileSelection">
+<fieldset class="arquivo">
+  <div class="archive-input">
+    <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+      style="display: none" />
+    <button @click="triggerFileInput" class="icon-button">
+      <i class="fas fa-file-archive"> <img src="@/assets/file-attach-01.png" alt="" id="imagelogo"></i>
+      <!-- Example icon -->
+    </button>
+    <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
+  </div>
+  <h6>INSIRA AQUI</h6>
+  <h4>Imagens da máquina DEPOIS do serviço</h4>
+</fieldset>
+</div> 
+</div>
+
+<div>
+<button id="enviar" type="submit">Enviar</button>
+</div> 
+
 </template>
 
 <script setup>
@@ -111,6 +199,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 @media only screen and (min-device-width: 601px) {
+  .sm{
+    display: none;
+  }
 #main {
   width: 564px;
   height: 734px;
@@ -351,13 +442,13 @@ h6 {
   padding-left: 20%;
 }
 
-#main {
-
+.lg{
+  display: none;
 }
 
 .container {
-margin: 50%;
-
+margin-left: 10%;
+width: 50%;
 }
 
 
@@ -371,11 +462,10 @@ margin: 50%;
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 170%;
+  font-size: 150%;
   color: #180577;
-
-  margin-left: 15%;
-  margin-top: 7%;
+  width:110%;
+  margin-top: 10%;
 }
 
 .espacamento {
@@ -384,7 +474,7 @@ margin: 50%;
 
 
 #opcoes {
-  width: 465px;
+  width: 100%;
   height: 53px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
@@ -393,7 +483,8 @@ margin: 50%;
   font-family: 'Karla';
   font-style: normal;
   font-size: 14px;
-  color: #687C94;
+  color: #666666;
+  padding-left: 3.5%;
 }
 
 
@@ -401,7 +492,7 @@ margin: 50%;
 .input1 {
   padding: 10px 16px;
   gap: 10px;
-  width: 430px;
+  width: 90%;
   height: 34px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
@@ -412,8 +503,7 @@ margin: 50%;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #687C94;
-  color: #000000;
+  color:#666666;
 
 }
 
@@ -422,7 +512,7 @@ margin: 50%;
 
 .input2 {
   padding: 10px 16px;
-  width: 430px;
+  width: 90%;
   height: 34px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
@@ -431,8 +521,7 @@ margin: 50%;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #687C94;
-  color: #000000;
+  color: #666666;
   border: none;
   outline: none;
 
@@ -440,21 +529,22 @@ margin: 50%;
 
 
 .input3 {
-  width: 465px;
-  height: 403px;
-  top: 177px;
+  padding: 10px 16px;
+  gap: 10px;
+  width: 70%;
+  height: 110px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
+  border: none;
+  outline: none;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #687C94;
-  color: #000000;
-  border: none;
-  outline: none;
-
+  color:#666666;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -473,7 +563,7 @@ label {
   align-self: stretch;
   flex-grow: 0;
   padding: 15px;
-  margin-left: -2.1%;
+  
 }
 
 
@@ -482,14 +572,15 @@ label {
   border-radius: 5px;
   font-family: 'Karla';
   padding: 15px 40px;
-  width: 148px;
+  width: 36%;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 90%;
   color: white;
   margin-top: 3rem;
   border: none;
   text-align: center;
-  margin-left: 51%;
+  margin: 0 auto;
+  align-items: center;
 }
 
 
@@ -502,16 +593,15 @@ label {
 }
 
 .arquivo {
-  width: 63%;
+  width: 70%;
   height: 6vh;
-  margin-left: -1%;
   border-radius: 20px;
   border-color: rgba(217, 217, 217, 0.43);
-  margin-top: 10%;
   display: grid;
-  margin-left: 6%;
   grid-template-rows: 20% 40% 20%;
-  background-color: rgba(217, 217, 217, 0.43);;
+  margin: auto;
+  margin-top: 15%;
+  background-color: rgba(217, 217, 217, 0.2);
 }
 
 h4 {
@@ -534,8 +624,7 @@ h6 {
 
 #file-input {
   background-image: ("@/assets/iconimage.png");
-  width: 34px;
-  height: 34px;
+
 
 }
 
@@ -543,6 +632,8 @@ h6 {
 .icon-button{
   border: 0px;
   margin-top: 2%;
+
+
 }
 
 .espacing{
@@ -562,11 +653,11 @@ h6 {
 
 
 #imagelogo {
-    width: 24px;
-    height: 24px;
-    padding: 3%;
-    left: 12%;
-
+  
+    width: 30px;
+    height: 30px;
+margin-left: 30%;
+margin-top: 30%;
 }
 .box{
   margin-left: 10%;
