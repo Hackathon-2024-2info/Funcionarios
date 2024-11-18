@@ -66,6 +66,7 @@ const novoServico = reactive({
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
+@media only screen and (min-device-width: 601px) {
 #formulario{
     display: flex;
     flex-direction: column;
@@ -96,5 +97,51 @@ h1{
     font-family: "Karla", sans-serif;
     font-weight: 700;
 }
+}
 
+@media only screen and (max-device-width: 600px) {
+    #formulario{
+    display: flex;
+    flex-direction: column;
+   margin-left: 10%;
+}
+
+input, select{
+    width: 90%;
+    height: 40px;
+    color: #687C94;
+    margin-bottom: 5%;
+}
+label{
+    font-size: 13px;
+}
+h1{
+    color: #180577;
+    font-size: 20px;
+    font-family: "Readex Pro", sans-serif;
+    font-weight: 600;
+    margin-bottom: 2%;
+    margin-left: 7%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+
+
+}
+
+#enviar{
+    width: 10%;
+display: block;
+margin: auto;
+    padding: 0.8%;
+    border-radius: 5px;
+    border-style:hidden;
+    background-color: #091D87;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    width: 35%;
+    height: 29px;
+}
+}
 </style>
