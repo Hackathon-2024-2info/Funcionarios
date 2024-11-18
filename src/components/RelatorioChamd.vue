@@ -166,12 +166,12 @@
   <h4>Imagens da máquina DEPOIS do serviço</h4>
 </fieldset>
 </div> 
-</div>
+
 
 <div>
 <button id="enviar" type="submit">Enviar</button>
 </div> 
-
+</div>
 </template>
 
 <script setup>
