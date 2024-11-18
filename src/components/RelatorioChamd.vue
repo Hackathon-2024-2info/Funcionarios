@@ -135,7 +135,7 @@
       <input type="file" @change="handleFileChangeantes" accept=".jpeg, .png" ref="fileInputantes"
         style="display: none" />
       <button @click="triggerFileInputantes" class="icon-button">
-        <i class="fas fa-file-archive"> <img src="@/assets/file-attach-01.png" alt="" id="imagelogo"></i>
+        <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
         <!-- Example icon -->
       </button>
       <div id="arquive-selected" v-if="fileNameantes">Arquivo Selecionado: {{ fileNameantes }}</div>
@@ -157,7 +157,7 @@
     <input type="file" @change="handleFileChangedepois" accept=".jpeg, .png" ref="fileInputdepois"
       style="display: none" />
     <button @click="triggerFileInputdepois" class="icon-button">
-      <i class="fas fa-file-archive"> <img src="@/assets/file-attach-01.png" alt="" id="imagelogo"></i>
+      <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
       <!-- Example icon -->
     </button>
     <div id="arquive-selected" v-if="fileNamedepois">Arquivo Selecionado: {{ fileNamedepois }}</div>
@@ -687,7 +687,7 @@ h6 {
     width: 30px;
     height: 30px;
 margin-left: 30%;
-margin-top: 30%;
+margin-top: 20%;
 }
 .box{
   margin-left: 10%;
