@@ -6,7 +6,7 @@
   <div class="lg"><main id="main">
 
 <div class="box">
-  <h1 class="relatorio">RELÁTORIO DE CONCLUSÃO DE SERVIÇO</h1>
+  <h1 class="relatorio">RELATÓRIO DE CONCLUSÃO DE SERVIÇO</h1>
   <label for=""> Dificuldade do serviço</label>
   <select id="opcoes" name="opcoes" required>
     <option value="" disabled selected>Selecione</option>
@@ -129,16 +129,16 @@
 <label for="">Descrição da máquina e da realização do serviço</label>
 </div>
 <input class="input3" placeholder="Insira a descrição">
-<div class="espacing" @click="openFileSelection">
+<div class="espacing" @click="openFileSelectionantes">
   <fieldset class="arquivo">
     <div class="archive-input">
-      <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+      <input type="file" @change="handleFileChangeantes" accept=".jpeg, .png" ref="fileInputantes"
         style="display: none" />
-      <button @click="triggerFileInput" class="icon-button">
+      <button @click="triggerFileInputantes" class="icon-button">
         <i class="fas fa-file-archive"> <img src="@/assets/file-attach-01.png" alt="" id="imagelogo"></i>
         <!-- Example icon -->
       </button>
-      <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
+      <div id="arquive-selected" v-if="fileNameantes">Arquivo Selecionado: {{ fileNameantes }}</div>
     </div>
     <h6>INSIRA AQUI</h6>
     <h4>Imagens da máquina ANTES do serviço </h4>
@@ -151,16 +151,16 @@
 </main>
 
 
-<div class="espacing" @click="openFileSelection">
+<div class="espacing" @click="openFileSelectiondepois">
 <fieldset class="arquivo">
   <div class="archive-input">
-    <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+    <input type="file" @change="handleFileChangedepois" accept=".jpeg, .png" ref="fileInputdepois"
       style="display: none" />
-    <button @click="triggerFileInput" class="icon-button">
+    <button @click="triggerFileInputdepois" class="icon-button">
       <i class="fas fa-file-archive"> <img src="@/assets/file-attach-01.png" alt="" id="imagelogo"></i>
       <!-- Example icon -->
     </button>
-    <div id="arquive-selected" v-if="fileName">Arquivo Selecionado: {{ fileName }}</div>
+    <div id="arquive-selected" v-if="fileNamedepois">Arquivo Selecionado: {{ fileNamedepois }}</div>
   </div>
   <h6>INSIRA AQUI</h6>
   <h4>Imagens da máquina DEPOIS do serviço</h4>
@@ -177,21 +177,39 @@
 <script setup>
   import { ref } from 'vue'
 
-  const fileName = ref('')
-  const fileInput = ref(null)
+  const fileNameantes = ref('')
+  const fileInputantes = ref(null)
 
-  function openFileSelection() {
-    fileInput.value.click()
+  function openFileSelectionantes() {
+    fileInputantes.value.click()
   }
 
-  function handleFileChange(event) {
+  function handleFileChangeantes(event) {
       const file = event.target.files[0];
       if (file) {
-        fileName.value = file.name;
+        fileNameantes.value = file.name;
       }
     }
-  function triggerFileInput() {
-      fileInput.value.click(); 
+  function triggerFileInputantes() {
+      fileInputantes.value.click(); 
+    }
+
+
+    const fileNamedepois = ref('')
+  const fileInputdepois = ref(null)
+
+  function openFileSelectiondepois() {
+    fileInputdepois.value.click()
+  }
+
+  function handleFileChangedepois(event) {
+      const file = event.target.files[0];
+      if (file) {
+        fileNamedepois.value = file.name;
+      }
+    }
+  function triggerFileInputdepois() {
+      fileInputdepois.value.click(); 
     }
 </script>
 
@@ -462,10 +480,11 @@ width: 50%;
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 150%;
+  font-size: 120%;
   color: #180577;
-  width:110%;
+  width: 273px;
   margin-top: 10%;
+  margin-bottom: 20px;
 }
 
 .espacamento {
@@ -482,7 +501,7 @@ width: 50%;
   outline: none;
   font-family: 'Karla';
   font-style: normal;
-  font-size: 14px;
+  font-size: 12px;
   color: #666666;
   padding-left: 3.5%;
 }
@@ -501,7 +520,7 @@ width: 50%;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   color:#666666;
 
@@ -519,7 +538,7 @@ width: 50%;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   color: #666666;
   border: none;
@@ -540,11 +559,12 @@ width: 50%;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   color:#666666;
   display: block;
   margin: 0 auto;
+  margin-bottom: -10%;
 }
 
 
@@ -553,7 +573,7 @@ label {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 18px;
   display: flex;
   align-items: center;
@@ -562,8 +582,9 @@ label {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  padding: 15px;
-  
+  padding: 0px;
+  width: 296px;
+  padding-bottom: 10px;
 }
 
 
@@ -574,13 +595,16 @@ label {
   padding: 15px 40px;
   width: 36%;
   font-weight: 700;
-  font-size: 90%;
+  font-size: 85%;
   color: white;
   margin-top: 3rem;
   border: none;
   text-align: center;
-  margin: 0 auto;
+  display: block;
+    margin: 0 auto;
   align-items: center;
+  margin-top: 23%;
+  margin-bottom: 10%;
 }
 
 
@@ -593,31 +617,37 @@ label {
 }
 
 .arquivo {
+
   width: 70%;
-  height: 6vh;
+  height: 60px;
   border-radius: 20px;
   border-color: rgba(217, 217, 217, 0.43);
   display: grid;
   grid-template-rows: 20% 40% 20%;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 20%;
   background-color: rgba(217, 217, 217, 0.2);
 }
 
 h4 {
-  font-size: 12px;
+  font-size: 11px;
   color: #555555;
   font-family: 'Karla';
   font-weight: 300;
   padding-left: 20%;
+  margin-top: -3%;
+  width: 70%;
+  margin-left: 5%;
 }
 
 h6 {
   font-family: 'Karla';
-  font-size: 16px;
+  margin-top: -5px;
+  font-size: 15px;
   color: #091D87;
   font-weight: 400;
   padding-left: 20%;
+  margin-left: 5%;
 }
 
 
@@ -631,9 +661,9 @@ h6 {
 
 .icon-button{
   border: 0px;
-  margin-top: 2%;
-
-
+  background: none;
+  margin-top: 3%;
+  margin-left: 3%;
 }
 
 .espacing{
@@ -662,6 +692,7 @@ margin-top: 30%;
 .box{
   margin-left: 10%;
   margin-right: 10%;
+
 }
 }
 </style>
