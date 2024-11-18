@@ -1,10 +1,14 @@
-<script setup></script>
+<script setup>
+import { useRelatorioStore } from '../stores/relatorios.js';
+
+const relatorioStore = useRelatorioStore();
+</script>
 
 <template>
  
     <div class="body">
       <div></div>
-      <div>
+      
         <main>
           <div class="filtrar">
             <label for="">Filtrar:</label>
@@ -19,87 +23,28 @@
             <p class="p">1</p>
             <button style="background: #f5f5f5"><img src="../assets/direita.png" alt="" /></button>
           </div>
+      
         </main>
+      </div>
+      
+        
         <section>
-          <div>
-            <div class="box">
+          <div id="display">
+            <div class="box" v-for="relatorio in relatorioStore.relatorios" :key="relatorio.id">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
+                <h3>{{relatorio.nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
+                  <P class="txt-box">{{relatorio.cliente}}</P>
+                  <p class="txt-box">{{relatorio.dataenvio}} </p>
                 </div>
 
                 <RouterLink to="/detalherelatorio"><button class="btn-box">Ver detalhes</button></RouterLink>
               </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
           </div>
-          <div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
           </div>
         </section>
-      </div>
-    </div>
+    
 
 </template>
 
@@ -107,9 +52,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.body {
-  display: grid;
-  grid-template-columns: 18% 1fr;
+#display{
+  display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
 }
 * {
   margin: 0;
@@ -122,9 +68,8 @@ body {
 .txt-box {
   margin-bottom: 5%;
 }
-section {
-  display: grid;
-  grid-template-columns: 50% 50%;
+section{
+  margin-left: 18%;
 }
 
 .txt {
@@ -134,6 +79,7 @@ section {
 
 .box {
   margin: 5%;
+  margin-bottom: -1%;
   display: flex;
   background: rgb(255, 255, 255);
   font-family: 'karla';
@@ -141,6 +87,7 @@ section {
   color: black;
   border-radius: 20px;
   height: 186px;
+  width: 40%;
 }
 
 .info {

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, ref } from 'vue'
 // import { useAuthStore } from '@/stores/auth';
 import { useChamadoStore } from '@/stores/chamados.js';
 

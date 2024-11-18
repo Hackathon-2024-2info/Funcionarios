@@ -49,7 +49,22 @@ export const useRelatorioStore = defineStore('relatorio', () => {
         colaboracao: 'Boa',
         titulo: 'Relatorio krona 12/09',
         pendencias: 'ckjehue3j euhdouefhje3f 4uihou3fhe3f ui34hfoie3je3e  ui34hfoijlknchjbrfu34'
-   }
+   },
+   { 
+    id: 4,
+    nome: 'Manutenção preventiva',
+    cliente: 'Krona',
+    remetente: 'Edson',
+    descricao:
+      'dhwudhwuidhweuidhwuiedhweuidhewuihdwieudhiudhweuidhewudhweuhdewuihdie wuhdeuhduwehduwehdeuiwhdewuihdewuidheuhdwuehdeuihdeuhduewdhweuhweuhdweuh',
+    datainicio: '18/09/2024',
+    dataenvio: '13/09/2024',
+    temporealizacao: '12horas',
+    dificuldade: 'Média',
+    colaboracao: 'Boa',
+    titulo: 'Relatorio krona 12/09',
+    pendencias: 'ckjehue3j euhdouefhje3f 4uihou3fhe3f ui34hfoie3je3e  ui34hfoijlknchjbrfu34'
+},
   ])
 
   //   function removeProduct(id) {
