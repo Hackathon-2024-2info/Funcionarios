@@ -1,65 +1,5 @@
 <script setup>
 const itens = [
-  {
-    id: 499,
-    nome: 'Cano 20x10cm',
-    quantidade: '20pcs',
-    marca: 'Tigre'
-  },
-  {
-    id: 500,
-    nome: 'Chave de fenda tipo A',
-    quantidade: '3pcs',
-    marca: 'Phillips'
-  },
-  {
-    id: 501,
-    nome: 'Fio preto 2m',
-    quantidade: '12pcs',
-    marca: 'Tio Kleber'
-  },
-  {
-    id: 502,
-    nome: 'Fita isolante',
-    quantidade: '4pcs',
-    marca: '3M'
-  },
-  {
-    id: 503,
-    nome: 'Fuso máquina injetora',
-    quantidade: '2pcs',
-    marca: 'Tio Cacau'
-  },
-  {
-    id: 504,
-    nome: 'Registro 4 bocas',
-    quantidade: '7pcs',
-    marca: 'Krona'
-  },
-  {
-    id: 505,
-    nome: 'Registro 7 bocas',
-    quantidade: '9pcs',
-    marca: 'Tuppaware'
-  },
-  {
-    id: 506,
-    nome: 'Registro',
-    quantidade: '2pcs',
-    marca: 'Zagonel'
-  },
-  {
-    id: 506,
-    nome: 'Máquina',
-    quantidade: '5pcs',
-    marca: 'Eletrolux'
-  },
-  {
-    id: 507,
-    nome: 'Máquina',
-    quantidade: '9pcs',
-    marca: 'Brastemp'
-  }
 ]
 </script>
 
@@ -87,7 +27,7 @@ const itens = [
             <section class="order-icons">
               <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
-            <span> Código do item </span>
+            <span> Código do chamado </span>
           </div>
         </th>
         <th>
@@ -95,7 +35,7 @@ const itens = [
           <section class="order-icons">
             <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
           </section>
-          <span> Nome do item </span>          
+          <span> Título do chamado </span>          
         </div>
         </th>
         <th>
@@ -103,7 +43,7 @@ const itens = [
           <section class="order-icons">
             <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
           </section>
-          <span> Quantidade </span>
+          <span> Data do chamado </span>
         </div>
         </th>
         <th>
