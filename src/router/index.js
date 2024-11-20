@@ -94,14 +94,16 @@ const router = createRouter({
       component: () => import('@/views/AddServicoAdminView.vue')
     },
     {
-      path: '/detalherelatorio',
+      path: '/detalherelatorio/:id',
       name: 'detalherelatorio',
-      component: () => import('@/views/DetalheRelatorioView.vue')
+      component: () => import('@/views/DetalheRelatorioView.vue'),
+      props: true
     },
     {
-      path: '/detalhechamado',
+      path: '/detalhechamado/:id',
       name: 'detalhechamado',
-      component: () => import('@/views/DetalhesChamadoAdminView.vue')
+      component: () => import('@/views/DetalhesChamadoAdminView.vue'),
+      props: true
     },
     {
       path: '/perfil',
@@ -134,6 +136,11 @@ const router = createRouter({
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
     }
+    // {
+    //   path: '/menu',
+    //   name: 'menu',
+    //   component: () => import('@/components/MenuAdministradores.vue')
+    // }
 
   ],
   linkActiveClass: 'active',

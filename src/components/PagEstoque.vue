@@ -1,66 +1,17 @@
 <script setup>
-const itens = [
-  {
-    id: 499,
-    nome: 'Cano 20x10cm',
-    quantidade: '20pcs',
-    marca: 'Tigre'
-  },
-  {
-    id: 500,
-    nome: 'Chave de fenda tipo A',
-    quantidade: '3pcs',
-    marca: 'Phillips'
-  },
-  {
-    id: 501,
-    nome: 'Fio preto 2m',
-    quantidade: '12pcs',
-    marca: 'Tio Kleber'
-  },
-  {
-    id: 502,
-    nome: 'Fita isolante',
-    quantidade: '4pcs',
-    marca: '3M'
-  },
-  {
-    id: 503,
-    nome: 'Fuso máquina injetora',
-    quantidade: '2pcs',
-    marca: 'Tio Cacau'
-  },
-  {
-    id: 504,
-    nome: 'Registro 4 bocas',
-    quantidade: '7pcs',
-    marca: 'Krona'
-  },
-  {
-    id: 505,
-    nome: 'Registro 7 bocas',
-    quantidade: '9pcs',
-    marca: 'Tuppaware'
-  },
-  {
-    id: 506,
-    nome: 'Registro',
-    quantidade: '2pcs',
-    marca: 'Zagonel'
-  },
-  {
-    id: 506,
-    nome: 'Máquina',
-    quantidade: '5pcs',
-    marca: 'Eletrolux'
-  },
-  {
-    id: 507,
-    nome: 'Máquina',
-    quantidade: '9pcs',
-    marca: 'Brastemp'
-  }
-]
+// import { useAuthStore } from '@/stores/auth';
+import { useEstoqueStore } from '../stores/estoque.js';
+
+// const props = defineProps(['id']);
+const estoqueStore = useEstoqueStore();
+// const authStore = useAuthStore();
+// const estoque = ref({});
+
+// console.log(estoqueStore.getProductById())
+// onMounted(() => {
+//   estoque.value = estoqueStore.getProductById(props.id)
+// })
+
 </script>
 
 <template>
@@ -101,11 +52,11 @@ const itens = [
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in itens" :key="item.id">
-          <td>{{ item.id }}</td>
-          <td>{{ item.nome }}</td>
-          <td>{{ item.quantidade }}</td>
-          <td>{{ item.marca }}</td>
+        <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
+           <td>{{ estoque.id }}</td>
+        <td>{{ estoque.nome }}</td>
+        <td>{{ estoque.quantidade }}</td>
+        <td>{{ estoque.marca }}</td>
         </tr>
       </tbody>
     </table>
@@ -114,7 +65,6 @@ const itens = [
       <p>1</p>
       <button><img src="../assets/direita.png" alt="" /></button>
     </div>
-  </div>
 
   <div class="large">
     <main>
@@ -173,11 +123,11 @@ const itens = [
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in itens" :key="item.id">
-          <td>{{ item.id }}</td>
-          <td>{{ item.nome }}</td>
-          <td>{{ item.quantidade }}</td>
-          <td>{{ item.marca }}</td>
+        <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
+         <td>{{ estoque.id }}</td>
+        <td>{{ estoque.nome }}</td>
+        <td>{{ estoque.quantidade }}</td>
+        <td>{{ estoque.marca }}</td>
         </tr>
       </tbody>
     </table>

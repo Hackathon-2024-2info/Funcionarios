@@ -6,6 +6,12 @@ import pagHeader from '@/components/pagHeader.vue';
 
 <template>
    <MenuAdministradores></MenuAdministradores>
-   <pagHeader></pagHeader>
+   <pagHeader class="pagHeader"></pagHeader>
    <RelatoriosAdmin></RelatoriosAdmin>
 </template>
+
+<style scoped>
+.pagHeader{
+margin-top: -90%;
+}
+</style>
