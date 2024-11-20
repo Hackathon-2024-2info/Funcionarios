@@ -7,7 +7,7 @@ const estoqueStore = useEstoqueStore();
 <template>
   <main>
     <div class="filtrar">
-      <button class="btn-azul">ADICIONAR ITEM AO ESTOQUE</button>
+      <RouterLink to="/additem"><button class="btn-azul">ADICIONAR ITEM AO ESTOQUE</button></RouterLink>
       <label for="">Filtrar:</label>
       <select name="Selecione" id="Selecione">
         <option value="" class="option">SELECIONE</option>
