@@ -17,7 +17,9 @@ const authStore = useAuthStore()
 </template>
 
 <style scoped>
+@media only screen and (min-device-width: 601px){
 main{
+    padding-left: -1%;
     padding-bottom: 10%;
 }
 
@@ -51,5 +53,11 @@ img {
     display: flex;
     margin-left: 88%;
     top: calc(50% - 43px/2 - 0.5px);
+}
+}
+@media only screen and (max-device-width: 600px){
+    *{
+        display: none;
+    }
 }
 </style>

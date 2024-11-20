@@ -60,12 +60,13 @@ const itens = [
     </div>
     <div class="espaçamento-lista">
       <h1 class="titulo-lista">Ferramentas necessárias:</h1>
+      <br>
       <ul class="lista">
         <li v-for="item in itens" :key="item.nome">
           {{ item.nome }}
         </li>
       </ul>
-    </div> 
+    </div>
   </main>
 </template>
 
@@ -95,14 +96,17 @@ const itens = [
 
 main {
   background-color: #f5f5f5;
-  height: 154vh;
-  margin-top: -82%;
+  /* height: 154vh; */
+  height: 200vh;
+  margin-top: 20%;
 }
 
 .espaçamento {
   display: grid;
   margin-left: 20%;
   margin-right: 0px;
+  /* margin-top: -95%; ESPAÇAMENTO COM OS COMPONENTES INCLUSOS!!!! VOU MUDAR PARA MEXER NA RESPONSIVIDADE P/ MOBILE*/
+  margin-top: -12%;
 }
 
 .box {
@@ -172,7 +176,8 @@ main {
 }
 .descricao{
   line-height: 110%;
-  width: 100px;
+  width: 500px;
+  word-wrap: break-word;
 }
 
 .espaçamento-lista {
@@ -215,8 +220,6 @@ main {
   width: 23.5%;
 }
 
-
-
 ul {
   list-style-type: none;
   padding-left: 40px;
@@ -239,5 +242,109 @@ ul li::before {
   left: -30px;
   top: 50%;
   transform: translateY(-60%);
+} 
+
+@media only screen and (max-device-width: 480px) {
+  .box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 110%;
+  height: 150%;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-right: 0px;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.espaçamento {
+  display: grid;
+  margin-left: 2%;
+  margin-right: 0px;
+  margin-top: -15%;
+}
+.titulo {
+  margin-top: 4%;
+  font-size: 26px;
+  font-family: 'Kantumruy Pro';
+}
+
+.minicontainer {
+  width: 70%;
+  margin-left: 5%;
+  height: 3%;
+  margin-top: -14%;
+}
+
+.minicontainer p {
+  margin-top: -1%;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.infos {
+  line-height: 200%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding-right: 5%;
+  margin-top: -20%;
+}
+
+.infos p {
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+
+}
+.descricao{
+  line-height: 110%;
+  width: -600px;
+  word-wrap: break-word;
+}
+
+
+.espaçamento-lista {
+  width: 480px;
+  height: 50vh;
+  position: relative;
+  top: 15%;
+  margin-left: -55%;
+}
+.titulo-lista {
+  margin-bottom: 40px;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  color: #091d87;
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 15px;
+  width: 77.5%;
+  height: 5%;
+}
+
+.lista {
+  list-style-position: outside;
+  display: block;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  align-items: center;
+}
+ul li {
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 20px;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10%;
+  width: 300%;
+}
 }
 </style>

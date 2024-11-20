@@ -79,6 +79,11 @@ const router = createRouter({
       component: () => import('@/views/EstoqueAdminView.vue')
     },
     {
+      path: '/curriculoadmin',
+      name: 'curriculoadmin',
+      component: () => import('@/views/CurriculosAdminView.vue')
+    },
+    {
       path: '/curriculo',
       name: 'curriculo',
       component: () => import('@/views/PagCurriculoView.vue')
