@@ -25,27 +25,42 @@ const estoqueStore = useEstoqueStore();
         </select>
       </div>
     </main>
-
     <table class="tabela-itens">
       <thead>
         <tr>
           <th>
             <div class="th-content">
+              <section class="order-icons">
+                <img src="../assets/Vector-1.png" alt="" />
+                <img src="../assets//Vector.png" alt="" />
+              </section>
               <span> Código do item </span>
             </div>
           </th>
           <th>
             <div class="th-content">
+              <section class="order-icons">
+                <img src="../assets/Vector-1.png" alt="" />
+                <img src="../assets//Vector.png" alt="" />
+              </section>
               <span> Nome do item </span>
             </div>
           </th>
           <th>
             <div class="th-content">
+              <section class="order-icons">
+                <img src="../assets/Vector-1.png" alt="" />
+                <img src="../assets//Vector.png" alt="" />
+              </section>
               <span> Quantidade </span>
             </div>
           </th>
           <th>
             <div class="th-content">
+              <section class="order-icons">
+                <img src="../assets/Vector-1.png" alt="" />
+                <img src="../assets//Vector.png" alt="" />
+              </section>
               <span> Marca do item </span>
             </div>
           </th>
@@ -53,18 +68,14 @@ const estoqueStore = useEstoqueStore();
       </thead>
       <tbody>
         <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
-           <td>{{ estoque.id }}</td>
+         <td>{{ estoque.id }}</td>
         <td>{{ estoque.nome }}</td>
         <td>{{ estoque.quantidade }}</td>
         <td>{{ estoque.marca }}</td>
         </tr>
       </tbody>
     </table>
-    <div class="setas">
-      <button><img src="../assets/esquerda.png" alt="" /></button>
-      <p>1</p>
-      <button><img src="../assets/direita.png" alt="" /></button>
-    </div>
+  </div>
 
   <div class="large">
     <main>
