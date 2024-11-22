@@ -276,4 +276,99 @@ aside {
       font-family: 'Karla';
     text-align: center;
   }
+  /* Versão Responsiva */
+@media (max-width: 768px) {
+  #main {
+    display: flex; /* Altera para layout flexível */
+    flex-direction: column-reverse; /* Move o aside para cima na ordem */
+  }
+
+  aside {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  section {
+    height: auto; /* Ajusta altura ao conteúdo */
+    padding: 1rem; /* Adiciona espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .img {
+    margin: 1rem 0;
+  }
+
+  h1 {
+    font-size: 24px; /* Reduz tamanho do texto */
+    margin-top: 1rem;
+  }
+
+  .pergunta {
+    font-size: 18px;
+    margin: 1rem 0;
+    width: auto; /* Ajusta para caber na tela */
+    padding: 0;
+  }
+
+  button {
+    width: 100%; /* Botão ocupa toda a largura */
+    max-width: 300px; /* Limita tamanho máximo */
+    padding: 10px 20px; /* Reduz altura */
+    margin: 1rem auto; /* Centraliza */
+  }
+
+  input,
+  select {
+    width: 90%; /* Reduz largura */
+    max-width: 500px;
+    margin: 0.5rem auto;
+  }
+
+  label {
+    font-size: 14px; /* Diminui fonte */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #main {
+    flex-direction: column-reverse; /* Mantém aside no topo */
+  }
+
+  aside {
+    margin-top: 2rem;
+  }
+
+  input,
+  select {
+    width: 95%; /* Quase ocupa toda a tela */
+    height: 38px; /* Reduz altura */
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 20px; /* Ajuste menor para telas pequenas */
+  }
+
+  .pergunta {
+    font-size: 16px;
+    margin: 0.5rem 0;
+  }
+}
+
 </style>
