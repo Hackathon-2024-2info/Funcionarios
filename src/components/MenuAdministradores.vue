@@ -63,7 +63,7 @@ const toggleDropdown = () => {
       <router-link to="/orcamentos" >
         Orçamentos
       </router-link>
-      <router-link to="/" >
+      <router-link to="/curriculoadmin" >
         Currículos
       </router-link>
 

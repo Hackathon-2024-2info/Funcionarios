@@ -1,4 +1,17 @@
-<script setup></script>
+<script setup>
+// import { onMounted, ref } from 'vue'
+// import { useAuthStore } from '@/stores/auth';
+import { useServicoStore } from '../stores/servicos.js';
+
+const servicoStore = useServicoStore();
+// const authStore = useAuthStore()
+// const servico = ref({})
+
+
+// onMounted(() => {
+//   servico.value = servicoStore }
+
+</script>
 
 <template>
  
@@ -22,81 +35,17 @@
           </div>
         </main>
         <section>
-          <div>
-            <div class="box">
+            <div class="box" v-for="servico in servicoStore.servicos" :key="servico.id">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
+                <h3>{{servico.nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
+                  <P class="txt-box">{{servico.cliente}}</P>
+                  <p class="txt-box"> {{ servico.datainicio }}</p>
                 </div>
 
                 <RouterLink to="/detalheservico/:id"><button class="btn-box">Ver detalhes</button></RouterLink>
               </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
-            <div class="box">
-              <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
-                <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
-
-                <button class="btn-box">Ver detalhes</button>
-              </div>
-            </div>
           </div>
         </section>
       </div>
