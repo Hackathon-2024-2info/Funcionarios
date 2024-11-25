@@ -1,21 +1,24 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
 const toggleDropdown = () => {
-  isOpen.value = !isOpen.value
-}
+  isOpen.value = !isOpen.value;
+};
 </script>
 
 <template>
-  <div class="menu-sm">
-    <header>
-      <h1>Olá, Edson!</h1>
-      <img src="../assets/Group 37322.png" alt="" />
-    </header>
-    <nav>
-      <div class="menu">
+
+  <body>
+    <div class="menu-sm">
+      <header>
+        <h1>Olá, Edson!</h1>
+        <img src="../assets/Group 37322.png" alt="">
+    
+      </header>
+      <nav>
+        <div class="menu">
         <div class="container-nav">
           <div>
             <button class="dropdown-btn" @click="toggleDropdown">
@@ -26,68 +29,85 @@ const toggleDropdown = () => {
               </div>
             </button>
           </div>
-          <div class="nav"></div>
-        </div>
-        <div class="dropdown-content" v-if="isOpen">
-          <hr>
-          <a> <router-link to="/servicos"> Serviços </router-link></a>
-          <hr>
-          <a><router-link to="/estoqueadmin"> Estoque </router-link></a>
-          <hr>
-          <a> <router-link to="/relatorios"> Relatórios </router-link></a>
-          <hr>
-          <a><router-link to="/chamadosadmin"> Chamados </router-link></a>
-          <hr>
-          <a> <router-link to="/"> Orçamentos </router-link></a>
-          <hr>
-          <a> <router-link to="/"> Currículos </router-link></a>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <div class="menu-lg">
-    <nav>
-      <img src="../assets/logo AVANTE.png" alt="" class="img" />
-  <router-link to="/estoqueadmin" >
-        Estoque
-      </router-link>
-      <router-link to="/servicosadmin" >
-        Serviços
-      </router-link>
-      <router-link to="/relatoriosadmin">
-        Relatórios
-      </router-link>
-      <router-link to="/chamadosadmin" >
-        Chamados
-      </router-link>
-      <router-link to="/orcamentos" >
-        Orçamentos
-      </router-link>
-      <router-link to="/curriculoadmin" >
-        Currículos
-      </router-link>
+          <div class="nav">
 
-      <div class="vazio"></div>
+          </div>
+        </div>
+          <div class="dropdown-content" v-if="isOpen">
+            <router-link to="/estoqueadmin"> Estoque </router-link>
+      <router-link to="/servicos"> Serviços </router-link>
+      <router-link to="/relatorios"> Relatórios </router-link>
+      <router-link to="/chamadosadmin"> Chamados </router-link>
+      <router-link to="/"> Orçamentos </router-link>
+      <router-link to="/"> Currículos </router-link>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-      <img src="../assets/Question.png" alt="" class="warning" />
-      <div class="box">
-        <p class="title">Remover acesso</p>
-        <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
-        <button class="button">Clique aqui</button>
-      </div>
-    </nav>
-  </div>
+    <div class="menu-lg">
+      <nav>
+        <img src="../assets/logo AVANTE.png" alt="" class="img" />
+        <router-link to="/estoqueadmin"> Estoque </router-link>
+      <router-link to="/servicos"> Serviços </router-link>
+      <router-link to="/relatorios"> Relatórios </router-link>
+      <router-link to="/chamadosadmin"> Chamados </router-link>
+      <router-link to="/"> Orçamentos </router-link>
+      <router-link to="/"> Currículos </router-link>
+
+        <div class="vazio"></div>
+
+        <img src="../assets/Question.png" alt="" class="warning" />
+        <div class="box">
+          <p class="title">Abra um chamado</p>
+          <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
+          <button class="button">Abrir chamado</button>
+        </div>
+      </nav>
+    </div>
+  </body>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
-@media only screen and (min-device-width: 501px) {
+body {
+  background: #f5f5f5;
+  margin-top: -10%;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 18%;
+}
+template {
+  margin: 0;
+  height: 100%;
+}
+nav {
+  height: 100%;
+  margin: 0;
+  padding-bottom: 15%;
+  background: #0f0541;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-device-width: 601px) {
   .menu-sm {
     display: none;
   }
+
   .box {
     background-color: #384dbb;
     color: white;
@@ -104,14 +124,16 @@ const toggleDropdown = () => {
     margin-bottom: -10%;
   }
 
-  .menu {
+  .menu-lg {
     display: grid;
     grid-template-columns: 18% 1fr;
   }
+
   template {
     margin: 0;
     height: 100%;
   }
+
   nav {
     height: 100%;
     margin: 0;
@@ -133,6 +155,7 @@ const toggleDropdown = () => {
     height: 17vh;
     margin-top: 10%;
   }
+
   img {
     display: grid;
     place-items: center;
@@ -176,8 +199,9 @@ const toggleDropdown = () => {
   }
 
   .vazio {
-    padding: 40%;
+    padding: 75%;
   }
+
   .btn-branco {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: white;
@@ -191,6 +215,7 @@ const toggleDropdown = () => {
     font-weight: 600;
     margin: 4vh;
   }
+
   .frase-box {
     font-size: 80%;
     margin: 10%;
@@ -221,12 +246,18 @@ const toggleDropdown = () => {
     font-family: 'Kantumruy Pro', sans-serif;
     margin-top: 35%;
   }
+
+  .barra {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+  }
 }
 
 @media only screen and (min-device-width: 1500px) {
   .menu-sm {
     display: none;
   }
+
   .box {
     background-color: #384dbb;
     color: white;
@@ -243,14 +274,16 @@ const toggleDropdown = () => {
     margin-bottom: -13%;
   }
 
-  .menu {
+  .menu-lg {
     display: grid;
     grid-template-columns: 18% 1fr;
   }
+
   template {
     margin: 0;
     height: 100%;
   }
+
   nav {
     height: 100%;
     margin: 0;
@@ -267,11 +300,12 @@ const toggleDropdown = () => {
     box-sizing: border-box;
   }
 
-  .img {
+ .img {
     width: 17vh;
     height: 17vh;
     margin-top: 10%;
   }
+
   img {
     display: grid;
     place-items: center;
@@ -315,8 +349,9 @@ const toggleDropdown = () => {
   }
 
   .vazio {
-    padding: 40%;
+    padding: 75%;
   }
+
   .btn-branco {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: white;
@@ -330,6 +365,7 @@ const toggleDropdown = () => {
     font-weight: 600;
     margin: 4vh;
   }
+
   .frase-box {
     font-size: 80%;
     margin: 10%;
@@ -343,6 +379,7 @@ const toggleDropdown = () => {
     height: 15%;
     width: 85%;
     border: none;
+
     text-align: center;
     place-items: center;
     color: #546fff;
@@ -361,10 +398,11 @@ const toggleDropdown = () => {
   }
 }
 
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-device-width: 600px) {
   .menu-lg {
     display: none;
   }
+
 
   header {
     background: rgba(217, 217, 217, 0.38);
@@ -375,8 +413,8 @@ const toggleDropdown = () => {
     display: flex;
   }
 
-  h1 {
-    font-weight: 600;
+  h1{
+     font-weight: 600;
   }
 
   body {
@@ -393,6 +431,7 @@ const toggleDropdown = () => {
     background-color: #180577;
 
     min-width: 500%;
+   
   }
 
   .dropdown-content a {
@@ -408,10 +447,10 @@ const toggleDropdown = () => {
   .dropdown-content a:hover {
     background-color: #f1f1f1;
     color: black;
-    margin-left: -3.69%;
+margin-left: -3.69%;
     width: 209px;
 
-    padding-right: 15px;
+    padding-right:15px;
   }
 
   .dropdown-content {
@@ -422,13 +461,13 @@ const toggleDropdown = () => {
     width: 209px;
   }
 
-  hr {
-    padding-left: 103%;
-    padding-right: 50%;
-    margin-left: -50%;
+  hr{
+padding-left: 103%;
+padding-right: 50%;
+margin-left: -50%;
   }
 
-  .line1 {
+  .line1{
     width: 25px;
     height: 2px;
     background: #fff;
@@ -436,7 +475,7 @@ const toggleDropdown = () => {
     transition: 0.3s;
   }
 
-  .line2 {
+  .line2{
     width: 15px;
     height: 2px;
     background: #fff;
@@ -444,7 +483,7 @@ const toggleDropdown = () => {
     transition: 0.3s;
   }
 
-  .line3 {
+  .line3{
     width: 25px;
     height: 2px;
     background: #fff;
@@ -468,16 +507,17 @@ const toggleDropdown = () => {
     max-width: fit-content;
   }
 
-  .container-nav {
+  .container-nav{
     display: flex;
   }
 
-  nav {
+  nav{
     background-color: #180577;
   }
 
-  img {
-    margin-left: 30%;
-  }
+img{
+  margin-left: 30%;
+
+}
 }
 </style>
