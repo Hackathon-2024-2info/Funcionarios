@@ -5,7 +5,7 @@ import pagHeader from '@/components/pagHeader.vue';
 </script>
 
 <template>
+      <pagHeader></pagHeader>
    <MenuAdministradores></MenuAdministradores>
-   <pagHeader></pagHeader>
    <ServicosAdmin></ServicosAdmin>
 </template>

@@ -46,13 +46,15 @@ export const useServicoStore = defineStore('servico', () => {
   //   }
 
 
-  function getProductById(id) {
-    console.log(id)
-    const foundServico = servicos.value.find((servico) => servico.id == id);
-    if (!foundServico) {
-      console.log("Service not found");
-    }
-    return foundServico || null;
-  }
-  return { servicos, getProductById }
+  // function getProductById(id) {
+  //   console.log(id)
+  //   const foundServico = servicos.value.find((servico) => servico.id == id);
+  //   if (!foundServico) {
+  //     console.log("Service not found");
+  //   }
+  //   return foundServico || null;
+  // }
+  return { servicos }
 })
+
+

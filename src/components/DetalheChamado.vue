@@ -1,16 +1,30 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from 'vue'
+// import { useAuthStore } from '@/stores/auth';
+import { useChamadoStore } from '@/stores/chamados.js';
+
+const props = defineProps(['id']);
+const chamadoStore = useChamadoStore();
+// const authStore = useAuthStore();
+const chamado = ref({});
+
+onMounted(() => {
+    console.log('prop id: '+ props.id)
+    chamado.value = chamadoStore.getProductById(props.id)
+})
+
+</script>
 
 <template>
     <main>
         <div class="botaozinho">
-            <img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
+            <RouterLink to="/chamadosadmin"><img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
-        <div class="texts">
-            <h1> Título do chamado</h1>
-            <p>Remetente: Edson</p>
-            <p class="chamado">Chamado aberto em: 13/09/2024</p>
-            <p class="descricao">Descrição:
-                bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccwijedoiewjdewoidhewudhewyifgewufeiocjjkgeweydw8oueroifhewyydg379uwrfh4ury3279ew09fuhwiudjewifuewygdqwudhewifu8yqwuhdewdjopwefiuoeruquiegqwjbdewiofjewoiwoieyuiqwhdjkdneijewihwyvdjhwbewdewijduwweidhnewoidewopdkewpduewouhdwoudhewiodjiwejdoiwjdwqdbwuihdwoidhoiqwhdwihdwiohdwodhoidqwhdiwhdoiwqdhiowhdoiqwhdqwoidhwoidhoidhqwihdwoiqhdoiqwhdoiwqhxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        <div class="texts" :key="props.id">
+            <h1>{{chamado.titulo}}</h1>
+            <p>{{chamado.solicitador}}</p>
+            <p class="chamado">{{chamado.data}}</p>
+            <p class="descricao">{{ chamado.descricao }}
             </p>
         </div>
         <div>

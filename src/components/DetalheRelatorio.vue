@@ -1,4 +1,18 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from 'vue'
+// import { useAuthStore } from '@/stores/auth';
+import { useRelatorioStore } from '@/stores/relatorios.js';
+
+const props = defineProps(['id']);
+const relatorioStore = useRelatorioStore();
+// const authStore = useAuthStore()
+const relatorio = ref({})
+
+
+onMounted(() => {
+  relatorio.value = relatorioStore.getProductById(props.id)
+})
+</script>
 
 <template>
     <main>
@@ -6,18 +20,16 @@
             <img class="img" src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
         </div>
         <div class="texts">
-            <h1> Título do Relatório</h1>
-            <p>Remetente: Edson</p>
-            <p class="chamado">Chamado aberto em: 13/09/2024</p>
-            <p class="tempo">Tempo de realização do serviço: 12 horas</p>
-            <p class="dificuldade">Dificuldade do serviço: Média</p>
-            <p class="colaborar">Colaboração da empresa: Boa</p>
-            <p class="pendente">Possíveis pendências que ficaram na máquina:
-                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            <h1> {{relatorio.titulo}}</h1>
+            <p>Remetente: {{relatorio.remetente}}</p>
+            <p class="chamado">Relatório enviado em: {{relatorio.dataenvio}}</p>
+            <p class="tempo">Tempo de realização do serviço: {{relatorio.temporealizacao}}</p>
+            <p class="dificuldade">Dificuldade do serviço: {{relatorio.dificuldade}}</p>
+            <p class="colaborar">Colaboração da empresa: {{relatorio.colaboracao}}</p>
+            <p class="pendente">Possíveis pendências que ficaram na máquina: {{ relatorio.pendencias }}
             </p>
             <div class="espaco"></div>
-            <p class="descricao">Descrição:
-                bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccwijedoiewjdewoidhewudhewyifgewufeiocjjkgeweydw8oueroifhewyydg379uwrfh4ury3279ew09fuhwiudjewifuewygdqwudhewifu8yqwuhdewdjopwefiuoeruquiegqwjbdewiofjewoiwoieyuiqwhdjkdneijewihwyvdjhwbewdewijduwweidhnewoidewopdkewpduewouhdwoudhewiodjiwejdoiwjdwqdbwuihdwoidhoiqwhdwihdwiohdwodhoidqwhdiwhdoiwqdhiowhdoiqwhdqwoidhwoidhoidhqwihdwoiqhdoiqwhdoiwqh
+            <p class="descricao">Descrição: {{ relatorio.descricao }}
             </p>
 
         </div>
@@ -49,8 +61,8 @@
     position: absolute;
     top: 28%;
     left: 20%;
-    width: 51px;
-    height: 43px;
+    width: 3%;
+    height: 5.5%;
     background: rgba(84, 111, 255, 0.32);
     border-radius: 10px;
 }
@@ -58,16 +70,16 @@
 
 .container {
     position: absolute;
-    width: 400px;
+    width: 22%;
     right: 2%;
     top: 27%;
-    padding: 10px;
+    padding: 1%;
     background-color: #ececec;
     border-radius: 20px;
 }
 
 .container-carrosel {
-    margin-top: 20px;
+    margin-top: 10%;
     width: 320px;
     height: 680px;
     overflow-y: scroll;
@@ -80,6 +92,7 @@
 
 .container-carrosel::-webkit-scrollbar {
     width: 0.7vw;
+    width: 10px;
 }
 
 .container-carrosel::-webkit-scrollbar-track {
@@ -90,24 +103,17 @@
 
 .container-carrosel::-webkit-scrollbar-thumb {
     background-color: #6e78ff;
-    width: 3px;
+    width: 3%;
     border-radius: 4px;
-
 }
 
-
-.container-carrosel::-webkit-scrollbar-thumb:hover {
-    width: 10px;
-    height: 15px;
-    margin-left: 10px;
-}
 
 
 .img {
     position: relative;
     display: flex;
     margin-left: 33%;
-    margin-top: 21%;
+    margin-top: 22%;
 }
 
 h1 {
