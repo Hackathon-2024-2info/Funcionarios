@@ -19,7 +19,7 @@ const authStore = useAuthStore()
 <style scoped>
 @media only screen and (min-device-width: 601px){
 main{
-    padding-left: -1%;
+    padding-bottom: 10%;
 }
 
 header {

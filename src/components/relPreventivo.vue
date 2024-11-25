@@ -81,7 +81,9 @@ const servicos = ref([
           </span>
         </template>
       </div>
+      <div class="botao">
       <button>Próximo</button>
+    </div>
     </div>
   </main>
 </template>
@@ -92,12 +94,11 @@ const servicos = ref([
 
 main {
   background-color: #f5f5f5;
-  height: 100vh;
+  margin-top: 20%;
 }
 
 .espaçamento {
-  margin-left: 20%;
-  margin-top: 10%;
+  margin-left: 25%;
 }
 
 .label-pergunta {
@@ -196,5 +197,129 @@ button {
   color: white;
   margin-bottom: 2%;
   margin-top: 3%;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+main {
+  background-color: #f5f5f5;
+  margin-top: 10%;
+}
+
+.espaçamento {
+  margin-left: -2%;
+}
+
+.label-pergunta {
+  margin-bottom: 10%;
+  width:150%;
+  font-size: 14px;
+}
+
+span {
+  margin-top: -30%;
+  /* margin-left: 120px; */
+}
+
+h1 {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24.5px;
+  width: 100%;
+  color: #180577;
+  margin-bottom: 3%;
+  margin-left: 7%;
+}
+
+.container-inputs-num {
+  width: 100%;
+  display: flex;
+  gap: 15%;
+  margin-left: 7%;
+  margin-top: 10%;
+}
+
+.num {
+  display: inline-block;
+}
+
+.input-num {
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  /* Duas colunas de 10px cada */
+  column-gap: 2%;
+  row-gap: 2%;
+  margin-top: 10%;
+}
+
+input[type='number'] {
+  height: 60px;
+  border: none;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  text-align: center;
+}
+
+label,
+span {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #666666;
+  
+}
+
+.checkbox {
+  margin-bottom: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+input[type='radio'] {
+  margin-left: 5%;
+  width: 24px;
+  height: 24px;
+
+}
+
+.container-checkbox {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  /* flex-direction: column; */
+  margin-top: 3%;
+  width: 100%;
+  padding: 5%;
+  margin-left: 2%;
+}
+
+.container-checkbox label {
+  width: 100%;
+}
+
+.container-checkbox span {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 10%;
+  background: #091d87;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-bottom: 2%;
+  margin-top: 3%;
+}
+.botao{
+  display: flex;
+  justify-content: center;
+}
 }
 </style>
