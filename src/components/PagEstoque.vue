@@ -17,13 +17,6 @@ const estoqueStore = useEstoqueStore();
 <template>
   <div class="small">
     <main>
-      <div class="filtrar">
-        <label for="">Filtrar:</label>
-
-        <select name="Selecione" id="Selecione">
-          <option value="" class="option">SELECIONE</option>
-        </select>
-      </div>
     </main>
     <table class="tabela-itens">
       <thead>
@@ -79,12 +72,6 @@ const estoqueStore = useEstoqueStore();
 
   <div class="large">
     <main>
-      <div class="filtrar">
-        <label for="">Filtrar:</label>
-        <select name="Selecione" id="Selecione">
-          <option value="" class="option">SELECIONE</option>
-        </select>
-      </div>
       <div class="setas">
         <button><img src="../assets/esquerda.png" alt="" /></button>
         <p>1</p>
@@ -207,20 +194,6 @@ const estoqueStore = useEstoqueStore();
     margin-right: 3%;
   }
 
-  .filtrar {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 5%;
-    padding-bottom: 5%;
-
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 10%;
-  }
-
   label,
   select,
   option {
@@ -328,7 +301,7 @@ const estoqueStore = useEstoqueStore();
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    margin-left: -5%;
+    justify-content: center;
     margin-top: -0.4%;
   }
 

@@ -75,31 +75,6 @@ body {
   background: #f5f5f5;
 
 }
-
-.menu {
-  display: grid;
-  width: 18%;
-}
-template {
-  margin: 0;
-  height: 100%;
-}
-nav {
-  height: 100%;
-  margin: 0;
-  padding-bottom: 15%;
-  background: #0f0541;
-
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
-}
-
 @media only screen and (min-device-width: 601px) {
   .menu-sm {
     display: none;
