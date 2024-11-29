@@ -1,6 +1,18 @@
 <script setup>
 // import { useAuthStore } from '@/stores/auth';
 import { useEstoqueStore } from '../stores/estoque.js';
+// import axios from 'axios';
+
+// async function buscarTodasAsCategorias() {
+//   try {
+//     const resposta = await axios.get(
+//       'http://ip_e_porta_do_servidor/categorias',
+//     );
+//     return resposta.data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
 // const props = defineProps(['id']);
 const estoqueStore = useEstoqueStore();
