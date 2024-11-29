@@ -36,7 +36,7 @@ const relatorioStore = useRelatorioStore();
               </div>
           </div>
           </div>
-        </section>
+        </section> 
         <div class="setas">
             <button style="background-color: #f5f5f5">
               <img src="../assets/esquerda.png" alt="" />
