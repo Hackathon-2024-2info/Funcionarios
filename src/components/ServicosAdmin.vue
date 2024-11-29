@@ -30,7 +30,7 @@ const servicoStore = useServicoStore();
       
         <section>
             <div class="box" v-for="servico in servicoStore.servicos" :key="servico.id">
-              <img src="../assets/logoopaca.png" alt="" />
+              <img src="../assets/logoopaca.png" alt="" class="img" />
               <div class="info">
                 <h3>{{servico.nome}}</h3>
                 <div class="txt">
@@ -235,12 +235,9 @@ main {
   display: none;
 }
 
-
-main {
-  padding-top: 5%;
-
-width: 100%;
- 
+.img{
+  width: 154px;
+  height: 128px;
 }
 * {
   margin: 0;
@@ -251,37 +248,46 @@ body {
   margin: 0;
 }
 .txt-box {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
+  font-size: 15px;
+}
+h3{
+  margin-top: -5%;
 }
 
-
 .txt {
-  margin-top: 7%;
-  bottom: 15%;
+ 
+  bottom: 5%;
 }
 
 .box {
-  margin: 8%;
+  margin: 3%;
   display: flex;
-  background: rgb(255, 255, 255);
+  background:rgba(255, 255, 255, 1);
   font-family: 'karla';
   text-align: center;
   color: black;
   border-radius: 20px;
-  height: 186px;
+  height: 128px;
+  width: 337px;
+  
 }
 
 .info {
   margin: 5%;
 }
 
-label {
-  margin-right: 3%;
-}
+
 label,
 select,
 option {
   font-family: 'Karla';
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -289,8 +295,8 @@ option {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-style: normal;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
   background: rgb(84, 111, 255, 0.32);
   padding: 3%;
   border-radius: 10px;
@@ -302,7 +308,8 @@ body {
 
 .filtrar {
     width: 100%;
-  margin: 0 30% 0 30%;
+    display: flex;
+    justify-content: center;
     padding-bottom: 5%;
     margin-top: 10%;
   }
@@ -333,7 +340,9 @@ select {
   padding-left: 9%;
   padding-right: 9%;
   font-weight: 700;
-  margin-top: 10%;
+  display: block;
+ margin: 0 auto;
+ margin-top: 8%;
 
 }
 
@@ -344,8 +353,8 @@ select {
   padding: 2%;
   border-radius: 20px;
   font-weight: 700;
-  margin: 6%;
-  width: 85%;
+
+  width: 60%;
 }
 
 main {

@@ -35,7 +35,7 @@ const toggleDropdown = () => {
         </div>
           <div class="dropdown-content" v-if="isOpen">
             <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicos"> Serviços </router-link>
+      <router-link to="/servicosadmin"> Serviços </router-link>
       <router-link to="/relatorios"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
       <router-link to="/"> Orçamentos </router-link>
