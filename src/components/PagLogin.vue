@@ -42,7 +42,7 @@ function processarForm() {
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/removeracesso"><button id="enviar" type="submit">Cadastre-se</button></RouterLink>
+        <RouterLink to="/removeracesso"><button id="enviarc" type="submit">Cadastre-se</button></RouterLink>
      
     </section>
 
@@ -70,47 +70,36 @@ function processarForm() {
     </aside>
   </main>
 </template>
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
-/* Base Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Karla', sans-serif;
-}
-
 .img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-.container {
+.container{
   display: grid;
-  grid-template-columns: 25% 1fr 25%;
+  grid-template-columns: 25% 1fr 25%
 }
-
-.pergunta {
-  margin-top: 2rem;
-  font-size: 22px;
-  text-align: center;
+.pergunta{
+margin-top: 5rem;
+font-size: 22px;
 }
-
 #main {
   display: grid;
   grid-template-columns: 30% 70%;
 }
 
-#h1 {
+#h1{
   color: #000000;
   font-size: 36px;
-  margin-top: 5%;
-  text-align: center;
+  margin-top: 15%;
 }
-
-h1 {
+h1{
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 500;
@@ -120,27 +109,29 @@ h1 {
   text-align: center;
   margin-top: 2%;
 }
-
-.logo {
+.logo{
   display: flex;
-  margin-top: 30%;
-  align-items: center;
-  align-self: center;
+margin-top: 30%;
+align-items: center;
+align-self: center;
 }
-
 input {
-  width: 100%;
-  max-width: 700px;
-  height: 50px;
+  width: 578px;
+  height: 46px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
-  border: none;
+  border: 0px solid; /* Borda inicial em cinza claro */
   margin: 0;
-  padding-left: 2%;
-  font-size: 16px;
+padding-left: 2%;
+transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+}
+input:focus {
+  border: 2px solid blue;
+  border-color: #091D87; /* Cor azul */
+  outline: none; /* Remove o contorno padrão do navegador */
 }
 
-label {
+label{
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
@@ -151,37 +142,46 @@ label {
   text-align: center;
   margin-top: 6%;
   margin-bottom: 4%;
+  
 }
 
-button {
-  margin: 0 auto;
-  display: block;
+ button{
+  margin: 0 30% 0 30%;
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 15px 40px;
+  gap: 10px;
   width: 230px;
   font-size: 16px;
   color: white;
-  margin-top: 1.5rem; 
+  margin-top: 3rem;
   border: none;
   text-align: center;
+  cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
+  transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
 }
-
+button:active {
+  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+}
+button#enviar {
+  margin-left: 120px;
+}
+button#enviarc {
+  margin-left: 100px;
+}
 section {
   background: #0f0541;
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
 
 aside {
   margin: 5%;
-  padding: 20px;
 }
 
 .bemvindo,
@@ -189,139 +189,99 @@ aside {
 p {
   color: white;
 }
-
 .bemvindo {
   font-family: 'Readex Pro';
   font-size: 32px;
+
 }
 
 .congmta,
 p {
   font-family: 'Karla';
-  text-align: center;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-  #main {
-    grid-template-columns: 1fr;
-  }
-
-  aside {
-    margin: 0;
-    padding: 10px;
-  }
-
-  section {
-    height: auto;
-  }
-
-  h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  button {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  input {
-    width: 90%;
-    max-width: 500px;
-  }
-
-  .pergunta {
-    margin-top: 1.5rem;
-  }
-}
-
+   text-align: center;
+} 
 @media (max-width: 768px) {
-
-  .pergunta {
-    font-size: 18px;
-    margin-top: 1rem; 
-  }
-
-  #h1 {
-    font-size: 18px;
-    margin-top: 2%;
-  }
-
-  label {
-    font-size: 14px;
-  }
-
-  input {
-    width: 270px; 
-    max-width: 600px; 
-    padding-left: 1.5%;
-    margin-left: -10%; 
-  }
-
-  button {
-    font-size: 14px;
-    padding: 10px 20px;
-    margin-left: auto; 
-    margin-right: auto; 
-  }
-  button#enviar {
-    width: 150px; 
-    padding: 8px 15px; 
-    margin-left: 10px; 
-  }
-  .formulario button {
-    width: 80%; 
-    max-width: 250px; 
-    margin: 1.5rem auto; }
-
-  .formulario button#enviar {
-    width: 57%;
-    max-width: 250px;
-  }
-}
-section {
-    height: 60vh; 
+  section {
+    height: 50vh; 
     padding: 10px; 
   }
   .logo {
-    width: 150px; 
-    margin-top: 20%; 
+    width: 120px; 
+    margin-bottom: 20px;
   }
-
-@media (max-width: 480px) {
-  section {
-    height: 50vh; 
-    padding: 5px; 
-  }
-  h1 {
-    font-size: 24px;
-  }
-
   #main {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr; /* Uma coluna para telas menores */
   }
-
-  section,
-  aside {
-    margin: 0;
-    padding: 10px;
+  
+  .container {
+    grid-template-columns: 1fr; /* Formulário com uma coluna */
   }
 
   input {
-    height: 38px;
+    width: 100%; /* Ajusta o tamanho dos inputs para a largura da tela */
+  }
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: auto; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-right: auto; /* Alinha à direita em dispositivos muito pequenos */
+  }
+  button#enviar {
+    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
+    width: 150px; /* Comprimento para tablets */
+    padding: 8px 15px; /* Ajusta o preenchimento */
+    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
+  }
+  button#enviarc {
+    width: 150px; /* Comprimento para tablets */
+    padding: 8px 15px; /* Ajusta o preenchimento */
+    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-top: 20px;
+  }
+
+
+  #h1 {
+    font-size: 28px; /* Ajusta o tamanho da fonte do título */
+  }
+
+  h1 {
+    font-size: 20px; /* Ajusta o tamanho da fonte do título principal */
+
+  }
+
+ 
+
+  .pergunta {
+    font-size: 18px; 
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+  }
+
+  input {
+    width: 100%; /* Ajusta para ocupar toda a largura */
   }
 
   button {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Ajusta o botão para ocupar toda a largura */
+    margin-left: 0;
   }
 
-  .pergunta {
-    margin-top: 1rem; 
-    font-size: 16px;
+  #h1 {
+    font-size: 24px; /* Diminui ainda mais o título em telas pequenas */
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .logo {
+    margin-top: 15%;
   }
 }
 </style>
-
