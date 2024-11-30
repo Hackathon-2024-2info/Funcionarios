@@ -48,10 +48,13 @@ const chamadoStore= useChamadoStore();
           </section>
           <span> Solicitador </span>
         </div>
-            <section class="order-icons">
+        </th>
+        <th>
+          <div class="th-content">
+        <section class="order-icons">
               <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
-            <span> Status do relaatório </span>
+            <span> Status do relatório </span>
           </div>
         </th>
         <th>
