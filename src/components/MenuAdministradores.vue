@@ -35,7 +35,7 @@ const toggleDropdown = () => {
           <div class="dropdown-content" v-if="isOpen">
             <router-link to="/estoqueadmin"> Estoque </router-link>
       <router-link to="/servicosadmin"> Serviços </router-link>
-      <router-link to="/relatorios"> Relatórios </router-link>
+      <router-link to="/relatoriosadmin"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
       <router-link to="/orcamento"> Orçamentos </router-link>
       <router-link to="/curriculoadmin"> Currículos </router-link>
@@ -49,7 +49,7 @@ const toggleDropdown = () => {
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
         <router-link to="/estoqueadmin"> Estoque </router-link>
       <router-link to="/servicosadmin"> Serviços </router-link>
-      <router-link to="/relatorios"> Relatórios </router-link>
+      <router-link to="/relatoriosadmin"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
       <router-link to="/orcamento"> Orçamentos </router-link>
       <router-link to="/curriculoadmin"> Currículos </router-link>
