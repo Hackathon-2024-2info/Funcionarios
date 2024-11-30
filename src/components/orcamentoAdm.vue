@@ -80,7 +80,6 @@ main {
     background: #384dbb;
     border-radius: 24px;
     color: white;
-    margin-top: 15%;
     margin-left: 20%;
 }
 
