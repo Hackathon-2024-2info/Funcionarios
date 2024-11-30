@@ -21,14 +21,14 @@ const tiposervico = [
         <div class="os-container-input">
             <div class="container-input">
                 <label class="tipo-label-um" for="">Retirada do caixa:</label>
-                <input class="tipo-input-um" type="num" placeholder="Insira o valor aqui" />
+                <input class="tipo-input-um" type="number" placeholder="Insira o valor aqui" />
                 <div class="botaozinho">
                     <img src="../assets/Vector.png" alt="" />
                 </div>
             </div>
             <div class="container-input">
                 <label class="tipo-label-um" for="">Investimento para a caixa:</label>
-                <input class="tipo-input-um" type="num" placeholder="Insira o valor aqui" />
+                <input class="tipo-input-um" type="number" placeholder="Insira o valor aqui" />
                 <div class="botaozinho">
                     <img src="../assets/Vector.png" alt="" />
                 </div>
@@ -49,11 +49,11 @@ const tiposervico = [
                 </div>
                 <div class="row">
                     <label class="tipo-label-dois" for="">Valor adicional <br>(opcional):</label>
-                    <input class="tipo-input-dois" type="num" placeholder="Insira aqui" />
+                    <input class="tipo-input-dois" type="number" placeholder="Insira aqui" />
                 </div>
                 <div class="row">
                     <label class="tipo-label-dois" for="">Desconto<br> (opcional):</label>
-                    <input class="tipo-input-dois" type="num" placeholder="Insira aqui" />
+                    <input class="tipo-input-dois" type="number" placeholder="Insira aqui" />
                 </div>
             </div>
             <p class="num-dois">R$2,478</p>
@@ -282,7 +282,7 @@ button {
         display: flex;
         flex-direction: column;
         width: 90%;
-        height: 14%;
+        height: 20%;
         background: #384dbb;
         border-radius: 24px;
         color: white;
@@ -298,6 +298,35 @@ button {
         margin-left: 7%;
         margin-top: 10%;
     }
+
+    .tipo-input-um {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2.5%;
+    margin-left: 10%;
+    width: 55%;
+    height: 26px;
+    background: rgba(84, 111, 255, 0.32);
+    border-radius: 5px;
+    border: none;
+}
+
+    .os-container-input{
+        display: flex;
+  gap: 30%;
+    }
+    .container-input {
+        display: flex;
+        float: left;
+        flex-direction: column;
+        width: 40%;
+        background: #d9d9d9;
+        border-radius: 20px;
+        margin-left: 7%;
+        margin-top: 10%;
+    }
+
 
     .num {
         display: flex;
@@ -320,28 +349,17 @@ button {
         color: rgba(255, 255, 255, 0.7);
     }
 
-    .container-input {
-        display: flex;
-        float: left;
-        flex-direction: column;
-        width: 40%;
-        background: #d9d9d9;
-        border-radius: 20px;
-        margin-right: 10%;
-        margin-bottom: 3.5%;
-        margin-top: 3.5%;
-        margin-left: 7%;
-    }
     .container-dois {
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 30%;
+    height: 40%;
     background: #384dbb;
     border-radius: 24px;
     color: white;
-    margin-left: 20%;
+    margin-left: 17%;
 }
+
 .tipo-input-dois {
     display: flex;
     flex-direction: row;
