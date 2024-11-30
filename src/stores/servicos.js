@@ -56,3 +56,5 @@ export const useServicoStore = defineStore('servico', () => {
   }
   return { servicos, getProductById }
 })
+
+

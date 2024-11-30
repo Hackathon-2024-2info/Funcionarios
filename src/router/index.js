@@ -15,6 +15,19 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/solicitarchamado',
+      name: 'solicitarchamado',
+      component: () => import('../views/SolicitarChamadoView.vue')
+    },   
+    {
+      path: '/editperfil',
+      name: 'editperfil',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
       component: () => import('@/components/editarInfos.vue')
     },
     {
@@ -58,9 +71,31 @@ const router = createRouter({
       component: () => import('@/views/EstoqueAdminView.vue')
     },
     {
+      path: '/curriculoadmin',
+      name: 'curriculoadmin',
+      component: () => import('@/views/CurriculosAdminView.vue')
+    },
+    {
       path: '/curriculo',
       name: 'curriculo',
       component: () => import('@/views/PagCurriculoView.vue')
+    },
+    {
+      path: '/addservico',
+      name: 'addservico',
+      component: () => import('@/views/AddServicoAdminView.vue')
+    },
+    {
+      path: '/detalherelatorio/:id',
+      name: 'detalherelatorio',
+      component: () => import('@/views/DetalheRelatorioView.vue'),
+      props: true
+    },
+    {
+      path: '/detalhechamado/:id',
+      name: 'detalhechamado',
+      component: () => import('@/views/DetalhesChamadoAdminView.vue'),
+      props: true
     },
     {
       path: '/perfil',
@@ -84,10 +119,22 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/additem',
+      name: 'additem',
+      component: () => import('../components/AddEstoqueAdministradores.vue')
+    },
+    {
       path: '/orcamento',
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
-    }
+    },
+    
+    // {
+    //   path: '/menu',
+    //   name: 'menu',
+    //   component: () => import('@/components/MenuAdministradores.vue')
+    // }
+
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'
