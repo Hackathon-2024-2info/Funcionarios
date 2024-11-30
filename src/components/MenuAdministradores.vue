@@ -9,7 +9,6 @@ const toggleDropdown = () => {
 </script>
 
 <template>
-
   <body>
     <div class="menu-sm">
       <header>
