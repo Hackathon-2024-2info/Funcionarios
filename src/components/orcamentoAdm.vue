@@ -70,7 +70,6 @@ main {
     display: flex;
     flex-direction: column;
     height: 130vh;
-    margin-top: -100%;
 }
 
 .container-um {

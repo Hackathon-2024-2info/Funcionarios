@@ -13,6 +13,24 @@ onMounted(() => {
   servico.value = servicoStore.getProductById(props.id)
 })
 
+const itens = [
+  {
+    nome: 'fjfjsjf'
+  },
+  {
+    nome: 'fhhfuih'
+  },
+  {
+    nome: 'rngbjkrengjre'
+  },
+  {
+    nome: 'fefhuifj'
+  },
+  {
+    nome: 'fhfhfui'
+  }
+]
+
 </script>
 
 <template>
@@ -40,6 +58,15 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <div class="espaçamento-lista">
+      <h1 class="titulo-lista">Ferramentas necessárias:</h1>
+      <br>
+      <ul class="lista">
+        <li v-for="item in itens" :key="item.nome">
+          {{ item.nome }}
+        </li>
+      </ul>
+    </div>
   </main>
 </template>
 
@@ -53,8 +80,8 @@ onMounted(() => {
   font-family: 'Karla';
   color: white;
   background-color: #180577;
-  width: 80%;
-  height: 7vh;
+  width: 35%;
+  height: 6vh;
   font-size: 18px;
   font-weight: 700;
   border-radius: 20px;
@@ -71,13 +98,15 @@ main {
   background-color: #f5f5f5;
   /* height: 154vh; */
   height: 200vh;
+  margin-top: 20%;
 }
 
 .espaçamento {
   display: grid;
   margin-left: 20%;
   margin-right: 0px;
-  margin-top: -95%;
+  /* margin-top: -95%; ESPAÇAMENTO COM OS COMPONENTES INCLUSOS!!!! VOU MUDAR PARA MEXER NA RESPONSIVIDADE P/ MOBILE*/
+  margin-top: -12%;
 }
 
 .box {
@@ -151,41 +180,81 @@ main {
   word-wrap: break-word;
 }
 
+.espaçamento-lista {
+  display: grid;
+  place-items: end;
+}
+
+.titulo-lista {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  align-items: center;
+  color: #091d87;
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 15px;
+  padding-bottom: 0.1%;
+  padding-top: 0.1%;
+  padding-left: 0.1%;
+  width: 25%;
+  top: 30%;
+  left: 71%;
+  height: 2.5%;
+}
+
+.lista {
+  list-style-position: outside;
+  display: block;
+  position: absolute;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  top: 40%;
+  left: 70%;
+  width: 23.5%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 40px;
+  width: 300px;
+}
+
+ul li {
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 20px;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10%;
+}
+
+ul li::before {
+  content: "•";
+  color: rgba(84, 111, 255, 0.32);
+  font-size: 40px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-60%);
+} 
 
 @media only screen and (max-device-width: 480px) {
-
-  #visurelatorio{
-  font-family: 'Karla';
-  color: white;
-  background-color: #180577;
-  width: 120%;
-  height: 4.5vh;
-  font-size: 10px;
-  font-weight: 700;
-  border-radius: 20px;
-  border-color: rgba(217, 217, 217, 0);
-}
-
-.teste{
-  display: flex;
-  justify-content: start;
-  margin-bottom: 30%;
-}
-
   .box {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
-  height: 100%;
+  width: 110%;
+  height: 150%;
   background: #ffffff;
   border-radius: 10px;
   margin-top: 7%;
-  margin-left: 3%;
+  margin-right: 0px;
 
-}
-
-p{
-  font-size: 15px;
 }
 
 img {
@@ -195,6 +264,7 @@ img {
 .espaçamento {
   display: grid;
   margin-left: 2%;
+  margin-right: 0px;
   margin-top: -15%;
 }
 .titulo {
@@ -207,7 +277,7 @@ img {
   width: 70%;
   margin-left: 5%;
   height: 3%;
-  margin-top: 2%;
+  margin-top: -14%;
 }
 
 .minicontainer p {
@@ -219,8 +289,9 @@ img {
 .infos {
   line-height: 200%;
   margin-left: 5%;
+  margin-bottom: 5%;
   padding-right: 5%;
-  margin-top: 5%;
+  margin-top: -20%;
 }
 
 .infos p {
@@ -237,5 +308,43 @@ img {
   word-wrap: break-word;
 }
 
+
+.espaçamento-lista {
+  width: 480px;
+  height: 50vh;
+  position: relative;
+  top: 15%;
+  margin-left: -55%;
+}
+.titulo-lista {
+  margin-bottom: 40px;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  color: #091d87;
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 15px;
+  width: 77.5%;
+  height: 5%;
+}
+
+.lista {
+  list-style-position: outside;
+  display: block;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  align-items: center;
+}
+ul li {
+  background: rgba(84, 111, 255, 0.32);
+  border-radius: 20px;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10%;
+  width: 300%;
+}
 }
 </style>
