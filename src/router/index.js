@@ -127,7 +127,8 @@ const router = createRouter({
       path: '/orcamento',
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
-    }
+    },
+    
     // {
     //   path: '/menu',
     //   name: 'menu',

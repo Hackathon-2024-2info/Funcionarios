@@ -71,7 +71,7 @@ h1 {
     width: 50%;
     height: 30%;
     margin-left: 20%;
-    margin-top: 20%;
+    margin-top: -90%;
 }
 
 p {
@@ -102,5 +102,55 @@ button {
   margin-left: 37%;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+@media only screen and (max-device-width: 480px) {
+    .texts {
+    width: 50%;
+    height: 30%;
+    margin-left: 12%;
+    margin-top: 30%;
+}
+.botaozinho {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    width: 51px;
+    height: 43px;
+    background: rgba(84, 111, 255, 0.32);
+    border-radius: 10px;
+}
+
+img {
+    position: relative;
+    display: flex;
+    margin-left: 33%;
+    margin-top: 21%;
+}
+
+h1 {
+    display: flex;
+    position: absolute;
+    top: 29%;
+    left: 27%;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 10%;
+  background: #091d87;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-left: 25%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
 }
 </style>
