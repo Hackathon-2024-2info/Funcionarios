@@ -73,8 +73,9 @@ const toggleDropdown = () => {
 
 body {
   background: #f5f5f5;
-
+  margin-top: -10%;
 }
+
 @media only screen and (min-device-width: 601px) {
   .menu-sm {
     display: none;
@@ -98,9 +99,7 @@ body {
 
   .menu-lg {
     display: grid;
-    grid-template-columns: 100%;
-    width: 18%;
-    margin-top: -10%;
+    grid-template-columns: 18% 1fr;
   }
 
   template {
@@ -248,6 +247,10 @@ body {
     margin-bottom: -13%;
   }
 
+  .menu-lg {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+  }
 
   template {
     margin: 0;

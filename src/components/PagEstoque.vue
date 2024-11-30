@@ -17,6 +17,11 @@ const estoqueStore = useEstoqueStore();
 <template>
   <div class="small">
     <main>
+      <div class="setas">
+        <button><img src="../assets/esquerda.png" alt="" /></button>
+        <p>1</p>
+        <button><img src="../assets/direita.png" alt="" /></button>
+      </div>
     </main>
     <table class="tabela-itens">
       <thead>
