@@ -61,74 +61,76 @@ const estoqueStore = useEstoqueStore();
       </thead>
       <tbody>
         <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
-         <td>{{ estoque.id }}</td>
-        <td>{{ estoque.nome }}</td>
-        <td>{{ estoque.quantidade }}</td>
-        <td>{{ estoque.marca }}</td>
+          <td>{{ estoque.id }}</td>
+          <td>{{ estoque.nome }}</td>
+          <td>{{ estoque.quantidade }}</td>
+          <td>{{ estoque.marca }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div class="large">
-    <main>
-      <div class="setas">
-        <button><img src="../assets/esquerda.png" alt="" /></button>
-        <p>1</p>
-        <button><img src="../assets/direita.png" alt="" /></button>
-      </div>
-    </main>
+    <div id="display">
+      <main>
+        <div class="setas">
+          <button><img src="../assets/esquerda.png" alt="" /></button>
+          <p>1</p>
+          <button><img src="../assets/direita.png" alt="" /></button>
+        </div>
+      </main>
 
-    <table class="tabela-itens">
-      <thead>
-        <tr>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Código do item </span>
-            </div>
-          </th>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Nome do item </span>
-            </div>
-          </th>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Quantidade </span>
-            </div>
-          </th>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Marca do item </span>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
-         <td>{{ estoque.id }}</td>
-        <td>{{ estoque.nome }}</td>
-        <td>{{ estoque.quantidade }}</td>
-        <td>{{ estoque.marca }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="tabela-itens">
+        <thead>
+          <tr>
+            <th>
+              <div class="th-content">
+                <section class="order-icons">
+                  <img src="../assets/Vector-1.png" alt="" />
+                  <img src="../assets//Vector.png" alt="" />
+                </section>
+                <span> Código do item </span>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+                <section class="order-icons">
+                  <img src="../assets/Vector-1.png" alt="" />
+                  <img src="../assets//Vector.png" alt="" />
+                </section>
+                <span> Nome do item </span>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+                <section class="order-icons">
+                  <img src="../assets/Vector-1.png" alt="" />
+                  <img src="../assets//Vector.png" alt="" />
+                </section>
+                <span> Quantidade </span>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+                <section class="order-icons">
+                  <img src="../assets/Vector-1.png" alt="" />
+                  <img src="../assets//Vector.png" alt="" />
+                </section>
+                <span> Marca do item </span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
+            <td>{{ estoque.id }}</td>
+            <td>{{ estoque.nome }}</td>
+            <td>{{ estoque.quantidade }}</td>
+            <td>{{ estoque.marca }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -150,14 +152,14 @@ const estoqueStore = useEstoqueStore();
   }
 
   .small {
-    background-color: rgba(245, 245, 245, 1); 
+    background-color: rgba(245, 245, 245, 1);
   }
 
   .tabela-itens {
     font-family: 'Roboto', sans-serif;
     font-weight: 450;
     height: 100%;
-    border-collapse: collapse;   
+    border-collapse: collapse;
     margin: 0;
     margin-left: 5%;
     line-height: 2rem;
@@ -237,14 +239,26 @@ const estoqueStore = useEstoqueStore();
     display: none;
   }
 
+  #display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     background-color: #f5f5f5;
+    margin: 0;
   }
 
   .tabela {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    margin-left: 5%;
+    margin-left: 22%;
     padding-right: 10%;
   }
 
@@ -253,8 +267,7 @@ const estoqueStore = useEstoqueStore();
     font-weight: 450;
     width: 80%;
     border-collapse: collapse;
-    margin: 0 auto;
-    margin-left: 5%;
+    margin-left: 22%;
     line-height: 2.5rem;
 
     & td {
@@ -266,6 +279,7 @@ const estoqueStore = useEstoqueStore();
       align-items: center;
       /* Alinha o conteúdo verticalmente */
       justify-content: flex-start;
+
       /* Se quiser espaçar igualmente */
     }
   }
@@ -295,12 +309,13 @@ const estoqueStore = useEstoqueStore();
   main {
     display: flex;
     margin-bottom: 3%;
+    margin-left: 17%;
   }
 
   .setas {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: -0.4%;
   }
@@ -313,6 +328,7 @@ const estoqueStore = useEstoqueStore();
     flex-wrap: nowrap;
     width: 100%;
     margin-left: 20%;
+
   }
 
   label,
@@ -345,10 +361,13 @@ const estoqueStore = useEstoqueStore();
     padding: 0.2%;
     padding-left: 2%;
     padding-right: 2%;
+
   }
 
   main {
     margin-top: 5%;
+    margin-top: -70%;
+
   }
 
   .option {

@@ -29,7 +29,7 @@
       <div class="box">
         <p class="title">Remover acesso</p>
         <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
-        <button class="button">Clique aqui</button>
+        <router-link to="/removeracesso"><button class="button">Clique aqui</button></router-link>
       </div>
     </nav>
   </div>

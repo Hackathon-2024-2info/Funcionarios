@@ -38,7 +38,7 @@ const toggleDropdown = () => {
             <hr>
             <a><router-link to="/servicos/:id"> Serviço </router-link></a>
             <hr>
-            <a><router-link to="/relpreventivo"> Relatório </router-link></a>
+            <a><router-link to="/relatorios"> Relatório </router-link></a>
           </div>
         </div>
       </nav>
@@ -50,7 +50,7 @@ const toggleDropdown = () => {
 
         <router-link to="/estoque"> Estoque </router-link>
         <router-link to="/servicos/:id"> Servico </router-link>
-        <router-link to="/relpreventivo"> Relatório </router-link>
+        <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
 
@@ -58,7 +58,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Abra um chamado</p>
           <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <button class="button">Abrir chamado</button>
+          <router-link to="/solicitarchamado"><button class="button">Abrir chamado</button></router-link>
         </div>
       </nav>
     </div>
