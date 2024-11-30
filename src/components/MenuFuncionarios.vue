@@ -38,7 +38,7 @@ const toggleDropdown = () => {
             <hr>
             <a><router-link to="/servicos/:id"> Serviço </router-link></a>
             <hr>
-            <a><router-link to="/relpreventivo"> Relatório </router-link></a>
+            <a><router-link to="/relatorios"> Relatório </router-link></a>
           </div>
         </div>
       </nav>
@@ -50,7 +50,7 @@ const toggleDropdown = () => {
 
         <router-link to="/estoque"> Estoque </router-link>
         <router-link to="/servicos/:id"> Servico </router-link>
-        <router-link to="/relpreventivo"> Relatório </router-link>
+        <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
 
@@ -58,7 +58,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Abra um chamado</p>
           <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <button class="button">Abrir chamado</button>
+          <router-link to="/solicitarchamado"><button class="button">Abrir chamado</button></router-link>
         </div>
       </nav>
     </div>
@@ -74,30 +74,6 @@ const toggleDropdown = () => {
 body {
   background: #f5f5f5;
   margin-top: -10%;
-}
-.menu {
-  display: grid;
-  grid-template-columns: 100%;
-  width: 18%;
-}
-template {
-  margin: 0;
-  height: 100%;
-}
-nav {
-  height: 100%;
-  margin: 0;
-  padding-bottom: 15%;
-  background: #0f0541;
-
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
 }
 
 @media only screen and (min-device-width: 601px) {
