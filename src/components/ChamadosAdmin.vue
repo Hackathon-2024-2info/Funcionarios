@@ -49,30 +49,8 @@ const chamadoStore= useChamadoStore();
           <span> Solicitador </span>
         </div>
         </th>
-        <th>
-          <div class="th-content">
-        <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
-            </section>
-            <span> Status do relatório </span>
-          </div>
-        </th>
-        <th>
-          <div class="th-content">
-            <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
-            </section>
-            <span> Data </span>
-          </div>
-        </th>
-        <th>
-          <div class="th-content">
-            <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
-            </section>
-            <span> Solicitador </span>
-          </div>
-        </th>
+
+    
       </tr>
     </thead>
     <tbody>
