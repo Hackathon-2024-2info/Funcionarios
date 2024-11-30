@@ -1,8 +1,11 @@
 <script setup>
-
+import MenuFuncionarios from '@/components/MenuFuncionarios.vue';
+import pagHeader from '@/components/pagHeader.vue';
 </script>
 
 <template>
+  <pagHeader></pagHeader>
+  <MenuFuncionarios></MenuFuncionarios>
   <main id="main">
     <div>
 
@@ -29,7 +32,7 @@
   width: 564px;
   height: 734px;
   margin-left: 28%;
-  margin-top: 8%;
+  margin-top: -73%;
 }
 
 
