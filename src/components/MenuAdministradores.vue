@@ -9,7 +9,6 @@ const toggleDropdown = () => {
 </script>
 
 <template>
-
   <body>
     <div class="menu-sm">
       <header>
@@ -35,11 +34,11 @@ const toggleDropdown = () => {
         </div>
           <div class="dropdown-content" v-if="isOpen">
             <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicos"> Serviços </router-link>
+      <router-link to="/servicosadmin"> Serviços </router-link>
       <router-link to="/relatorios"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/"> Orçamentos </router-link>
-      <router-link to="/"> Currículos </router-link>
+      <router-link to="/orcamento"> Orçamentos </router-link>
+      <router-link to="/curriculoadmin"> Currículos </router-link>
           </div>
         </div>
       </nav>
@@ -49,11 +48,11 @@ const toggleDropdown = () => {
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
         <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicos"> Serviços </router-link>
+      <router-link to="/servicosadmin"> Serviços </router-link>
       <router-link to="/relatorios"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/"> Orçamentos </router-link>
-      <router-link to="/"> Currículos </router-link>
+      <router-link to="/orcamento"> Orçamentos </router-link>
+      <router-link to="/curriculoadmin"> Currículos </router-link>
 
         <div class="vazio"></div>
 
@@ -77,30 +76,6 @@ const toggleDropdown = () => {
 body {
   background: #f5f5f5;
   margin-top: -10%;
-}
-.menu {
-  display: grid;
-  grid-template-columns: 100%;
-  width: 18%;
-}
-template {
-  margin: 0;
-  height: 100%;
-}
-nav {
-  height: 100%;
-  margin: 0;
-  padding-bottom: 15%;
-  background: #0f0541;
-
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
 }
 
 @media only screen and (min-device-width: 601px) {
