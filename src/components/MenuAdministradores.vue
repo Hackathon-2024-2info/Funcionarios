@@ -37,8 +37,8 @@ const toggleDropdown = () => {
       <router-link to="/servicos"> Serviços </router-link>
       <router-link to="/relatorios"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/"> Orçamentos </router-link>
-      <router-link to="/"> Currículos </router-link>
+      <router-link to="/orcamento"> Orçamentos </router-link>
+      <router-link to="/curriculoadmin"> Currículos </router-link>
           </div>
         </div>
       </nav>
@@ -51,8 +51,8 @@ const toggleDropdown = () => {
       <router-link to="/servicos"> Serviços </router-link>
       <router-link to="/relatorios"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/"> Orçamentos </router-link>
-      <router-link to="/"> Currículos </router-link>
+      <router-link to="/orcamento"> Orçamentos </router-link>
+      <router-link to="/curriculoadmin"> Currículos </router-link>
 
         <div class="vazio"></div>
 
