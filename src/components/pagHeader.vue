@@ -147,7 +147,13 @@ img {
     margin-left: 88%;
     top: calc(50% - 43px/2 - 0.5px);
 }
+  img:hover{
+    scale: 1.05;
+    border-radius: 60%;    
+    background-color: rgb(99, 99, 245);
+  }
 }
+
 @media only screen and (max-device-width: 600px){
     *{
         display: none;
