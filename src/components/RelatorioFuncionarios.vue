@@ -110,8 +110,8 @@
 
 #main {
   width: 39%;
-  margin-left: 28%;
-  margin-top: 8%;
+  margin-left: 25%;
+  margin-top: -70%;
 }
 
 .container {
@@ -135,12 +135,12 @@
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 22.5px;
   line-height: 18px;
   color: #180577;
   padding: 10%;
   margin-left: -9%;
-  width: 99%;
+  width: 150%;
   top: 59%;
 }
 
