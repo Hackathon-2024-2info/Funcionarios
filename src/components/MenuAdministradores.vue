@@ -100,8 +100,7 @@ body {
   }
 
   .menu-lg {
-    display: grid;
-    grid-template-columns: 18% 1fr;
+    width: 20%;
   }
 
   template {
