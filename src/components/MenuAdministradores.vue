@@ -9,7 +9,6 @@ const toggleDropdown = () => {
 </script>
 
 <template>
-
   <body>
     <div class="menu-sm">
       <header>
@@ -78,6 +77,7 @@ body {
   background: #f5f5f5;
   margin-top: -10%;
 }
+
 @media only screen and (min-device-width: 601px) {
   .menu-sm {
     display: none;
