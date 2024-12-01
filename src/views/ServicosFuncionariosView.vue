@@ -1,11 +1,15 @@
 <script setup>
-import boxinfo from "../components/boxinfo.vue";
+import boxinfo from "@/components/BoxInfo.vue";
 import MenuFuncionarios from "@/components/MenuFuncionarios.vue";
+import PagHeader from '../components/pagHeader.vue';
+
+defineProps(['id'])
 
 </script>
 
 <template> 
-  <MenuFuncionarios></MenuFuncionarios>
-<boxinfo></boxinfo>
+<PagHeader></PagHeader>
+<MenuFuncionarios></MenuFuncionarios>
+<boxinfo :id="id"></boxinfo>
 
 </template>

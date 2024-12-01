@@ -1,8 +1,7 @@
 <script setup>
-import PagHeader from '../components/pagHeader.vue';
-
+import PagCadastro from '@/components/PagCadastro.vue';
 </script>
 
 <template> 
-<PagHeader></PagHeader>
+<PagCadastro></PagCadastro>
 </template>

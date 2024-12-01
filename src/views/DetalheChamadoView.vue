@@ -1,11 +1,11 @@
 <script setup>
 import MenuFuncionarios from "@/components/MenuFuncionarios.vue";
 import pagHeader from "@/components/pagHeader.vue";
-import RelatorioFuncionarios from "@/components/RelatorioFuncionarios.vue";
+import DetalheChamado from "@/components/DetalheChamado.vue";
 </script>
 
 <template> 
 <pagHeader></pagHeader>
 <MenuFuncionarios></MenuFuncionarios>
-<RelatorioFuncionarios></RelatorioFuncionarios>
+<DetalheChamado></DetalheChamado>
 </template>
