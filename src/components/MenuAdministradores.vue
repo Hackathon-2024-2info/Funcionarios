@@ -34,8 +34,8 @@ const toggleDropdown = () => {
         </div>
           <div class="dropdown-content" v-if="isOpen">
             <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicos"> Serviços </router-link>
-      <router-link to="/relatorios"> Relatórios </router-link>
+      <router-link to="/servicosadmin"> Serviços </router-link>
+      <router-link to="/relatoriosadmin"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
       <router-link to="/orcamento"> Orçamentos </router-link>
       <router-link to="/curriculoadmin"> Currículos </router-link>
@@ -48,8 +48,8 @@ const toggleDropdown = () => {
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
         <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicos"> Serviços </router-link>
-      <router-link to="/relatorios"> Relatórios </router-link>
+      <router-link to="/servicosadmin"> Serviços </router-link>
+      <router-link to="/relatoriosadmin"> Relatórios </router-link>
       <router-link to="/chamadosadmin"> Chamados </router-link>
       <router-link to="/orcamento"> Orçamentos </router-link>
       <router-link to="/curriculoadmin"> Currículos </router-link>
@@ -106,6 +106,39 @@ nav {
   .menu-sm {
     display: none;
   }
+  
+  nav a {
+      position: relative;
+      display: block;
+      padding: 4px 0;
+      color: #ecf0f1;
+      text-decoration: none;
+      transition: 0.7s;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 90%;
+        left: 20px;
+        width: 80%;
+        height: 3px;
+        background: gray;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.7s;
+      }
+
+      &:hover {
+        color: #95a5a6;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  
+ 
 
   .box {
     background-color: #384dbb;
@@ -117,6 +150,7 @@ nav {
     height: 60%;
     margin-top: -15%;
     padding-bottom: 10%;
+   
   }
 
   .warning {
@@ -147,6 +181,7 @@ nav {
     justify-content: start;
     align-items: center;
     box-sizing: border-box;
+
   }
 
   .img {
@@ -178,6 +213,7 @@ nav {
 
     display: flex;
     justify-content: center;
+    
   }
 
   nav a.active,
@@ -195,6 +231,8 @@ nav {
     margin: 4vh;
     padding-top: 5%;
     padding-bottom: 5%;
+    animation-name: menu-anim;
+    animation-duration: 2s;
   }
 
   .vazio {

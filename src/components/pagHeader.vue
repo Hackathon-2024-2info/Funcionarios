@@ -1,7 +1,7 @@
 <script setup>
 
-import { useAuthStore } from '@/stores/auth';
-const authStore = useAuthStore()
+// import { useAuthStore } from '@/stores/auth';
+// const authStore = useAuthStore()
 
 </script>
 
@@ -10,10 +10,9 @@ const authStore = useAuthStore()
     <main>
     <header>
         <h1 class="block-effect" style="--td: 0.9s">
-  <div class="block-reveal" style="--bc: #0F0541; --d: .3s">Olá, Edson!</div>
+  <div class="block-reveal" style="--bc: rgba(217, 217, 217, 1); --d: 0.25s">Olá, Edson!</div>
 </h1>
         <RouterLink to="/perfil"><img src="../assets/foto-perfil.png" alt=""></RouterLink>
-        <button @click="authStore.toggleAdmin">trocar p admin</button>
     </header>
 </main>
 </template>
@@ -60,7 +59,7 @@ body {
   position: relative;
   overflow: hidden;
 
-  animation: revealBlock 0s var(--t) forwards;
+  animation: revealBlock 1s var(--t) forwards;
   border-radius: 5px 5px 5px 5px;
 }
 
@@ -91,10 +90,12 @@ body {
 
   0% {
     width: 0;
+    opacity: 100%;
   }
 
   100% {
     width: 100%;
+    opacity: 100%;
   }
 }
 
@@ -109,18 +110,6 @@ body {
   }
 
 }
-
-.abs-site-link {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  color: hsla(0, 0%, 0%, .6);
-  font-size: 16px;
-}
-
-
-
-
 
 
 main{
