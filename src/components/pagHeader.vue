@@ -24,7 +24,7 @@ main{
 
 header {
     display: flex;
-    margin-left: 18%;
+    margin-left: 20%;
     position: absolute;
     width: 82%;
     height: 18vh;

@@ -49,7 +49,6 @@ const relatorioStore = useRelatorioStore();
 
  <div class="lg">  <div class="body">
       <div></div>
-      
         <main>
           <div class="filtrar">
             <label for="">Filtrar:</label>
@@ -70,7 +69,7 @@ const relatorioStore = useRelatorioStore();
       
         
         <section>
-          <div id="display">
+        
             <div class="box" v-for="relatorio in relatorioStore.relatorios" :key="relatorio.id">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
@@ -83,7 +82,7 @@ const relatorioStore = useRelatorioStore();
                 <RouterLink to="/detalherelatorio"><button class="btn-box">Ver detalhes</button></RouterLink>
               </div>
           </div>
-          </div>
+       
         </section>
     
 </div>
@@ -112,8 +111,10 @@ body {
   margin-bottom: 5%;
 }
 section {
-  display: grid;
-  grid-template-columns: 50% 50%;
+display: grid;
+grid-template-columns: 50% 50%;
+
+  margin-left: 19%;
 }
 
 .txt {
@@ -122,6 +123,7 @@ section {
 }
 
 .box {
+
   margin: 5%;
   display: flex;
   background: rgb(255, 255, 255);
@@ -283,6 +285,7 @@ section{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 5%
 }
 
 
@@ -324,22 +327,7 @@ select {
   margin-left: 2%;
   
 }
-.btn-azul {
-  border: none;
-  border-radius: 5px;
-  color: white;
-  width:65%;
-  font-family: 'Karla';
-  background-color: #091d87;
-  padding: 2%;
-  padding-left: 9%;
-  padding-right: 9%;
-  font-weight: 700;
-  display: block;
- margin: 0 auto;
- margin-top: 8%;
 
-}
 
 .btn-box {
   background-color: #091d87;
