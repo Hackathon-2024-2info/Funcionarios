@@ -118,7 +118,7 @@ main{
 
 header {
     display: flex;
-    margin-left: 20%;
+    margin-left: 18%;
     position: absolute;
     width: 82%;
     height: 18vh;
