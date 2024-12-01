@@ -37,6 +37,7 @@ const cargos=[
           <h6>INSIRA SEU CURRÍCULO</h6>
           <h4>Insira o arquivo do seu currículo</h4>
         </fieldset> -->
+          <button id="enviarc"> Concluir</button>
 </aside>
 
 <section>
@@ -55,7 +56,6 @@ const cargos=[
 
   <style scoped>
 
- 
 .espacamento {
   margin-top: 15%;
 }
@@ -102,48 +102,20 @@ input {
   border: none;
   margin: 0;
   padding-left: 2%;
+  cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
+  transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+
+}
+input:focus {
+  border: 2px solid blue;
+  border-color: #091D87; /* Cor azul */
+  outline: none; /* Remove o contorno padrão do navegador */
 }
 
 aside {
   margin: 5%;
   display: grid; 
   place-content: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .espacamento {
-    margin-top: 10%;
-  }
-
-  select,
-  input {
-    width: 90%; 
-    height: 40px; 
-    margin: 0 auto;
-  }
-
-  label {
-    font-size: 14px; 
-  }
-
-  option {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .espacamento {
-    margin-top: 5%;
-  }
-
-  select,
-  input {
-    height: 38px;
-  }
-
-  label {
-    font-size: 12px; 
-  }
 }
 
  
@@ -251,7 +223,16 @@ aside {
       margin-top: 3rem;
       border: none;
       text-align: center;
+      cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
+      transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
     }
+    button:active {
+  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+}
+    button#enviarc {
+    margin-top:-15px;
+  }
+ 
 
     section {
       background: #0f0541;
@@ -276,99 +257,63 @@ aside {
       font-family: 'Karla';
     text-align: center;
   }
-  /* Versão Responsiva */
-@media (max-width: 768px) {
-  #main {
-    display: flex; /* Altera para layout flexível */
-    flex-direction: column-reverse; /* Move o aside para cima na ordem */
-  }
-
-  aside {
-    margin: 5%;
+  @media (max-width: 768px) {
+    #main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Altera para coluna em telas menores */
   }
 
   section {
-    height: auto; /* Ajusta altura ao conteúdo */
-    padding: 1rem; /* Adiciona espaçamento interno */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    order: -1; /* Move a section para o topo */
+    height: 50vh; /* Ajusta a altura para se adaptar ao conteúdo */
+    padding: 2rem 0;
+  }
+  input {
+    width: 100%; /* Ajusta o tamanho dos inputs para a largura da tela */
+  }
+  .espacamento {
+    margin-top: 2rem; /* Ajusta o espaçamento do aside */
+  }
+  input, select {
+    max-width: 100%;
+    width: 90%;
   }
 
-  .img {
-    margin: 1rem 0;
-  }
-
-  h1 {
-    font-size: 24px; /* Reduz tamanho do texto */
-    margin-top: 1rem;
+  button {
+    width: 90%;
   }
 
   .pergunta {
     font-size: 18px;
-    margin: 1rem 0;
-    width: auto; /* Ajusta para caber na tela */
-    padding: 0;
-  }
-
-  button {
-    width: 100%; /* Botão ocupa toda a largura */
-    max-width: 300px; /* Limita tamanho máximo */
-    padding: 10px 20px; /* Reduz altura */
-    margin: 1rem auto; /* Centraliza */
-  }
-
-  input,
-  select {
-    width: 90%; /* Reduz largura */
-    max-width: 500px;
-    margin: 0.5rem auto;
-  }
-
-  label {
-    font-size: 14px; /* Diminui fonte */
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  #main {
-    flex-direction: column-reverse; /* Mantém aside no topo */
-  }
-
-  aside {
-    margin-top: 2rem;
-  }
-
-  input,
-  select {
-    width: 95%; /* Quase ocupa toda a tela */
-    height: 38px; /* Reduz altura */
-  }
-
-  label {
-    font-size: 12px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 16px;
+    width: 90%;
+    margin-top: 10px;
+    margin-left:-40px;
   }
 
   h1 {
-    font-size: 20px; /* Ajuste menor para telas pequenas */
+    font-size: 24px;
   }
 
-  .pergunta {
-    font-size: 16px;
-    margin: 0.5rem 0;
+  .logo {
+    max-width: 100px;
+    max-height: 100px;
   }
-}
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: auto; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-right: auto; /* Alinha à direita em dispositivos muito pequenos */
+  }
+  button#enviar {
+    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
+    width: 200px; /* Comprimento para tablets */
+    padding: 8px 15px; /* Ajusta o preenchimento */
+    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-top: 10px;
+
+  }  }
+
+
 
 </style>
+

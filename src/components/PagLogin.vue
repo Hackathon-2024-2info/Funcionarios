@@ -45,11 +45,11 @@ const authStore = useAuthStore();
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
+    </section>
         <!-- <RouterLink to="/about"> -->
           <button id="enviar" type="submit" @click="authStore.toggleAdmin">Cadastre-se</button>
         <!-- </RouterLink>     -->
       </section>
-
     <aside>
       <h1 id="h1">Faça seu login</h1>
       <div class="container">
@@ -125,10 +125,16 @@ input {
   height: 46px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
-  border: none;
-margin: 0;
+  border: 0px solid; /* Borda inicial em cinza claro */
+  margin: 0;
+  cursor: pointer;
 padding-left: 2%;
-
+transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+}
+input:focus {
+  border: 2px solid blue;
+  border-color: #091D87; /* Cor azul */
+  outline: none; /* Remove o contorno padrão do navegador */
 }
 
 label{
@@ -162,8 +168,18 @@ label{
   margin-top: 3rem;
   border: none;
   text-align: center;
+  cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
+  transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
 }
-
+button:active {
+  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+}
+button#enviar {
+  margin-left: 120px;
+}
+button#enviarc {
+  margin-left: 100px;
+}
 section {
   background: #0f0541;
   height: 100vh;
@@ -190,4 +206,88 @@ p {
   font-family: 'Karla';
    text-align: center;
 } 
+@media (max-width: 768px) {
+  section {
+    height: 50vh; 
+    padding: 10px; 
+  }
+  .logo {
+    width: 120px; 
+    margin-bottom: 20px;
+  }
+  #main {
+    grid-template-columns: 1fr; /* Uma coluna para telas menores */
+  }
+  
+  .container {
+    grid-template-columns: 1fr; /* Formulário com uma coluna */
+  }
+
+  input {
+    width: 100%; /* Ajusta o tamanho dos inputs para a largura da tela */
+  }
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: auto; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-right: auto; /* Alinha à direita em dispositivos muito pequenos */
+  }
+  button#enviar {
+    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
+    width: 150px; /* Comprimento para tablets */
+    padding: 8px 15px; /* Ajusta o preenchimento */
+    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
+  }
+  button#enviarc {
+    width: 150px; /* Comprimento para tablets */
+    padding: 8px 15px; /* Ajusta o preenchimento */
+    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-top: 20px;
+  }
+
+
+  #h1 {
+    font-size: 28px; /* Ajusta o tamanho da fonte do título */
+  }
+
+  h1 {
+    font-size: 20px; /* Ajusta o tamanho da fonte do título principal */
+
+  }
+
+ 
+
+  .pergunta {
+    font-size: 18px; 
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+  }
+
+  input {
+    width: 100%; /* Ajusta para ocupar toda a largura */
+  }
+
+  button {
+    width: 100%; /* Ajusta o botão para ocupar toda a largura */
+    margin-left: 0;
+  }
+
+  #h1 {
+    font-size: 24px; /* Diminui ainda mais o título em telas pequenas */
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .logo {
+    margin-top: 15%;
+  }
+}
 </style>

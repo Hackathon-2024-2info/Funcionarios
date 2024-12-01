@@ -68,6 +68,8 @@
 }
 
 .arquivo {
+  cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
+
   width: 50%;
   height: auto;
   background-color: #D9D9D9;
