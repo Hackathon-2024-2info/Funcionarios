@@ -17,7 +17,7 @@ onMounted(() => {
 <template>
     <main>
         <div class="botaozinho">
-            <img class="img" src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt="">
+            <RouterLink to="/relatoriosadmin"><img class="img" src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
         <div class="texts">
             <h1> {{relatorio.titulo}}</h1>
