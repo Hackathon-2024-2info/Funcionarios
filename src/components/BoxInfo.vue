@@ -164,7 +164,7 @@ main {
 }
 .descricao{
   line-height: 110%;
-  width: 500px;
+  width: 75%;
   word-wrap: break-word;
 }
 
@@ -173,6 +173,13 @@ main {
 
 @media only screen and (max-device-width: 480px) {
 
+
+  main {
+  background-color: #f5f5f5;
+  height: 154vh;
+  margin-top: 15%;
+  margin-left:1%;
+}
 
   #visurelatorio{
   font-family: 'Karla';
@@ -197,8 +204,8 @@ main {
   .box {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
-  height: 100%;
+  width: 65%;
+  height: 80%;
   background: #ffffff;
   border-radius: 10px;
   margin-top: 7%;
@@ -219,7 +226,7 @@ img {
 }
 .espaçamento {
   display: grid;
-  margin-left: 2%;
+  margin-left: 0%;
   margin-top: -15%;
 }
 .titulo {
@@ -263,8 +270,8 @@ img {
 }
 .descricao{
   line-height: 110%;
-  width: -600px;
   word-wrap: break-word;
+  width: 60%;
 }
 
 
