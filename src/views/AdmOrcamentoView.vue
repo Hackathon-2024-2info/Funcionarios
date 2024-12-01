@@ -6,7 +6,8 @@ import MenuAdministradores from '@/components/MenuAdministradores.vue';
 
 <template>
     <pagHeader></pagHeader>
+    <MenuAdministradores></MenuAdministradores>
         <orcamentoAdm></orcamentoAdm>
-        <MenuAdministradores></MenuAdministradores>
+
 
 </template>

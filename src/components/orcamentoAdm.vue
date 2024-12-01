@@ -70,7 +70,10 @@ main {
     display: flex;
     flex-direction: column;
     height: 130vh;
+    margin-left: 5%;
+    margin-top: -90%;
 }
+
 
 .container-um {
     display: flex;
@@ -277,6 +280,15 @@ button {
 }
 
 @media only screen and (max-device-width: 480px) {
+
+    main {
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    margin-left: 0%;
+    margin-top: 5%;
+}
+
     .container-um {
         display: flex;
         flex-direction: column;
