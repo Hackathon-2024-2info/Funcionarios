@@ -122,6 +122,7 @@ input {
   border-radius: 5px;
   border: 0px solid; /* Borda inicial em cinza claro */
   margin: 0;
+  cursor: pointer;
 padding-left: 2%;
 transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
 }
