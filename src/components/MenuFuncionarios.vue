@@ -81,6 +81,37 @@ body {
     display: none;
   }
 
+  nav a {
+      position: relative;
+      display: block;
+      padding: 4px 0;
+      color: #ecf0f1;
+      text-decoration: none;
+      transition: 0.7s;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 90%;
+        left: 20px;
+        width: 80%;
+        height: 3px;
+        background: gray;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.7s;
+      }
+
+      &:hover {
+        color: #95a5a6;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+
   .box {
     background-color: #384dbb;
     color: white;
