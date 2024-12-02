@@ -1,15 +1,73 @@
 <script setup>
 // import { onMounted, ref } from 'vue'
 // import { useAuthStore } from '@/stores/auth';
-import { useServicoStore } from '../stores/servicos.js';
+// import { useServicoStore } from '../stores/servicos.js';
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
 
-const servicoStore = useServicoStore();
+// const servicoStore = useServicoStore();
 // const authStore = useAuthStore()
 // const servico = ref({})
 
 
 // onMounted(() => {
 //   servico.value = servicoStore }
+
+const nome = ref('');
+const cliente = ref('');
+const datainicio = ref('');
+
+const fetchNomes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	nome.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar dificuldades:', error);
+  }
+};
+
+const fetchClientes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	cliente.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchDatas = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	datainicio.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+// const submitRelatorio = async () => {
+//   try {
+// 	const response = await axios.post('http://seu-dominio.com/api/Servico/', {
+//   	dificuldade: selectedDificuldade.value,
+//   	tempo: tempoServico.value,
+//   	colaboracao: selectedColaboracao.value,
+//   	pendencias: pendencias.value,
+// 	});
+// 	console.log('Relatório enviado com sucesso:', response.data);
+//   } catch (error) {
+// 	console.error('Erro ao enviar relatório:', error);
+//   }
+// };
+
+onMounted(() => {
+  fetchNomes();
+  fetchClientes();
+  fetchDatas();
+});
+
+// const selectedDificuldade = ref('');
+// const tempoServico = ref('');
+// const selectedColaboracao = ref('');
+
 
 </script>
 
@@ -29,13 +87,13 @@ const servicoStore = useServicoStore();
          
       
         <section>
-            <div class="box" v-for="servico in servicoStore.servicos" :key="servico.id">
+            <div class="box" v-for="nome in nome" :key="nome">
               <img src="../assets/logoopaca.png" alt="" class="img" />
               <div class="info">
-                <h3>{{servico.nome}}</h3>
+                <h3 :v-model="nome">{{nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">{{servico.cliente}}</P>
-                  <p class="txt-box"> {{ servico.datainicio }}</p>
+                  <P class="txt-box" :v-model="cliente">{{cliente}}</P>
+                  <p class="txt-box" :v-model="datainicio"> {{ servico.datainicio }}</p>
                 </div>
 
                 <RouterLink to="/detalheservico/:id"><button class="btn-box">Ver detalhes</button></RouterLink>
@@ -75,13 +133,13 @@ const servicoStore = useServicoStore();
           </div>
         </main>
         <section>
-            <div class="box" v-for="servico in servicoStore.servicos" :key="servico.id">
+            <div class="box" v-for="nome in nome" :key="nome">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
-                <h3>{{servico.nome}}</h3>
+                <h3 :v-model="nome">{{nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">{{servico.cliente}}</P>
-                  <p class="txt-box"> {{ servico.datainicio }}</p>
+                  <P class="txt-box" :v-model="cliente">{{cliente}}</P>
+                  <p class="txt-box" :v-model="datainicio"> {{ datainicio }}</p>
                 </div>
 
                 <RouterLink to="/detalheservico/:id"><button class="btn-box">Ver detalhes</button></RouterLink>
