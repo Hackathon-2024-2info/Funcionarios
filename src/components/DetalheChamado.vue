@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import axios from 'axios';
 // import { useAuthStore } from '@/stores/auth';
 import { useChamadoStore } from '@/stores/chamados.js';
 
@@ -13,6 +14,45 @@ onMounted(() => {
     chamado.value = chamadoStore.getProductById(props.id)
 })
 
+const remetente = ref(''); 
+const data_envio = ref('');
+const descricao = ref('');
+
+const fetchRemetentes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	remetente.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar remetentes:', error);
+  }
+};
+
+const fetchEnvios = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	data_envio.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar data de envio:', error);
+  }
+};
+
+const fetchDescricoes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	descricao.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar descrição:', error);
+  }
+};
+
+onMounted(() => {
+  fetchRemetentes();
+  fetchEnvios();
+  fetchDescricoes();
+});
+
+
+
 </script>
 
 <template>
@@ -22,9 +62,9 @@ onMounted(() => {
         </div>
         <div class="texts" :key="props.id">
             <h1>{{chamado.titulo}}</h1>
-            <p>{{chamado.solicitador}}</p>
-            <p class="chamado">{{chamado.data}}</p>
-            <p class="descricao">{{ chamado.descricao }}
+            <p :v-model="fetchRemetentes">{{solicitador}}</p>
+            <p class="chamado" :v-model="fetchEnvios">{{data}}</p>
+            <p class="descricao" :v-model="fetchDescricoes">{{descricao }}
             </p>
         </div>
         <div>
