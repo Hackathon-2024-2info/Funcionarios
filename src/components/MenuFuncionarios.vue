@@ -93,7 +93,7 @@ body {
         position: absolute;
         content: "";
         top: 90%;
-        left: 20px;
+        left: 12px;
         width: 80%;
         height: 3px;
         background: gray;
@@ -233,15 +233,14 @@ body {
     height: 15%;
     width: 85%;
     border: none;
-
-    text-align: center;
-    place-items: center;
+display: block;
+margin: 0 auto;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 7%;
-    margin-top: 8%;
+  
+    margin-top: -5%;
     padding-top: 3%;
-    padding-bottom: 3%;
+
   }
 
   .title {

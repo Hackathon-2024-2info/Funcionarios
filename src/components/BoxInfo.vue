@@ -80,9 +80,11 @@ main {
   background-color: #f5f5f5;
   /* height: 154vh; */
   height: 200vh;
-  margin-top: -95%;
   margin-left:35%;
+    position: absolute;
+    top: 30%;
 }
+
 
 
 .espaçamento {
