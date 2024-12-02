@@ -1,6 +1,8 @@
 <script setup>
 // import { useAuthStore } from '@/stores/auth';
 import { useEstoqueStore } from '../stores/estoque.js';
+import { onMounted, ref } from 'vue'
+import axios from 'axios';
 
 // const props = defineProps(['id']);
 const estoqueStore = useEstoqueStore();
@@ -11,6 +13,48 @@ const estoqueStore = useEstoqueStore();
 // onMounted(() => {
 //   estoque.value = estoqueStore.getProductById(props.id)
 // })
+
+
+const nome_ferramentaspecas = ref(''); 
+const quantidade_ferramentaspecas = ref('');
+const marca = ref('');
+
+const fetchFerramentas = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	nome_ferramentaspecas.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar nome ferramentas:', error);
+  }
+};
+
+const fetchQuantidades = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	quantidade_ferramentaspecas.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar quantidade de peças:', error);
+  }
+};
+
+const fetchMarcas = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	marca.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar marca:', error);
+  }
+};
+
+
+onMounted(() => {
+  fetchFerramentas();
+  fetchQuantidades();
+  fetchMarcas();
+});
+
+
+
 
 </script>
 
@@ -74,9 +118,9 @@ const estoqueStore = useEstoqueStore();
         <tbody>
           <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
             <td>{{ estoque.id }}</td>
-            <td>{{ estoque.nome }}</td>
-            <td>{{ estoque.quantidade }}</td>
-            <td>{{ estoque.marca }}</td>
+            <td :v-model="fetchFerramentas">{{nome }}</td>
+            <td :v-model="fetchQuantidades">{{quantidade }}</td>
+            <td :v-model="fetchMarcas">{{ marca }}</td>
           </tr>
         </tbody>
       </table>
