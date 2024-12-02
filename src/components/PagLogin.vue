@@ -88,7 +88,7 @@ const authStore = useAuthStore();
         display: flex;
         align-items: center;
         justify-content: center;
-
+        margin-top: -20%;
       }
 
 
@@ -123,7 +123,7 @@ h1{
   line-height: 40px;
   color: #FFFFFF;
   text-align: center;
-  margin-top: 2%;
+  margin-top: -5% !important;
 }
 .logo{
   display: flex;
@@ -222,13 +222,13 @@ p {
 } 
 @media (max-width: 768px) {
   section {
-    height: 45vh;
+    height: 40vh;
     padding: 2px;
   }
 
   .logo {
-    width: 25vw;
-    margin-bottom: 5px;
+    width: 35vw;
+    margin-bottom: 2vh;
   }
 
   #main {
@@ -256,12 +256,16 @@ p {
     padding: 8px 16px !important;
   }
   button#enviar {
-    padding: 6px 12px !important;
-    margin-top: 2%;
+    padding: 5px 10px !important;
+    margin-top: 8%;
+    width: 100% !important;
+    font-size: 13px;
+    margin-left: 25%;
 
 
   }
   button#enviarc {
+    width: 100% !important;
     margin-top: 5%;
     padding: 8px 16px !important;
 
@@ -273,11 +277,12 @@ p {
 
   h1 {
     font-size: 4vw;
+    margin-top: -20vw;
   }
 
   .pergunta {
     font-size: 4vw;
-    margin-top: 2vh;
+    margin-top: 5vh;
   }
 }
 
