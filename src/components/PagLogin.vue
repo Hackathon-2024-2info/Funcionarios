@@ -38,14 +38,14 @@ const authStore = useAuthStore();
 
 <template>
   <main id="main">
-    <section>
+    <section class="teste">
       <div class="img">
           <img class="logo" src="../assets/logo AVANTE.png" alt="" />
       </div>
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/about">
+        <RouterLink class="teste" to="/about">
           <button id="enviar" type="submit" @click="authStore.toggleAdmin">Cadastre-se</button>
         </RouterLink>    
       </section>
@@ -78,7 +78,12 @@ const authStore = useAuthStore();
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
-
+.teste {
+  display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
 .img {
         display: flex;
         align-items: center;
@@ -100,8 +105,9 @@ font-size: 22px;
 
 #h1{
   color: #000000;
-  font-size: 36px;
-  margin-top: 15%;
+  font-size: 30px;
+  margin-top: 20vh;
+  margin-left: -23vh;
 }
 h1{
   font-family: 'Readex Pro';
@@ -122,10 +128,10 @@ align-self: center;
 input {
   width: 578px;
   height: 46px;
+  margin-left: -20vh;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: 0px solid; /* Borda inicial em cinza claro */
-  margin: 0;
   cursor: pointer;
 padding-left: 2%;
 transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
@@ -145,6 +151,7 @@ label{
   display: flex;
   color: #000000;
   text-align: center;
+  margin-left: -20vh;
   margin-top: 6%;
   margin-bottom: 4%;
   
@@ -168,17 +175,15 @@ label{
   border: none;
   text-align: center;
   cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
-  transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
-  margin-left: 25%;
+  transition: transform 0.1s ease; 
 }
 button:active {
-  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+  transform: scale(0.95); 
 }
-button#enviar {
-  margin-left: 120px;
-}
+
+
 button#enviarc {
-  margin-left: 100px;
+  margin-left: 8%;
 }
 section {
   background: #0f0541;
