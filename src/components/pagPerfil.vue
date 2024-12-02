@@ -89,8 +89,8 @@ p {
 
 button {
     display: flex;
-    width: 60%;
-    height: 6vh;
+    width: 180%;
+    height: 4vh;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -98,9 +98,9 @@ button {
     border-radius: 5px;
     color: white;
     border: none;
-    margin-top: 20%;
+    margin-top: 50%;
     margin-bottom: 5%;
-    margin-left: 1%;
+    margin-left: -35%;
 }
 
 @media only screen and (max-device-width: 1500px) {
