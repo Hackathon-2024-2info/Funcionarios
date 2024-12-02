@@ -45,10 +45,9 @@ const authStore = useAuthStore();
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-    </section>
-        <!-- <RouterLink to="/about"> -->
+        <RouterLink to="/about">
           <button id="enviar" type="submit" @click="authStore.toggleAdmin">Cadastre-se</button>
-        <!-- </RouterLink>     -->
+        </RouterLink>    
       </section>
     <aside>
       <h1 id="h1">Faça seu login</h1>
