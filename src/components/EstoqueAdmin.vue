@@ -266,9 +266,14 @@ const estoqueStore = useEstoqueStore();
 }
 
 @media only screen and (min-device-width: 701px) {
-  .espacamento{
-    margin-left: 25%;
-    margin-top: -90%
+  .espacamento {
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    margin-left: 20%;
+    position: absolute;
+    top: 20%;
+    width: 90%;
   }
 
   .small {

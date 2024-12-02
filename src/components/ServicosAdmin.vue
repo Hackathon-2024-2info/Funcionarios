@@ -101,11 +101,14 @@ const servicoStore = useServicoStore();
   .sm{
     display: none;
   }
-.body {
+  .body {
   display: grid;
   grid-template-columns: 18% 1fr;
-  margin-top: -95%;
-}
+    margin-left: 5%;
+    position: absolute; /* Posiciona o main no topo da página */
+    top: 25%; /* Garante que o main esteja no topo */
+    width: 90%;
+  }
 * {
   margin: 0;
   padding: 0;
