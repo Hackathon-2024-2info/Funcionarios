@@ -58,9 +58,9 @@ const servicoStore = useServicoStore();
  <div class="lg"><div class="body">
       <div></div>
       <div>
-        <main>
+        <main>  <RouterLink to="/addservico"><button class="btn-azul">ADICIONAR NOVO SERVIÇO</button></RouterLink>
           <div class="filtrar">
-            <RouterLink to="/addservico"><button class="btn-azul">ADICIONAR NOVO SERVIÇO</button></RouterLink>
+          
             <label for="">Filtrar:</label>
             <select name="Selecione" id="Selecione">
               <option value="" class="option">SELECIONE</option>
@@ -172,6 +172,7 @@ body {
   color: #f5f5f5;
 }
 .filtrar {
+  margin-left: 15%;
   flex-wrap: nowrap;
   width: 100%;
 }
@@ -196,9 +197,10 @@ select {
   color: white;
   font-family: 'Karla';
   background-color: #091d87;
-  padding: 1.5%;
-  padding-left: 9%;
-  padding-right: 9%;
+  width: 250%;
+  padding: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
   font-weight: 700;
   margin-left: 10%;
   margin-right: 5%;
