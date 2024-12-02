@@ -1,4 +1,59 @@
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios';
+
+// const nomeitem = ref([]);
+// const marcaitem = ref([]);
+// const quantidadeitem = ref('');
+
+// const fetchNomes = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/dificuldades/');
+// 	nomeitem.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar dificuldades:', error);
+//   }
+// };
+
+// const fetchMarcas = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+// 	marcaitem.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+// const fetchQtd = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+// 	quantidadeitem.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+const submitEstoque = async () => {
+  try {
+	const response = await axios.post('http://seu-dominio.com/api/Ferramentaspecas/', {
+  	nome: nome_ferramentaspecas.value,
+  	marca: marca.value,
+  	quantidade: quantidade_ferramentaspecas.value,
+	});
+	console.log('Relatório enviado com sucesso:', response.data);
+  } catch (error) {
+	console.error('Erro ao enviar relatório:', error);
+  }
+};
+
+// onMounted(() => {
+//   fetchDificuldades();
+//   fetchColaboracoes();
+// });
+
+const nome_ferramentaspecas = ref('');
+const marca = ref('');
+const quantidade_ferramentaspecas = ref('');
 
 </script>
 
@@ -7,21 +62,21 @@
         <div>
             <h1 class="add">ADICIONAR ITEM AO ESTOQUE</h1>
             <label for=""> Nome do item </label>
-            <input type="text" class="input1" placeholder="Insira o nome do item a ser adicionado">
+            <input type="text" class="input1" placeholder="Insira o nome do item a ser adicionado" v-model="nome_ferramentaspecas">
         </div>
 
         <div class="espacamento"></div>
 
         <div>
             <label for=""> Marca do item </label>
-            <input type="text" class="input2" placeholder="Insira a marca do item">
+            <input type="text" class="input2" placeholder="Insira a marca do item" v-model="marca">
         </div>
 
         <div class="espacamento"></div>
         <div>
             <label for="">Quantidade do item </label>
-            <input type="text" class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item">
-            <button id="Adicionar" type="submit">Adicionar</button>
+            <input type="text" class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item" v-model="quantidade_ferramentaspecas">
+            <button id="Adicionar" type="submit" @click="submitEstoque">Adicionar</button>
         </div>
 
     </main>
