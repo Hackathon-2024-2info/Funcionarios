@@ -185,9 +185,9 @@ onMounted(() => {
         <tbody>
           <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
             <td>{{ estoque.id }}</td>
-            <td>{{ estoque.nome }}</td>
-            <td>{{ estoque.quantidade }}</td>
-            <td>{{ estoque.marca }}</td>
+            <td :v-model="fetchFerramentas">{{nome }}</td>
+            <td :v-model="fetchQuantidades">{{quantidade }}</td>
+            <td :v-model="fetchMarcas">{{ marca }}</td>
           </tr>
         </tbody>
       </table>
