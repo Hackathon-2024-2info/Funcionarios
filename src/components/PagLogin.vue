@@ -169,6 +169,7 @@ label{
   text-align: center;
   cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
   transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
+  margin-left: 25% !important;
 }
 button:active {
   transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
