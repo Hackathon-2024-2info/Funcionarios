@@ -17,11 +17,21 @@ onMounted(() => {
 const remetente = ref(''); 
 const data_envio = ref('');
 const descricao = ref('');
+const titulo = ref('');
 
 const fetchRemetentes = async () => {
   try {
 	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
 	remetente.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar remetentes:', error);
+  }
+};
+
+const fetchTitulos = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	titulo.value = response.data;
   } catch (error) {
 	console.error('Erro ao buscar remetentes:', error);
   }
@@ -49,6 +59,7 @@ onMounted(() => {
   fetchRemetentes();
   fetchEnvios();
   fetchDescricoes();
+  fetchTitulos();
 });
 
 
@@ -61,7 +72,7 @@ onMounted(() => {
             <RouterLink to="/chamadosadmin"><img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
         <div class="texts" :key="props.id">
-            <h1>{{chamado.titulo}}</h1>
+            <h1 :v-model="fetchTitulos">{{titulo}}</h1>
             <p :v-model="fetchRemetentes">{{solicitador}}</p>
             <p class="chamado" :v-model="fetchEnvios">{{data}}</p>
             <p class="descricao" :v-model="fetchDescricoes">{{descricao }}
