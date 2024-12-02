@@ -8,7 +8,6 @@
 
 <template>
     <main>
-      <button @click="authStore.toggleAdmin">trocar p admin</button>
     <header>
         <h1 class="block-effect" style="--td: 0.9s">
   <div class="block-reveal" style="--bc: rgba(217, 217, 217, 1); --d: 0.25s">Olá, Edson!</div>
