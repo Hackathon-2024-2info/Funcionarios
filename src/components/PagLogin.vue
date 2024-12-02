@@ -61,7 +61,7 @@ const authStore = useAuthStore();
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <RouterLink to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
+            <RouterLink class="button-area" to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
             <RouterLink to="/estoqueadmin" v-if="authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
             </form>
       </div>
@@ -88,11 +88,17 @@ const authStore = useAuthStore();
         display: flex;
         align-items: center;
         justify-content: center;
+
       }
 
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .container{
-  display: grid;
-  grid-template-columns: 25% 1fr 25%
 }
 .pergunta{
 margin-top: 5rem;
@@ -107,7 +113,7 @@ font-size: 22px;
   color: #000000;
   font-size: 30px;
   margin-top: 20vh;
-  margin-left: -23vh;
+  margin-left: -5vh;
 }
 h1{
   font-family: 'Readex Pro';
@@ -128,13 +134,12 @@ align-self: center;
 input {
   width: 578px;
   height: 46px;
-  margin-left: -20vh;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: 0px solid; /* Borda inicial em cinza claro */
   cursor: pointer;
-padding-left: 2%;
-transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+  padding-left: 2%;
+  transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
 }
 input:focus {
   border: 2px solid blue;
@@ -148,13 +153,12 @@ label{
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
   color: #000000;
   text-align: center;
-  margin-left: -20vh;
   margin-top: 6%;
   margin-bottom: 4%;
-  
+  text-align: start;
+
 }
 
  button{
@@ -182,8 +186,10 @@ button:active {
 }
 
 
-button#enviarc {
-  margin-left: 8%;
+.button-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 section {
   background: #0f0541;
@@ -193,6 +199,9 @@ section {
 
 aside {
   margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bemvindo,
@@ -227,7 +236,7 @@ p {
   }
 
   .container {
-    grid-template-columns: 1fr;
+    
   }
 
   input {
@@ -247,14 +256,12 @@ p {
     padding: 8px 16px !important;
   }
   button#enviar {
-    margin-left: 35%;
     padding: 6px 12px !important;
     margin-top: 2%;
 
 
   }
   button#enviarc {
-    margin-left: 35%;
     margin-top: 5%;
     padding: 8px 16px !important;
 
