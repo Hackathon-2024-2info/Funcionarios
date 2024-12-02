@@ -1,7 +1,7 @@
 <script setup>
 // import { useAuthStore } from '@/stores/auth';
 import { useEstoqueStore } from '../stores/estoque.js';
-
+import { useAuthStore } from '@/stores/auth';
 // const props = defineProps(['id']);
 const estoqueStore = useEstoqueStore();
 // const authStore = useAuthStore();
@@ -11,61 +11,46 @@ const estoqueStore = useEstoqueStore();
 // onMounted(() => {
 //   estoque.value = estoqueStore.getProductById(props.id)
 // })
-
+const authStore = useAuthStore()
 </script>
 
 <template>
   <div class="espacamento">
     <div class="small">
       <main>
+        <RouterLink to="/additem" v-if="authStore.user.is_admin == true"><button class="btn-azul">ADICIONAR ITEM</button></RouterLink>
         <div class="filtrar">
           <label for="">Filtrar:</label>
           <select name="Selecione" id="Selecione">
             <option value="" class="option">SELECIONE</option>
           </select>
         </div>
-        <div class="setas">
-          <button><img src="../assets/esquerda.png" alt="" /></button>
-          <p>1</p>
-          <button><img src="../assets/direita.png" alt="" /></button>
-        </div>
+      
       </main>
       <table class="tabela-itens">
         <thead>
           <tr>
             <th>
               <div class="th-content">
-                <section class="order-icons">
-                  <img src="../assets/Vector-1.png" alt="" />
-                  <img src="../assets//Vector.png" alt="" />
-                </section>
+          
                 <span> Código do item </span>
               </div>
             </th>
             <th>
               <div class="th-content">
-                <section class="order-icons">
-                  <img src="../assets/Vector-1.png" alt="" />
-                  <img src="../assets//Vector.png" alt="" />
-                </section>
+             
                 <span> Nome do item </span>
               </div>
             </th>
             <th>
               <div class="th-content">
-                <section class="order-icons">
-                  <img src="../assets/Vector-1.png" alt="" />
-                  <img src="../assets//Vector.png" alt="" />
-                </section>
+           
                 <span> Quantidade </span>
               </div>
             </th>
             <th>
               <div class="th-content">
-                <section class="order-icons">
-                  <img src="../assets/Vector-1.png" alt="" />
-                  <img src="../assets//Vector.png" alt="" />
-                </section>
+             
                 <span> Marca do item </span>
               </div>
             </th>
@@ -80,10 +65,16 @@ const estoqueStore = useEstoqueStore();
           </tr>
         </tbody>
       </table>
+        <div class="setas">
+          <button><img src="../assets/esquerda.png" alt="" /></button>
+          <p>1</p>
+          <button><img src="../assets/direita.png" alt="" /></button>
+        </div>
     </div>
 
     <div class="large">
       <main>
+        <RouterLink to="/additem" v-if="authStore.user.is_admin"><button class="btn-azul">ADICIONAR ITEM</button></RouterLink>
         <div class="filtrar">
           <label for="">Filtrar:</label>
           <select name="Selecione" id="Selecione">
@@ -264,9 +255,43 @@ const estoqueStore = useEstoqueStore();
     margin-left: 5%;
 
   }
+
+  
+.btn-azul {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width:65%;
+  font-family: 'Karla';
+  background-color: #091d87;
+  padding: 2%;
+  padding-left: 9%;
+  padding-right: 9%;
+  font-weight: 700;
+  display: block;
+ margin: 0 auto;
+ margin-top: 8%;
+
+}
 }
 
 @media only screen and (min-device-width: 701px) {
+
+  
+.btn-azul {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Karla';
+  background-color: #091d87;
+  width: 250%;
+  padding: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-weight: 700;
+  margin-left: 10%;
+  margin-right: 5%;
+}
   .espacamento {
     display: flex;
     flex-direction: column;
@@ -346,7 +371,7 @@ const estoqueStore = useEstoqueStore();
     display: flex;
     flex-wrap: nowrap;
     margin-left: -5%;
-    margin-top: -0.4%;
+    margin-top: -0.9%;
   }
 
   label {
