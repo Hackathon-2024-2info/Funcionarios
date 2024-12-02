@@ -1,4 +1,46 @@
-<script setup></script>
+<script setup>
+// import { ref, onMounted } from 'vue';
+// import axios from 'axios';
+
+// const nome = ref('');
+// const cliente = ref('');
+// const datainicio = ref('');
+
+// const fetchNomes = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+// 	nome.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar dificuldades:', error);
+//   }
+// };
+
+// const fetchClientes = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+// 	cliente.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+// const fetchDatas = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+// 	datainicio.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+// onMounted(() => {
+//   fetchNomes();
+//   fetchClientes();
+//   fetchDatas();
+// });
+
+
+</script>
 
 <template>
  
@@ -24,12 +66,14 @@
           <div>
             <div class="box">
               <img src="../assets/logoopaca.png" alt="" />
-              <div class="info">
-                <h3>MANUTENÇÃO PREVENTIVA</h3>
+              <!-- <div class="info">
+                <h3 :v-model="nome">{{nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">Empresa: Krona</P>
-                  <p class="txt-box">Data de início: 13/09/2024</p>
-                </div>
+                  <P class="txt-box"
+                  :v-model="cliente">{{cliente}}</P>
+                  <p class="txt-box"
+                  :v-model="datainicio"> {{ servico.datainicio }}</p>
+                </div> -->
 
                 <button class="btn-box">Ver detalhes</button>
               </div>
