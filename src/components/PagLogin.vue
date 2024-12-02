@@ -45,7 +45,6 @@ const authStore = useAuthStore();
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-    </section>
         <!-- <RouterLink to="/about"> -->
           <button id="enviar" type="submit" @click="authStore.toggleAdmin">Cadastre-se</button>
         <!-- </RouterLink>     -->
@@ -62,8 +61,8 @@ const authStore = useAuthStore();
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <RouterLink to="/estoque" v-if="!authStore.user.is_admin"><button id="enviar" type="submit">Concluir</button></RouterLink>
-            <RouterLink to="/estoqueadmin" v-if="authStore.user.is_admin"><button id="enviar" type="submit">Concluir</button></RouterLink>
+            <RouterLink to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
+            <RouterLink to="/estoqueadmin" v-if="authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
             </form>
       </div>
        <div>
@@ -208,86 +207,91 @@ p {
 } 
 @media (max-width: 768px) {
   section {
-    height: 50vh; 
-    padding: 10px; 
+    height: 45vh;
+    padding: 2px;
   }
+
   .logo {
-    width: 120px; 
-    margin-bottom: 20px;
+    width: 25vw;
+    margin-bottom: 5px;
   }
+
   #main {
-    grid-template-columns: 1fr; /* Uma coluna para telas menores */
+    grid-template-columns: 1fr;
   }
-  
+
   .container {
-    grid-template-columns: 1fr; /* Formulário com uma coluna */
+    grid-template-columns: 1fr;
   }
 
   input {
-    width: 100%; /* Ajusta o tamanho dos inputs para a largura da tela */
+    width: 80% !important;
+    margin-left: 10%;
+    margin-top: 0.006%;
   }
-  button {
+  label {
+    margin-left: 10%;
     font-size: 14px;
-    padding: 10px 20px;
-    margin-left: auto; /* Alinha à esquerda em dispositivos muito pequenos */
-    margin-right: auto; /* Alinha à direita em dispositivos muito pequenos */
+  }
+
+  button {
+    weight: 10px;
+    width: 30% !important; /* Novo comprimento para telas menores */
+    font-size: 15px;
+    padding: 8px 16px !important;
   }
   button#enviar {
-    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
-    width: 150px; /* Comprimento para tablets */
-    padding: 8px 15px; /* Ajusta o preenchimento */
-    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
+    margin-left: 35%;
+    padding: 6px 12px !important;
+    margin-top: 2%;
+
+
   }
   button#enviarc {
-    width: 150px; /* Comprimento para tablets */
-    padding: 8px 15px; /* Ajusta o preenchimento */
-    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
-    margin-top: 20px;
+    margin-left: 35%;
+    margin-top: 5%;
+    padding: 8px 16px !important;
+
   }
-
-
   #h1 {
-    font-size: 28px; /* Ajusta o tamanho da fonte do título */
+    font-size: 6vw;
+    margin-top: 2%;
   }
 
   h1 {
-    font-size: 20px; /* Ajusta o tamanho da fonte do título principal */
-
+    font-size: 4vw;
   }
 
- 
-
   .pergunta {
-    font-size: 18px; 
-    margin-top: 10px;
+    font-size: 4vw;
+    margin-top: 2vh;
   }
 }
 
-
 @media (max-width: 480px) {
   .container {
-    grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+    grid-template-columns: 1fr;
   }
 
   input {
-    width: 100%; /* Ajusta para ocupar toda a largura */
+    width: 100%;
   }
 
   button {
-    width: 100%; /* Ajusta o botão para ocupar toda a largura */
+    width: 100%;
     margin-left: 0;
   }
 
   #h1 {
-    font-size: 24px; /* Diminui ainda mais o título em telas pequenas */
+    font-size: 6vw;
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 4vw;
   }
 
   .logo {
-    margin-top: 15%;
+    margin-top: 10vh;
   }
 }
 </style>
