@@ -58,9 +58,9 @@ const toggleDropdown = () => {
 
         <img src="../assets/Question.png" alt="" class="warning" />
         <div class="box">
-          <p class="title">Abra um chamado</p>
-          <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <button class="button">Abrir chamado</button>
+          <p class="title">Remover acesso</p>
+          <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
+          <router-link to="/removeracesso"><button class="button">Clique aqui</button></router-link>
         </div>
       </nav>
     </div>
@@ -125,6 +125,7 @@ body {
     height: 60%;
     margin-top: -15%;
     padding-bottom: 10%;
+    
    
   }
 
@@ -246,10 +247,11 @@ body {
     place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 7%;
-    margin-top: 8%;
+    margin-left: 0%;
     padding-top: 3%;
     padding-bottom: 3%;
+    margin-top: -3% !important;
+    background-color: white;
   }
 
   .title {
