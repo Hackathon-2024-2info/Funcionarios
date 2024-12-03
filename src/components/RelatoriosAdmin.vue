@@ -1,7 +1,57 @@
 <script setup>
-import { useRelatorioStore } from '../stores/relatorios.js';
+// import { useRelatorioStore } from '../stores/relatorios.js';
 
-const relatorioStore = useRelatorioStore();
+// const relatorioStore = useRelatorioStore();
+
+
+
+
+
+
+// import { ref, onMounted } from 'vue';
+// import axios from 'axios';
+
+// const nome = ref('');
+// const cliente = ref('');
+// const datainicio = ref('');
+
+
+// const fetchNomes = async () => {
+//   try {
+//   const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+//   nome.value = response.data;
+//   } catch (error) {
+//   console.error('Erro ao buscar dificuldades:', error);
+//   }
+// };
+
+
+// const fetchClientes = async () => {
+//   try {
+//   const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+//   cliente.value = response.data;
+//   } catch (error) {
+//   console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+
+// const fetchDatas = async () => {
+//   try {
+//   const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+//   datainicio.value = response.data;
+//   } catch (error) {
+//   console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+// onMounted(() => {
+//   fetchNomes();
+//   fetchClientes();
+//   fetchDatas();
+// });
+
+
 </script>
 
 <template>
