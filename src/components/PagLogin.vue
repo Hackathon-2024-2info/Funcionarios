@@ -222,7 +222,7 @@ p {
 } 
 @media (max-width: 768px) {
   section {
-    height: 40vh;
+    height: 35vh;
     padding: 2px;
   }
 
@@ -235,17 +235,14 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .container {
-    
-  }
 
   input {
-    width: 80% !important;
-    margin-left: 10%;
+    width: 200% !important;
+    margin-left: -50%;
     margin-top: 0.006%;
   }
   label {
-    margin-left: 10%;
+    margin-left: -50%;
     font-size: 14px;
   }
 
@@ -256,23 +253,24 @@ p {
     padding: 8px 16px !important;
   }
   button#enviar {
-    padding: 5px 10px !important;
+    padding: 10px 20px !important;
     margin-top: 8%;
     width: 100% !important;
-    font-size: 13px;
+    font-size: 15px;
     margin-left: 25%;
 
 
   }
   button#enviarc {
     width: 100% !important;
-    margin-top: 5%;
-    padding: 8px 16px !important;
+    margin-top: 15%;
+    margin-left: 10%;
+    padding: 10px 35px !important;
 
   }
   #h1 {
     font-size: 6vw;
-    margin-top: 2%;
+    margin-top: 15% !important;
   }
 
   h1 {
@@ -282,7 +280,7 @@ p {
 
   .pergunta {
     font-size: 4vw;
-    margin-top: 5vh;
+    margin-top: 2vh !important;
   }
 }
 
