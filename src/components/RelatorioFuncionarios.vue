@@ -464,6 +464,7 @@ h6 {
 .container {
 margin-left: 10%;
 width: 50%;
+margin-top: 5%;
 }
 
 
