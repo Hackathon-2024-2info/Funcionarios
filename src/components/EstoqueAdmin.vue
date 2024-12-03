@@ -18,7 +18,7 @@ const authStore = useAuthStore()
   <div class="espacamento">
     <div class="small">
       <main>
-        <RouterLink to="/additem" v-if="authStore.user.is_admin == true"><button class="btn-azul">ADICIONAR ITEM</button></RouterLink>
+        <RouterLink to="/additem" v-if="authStore.user.is_admin"><button class="btn-azul">ADICIONAR ITEM</button></RouterLink>
         <div class="filtrar">
           <label for="">Filtrar:</label>
           <select name="Selecione" id="Selecione">
