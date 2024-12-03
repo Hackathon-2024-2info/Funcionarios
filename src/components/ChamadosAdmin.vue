@@ -1,6 +1,49 @@
 <script setup>
-import { useChamadoStore } from '../stores/chamados.js';
-const chamadoStore= useChamadoStore();
+// import { useChamadoStore } from '../stores/chamados.js';
+// const chamadoStore= useChamadoStore();
+
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const titulo = ref('');
+const data_envio = ref('');
+const solicitador = ref('');
+
+const fetchTitulos = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	titulo.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar dificuldades:', error);
+  }
+};
+
+const fetchDataEnvios = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	data_envio.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchSolicitadores = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	solicitador.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+onMounted(() => {
+  fetchTitulos();
+  fetchDataEnvios();
+  fetchSolicitadores();
+});
+
+
+
 </script>
 
 <template>
@@ -56,9 +99,12 @@ const chamadoStore= useChamadoStore();
     <tbody>
       <tr v-for="chamado in chamadoStore.chamados" :key="chamado.id">
         <td>{{ chamado.id }}</td>
-        <td>{{ chamado.status }}</td>
-        <td>{{ chamado.data }}</td>
-        <td>{{ chamado.solicitador }}</td>
+        <td :v-model="titulo">
+          {{ chamado.status }}</td>
+        <td :v-model="data_envio">
+          {{ chamado.data }}</td>
+        <td :v-model="solicitador">
+          {{ chamado.solicitador }}</td>
         <td>
         <div class="path-detail">
           <RouterLink to="/detalhechamado/:id"><img src="@/assets/Group 37329.png" alt="" id="path-detail"></RouterLink>
@@ -108,10 +154,13 @@ const chamadoStore= useChamadoStore();
     </thead>
     <tbody>
   <tr v-for="chamado in chamadoStore.chamados" :key="chamado.id">
-        <td>{{ chamado.id }}</td>
-        <td>{{ chamado.status }}</td>
-        <td>{{ chamado.data }}</td>
-        <td>{{ chamado.solicitador }}</td>
+    <td>{{ chamado.id }}</td>
+        <td :v-model="titulo">
+          {{ chamado.status }}</td>
+        <td :v-model="data_envio">
+          {{ chamado.data }}</td>
+        <td :v-model="solicitador">
+          {{ chamado.solicitador }}</td>
         <td>
         <div class="path-detail">
           <RouterLink to="/detalhechamado/:id"><img src="@/assets/Group 37329.png" alt="" id="path-detail"></RouterLink>
