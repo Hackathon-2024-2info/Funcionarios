@@ -1,11 +1,11 @@
 <script setup>
 // import { useAuthStore } from '@/stores/auth';
-import { useEstoqueStore } from '../stores/estoque.js';
+// import { useEstoqueStore } from '../stores/estoque.js';
 import { onMounted, ref } from 'vue'
 import axios from 'axios';
 
 // const props = defineProps(['id']);
-const estoqueStore = useEstoqueStore();
+// const estoqueStore = useEstoqueStore();
 // const authStore = useAuthStore();
 // const estoque = ref({});
 
@@ -118,9 +118,9 @@ onMounted(() => {
         <tbody>
           <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
             <td>{{ estoque.id }}</td>
-            <td :v-model="fetchFerramentas">{{nome }}</td>
-            <td :v-model="fetchQuantidades">{{quantidade }}</td>
-            <td :v-model="fetchMarcas">{{ marca }}</td>
+            <td :v-model="nome_ferramentaspecas">{{nome }}</td>
+            <td :v-model="quantidade_ferramentaspecas">{{quantidade }}</td>
+            <td :v-model="marca">{{ marca }}</td>
           </tr>
         </tbody>
       </table>
@@ -185,9 +185,9 @@ onMounted(() => {
         <tbody>
           <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
             <td>{{ estoque.id }}</td>
-            <td :v-model="fetchFerramentas">{{nome }}</td>
-            <td :v-model="fetchQuantidades">{{quantidade }}</td>
-            <td :v-model="fetchMarcas">{{ marca }}</td>
+            <td :v-model="nome_ferramentaspecas">{{nome }}</td>
+            <td :v-model="quantidade_ferramentaspecas">{{quantidade }}</td>
+            <td :v-model="marca">{{ marca }}</td>
           </tr>
         </tbody>
       </table>

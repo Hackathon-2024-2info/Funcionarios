@@ -1,7 +1,8 @@
 <script setup>
 // import { useAuthStore } from '@/stores/auth';
-import { useEstoqueStore } from '../stores/estoque.js';
-// import axios from 'axios';
+// import { useEstoqueStore } from '../stores/estoque.js';
+import { onMounted, ref } from 'vue'
+import axios from 'axios';
 
 // async function buscarTodasAsCategorias() {
 //   try {
@@ -15,7 +16,7 @@ import { useEstoqueStore } from '../stores/estoque.js';
 // }
 
 // const props = defineProps(['id']);
-const estoqueStore = useEstoqueStore();
+// const estoqueStore = useEstoqueStore();
 // const authStore = useAuthStore();
 // const estoque = ref({});
 
@@ -23,6 +24,45 @@ const estoqueStore = useEstoqueStore();
 // onMounted(() => {
 //   estoque.value = estoqueStore.getProductById(props.id)
 // })
+
+const nome_ferramentaspecas = ref(''); 
+const quantidade_ferramentaspecas = ref('');
+const marca = ref('');
+
+const fetchFerramentas = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	nome_ferramentaspecas.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar nome ferramentas:', error);
+  }
+};
+
+const fetchQuantidades = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	quantidade_ferramentaspecas.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar quantidade de peças:', error);
+  }
+};
+
+const fetchMarcas = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	marca.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar marca:', error);
+  }
+};
+
+
+onMounted(() => {
+  fetchFerramentas();
+  fetchQuantidades();
+  fetchMarcas();
+});
+
 
 </script>
 
@@ -78,11 +118,11 @@ const estoqueStore = useEstoqueStore();
       </thead>
       <tbody>
         <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
-          <td>{{ estoque.id }}</td>
-          <td>{{ estoque.nome }}</td>
-          <td>{{ estoque.quantidade }}</td>
-          <td>{{ estoque.marca }}</td>
-        </tr>
+            <td>{{ estoque.id }}</td>
+            <td :v-model="nome_ferramentaspecas">{{nome }}</td>
+            <td :v-model="quantidade_ferramentaspecas">{{quantidade }}</td>
+            <td :v-model="marca">{{ marca }}</td>
+          </tr>
       </tbody>
     </table>
   </div>
@@ -141,9 +181,9 @@ const estoqueStore = useEstoqueStore();
         <tbody>
           <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
             <td>{{ estoque.id }}</td>
-            <td>{{ estoque.nome }}</td>
-            <td>{{ estoque.quantidade }}</td>
-            <td>{{ estoque.marca }}</td>
+            <td :v-model="nome_ferramentaspecas">{{nome }}</td>
+            <td :v-model="quantidade_ferramentaspecas">{{quantidade }}</td>
+            <td :v-model="marca">{{ marca }}</td>
           </tr>
         </tbody>
       </table>
