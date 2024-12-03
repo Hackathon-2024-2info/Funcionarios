@@ -163,7 +163,13 @@ input {
   border: none;
   margin: 0;
   margin-bottom: 5%;
-
+  cursor: pointer;
+  transition: border-color 0.3s ease; 
+}
+input:focus {
+  border: 2px solid blue;
+  border-color: #091D87; 
+  outline: none; 
 }
 
 label {
@@ -190,8 +196,13 @@ button {
   margin-top: 1rem;
   margin-bottom: 2rem;
   border: none;
+  cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
+  transition: transform 0.1s ease; 
+}
+button:active {
+  transform: scale(0.95); 
 }
 
 #voltar {
@@ -201,4 +212,75 @@ button {
   margin-top: 13%;
 
 }
+@media screen and (max-width: 768px) {
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerA {
+    order: 1;
+    height: auto;
+    width: 60vh;
+  }
+.logo {
+  margin-top: 10% !important;
+  margin-left: -15vh;
+
+
+}
+  aside {
+    order: 2;
+    margin: 0;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .formularioo {
+    grid-template-columns: 1fr;
+  }
+
+  .faca {
+    font-size: 24px;
+    margin-left: -10%;
+    text-align: center;
+  }
+
+  input {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .img {
+    margin: 0 auto;
+  }
+
+  .bemvinde {
+    margin-left: 15%;
+    font-size: 25px !important;
+  } 
+  
+  .conta {
+    margin-left: -20%;
+    font-size: 15px;
+    margin-top: 5%;
+  }
+
+  #voltar {
+    width: 50% !important;
+    margin-left: 15%;
+    padding: 10px 20px !important;
+    margin-top: 5%;
+  }
+  #enviar {
+    width: 50% !important;
+  margin-left: 15%;
+  }
+}
+
 </style>
+
