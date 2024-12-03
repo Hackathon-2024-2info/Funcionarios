@@ -18,12 +18,11 @@
 <style scoped>
 @media only screen and (min-device-width: 601px) {
   .logout {
-    position: absolute;
     display: flex;
-    margin-left: 93%;
-    margin-top: 0.2%;
-    top: calc(50% - 43px / 2 - 0.5px);
-    width: 3%;
+    position: absolute;
+    margin-left: 94%;
+    top: calc(55% - 43px / 2 - 0.5px);
+    width: 40px;
   }
 
   *,
