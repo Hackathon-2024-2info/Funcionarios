@@ -1,8 +1,8 @@
 <script setup>
 import MenuFuncionarios from '@/components/MenuFuncionarios.vue';
 import pagHeader from '@/components/pagHeader.vue';
-// import { ref } from 'vue';
-// import axios from 'axios';
+import { ref } from 'vue';
+import axios from 'axios';
 
 // // const nomeitem = ref([]);
 // // const marcaitem = ref([]);
@@ -35,27 +35,27 @@ import pagHeader from '@/components/pagHeader.vue';
 // //   }
 // // };
 
-// const submitChamado = async () => {
-//   try {
-// 	const response = await axios.post('http://seu-dominio.com/api/Ferramentaspecas/', {
-//   	nome: nome_ferramentaspecas.value,
-//   	marca: marca.value,
-//   	quantidade: quantidade_ferramentaspecas.value,
-// 	});
-// 	console.log('Relatório enviado com sucesso:', response.data);
-//   } catch (error) {
-// 	console.error('Erro ao enviar relatório:', error);
-//   }
-// };
+const submitChamado = async () => {
+  try {
+	const response = await axios.post('http://seu-dominio.com/api/Ferramentaspecas/', {
+  	motivo: motivo.value,
+  	descricao: descricao.value,
+  	titulo: titulo.value,
+	});
+	console.log('Relatório enviado com sucesso:', response.data);
+  } catch (error) {
+	console.error('Erro ao enviar relatório:', error);
+  }
+};
 
 // onMounted(() => {
 //   fetchDificuldades();
 //   fetchColaboracoes();
 // });
 
-// const nome_ferramentaspecas = ref('');
-// const marca = ref('');
-// const quantidade_ferramentaspecas = ref('');
+const motivo = ref('');
+const descricao = ref('');
+const titulo = ref('');
 
 </script>
 
@@ -67,14 +67,14 @@ import pagHeader from '@/components/pagHeader.vue';
 
       <h1 class="solicitar">SOLICITAR CHAMADO</h1>
       <label for=""> Motivo </label>
-      <input class="input1" placeholder="Insira o motivo do chamado">
+      <input class="input1" placeholder="Insira o motivo do chamado" v-model="motivo">
 
     </div>
     <div class="espacamento"></div>
     <div>
       <label for=""> Descrição </label>
-      <input class="input2" placeholder="Insira a decriçâo">
-      <button id="enviar" type="submit">Enviar</button>
+      <input class="input2" placeholder="Insira a decriçâo" v-model="descricao">
+      <button id="enviar" type="submit" @click="submitChamado">Enviar</button>
     </div>
 
   </main>

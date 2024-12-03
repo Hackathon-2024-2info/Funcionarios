@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 // import { useAuthStore } from '@/stores/auth';
 import { useRelatorioStore } from '@/stores/relatorios.js';
+import axios from 'axios';
 
 const props = defineProps(['id']);
 const relatorioStore = useRelatorioStore();
@@ -12,6 +13,131 @@ const relatorio = ref({})
 onMounted(() => {
   relatorio.value = relatorioStore.getProductById(props.id)
 })
+
+// import { onMounted, ref } from 'vue'
+// import { useAuthStore } from '@/stores/auth';
+// import { useServicoStore } from '../stores/servicos.js';
+
+
+// const servicoStore = useServicoStore();
+// const authStore = useAuthStore()
+// const servico = ref({})
+
+
+// onMounted(() => {
+//   servico.value = servicoStore }
+
+const titulo = ref('');
+const remetente = ref('');
+const dataenvio = ref('');
+const temporealizacao = ref('');
+const dificuldade = ref('');
+const colaboracao = ref('');
+const pendencias = ref('');
+const descricao = ref('');
+
+const fetchTitulos = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	titulo.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar dificuldades:', error);
+  }
+};
+
+const fetchRemetentes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	remetente.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchDatas = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	dataenvio.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchTempos = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	temporealizacao.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchDificuldades = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	dificuldade.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchColaboracoes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	colaboracao.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchPendencias = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	pendencias.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+const fetchDescricoes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	descricao.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar colaborações:', error);
+  }
+};
+
+// const submitRelatorio = async () => {
+//   try {
+// 	const response = await axios.post('http://seu-dominio.com/api/Servico/', {
+//   	dificuldade: selectedDificuldade.value,
+//   	tempo: tempoServico.value,
+//   	colaboracao: selectedColaboracao.value,
+//   	pendencias: pendencias.value,
+// 	});
+// 	console.log('Relatório enviado com sucesso:', response.data);
+//   } catch (error) {
+// 	console.error('Erro ao enviar relatório:', error);
+//   }
+// };
+
+onMounted(() => {
+  fetchColaboracoes();
+  fetchDatas();
+  fetchDescricoes();
+  fetchDificuldades();
+  fetchPendencias();
+  fetchRemetentes();
+  fetchTempos();
+  fetchTitulos();
+});
+
+// const selectedDificuldade = ref('');
+// const tempoServico = ref('');
+// const selectedColaboracao = ref('');
+
+
 </script>
 
 <template>
@@ -20,16 +146,16 @@ onMounted(() => {
             <RouterLink to="/relatoriosadmin"><img class="img" src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
         <div class="texts">
-            <h1> {{relatorio.titulo}}</h1>
-            <p>Remetente: {{relatorio.remetente}}</p>
-            <p class="chamado">Relatório enviado em: {{relatorio.dataenvio}}</p>
-            <p class="tempo">Tempo de realização do serviço: {{relatorio.temporealizacao}}</p>
-            <p class="dificuldade">Dificuldade do serviço: {{relatorio.dificuldade}}</p>
-            <p class="colaborar">Colaboração da empresa: {{relatorio.colaboracao}}</p>
-            <p class="pendente">Possíveis pendências que ficaram na máquina: {{ relatorio.pendencias }}
+            <h1 :v-model="titulo"> {{titulo}}</h1>
+            <p :v-model="remetente">Remetente: {{remetente}}</p>
+            <p class="chamado" :v-model="dataenvio">Relatório enviado em: {{dataenvio}}</p>
+            <p class="tempo" :v-model="temporealizacao">Tempo de realização do serviço: {{temporealizacao}}</p>
+            <p class="dificuldade" :v-model="dificuldade">Dificuldade do serviço: {{dificuldade}}</p>
+            <p class="colaborar" :v-model="colaboracao">Colaboração da empresa: {{colaboracao}}</p>
+            <p class="pendente" :v-model="pendencias">Possíveis pendências que ficaram na máquina: {{pendencias}}
             </p>
             <div class="espaco"></div>
-            <p class="descricao">Descrição: {{ relatorio.descricao }}
+            <p class="descricao" :v-model="descricao">Descrição: {{descricao }}
             </p>
 
         </div>

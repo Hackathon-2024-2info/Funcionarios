@@ -1,25 +1,78 @@
 <script setup>
-import { reactive, ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
-const mostrarResultado = ref(false)
-const info = reactive({
-  nome: '',
-  email: '',
-  senha: '',
-  confisenha: '',
-  usuario: '',
-  telefone: '',
-  matricula: ''
-})
+import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
+import axios from 'axios';
+
+// const nomeitem = ref([]);
+// const marcaitem = ref([]);
+// const quantidadeitem = ref('');
+
+// const fetchNomes = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/dificuldades/');
+// 	nomeitem.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar dificuldades:', error);
+//   }
+// };
+
+// const fetchMarcas = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+// 	marcaitem.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+// const fetchQtd = async () => {
+//   try {
+// 	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+// 	quantidadeitem.value = response.data;
+//   } catch (error) {
+// 	console.error('Erro ao buscar colaborações:', error);
+//   }
+// };
+
+const submitCadastro = async () => {
+  try {
+	const response = await axios.post('http://seu-dominio.com/api/Ferramentaspecas/', {
+  	usuario: usuario.value,
+  	senha: senha.value,
+  	nome: nome.value,
+    email: email.value,
+  	telefone: telefone.value,
+  	matricula: matricula.value,
+	});
+	console.log('Relatório enviado com sucesso:', response.data);
+  } catch (error) {
+	console.error('Erro ao enviar relatório:', error);
+  }
+};
+
+// onMounted(() => {
+//   fetchDificuldades();
+//   fetchColaboracoes();
+// });
+
+const usuario = ref('');
+const senha = ref('');
+const nome = ref('');
+const email = ref('');
+const telefone = ref('');
+const matricula = ref('');
+const confisenha = ref('');
+
+
 
 function processarForm() {
   if (
-    info.senha == info.confisenha &&
-    info.email.includes('@') &&
-    info.senha.length >= 6 &&
-    info.usuario.length >= 4
+    senha.value == confisenha.value &&
+    email.value.includes('@') &&
+    senha.value.length >= 6 &&
+    usuario.value.length >= 4
   ) {
-    mostrarResultado.value = !mostrarResultado.value
+    submitCadastro.value = !submitCadastro.value
   }
 }
 
@@ -40,20 +93,20 @@ function processarForm() {
       <div class="formularioo">
         <form class="formulario" @submit.prevent="processarForm">
           <label for="">CRIE SEU USUÁRIO</label>
-          <input type="text" v-model="info.usuario" required placeholder="Insira um usuário" />
+          <input type="text" v-model="usuario" required placeholder="Insira um usuário" />
           <label for="">CRIE SUA SENHA</label>
-          <input type="password" v-model="info.senha" required placeholder="Insira uma senha" />
+          <input type="password" v-model="senha" required placeholder="Insira uma senha" />
           <label for="">CONFIRME SUA SENHA</label>
-          <input type="password" v-model="info.confisenha" required placeholder="Confirme sua senha" />
+          <input type="password" v-model="confisenha" required placeholder="Confirme sua senha" />
           <label for="">SEU NOME</label>
-          <input type="text" v-model="info.nome" required placeholder="Insira seu nome" />
+          <input type="text" v-model="nome" required placeholder="Insira seu nome" />
           <label for="">INSIRA SEU E-MAIL</label>
-          <input type="email" v-model="info.email" required placeholder="Insira seu e-mail" />
+          <input type="email" v-model="email" required placeholder="Insira seu e-mail" />
           <label for="">INSIRA SEU TELEFONE</label>
-          <input type="number" v-model="info.telefone" required placeholder="Insira seu telefone" />
+          <input type="number" v-model="telefone" required placeholder="Insira seu telefone" />
           <label for="">INSIRA SUA MATRICULA</label>
-          <input type="number" v-model="info.matricula" required placeholder="Insira seu número de matrícula" />
-          <button id="enviar" type="submit">Concluir</button>
+          <input type="number" v-model="matricula" required placeholder="Insira seu número de matrícula" />
+          <button id="enviar" type="submit" @click="processarForm && submitCadastro">Concluir</button>
         </form>
       </div>
     </aside>
