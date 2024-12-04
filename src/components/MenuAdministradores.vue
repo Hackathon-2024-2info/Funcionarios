@@ -235,6 +235,8 @@ body {
     text-align: center;
     font-family: 'Karla';
     margin-top: 15%;
+    height: 5vh;
+    margin-left: -0%;
   }
 
   .button {
@@ -252,6 +254,8 @@ body {
     padding-bottom: 3%;
     margin-top: -3% !important;
     background-color: white;
+    height: 5vh !important;
+    margin-left: -10%;
   }
 
   .title {
@@ -393,15 +397,15 @@ body {
     height: 15%;
     width: 85%;
     border: none;
-
     text-align: center;
     place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 7%;
+    margin-left:-12%;
     margin-top: 8%;
     padding-top: 3%;
     padding-bottom: 3%;
+    height: 5vh !important;
   }
 
   .title {
