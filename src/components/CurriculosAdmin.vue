@@ -335,7 +335,7 @@ li {
 @media (max-width: 768px) {
   .setas {
     position: fixed !important;  /* Fixa as setas na parte inferior */
-    bottom: 5% !important; /* Distância da parte inferior */
+    bottom: 45% !important; /* Distância da parte inferior */
     display: flex !important;  /* Garante que as setas fiquem lado a lado */
     gap: 10px !important; /* Espaçamento entre as setas */
     margin-left: 80%;
