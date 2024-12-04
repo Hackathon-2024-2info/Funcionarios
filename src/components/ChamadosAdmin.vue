@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const titulo = ref('');
 const data_envio = ref('');
-const solicitador = ref('');
+const funcionario = ref('');
 
 const fetchTitulos = async () => {
   try {
@@ -30,7 +30,7 @@ const fetchDataEnvios = async () => {
 const fetchSolicitadores = async () => {
   try {
 	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
-	solicitador.value = response.data;
+	funcionario.value = response.data;
   } catch (error) {
 	console.error('Erro ao buscar colaborações:', error);
   }
@@ -100,11 +100,11 @@ onMounted(() => {
       <tr v-for="chamado in chamadoStore.chamados" :key="chamado.id">
         <td>{{ chamado.id }}</td>
         <td :v-model="titulo">
-          {{ chamado.status }}</td>
+          {{ titulo }}</td>
         <td :v-model="data_envio">
-          {{ chamado.data }}</td>
-        <td :v-model="solicitador">
-          {{ chamado.solicitador }}</td>
+          {{ data }}</td>
+        <td :v-model="funcionario">
+          {{ solicitador }}</td>
         <td>
         <div class="path-detail">
           <RouterLink to="/detalhechamado/:id"><img src="@/assets/Group 37329.png" alt="" id="path-detail"></RouterLink>
@@ -156,11 +156,11 @@ onMounted(() => {
   <tr v-for="chamado in chamadoStore.chamados" :key="chamado.id">
     <td>{{ chamado.id }}</td>
         <td :v-model="titulo">
-          {{ chamado.status }}</td>
+          {{ titulo }}</td>
         <td :v-model="data_envio">
-          {{ chamado.data }}</td>
-        <td :v-model="solicitador">
-          {{ chamado.solicitador }}</td>
+          {{ data }}</td>
+        <td :v-model="funcionario">
+          {{ solicitador }}</td>
         <td>
         <div class="path-detail">
           <RouterLink to="/detalhechamado/:id"><img src="@/assets/Group 37329.png" alt="" id="path-detail"></RouterLink>

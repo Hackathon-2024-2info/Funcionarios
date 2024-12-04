@@ -18,7 +18,6 @@ const funcionario = ref('');
 const data_envio = ref('');
 const descricao = ref('');
 const titulo = ref('');
-const funcionario = ref('');
 
 
 const fetchFuncionarios = async () => {
@@ -74,10 +73,10 @@ onMounted(() => {
             <RouterLink to="/chamadosadmin"><img src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
         <div class="texts" :key="props.id">
-            <h1 :v-model="fetchTitulos">{{titulo}}</h1>
-            <p :v-model="fetchFuncionarios">{{solicitador}}</p>
-            <p class="chamado" :v-model="fetchEnvios">{{data}}</p>
-            <p class="descricao" :v-model="fetchDescricoes">{{descricao }}
+            <h1 :v-model="titulo">{{titulo}}</h1>
+            <p :v-model="funcionario">{{solicitador}}</p>
+            <p class="chamado" :v-model="data_envio">{{data_envio}}</p>
+            <p class="descricao" :v-model="descricao">{{descricao }}
             </p>
         </div>
         <div>
