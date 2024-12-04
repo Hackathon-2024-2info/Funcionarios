@@ -77,12 +77,12 @@ const toggleDropdown = () => {
 body {
   background: #f5f5f5;
   margin-top: -10%;
-  position: fixed; /* ou absolute */
-    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
 }
 @media only screen and (min-device-width: 601px) {
   .menu-sm {
     display: none;
+    position: fixed; /* ou absolute */
+    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
   }
   
   nav a {
