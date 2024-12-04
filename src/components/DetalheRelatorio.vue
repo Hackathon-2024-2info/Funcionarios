@@ -129,10 +129,11 @@ h1 {
 }
 
 .texts {
+    margin: 10%;
     width: 50%;
     height: 30%;
     margin-left: 20%;
-    margin-top: 20%;
+    margin-top: -86%;
 }
 
 .texts .descricao,
@@ -141,13 +142,19 @@ h1 {
     word-wrap: break-word
 }
 
+.texts .chamado ,  .tempo , .dificuldade{
+    margin-left: 10%;
+}
+
 .descricao {
+    margin: 10%;
     margin-top: -4%;
 
 }
 
 
 p {
+    margin-left: 10%;
     font-family: 'Karla';
     line-height: 400%;
     color: #000000;

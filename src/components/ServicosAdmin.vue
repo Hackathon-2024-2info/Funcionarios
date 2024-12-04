@@ -2,7 +2,7 @@
 // import { onMounted, ref } from 'vue'
 // import { useAuthStore } from '@/stores/auth';
 import { useServicoStore } from '../stores/servicos.js';
-
+import { RouterLink } from 'vue-router';
 const servicoStore = useServicoStore();
 // const authStore = useAuthStore()
 // const servico = ref({})
