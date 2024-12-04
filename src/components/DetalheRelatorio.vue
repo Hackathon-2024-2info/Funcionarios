@@ -3,10 +3,13 @@ import { onMounted, ref } from 'vue'
 // import { useAuthStore } from '@/stores/auth';
 import { useRelatorioStore } from '@/stores/relatorios.js';
 
+
 const props = defineProps(['id']);
 const relatorioStore = useRelatorioStore();
 // const authStore = useAuthStore()
 const relatorio = ref({})
+
+
 
 
 onMounted(() => {
@@ -14,13 +17,14 @@ onMounted(() => {
 })
 </script>
 
+
 <template>
     <main>
         <div class="botaozinho">
             <RouterLink to="/relatoriosadmin"><img class="img" src="@/assets/🦆 icon _Chevron left alt (line)_.png" alt=""></RouterLink>
         </div>
-        <div class="texts">
             <h1> {{relatorio.titulo}}</h1>
+            <div class="texts">
             <p>Remetente: {{relatorio.remetente}}</p>
             <p class="chamado">Relatório enviado em: {{relatorio.dataenvio}}</p>
             <p class="tempo">Tempo de realização do serviço: {{relatorio.temporealizacao}}</p>
@@ -32,7 +36,9 @@ onMounted(() => {
             <p class="descricao">Descrição: {{ relatorio.descricao }}
             </p>
 
+
         </div>
+
 
         <section class="container">
             <div class="container-carrosel">
@@ -44,18 +50,24 @@ onMounted(() => {
             </div>
         </section>
 
+
     </main>
 
+
 </template>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 
+
+
 .espaco {
     margin-top: 10%;
 }
+
 
 .botaozinho {
     position: absolute;
@@ -68,6 +80,8 @@ onMounted(() => {
 }
 
 
+
+
 .container {
     position: absolute;
     width: 22%;
@@ -77,6 +91,7 @@ onMounted(() => {
     background-color: #ececec;
     border-radius: 20px;
 }
+
 
 .container-carrosel {
     margin-top: 10%;
@@ -90,16 +105,20 @@ onMounted(() => {
     margin-left: 10%;
 }
 
+
 .container-carrosel::-webkit-scrollbar {
     width: 0.7vw;
     width: 10px;
 }
 
+
 .container-carrosel::-webkit-scrollbar-track {
     background-color: #f5f5f5;
     border-radius: 4px;
 
+
 }
+
 
 .container-carrosel::-webkit-scrollbar-thumb {
     background-color: #6e78ff;
@@ -109,12 +128,16 @@ onMounted(() => {
 
 
 
+
+
+
 .img {
     position: relative;
     display: flex;
     margin-left: 33%;
     margin-top: 22%;
 }
+
 
 h1 {
     display: flex;
@@ -128,12 +151,15 @@ h1 {
     color: #000000;
 }
 
+
 .texts {
     width: 50%;
     height: 30%;
     margin-left: 20%;
-    margin-top: 20%;
+    position: absolute;
+    top: 40%;
 }
+
 
 .texts .descricao,
 .pendente {
@@ -141,10 +167,14 @@ h1 {
     word-wrap: break-word
 }
 
+
 .descricao {
     margin-top: -4%;
 
+
 }
+
+
 
 
 p {
@@ -155,3 +185,4 @@ p {
     font-size: 18px;
 }
 </style>
+
