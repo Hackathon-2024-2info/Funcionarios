@@ -14,17 +14,19 @@ onMounted(() => {
     chamado.value = chamadoStore.getProductById(props.id)
 })
 
-const remetente = ref(''); 
+const funcionario = ref(''); 
 const data_envio = ref('');
 const descricao = ref('');
 const titulo = ref('');
+const funcionario = ref('');
 
-const fetchRemetentes = async () => {
+
+const fetchFuncionarios = async () => {
   try {
 	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
-	remetente.value = response.data;
+	funcionario.value = response.data;
   } catch (error) {
-	console.error('Erro ao buscar remetentes:', error);
+	console.error('Erro ao buscar funcionario:', error);
   }
 };
 
@@ -33,7 +35,7 @@ const fetchTitulos = async () => {
 	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
 	titulo.value = response.data;
   } catch (error) {
-	console.error('Erro ao buscar remetentes:', error);
+	console.error('Erro ao buscar titulos:', error);
   }
 };
 
@@ -42,7 +44,7 @@ const fetchEnvios = async () => {
 	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
 	data_envio.value = response.data;
   } catch (error) {
-	console.error('Erro ao buscar data de envio:', error);
+	console.error('Erro ao buscar data de envios:', error);
   }
 };
 
@@ -56,7 +58,7 @@ const fetchDescricoes = async () => {
 };
 
 onMounted(() => {
-  fetchRemetentes();
+  fetchFuncionarios();
   fetchEnvios();
   fetchDescricoes();
   fetchTitulos();
@@ -73,7 +75,7 @@ onMounted(() => {
         </div>
         <div class="texts" :key="props.id">
             <h1 :v-model="fetchTitulos">{{titulo}}</h1>
-            <p :v-model="fetchRemetentes">{{solicitador}}</p>
+            <p :v-model="fetchFuncionarios">{{solicitador}}</p>
             <p class="chamado" :v-model="fetchEnvios">{{data}}</p>
             <p class="descricao" :v-model="fetchDescricoes">{{descricao }}
             </p>
