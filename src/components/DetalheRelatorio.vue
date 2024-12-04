@@ -28,7 +28,7 @@ onMounted(() => {
 //   servico.value = servicoStore }
 
 const titulo = ref('');
-const remetente = ref('');
+const funcionario = ref('');
 const dataenvio = ref('');
 const temporealizacao = ref('');
 const dificuldade = ref('');
@@ -48,7 +48,7 @@ const fetchTitulos = async () => {
 const fetchRemetentes = async () => {
   try {
 	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
-	remetente.value = response.data;
+	funcionario.value = response.data;
   } catch (error) {
 	console.error('Erro ao buscar colaborações:', error);
   }
@@ -147,7 +147,7 @@ onMounted(() => {
         </div>
         <div class="texts">
             <h1 :v-model="titulo"> {{titulo}}</h1>
-            <p :v-model="remetente">Remetente: {{remetente}}</p>
+            <p :v-model="funcionario" >Remetente: {{remetente}}</p>
             <p class="chamado" :v-model="dataenvio">Relatório enviado em: {{dataenvio}}</p>
             <p class="tempo" :v-model="temporealizacao">Tempo de realização do serviço: {{temporealizacao}}</p>
             <p class="dificuldade" :v-model="dificuldade">Dificuldade do serviço: {{dificuldade}}</p>
