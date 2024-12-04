@@ -21,7 +21,7 @@
 //   const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
 //   nome.value = response.data;
 //   } catch (error) {
-//   console.error('Erro ao buscar dificuldades:', error);
+//   console.error('Erro ao buscar nomes:', error);
 //   }
 // };
 
@@ -31,7 +31,7 @@
 //   const response = await axios.get('http://seu-dominio.com/api/Cliente/');
 //   cliente.value = response.data;
 //   } catch (error) {
-//   console.error('Erro ao buscar colaborações:', error);
+//   console.error('Erro ao buscar clientes:', error);
 //   }
 // };
 
@@ -41,7 +41,7 @@
 //   const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
 //   datainicio.value = response.data;
 //   } catch (error) {
-//   console.error('Erro ao buscar colaborações:', error);
+//   console.error('Erro ao buscar datas:', error);
 //   }
 // };
 
@@ -76,10 +76,10 @@
             <div class="box" v-for="relatorio in relatorioStore.relatorios" :key="relatorio.id">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
-                <h3>{{relatorio.nome}}</h3>
+                <h3 :v-model="cliente">{{cliente}}></h3>
                 <div class="txt">
-                  <P class="txt-box">{{relatorio.cliente}}</P>
-                  <p class="txt-box">{{relatorio.dataenvio}} </p>
+                  <P class="txt-box" :v-model="nome">{{nome}}></P>
+                  <p class="txt-box"> :v-model="datainicio">{{dataenvio}} </p>
                 </div>
 
                 <RouterLink to="/detalherelatorio"><button class="btn-box">Ver detalhes</button></RouterLink>
