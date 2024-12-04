@@ -1,20 +1,110 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import { useAuthStore } from '@/stores/auth';
-import { useServicoStore } from '../stores/servicos.js';
+import axios from 'axios';
+// import { useAuthStore } from '@/stores/auth';
+// import { useServicoStore } from '../stores/servicos.js';
+// const props = defineProps(['id']);
+// const servicoStore = useServicoStore();
+// const authStore = useAuthStore()
+// const servico = ref({})
 
+const tipo_de_servico = ref(''); 
+const cliente = ref('');
+const funcionario = ref('');
+const data_final_servico = ref('');
+const data_inicio = ref('');
+const contato_responsavel = ref('');
+const descricao_servico = ref('');
+const pendencias_maquina = ref('');
 
-const props = defineProps(['id']);
-const servicoStore = useServicoStore();
-const authStore = useAuthStore()
-const servico = ref({})
+const fetchPendencias = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	pendencias_maquina.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar pendencias:', error);
+  }
+};
 
+const fetchDataInicio = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	data_inicio.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar data inicio:', error);
+  }
+};
 
+const fetchTipos = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	tipo_de_servico.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar tipos de serviço:', error);
+  }
+};
 
+const fetchFuncionarios = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	funcionario.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar funcionarios:', error);
+  }
+};
+
+const fetchClientes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+	cliente.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar clientes:', error);
+  }
+};
+
+const fetchDataFinal = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+	data_final_servico.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar data de datas finais:', error);
+  }
+};
+
+const fetchContato = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	contato_responsavel.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar contatos:', error);
+  }
+};
+
+const fetchDescricoes = async () => {
+  try {
+	const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+	descricao_servico.value = response.data;
+  } catch (error) {
+	console.error('Erro ao buscar descrição:', error);
+  }
+};
 
 onMounted(() => {
-  servico.value = servicoStore.getProductById(props.id)
-})
+  fetchClientes();
+  fetchContato();
+  fetchDataFinal();
+  fetchDescricoes();
+  fetchTipos();
+  fetchFuncionarios();
+  fetchDataInicio();
+  fetchPendencias();
+});
+
+
+
+// onMounted(() => {
+//   servico.value = servicoStore.getProductById(props.id)
+// })
 
 
 </script>
@@ -25,20 +115,20 @@ onMounted(() => {
     <div class="espaçamento">
       <div class="box">
         <img src="../assets/Video Task.png" alt="mapaDps" />
-        <p class="titulo">{{ servico.nome }}</p>
+        <p class="titulo" :v-model="tipo_de_servico">{{ nome }}</p>
           <div class="minicontainer">
-          <p>{{servico.cliente}}</p>
+          <p :v-model="cliente"> {{ cliente }} </p>
         </div>
         <div class="infos">
-          <p>Prestadores: {{servico.prestadores}}</p>
-          <p v-if="!authStore.user.is_admin">Previsão de duração: {{servico.prevduracao}}</p>
-          <p v-if="!authStore.user.is_admin">Contato do responsável pela máquina: {{ servico.contatoresponsavel }}</p>
-          <p class="descricao" v-if="!authStore.user.is_admin">
-            Descrição: {{ servico.descricao }}
+          <p :v-model="funcionario">Prestadores: {{prestadores}}</p>
+          <p v-if="!authStore.user.is_admin" :v-model="tipo_de_servico">Previsão de duração: {{prevduracao}}</p>
+          <p v-if="!authStore.user.is_admin" :v-model="contato_responsavel">Contato do responsável pela máquina: {{contatoresponsavel }}</p>
+          <p class="descricao" v-if="!authStore.user.is_admin" :v-model="descricao_servico"> 
+            Descrição: {{descricao }}
           </p>
-          <p v-if="authStore.user.is_admin">Data de início: {{ servico.datainicio }}</p>
-          <p v-if="authStore.user.is_admin">Data de finalização: {{servico.datafinal}}</p>
-          <p v-if="authStore.user.is_admin">Pendências: {{servico.pendencias}}</p>
+          <p v-if="authStore.user.is_admin" :v-model="data_inicio">Data de início: {{ datainicio }}</p>
+          <p v-if="authStore.user.is_admin" :v-model="data_final_servico">Data de finalização: {{datafinal}}</p>
+          <p v-if="authStore.user.is_admin" :v-model="pendencias_maquina">Pendências: {{pendencias}}</p>
           <div class="teste">
           <RouterLink to="/detalherelatorio"><button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button></RouterLink>
         </div>
