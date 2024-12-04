@@ -4,52 +4,48 @@
 // const relatorioStore = useRelatorioStore();
 
 
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const nome = ref('');
+const cliente = ref('');
+const datainicio = ref('');
 
 
+const fetchNomes = async () => {
+  try {
+  const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
+  nome.value = response.data;
+  } catch (error) {
+  console.error('Erro ao buscar nomes:', error);
+  }
+};
 
 
-// import { ref, onMounted } from 'vue';
-// import axios from 'axios';
-
-// const nome = ref('');
-// const cliente = ref('');
-// const datainicio = ref('');
-
-
-// const fetchNomes = async () => {
-//   try {
-//   const response = await axios.get('http://seu-dominio.com/api/nome_Serviço/');
-//   nome.value = response.data;
-//   } catch (error) {
-//   console.error('Erro ao buscar nomes:', error);
-//   }
-// };
+const fetchClientes = async () => {
+  try {
+  const response = await axios.get('http://seu-dominio.com/api/Cliente/');
+  cliente.value = response.data;
+  } catch (error) {
+  console.error('Erro ao buscar clientes:', error);
+  }
+};
 
 
-// const fetchClientes = async () => {
-//   try {
-//   const response = await axios.get('http://seu-dominio.com/api/Cliente/');
-//   cliente.value = response.data;
-//   } catch (error) {
-//   console.error('Erro ao buscar clientes:', error);
-//   }
-// };
+const fetchDatas = async () => {
+  try {
+  const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
+  datainicio.value = response.data;
+  } catch (error) {
+  console.error('Erro ao buscar datas:', error);
+  }
+};
 
-
-// const fetchDatas = async () => {
-//   try {
-//   const response = await axios.get('http://seu-dominio.com/api/colaboracoes/');
-//   datainicio.value = response.data;
-//   } catch (error) {
-//   console.error('Erro ao buscar datas:', error);
-//   }
-// };
-
-// onMounted(() => {
-//   fetchNomes();
-//   fetchClientes();
-//   fetchDatas();
-// });
+onMounted(() => {
+  fetchNomes();
+  fetchClientes();
+  fetchDatas();
+});
 
 
 </script>
@@ -123,10 +119,10 @@
             <div class="box" v-for="relatorio in relatorioStore.relatorios" :key="relatorio.id">
               <img src="../assets/logoopaca.png" alt="" />
               <div class="info">
-                <h3>{{relatorio.nome}}</h3>
+                <h3 :v-model="nome">{{nome}}</h3>
                 <div class="txt">
-                  <P class="txt-box">{{relatorio.cliente}}</P>
-                  <p class="txt-box">{{relatorio.dataenvio}} </p>
+                  <P class="txt-box" :v-model="cliente">{{cliente}}></P>
+                  <p class="txt-box" :v-model="datainicio">{{dataenvio}} </p>
                 </div>
 
                 <RouterLink to="/detalherelatorio"><button class="btn-box">Ver detalhes</button></RouterLink>
