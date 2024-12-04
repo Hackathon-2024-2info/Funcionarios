@@ -51,7 +51,7 @@ import pagHeader from '@/components/pagHeader.vue';
   color: #180577;
   padding-top: 15%;
   padding-bottom: 5%;
-  margin-left: -9%;
+  margin-left: 0%;
 }
 
 .espacamento {

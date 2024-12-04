@@ -79,6 +79,7 @@ select {
   border-radius: 5px;
   border-style: none;
   padding-left: 2%;
+  margin-bottom: -12%;
 }
 
 label {
@@ -170,8 +171,8 @@ aside {
       font-size: 22px;
       width: 60%;
       font-weight: 300;
-      padding-right: 18%;
-      padding-left: 18%;
+      padding-right: 19%;
+      padding-left: 19%;
 
     }
 
@@ -207,7 +208,7 @@ aside {
   
 
     button {
-      margin: 0 30% 0 30%;
+      margin: 0 27% 0 28%;
       background-color: #091D87;
       border-radius: 5px;
       font-family: 'Karla';
@@ -217,7 +218,7 @@ aside {
       text-align: center;
       padding: 15px 40px;
       gap: 10px;
-      width: 230px;
+      width: 260px;
       font-size: 16px;
       color: white;
       margin-top: 3rem;
@@ -257,15 +258,23 @@ aside {
       font-family: 'Karla';
     text-align: center;
   }
+
+    #enviar{
+      margin-left: 22%;
+    }
   @media (max-width: 768px) {
     #main {
     display: flex;
     flex-direction: column; /* Altera para coluna em telas menores */
   }
 
+  .logo {
+      margin-top: 6%;
+    }
+
   section {
     order: -1; /* Move a section para o topo */
-    height: 50vh; /* Ajusta a altura para se adaptar ao conteúdo */
+    height: 33vh; /* Ajusta a altura para se adaptar ao conteúdo */
     padding: 2rem 0;
   }
   input {
@@ -284,14 +293,14 @@ aside {
   }
 
   .pergunta {
-    font-size: 18px;
+    font-size: 14px;
     width: 90%;
     margin-top: 10px;
-    margin-left:-40px;
+    margin-left:-45px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .logo {
@@ -308,10 +317,14 @@ aside {
     margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
     width: 200px; /* Comprimento para tablets */
     padding: 8px 15px; /* Ajusta o preenchimento */
-    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
-    margin-top: 10px;
+    margin-top: 6%;
 
-  }  }
+  }
+  button#enviarc{
+    margin-top: 1%;
+  }
+
+}
 
 
 

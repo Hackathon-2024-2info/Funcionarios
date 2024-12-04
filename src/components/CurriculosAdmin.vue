@@ -237,7 +237,7 @@ span {
 main {
   display: flex;
   margin-bottom: 3%;
-  margin-top: -77%;
+  margin-top: -90%;
   width: 100%;
   margin-left: 9%;
 }
