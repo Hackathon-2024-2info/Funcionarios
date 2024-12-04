@@ -1,6 +1,6 @@
 <script setup>
 import { reactive, ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 const mostrarResultado = ref(false)
 const info = reactive({
   nome: '',
@@ -104,7 +104,7 @@ aside {
   color: #000000;
   text-align: center;
   margin-top: 10%;
-  margin-left: -40%;
+  margin-left: -32%;
   white-space: nowrap;
   margin-bottom: 5%;
 
@@ -117,7 +117,7 @@ aside {
 }
 
 #enviar {
-  margin-left: 70%;
+  margin-left: 83%;
 }
 
 .img {
@@ -137,7 +137,7 @@ aside {
   font-family: 'Readex Pro';
   font-size: 32px;
   color: white;
-  margin-left: 24%;
+  margin-left: 18%;
   margin-top: 1%;
   font-weight: 500;
 }
@@ -149,8 +149,8 @@ aside {
   font-size: 150%;
   text-align: center;
   margin-top: 10%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 18%;
+  padding-right: 18%;
   
 }
 
@@ -210,6 +210,7 @@ button:active {
   justify-content: center;
   text-align: center;
   margin-top: 13%;
+  margin-left: 26%;
 
 }
 @media screen and (max-width: 768px) {
