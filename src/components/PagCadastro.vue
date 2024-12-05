@@ -148,15 +148,13 @@ aside {
   font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 40px;
   color: #000000;
   text-align: center;
   margin-top: 10%;
-  margin-left: -32%;
+  margin-left: -5%;
   white-space: nowrap;
-  margin-bottom: 5%;
-  
+
 }
 
 
