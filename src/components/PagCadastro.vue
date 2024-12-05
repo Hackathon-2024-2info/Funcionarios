@@ -98,15 +98,18 @@ function processarForm() {
         </form>
       </div>
     </aside>
-    <div class="containerA">
+    <div style="background-color: #0F0541; height: 100%; ">
+          <div class="containerA" >
       <div class="img">
         <img class="logo" src="../assets/logo AVANTE.png" alt="" />
       </div>
-      <p class="bemvinde">SEJA BEM-VINDO!</p>
-      <p class="conta">Faça seu cadastro para ter acesso ao sistema</p>
+      <p class="bemvinde" style=" background-color: #0F0541;">SEJA BEM-VINDO!</p>
+      <p class="conta" style=" background-color: #0F0541;">Faça seu cadastro para ter acesso ao sistema</p>
       <RouterLink to="/">
       <button id="voltar">Voltar a página de login</button></RouterLink>
     </div>
+    </div>
+
 
     <!-- Futuramente pra mandar pro banco aqui!!!! -->
     <!-- <div v-if="mostrarResultado" class="resultado">
@@ -136,7 +139,8 @@ aside {
 
 .formularioo {
   display: grid;
-  grid-template-columns: 25% 1fr 25%
+  grid-template-columns: 25% 1fr 25%;
+  order: 1;
 }
 
 .faca {
@@ -154,11 +158,6 @@ aside {
 
 }
 
-.containerA {
-  background-color: #0F0541;
-  height: 125vh;
-  width: 100%;
-}
 
 #enviar {
   margin-left: 83%;

@@ -6,6 +6,8 @@ const isOpen = ref(false);
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
 };
+
+
 </script>
 
 <template>
@@ -48,7 +50,7 @@ const toggleDropdown = () => {
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
 
-        <router-link to="/estoque"> Estoque </router-link>
+        <router-link to="/estoque" name v-if="id === '1'"> Estoque </router-link>
         <router-link to="/servicos/1"> Serviço </router-link>
         <router-link to="/relatorios"> Relatório </router-link>
 
