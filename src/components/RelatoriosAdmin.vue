@@ -49,7 +49,7 @@ const relatorioStore = useRelatorioStore();
 
  <div class="lg">  <div class="body">
       <div></div>
-        <main>
+        <div class="botoes">
           <div class="filtrar">
             <label for="">Filtrar:</label>
             <select name="Selecione" id="Selecione">
@@ -60,11 +60,11 @@ const relatorioStore = useRelatorioStore();
             <button style="background-color: #f5f5f5">
               <img src="../assets/esquerda.png" alt="" />
             </button>
-            <p class="p">1</p>
+            <p class="numerosetas">1</p>
             <button style="background: #f5f5f5"><img src="../assets/direita.png" alt="" /></button>
           </div>
       
-        </main>
+        </div>
       </div>
       
         
@@ -95,6 +95,31 @@ const relatorioStore = useRelatorioStore();
   .sm{
     display: none;
   }
+
+  
+.numerosetas{
+padding:3.5%;
+font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: 5%;
+  background: rgb(84, 111, 255, 0.32);
+
+  border-radius: 10px;
+  color: black;
+}
+.setas {
+  display: flex;
+  margin-left: -5%;
+}
+.botoes{
+  display: grid;
+  margin-left: 30%;
+  align-items: center;
+  grid-template-columns: 40% 40%;
+}
 .body {
   display: grid;
   grid-template-columns: 18% 1fr;
@@ -153,17 +178,6 @@ main {
 width: 100%;
  
 }
-.p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-left: 2%;
-  margin-right: 2%;
-  background: rgb(84, 111, 255, 0.32);
-  padding: 1.9%;
-  border-radius: 10px;
-  color: black;
-}
 body {
   color: #f5f5f5;
 }
@@ -216,14 +230,7 @@ main {
   margin-bottom: 3%;
 }
 
-.setas {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  margin-left: -5%;
-  margin-top: -0.4%;
-  margin-left: 5%;
-}
+
 }
 
 

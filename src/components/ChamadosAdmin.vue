@@ -224,6 +224,7 @@ span {
 main {
   display: flex;
   margin-bottom: 3%;
+
   width: 100%;
   position: absolute;
   top: 30%;
@@ -252,10 +253,9 @@ label {
 
 
 .filtrar {
-  flex-wrap: nowrap;
-  width: 50%;
-  margin-left: 32%;
-  padding-top: 1%;
+display: flex;
+text-align: center;
+margin-left: 52%;
 }
 
 
@@ -292,11 +292,8 @@ select {
   padding: 0.2%;
   padding-left: 2%;
   padding-right: 2%;
+  margin-left: 5%;
 }
-
-
-
-
 
 
 .option {
