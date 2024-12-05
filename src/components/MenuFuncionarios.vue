@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink } from 'vue-router';
 
 const isOpen = ref(false);
 
@@ -10,6 +9,7 @@ const toggleDropdown = () => {
 </script>
 
 <template>
+
   <body>
     <div class="menu-sm">
       <header>
@@ -34,12 +34,11 @@ const toggleDropdown = () => {
           </div>
         </div>
           <div class="dropdown-content" v-if="isOpen">
-            <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicosadmin"> Serviços </router-link>
-      <router-link to="/relatoriosadmin"> Relatórios </router-link>
-      <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/orcamento"> Orçamentos </router-link>
-      <router-link to="/curriculoadmin"> Currículos </router-link>
+            <a><router-link to="/estoque"> Estoque </router-link></a>
+            <hr>
+            <a><router-link to="/servicos/:id"> Serviço </router-link></a>
+            <hr>
+            <a><router-link to="/relatorios"> Relatório </router-link></a>
           </div>
         </div>
       </nav>
@@ -48,20 +47,18 @@ const toggleDropdown = () => {
     <div class="menu-lg">
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
-        <router-link to="/estoqueadmin"> Estoque </router-link>
-      <router-link to="/servicosadmin"> Serviços </router-link>
-      <router-link to="/relatoriosadmin"> Relatórios </router-link>
-      <router-link to="/chamadosadmin"> Chamados </router-link>
-      <router-link to="/orcamento"> Orçamentos </router-link>
-      <router-link to="/curriculoadmin"> Currículos </router-link>
+
+        <router-link to="/estoque"> Estoque </router-link>
+        <router-link to="/servicos/:id"> Serviço </router-link>
+        <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
 
         <img src="../assets/Question.png" alt="" class="warning" />
         <div class="box">
-          <p class="title">Remover acesso</p>
-          <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
-          <router-link to="/removeracesso" style="background: none;"><button class="button"><p style="margin-top: 3%;">Clique aqui</p></button></router-link>
+          <p class="title">Abra um chamado</p>
+          <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
+          <router-link to="/solicitarchamado" style="background: none;"><button class="button" id="chamado"><p style="margin-top: 3%; background: white; border-radius: 10px; padding: 5%; padding-top: 5%; padding-bottom: 5%;">Abrir chamado</p></button></router-link>
         </div>
       </nav>
     </div>
@@ -78,14 +75,15 @@ body {
   background: #f5f5f5;
   margin-top: -10%;
 }
-@media only screen and (min-device-width: 601px) {
 
+@media only screen and (min-device-width: 601px) {
   .menu-sm {
     display: none;
-    position: fixed; /* ou absolute */
-    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
   }
- 
+  
+.title{
+padding-top: 25%;
+}
   nav a {
       position: relative;
       display: block;
@@ -97,8 +95,8 @@ body {
       &::after {
         position: absolute;
         content: "";
-        top: 90%;
-        left: 20px;
+        top: 100%;
+        left: 15px;
         width: 80%;
         height: 3px;
         background: gray;
@@ -116,11 +114,8 @@ body {
         transform-origin: left;
       }
     }
-  
- 
 
- 
-    .box {
+  .box {
     background-color: #384dbb;
     color: white;
     font-weight: 400;
@@ -128,13 +123,14 @@ body {
     margin-left: 10%;
     margin-right: 10%;
 
-    padding-top: -18%;
+    padding-top: -15%;
   
   }
 
   .warning {
-    margin-bottom: -20%;
+    margin-bottom: -18%;
   }
+
   .menu-lg {
     display: grid;
     grid-template-columns: 18% 1fr;
@@ -159,7 +155,6 @@ body {
     justify-content: start;
     align-items: center;
     box-sizing: border-box;
-
   }
 
   .img {
@@ -187,11 +182,10 @@ body {
     padding-bottom: 5%;
     font-size: 14px;
     font-weight: 600;
-    margin: 4vh;
+    margin: 9%;
 
     display: flex;
     justify-content: center;
-    
   }
 
   nav a.active,
@@ -209,8 +203,6 @@ body {
     margin: 4vh;
     padding-top: 5%;
     padding-bottom: 5%;
-    animation-name: menu-anim;
-    animation-duration: 2s;
   }
 
   .vazio {
@@ -233,16 +225,14 @@ body {
 
   .frase-box {
     font-size: 80%;
-    margin: 10% 0;
+    margin: 10%;
     text-align: center;
     font-family: 'Karla';
     margin-top: 15%;
-    height: 5vh;
-width: 100%;
   }
 
   .button {
-    background-color: white;
+    background: none;
     border-radius: 10px;
     padding-top: 20%;
     padding-bottom: 20%;
@@ -254,17 +244,14 @@ margin: 0 auto;
     font-family: 'Plus Jakarta Sans', sans-serif;
   
     margin-top: -3% !important;
-    padding-top: 3%;
-    background-color: white;
     margin-bottom: -15%;
   }
-
 
   .title {
     font-size: 100%;
     text-align: center;
     font-family: 'Kantumruy Pro', sans-serif;
-    margin-top: 35%;
+    margin-top: 0%;
   }
 
   .barra {
@@ -399,15 +386,15 @@ margin: 0 auto;
     height: 15%;
     width: 85%;
     border: none;
+
     text-align: center;
     place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left:-12%;
+    margin-left: 7%;
     margin-top: 8%;
     padding-top: 3%;
     padding-bottom: 3%;
-    height: 5vh !important;
   }
 
   .title {
@@ -419,7 +406,6 @@ margin: 0 auto;
 }
 
 @media only screen and (max-device-width: 600px) {
-
   .menu-lg {
     display: none;
   }
@@ -440,9 +426,6 @@ margin: 0 auto;
 
   body {
     width: 100%;
-    position: fixed; /* ou absolute */
-    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
-
   }
 
   .menu {
