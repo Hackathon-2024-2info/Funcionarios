@@ -49,7 +49,7 @@ const toggleDropdown = () => {
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
 
         <router-link to="/estoque"> Estoque </router-link>
-        <router-link to="/servicos/:id"> Servico </router-link>
+        <router-link to="/servicos/:id"> Serviço </router-link>
         <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
@@ -58,7 +58,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Abra um chamado</p>
           <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <router-link to="/solicitarchamado"><button class="button">Abrir chamado</button></router-link>
+          <router-link to="/solicitarchamado"><button class="button" id="chamado">Abrir chamado</button></router-link>
         </div>
       </nav>
     </div>
@@ -80,6 +80,7 @@ body {
   .menu-sm {
     display: none;
   }
+  
 
   nav a {
       position: relative;
@@ -238,8 +239,9 @@ margin: 0 auto;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
   
-    margin-top: -5%;
+    margin-top: -3% !important;
     padding-top: 3%;
+    background-color: white;
 
   }
 
@@ -247,7 +249,7 @@ margin: 0 auto;
     font-size: 100%;
     text-align: center;
     font-family: 'Kantumruy Pro', sans-serif;
-    margin-top: 35%;
+    margin-top: 0%;
   }
 
   .barra {
