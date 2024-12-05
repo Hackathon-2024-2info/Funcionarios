@@ -1,9 +1,8 @@
-<script setup>
 
-</script>
 
 <template>
   <div class="lg"><main id="main">
+
 
 <div class="box">
   <h1 class="relatorio">RELATÓRIO DE CONCLUSÃO DE SERVIÇO</h1>
@@ -13,17 +12,23 @@
   </select>
 </div>
 
+
 <div class="espacamento"></div>
+
 
 <div class="box">
   <label for="opções"> Tempo de realização do serviço</label>
   <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
 </div>
 
+
 <div class="espacamento"></div>
 
 
+
+
 <div class="box">
+
 
   <label for=""> Colaboração da empresa que recebeu o serviço</label>
   <select id="opcoes" name="opcoes" required>
@@ -31,13 +36,18 @@
   </select>
 </div>
 
+
 <div class="espacamento"></div>
 
+
 <div class="box">
+
 
   <label for=""> Possíveis pendências que ficaram na máquina </label>
   <input class="input2" placeholder="Insira possíveis pendências">
 </div>
+
+
 
 
 <div class="espacing" @click="openFileSelection">
@@ -59,7 +69,12 @@
 
 
 
+
+
+
+
 </main>
+
 
 <div class="container">
 <label for="">Descrição da máquina e da realização do serviço</label>
@@ -78,8 +93,9 @@
   <h6>INSIRA AQUI</h6>
   <h4>Imagens da máquina DEPOIS do serviço</h4>
 </fieldset>
-</div> 
 </div>
+</div>
+
 
 <div>
 <button id="enviar" type="submit">Enviar</button>
@@ -88,8 +104,13 @@
 
 
 
+
+
+
+
   <div class="sm">
     <main id="main">
+
 
 <div class="box">
   <h1 class="relatorio">RELÁTORIO DE CONCLUSÃO DE SERVIÇO</h1>
@@ -99,17 +120,23 @@
   </select>
 </div>
 
+
 <div class="espacamento"></div>
+
 
 <div class="box">
   <label for="opções"> Tempo de realização do serviço</label>
   <input class="input1" placeholder="Insira o tempo em que foi realizado o serviço">
 </div>
 
+
 <div class="espacamento"></div>
 
 
+
+
 <div class="box">
+
 
   <label for=""> Colaboração da empresa que recebeu o serviço</label>
   <select id="opcoes" name="opcoes" required>
@@ -117,13 +144,17 @@
   </select>
 </div>
 
+
 <div class="espacamento"></div>
 
+
 <div class="box">
+
 
   <label for=""> Possíveis pendências que ficaram na máquina </label>
   <input class="input2" placeholder="Insira possíveis pendências">
 </div>
+
 
 <div class="container">
 <label for="">Descrição da máquina e da realização do serviço</label>
@@ -148,7 +179,13 @@
 
 
 
+
+
+
+
 </main>
+
+
 
 
 <div class="espacing" @click="openFileSelectiondepois">
@@ -165,24 +202,30 @@
   <h6>INSIRA AQUI</h6>
   <h4>Imagens da máquina DEPOIS do serviço</h4>
 </fieldset>
-</div> 
+</div>
+
+
 
 
 <div>
 <button id="enviar" type="submit">Enviar</button>
-</div> 
+</div>
 </div>
 </template>
+
 
 <script setup>
   import { ref } from 'vue'
 
+
   const fileNameantes = ref('')
   const fileInputantes = ref(null)
+
 
   function openFileSelectionantes() {
     fileInputantes.value.click()
   }
+
 
   function handleFileChangeantes(event) {
       const file = event.target.files[0];
@@ -191,16 +234,20 @@
       }
     }
   function triggerFileInputantes() {
-      fileInputantes.value.click(); 
+      fileInputantes.value.click();
     }
+
+
 
 
     const fileNamedepois = ref('')
   const fileInputdepois = ref(null)
 
+
   function openFileSelectiondepois() {
     fileInputdepois.value.click()
   }
+
 
   function handleFileChangedepois(event) {
       const file = event.target.files[0];
@@ -209,9 +256,10 @@
       }
     }
   function triggerFileInputdepois() {
-      fileInputdepois.value.click(); 
+      fileInputdepois.value.click();
     }
 </script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
@@ -224,8 +272,10 @@
   width: 564px;
   height: 734px;
   margin-left: 28%;
-  margin-top: 8%;
+  position: absolute;
+  top: 26%;
 }
+
 
 .container {
   gap: 15px;
@@ -236,14 +286,20 @@
   left: 1030px;
   top: 31%;
 
+
 }
+
+
+
 
 
 
 .espacing {
   height: 2vh;
 
+
 }
+
 
 .relatorio {
   font-family: 'Readex Pro';
@@ -259,9 +315,12 @@
   top: 177px;
 }
 
+
 .espacamento {
   margin-top: 2.8%;
 }
+
+
 
 
 #opcoes {
@@ -276,6 +335,9 @@
   font-size: 14px;
   color: #687C94;
 }
+
+
+
 
 
 
@@ -296,7 +358,12 @@
   color: #687C94;
   color: #000000;
 
+
 }
+
+
+
+
 
 
 
@@ -317,7 +384,10 @@
   border: none;
   outline: none;
 
+
 }
+
+
 
 
 .input3 {
@@ -336,7 +406,11 @@
   border: none;
   outline: none;
 
+
 }
+
+
+
 
 
 
@@ -358,6 +432,8 @@ label {
 }
 
 
+
+
 #enviar {
   background-color: #091D87;
   border-radius: 5px;
@@ -371,7 +447,11 @@ label {
   border: none;
   text-align: center;
   margin-left: 51%;
+  position: absolute;
+  top: 140%;
 }
+
+
 
 
 #arquive-selected {
@@ -381,6 +461,7 @@ label {
   font-weight: 300;
   margin-top: 4%;
 }
+
 
 .arquivo {
   width: 63%;
@@ -395,6 +476,7 @@ label {
   background-color: rgba(217, 217, 217, 0.43);;
 }
 
+
 h4 {
   font-size: 12px;
   color: #555555;
@@ -402,6 +484,7 @@ h4 {
   font-weight: 300;
   padding-left: 20%;
 }
+
 
 h6 {
   font-family: 'Karla';
@@ -413,12 +496,18 @@ h6 {
 
 
 
+
+
+
 #file-input {
   background-image: ("@/assets/iconimage.png");
   width: 34px;
   height: 34px;
 
+
 }
+
+
 
 
 .icon-button{
@@ -426,9 +515,12 @@ h6 {
   margin-top: 2%;
 }
 
+
 .espacing{
   height: 2vh;
 }
+
+
 
 
 #arquive-selected{
@@ -442,14 +534,19 @@ h6 {
 
 
 
+
+
+
 #imagelogo {
     width: 24px;
     height: 24px;
     padding: 3%;
     left: 12%;
 
+
 }
 }
+
 
 @media only screen and (max-device-width: 600px) {
   h6 {
@@ -460,21 +557,29 @@ h6 {
   padding-left: 20%;
 }
 
+
 .lg{
   display: none;
 }
 
+
 .container {
 margin-left: 10%;
 width: 50%;
+margin-top: 5%;
 }
+
+
+
 
 
 
 .espacing {
   height: 2vh;
 
+
 }
+
 
 .relatorio {
   font-family: 'Readex Pro';
@@ -487,9 +592,12 @@ width: 50%;
   margin-bottom: 20px;
 }
 
+
 .espacamento {
   margin-top: 2.8%;
 }
+
+
 
 
 #opcoes {
@@ -505,6 +613,9 @@ width: 50%;
   color: #666666;
   padding-left: 3.5%;
 }
+
+
+
 
 
 
@@ -524,7 +635,12 @@ width: 50%;
   line-height: 14px;
   color:#666666;
 
+
 }
+
+
+
+
 
 
 
@@ -544,7 +660,10 @@ width: 50%;
   border: none;
   outline: none;
 
+
 }
+
+
 
 
 .input3 {
@@ -569,6 +688,9 @@ width: 50%;
 
 
 
+
+
+
 label {
   font-family: 'Karla';
   font-style: normal;
@@ -586,6 +708,8 @@ label {
   width: 296px;
   padding-bottom: 10px;
 }
+
+
 
 
 #enviar {
@@ -608,6 +732,8 @@ label {
 }
 
 
+
+
 #arquive-selected {
   font-size: 12px;
   color: #000000;
@@ -616,7 +742,9 @@ label {
   margin-top: 4%;
 }
 
+
 .arquivo {
+
 
   width: 70%;
   height: 60px;
@@ -629,6 +757,7 @@ label {
   background-color: rgba(217, 217, 217, 0.2);
 }
 
+
 h4 {
   font-size: 11px;
   color: #555555;
@@ -639,6 +768,7 @@ h4 {
   width: 70%;
   margin-left: 5%;
 }
+
 
 h6 {
   font-family: 'Karla';
@@ -652,11 +782,18 @@ h6 {
 
 
 
+
+
+
 #file-input {
   background-image: ("@/assets/iconimage.png");
 
 
+
+
 }
+
+
 
 
 .icon-button{
@@ -666,9 +803,12 @@ h6 {
   margin-left: 3%;
 }
 
+
 .espacing{
   height: 2vh;
 }
+
+
 
 
 #arquive-selected{
@@ -682,8 +822,11 @@ h6 {
 
 
 
+
+
+
 #imagelogo {
-  
+ 
     width: 30px;
     height: 30px;
 margin-left: 30%;
@@ -693,6 +836,8 @@ margin-top: 20%;
   margin-left: 10%;
   margin-right: 10%;
 
+
 }
 }
 </style>
+

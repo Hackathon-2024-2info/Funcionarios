@@ -38,14 +38,14 @@ const authStore = useAuthStore();
 
 <template>
   <main id="main">
-    <section>
+    <section class="teste">
       <div class="img">
           <img class="logo" src="../assets/logo AVANTE.png" alt="" />
       </div>
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/about">
+        <RouterLink class="teste" to="/about">
           <button id="enviar" type="submit" @click="authStore.toggleAdmin">Cadastre-se</button>
         </RouterLink>    
       </section>
@@ -61,7 +61,7 @@ const authStore = useAuthStore();
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <RouterLink to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
+            <RouterLink class="button-area" to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
             <RouterLink to="/estoqueadmin" v-if="authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
             </form>
       </div>
@@ -78,16 +78,27 @@ const authStore = useAuthStore();
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
-
+.teste {
+  display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
 .img {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: -20%;
       }
 
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .container{
-  display: grid;
-  grid-template-columns: 25% 1fr 25%
 }
 .pergunta{
 margin-top: 5rem;
@@ -100,8 +111,9 @@ font-size: 22px;
 
 #h1{
   color: #000000;
-  font-size: 36px;
-  margin-top: 15%;
+  font-size: 30px;
+  margin-top: 20vh;
+  margin-left: -5vh;
 }
 h1{
   font-family: 'Readex Pro';
@@ -111,7 +123,7 @@ h1{
   line-height: 40px;
   color: #FFFFFF;
   text-align: center;
-  margin-top: 2%;
+  margin-top: -5% !important;
 }
 .logo{
   display: flex;
@@ -125,10 +137,9 @@ input {
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: 0px solid; /* Borda inicial em cinza claro */
-  margin: 0;
   cursor: pointer;
-padding-left: 2%;
-transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+  padding-left: 2%;
+  transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
 }
 input:focus {
   border: 2px solid blue;
@@ -142,12 +153,12 @@ label{
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
   color: #000000;
   text-align: center;
   margin-top: 6%;
   margin-bottom: 4%;
-  
+  text-align: start;
+
 }
 
  button{
@@ -167,17 +178,17 @@ label{
   border: none;
   text-align: center;
   cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
-  transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
-  margin-left: 25%;
+  transition: transform 0.1s ease; 
 }
 button:active {
-  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+  transform: scale(0.95); 
 }
-button#enviar {
-  margin-left: 120px;
-}
-button#enviarc {
-  margin-left: 100px;
+
+
+.button-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 section {
   background: #0f0541;
@@ -187,6 +198,9 @@ section {
 
 aside {
   margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bemvindo,
@@ -207,30 +221,27 @@ p {
 } 
 @media (max-width: 768px) {
   section {
-    height: 45vh;
+    height: 35vh;
     padding: 2px;
   }
 
   .logo {
-    width: 25vw;
-    margin-bottom: 5px;
+    width: 35vw;
+    margin-bottom: 2vh;
   }
 
   #main {
     grid-template-columns: 1fr;
   }
 
-  .container {
-    grid-template-columns: 1fr;
-  }
 
   input {
-    width: 80% !important;
-    margin-left: 10%;
+    width: 200% !important;
+    margin-left: -50%;
     margin-top: 0.006%;
   }
   label {
-    margin-left: 10%;
+    margin-left: -50%;
     font-size: 14px;
   }
 
@@ -241,30 +252,34 @@ p {
     padding: 8px 16px !important;
   }
   button#enviar {
-    margin-left: 35%;
-    padding: 6px 12px !important;
-    margin-top: 2%;
+    padding: 10px 20px !important;
+    margin-top: 8%;
+    width: 100% !important;
+    font-size: 15px;
+    margin-left: 25%;
 
 
   }
   button#enviarc {
-    margin-left: 35%;
-    margin-top: 5%;
-    padding: 8px 16px !important;
+    width: 100% !important;
+    margin-top: 15%;
+    margin-left: 10%;
+    padding: 10px 35px !important;
 
   }
   #h1 {
     font-size: 6vw;
-    margin-top: 2%;
+    margin-top: 15% !important;
   }
 
   h1 {
     font-size: 4vw;
+    margin-top: -20vw;
   }
 
   .pergunta {
     font-size: 4vw;
-    margin-top: 2vh;
+    margin-top: 2vh !important;
   }
 }
 
