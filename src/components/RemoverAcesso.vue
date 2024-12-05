@@ -55,7 +55,7 @@ const itens = [
 </script>
 
 <template>
-  <main id="main">
+  <div class="botoes">
     <div class="filtrar">
       <label for="">Filtrar:</label>
       <select name="Selecione" id="Selecione">
@@ -63,11 +63,11 @@ const itens = [
       </select>
     </div>
     <div class="setas">
-      <button><img src="../assets/esquerda.png" alt="" /></button>
-      <p class="pe">1</p>
-      <button><img src="../assets/direita.png" alt="" /></button>
+      <button style="background: none;"><img src="../assets/esquerda.png" alt="" /></button>
+      <p class="numerosetas">1</p>
+      <button style="background: none;"><img src="../assets/direita.png" alt="" /></button>
     </div>
-  </main>
+  </div>
 
   <table class="tabela-itens">
     <thead>
@@ -129,6 +129,9 @@ const itens = [
 .remover{
 padding-top: 5%;
 padding-bottom: 5%;
+padding-left: 3%;
+padding-right: 3%;
+width: 110%;
 background: #091D87;
 border-radius: 5px;
 color: white;
@@ -191,41 +194,47 @@ span{
   margin-top: -77%;
   margin-left: 10%;
 }
+.numerosetas{
+padding:3.5%;
+font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: 5%;
+  background: rgb(84, 111, 255, 0.32);
 
-.setas {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  margin-left: -15%;
-  margin-top: -5%;
-}
-
-label {
-  margin-right: 3%;
+  border-radius: 10px;
   color: black;
 }
-.filtrar {
-  width: 80%;
-  margin-left: 40%;
-  padding-top: 1%;
+.setas {
+  display: flex;
+  margin-left: -5%;
+}
+.botoes{
+  display: grid;
+  margin-left: 30%;
+  align-items: center;
+  grid-template-columns: 40% 40%;
 }
 
+
+select {
+  border-radius: 20px;
+  border: none;
+  background: rgb(84, 111, 255, 0.32);
+  color: #8787c7;
+  padding: 0.2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 2%;
+}
 label,
 select,
 option {
   font-family: 'Karla';
 }
-.pe{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-left: 2%;
-  margin-right: 2%;
-  background: rgb(84, 111, 255, 0.32);
-  padding: 1.9%;
-  border-radius: 10px;
-  color: black;
-}
+
 
 button {
   border: none;
