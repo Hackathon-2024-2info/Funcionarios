@@ -2,7 +2,7 @@
 // import { onMounted, ref } from 'vue'
 // import { useAuthStore } from '@/stores/auth';
 import { useServicoStore } from '../stores/servicos.js';
-
+import { RouterLink } from 'vue-router';
 const servicoStore = useServicoStore();
 // const authStore = useAuthStore()
 // const servico = ref({})
@@ -16,7 +16,7 @@ const servicoStore = useServicoStore();
 <template>
  <div class="sm">
   <div class="body">
-      <div></div>
+      <div id="teste"></div>
       <div>
      <RouterLink to="/addservico"><button class="btn-azul">ADICIONAR NOVO SERVIÇO</button></RouterLink>
           <div class="filtrar">
@@ -56,11 +56,11 @@ const servicoStore = useServicoStore();
 
 
  <div class="lg"><div class="body">
-      <div></div>
+      
       <div>
-        <main>  <RouterLink to="/addservico"><button class="btn-azul">ADICIONAR NOVO SERVIÇO</button></RouterLink>
+        <div class="botoes">  
+          <RouterLink to="/addservico"><button class="btn-azul">ADICIONAR NOVO SERVIÇO</button></RouterLink>
           <div class="filtrar">
-          
             <label for="">Filtrar:</label>
             <select name="Selecione" id="Selecione">
               <option value="" class="option">SELECIONE</option>
@@ -68,12 +68,12 @@ const servicoStore = useServicoStore();
           </div>
           <div class="setas">
             <button style="background-color: #f5f5f5">
-              <img src="../assets/esquerda.png" alt="" />
+              <img src="../assets/esquerda.png" alt=""  />
             </button>
-            <p class="p">1</p>
+            <p class="numerosetas">1</p>
             <button style="background: #f5f5f5"><img src="../assets/direita.png" alt="" /></button>
           </div>
-        </main>
+        </div >
         <section>
             <div class="box" v-for="servico in servicoStore.servicos" :key="servico.id">
               <img src="../assets/logoopaca.png" alt="" />
@@ -102,12 +102,11 @@ const servicoStore = useServicoStore();
     display: none;
   }
   .body {
-  display: grid;
-  grid-template-columns: 18% 1fr;
-    margin-left: 5%;
+
+    margin-left: 20%;
     position: absolute; /* Posiciona o main no topo da página */
     top: 25%; /* Garante que o main esteja no topo */
-    width: 90%;
+    width: 80%;
   }
 * {
   margin: 0;
@@ -129,7 +128,13 @@ section {
   margin-top: 7%;
   bottom: 15%;
 }
-
+.botoes{
+  display: grid;
+  margin-left: 20%;
+  align-items: center;
+  grid-template-columns: 30% 30% 30%;
+  
+}
 .box {
   margin: 5%;
   display: flex;
@@ -154,30 +159,15 @@ option {
   font-family: 'Karla';
 }
 
-main {
-  padding-top: 5%;
-  padding-left: 18%;
-width: 100%;
- 
-}
-.p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-left: 2%;
-  margin-right: 2%;
-  background: rgb(84, 111, 255, 0.32);
-  padding: 1.9%;
-  border-radius: 10px;
-  color: black;
-}
+
 body {
   color: #f5f5f5;
 }
 .filtrar {
-  margin-left: 15%;
+  display: block;
+margin-top: 2%;
   flex-wrap: nowrap;
-  width: 100%;
+ 
 }
 button {
   border: none;
@@ -200,13 +190,7 @@ select {
   color: white;
   font-family: 'Karla';
   background-color: #091d87;
-  width: 250%;
-  padding: 5%;
-  padding-left: 15%;
-  padding-right: 15%;
-  font-weight: 700;
-  margin-left: 10%;
-  margin-right: 5%;
+  padding: 3%;
 }
 
 .btn-box {
@@ -224,14 +208,22 @@ main {
   display: flex;
   margin-bottom: 3%;
 }
+.numerosetas{
+padding:3.5%;
+font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: 5%;
+  background: rgb(84, 111, 255, 0.32);
 
+  border-radius: 10px;
+  color: black;
+}
 .setas {
-  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
   margin-left: -5%;
-  margin-top: -0.4%;
-  margin-left: 5%;
 }
 }
 

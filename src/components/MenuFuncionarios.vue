@@ -6,6 +6,8 @@ const isOpen = ref(false);
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
 };
+
+
 </script>
 
 <template>
@@ -48,8 +50,8 @@ const toggleDropdown = () => {
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
 
-        <router-link to="/estoque"> Estoque </router-link>
-        <router-link to="/servicos/:id"> Servico </router-link>
+        <router-link to="/estoque" name v-if="id === '1'"> Estoque </router-link>
+        <router-link to="/servicos/1"> Serviço </router-link>
         <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
@@ -58,7 +60,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Abra um chamado</p>
           <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <router-link to="/solicitarchamado"><button class="button">Abrir chamado</button></router-link>
+          <router-link to="/solicitarchamado" style="background: none;"><button class="button" id="chamado"><p style="margin-top: 3%;">Abrir chamado</p></button></router-link>
         </div>
       </nav>
     </div>
@@ -80,7 +82,10 @@ body {
   .menu-sm {
     display: none;
   }
-
+  
+.title{
+padding-top: 25%;
+}
   nav a {
       position: relative;
       display: block;
@@ -119,13 +124,13 @@ body {
     border-radius: 10px;
     margin-left: 10%;
     margin-right: 10%;
-    height: 60%;
-    margin-top: -15%;
-    padding-bottom: 10%;
+
+    padding-top: -15%;
+  
   }
 
   .warning {
-    margin-bottom: -10%;
+    margin-bottom: -18%;
   }
 
   .menu-lg {
@@ -229,8 +234,10 @@ body {
   }
 
   .button {
+    background-color: white;
     border-radius: 10px;
-    height: 15%;
+    padding-top: 20%;
+    padding-bottom: 20%;
     width: 85%;
     border: none;
 display: block;
@@ -238,16 +245,17 @@ margin: 0 auto;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
   
-    margin-top: -5%;
+    margin-top: -3% !important;
     padding-top: 3%;
-
+    background-color: white;
+    margin-bottom: -15%;
   }
 
   .title {
     font-size: 100%;
     text-align: center;
     font-family: 'Kantumruy Pro', sans-serif;
-    margin-top: 35%;
+    margin-top: 0%;
   }
 
   .barra {

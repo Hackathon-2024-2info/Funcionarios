@@ -128,13 +128,11 @@ const router = createRouter({
       name: 'orcamento',
       component: () => import('@/views/AdmOrcamentoView.vue')
     },
-    
-    // {
-    //   path: '/menu',
-    //   name: 'menu',
-    //   component: () => import('@/components/MenuAdministradores.vue')
-    // }
-
+    {
+      path: '/relatorios',
+      name: 'relatorios',
+      component: () => import('@/views/RelatoriosFuncionariosView.vue')
+    }
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'

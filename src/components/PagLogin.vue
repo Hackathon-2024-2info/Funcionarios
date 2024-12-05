@@ -38,14 +38,14 @@ const authStore = useAuthStore();
 
 <template>
   <main id="main">
-    <section>
+    <section class="teste">
       <div class="img">
           <img class="logo" src="../assets/logo AVANTE.png" alt="" />
       </div>
       
         <h1>SEJA BEM-VINDO!</h1>
         <p class="pergunta">Ainda não tem uma conta?</p>
-        <RouterLink to="/about">
+        <RouterLink class="teste" to="/about">
           <button id="enviar" type="submit" @click="authStore.toggleAdmin">Cadastre-se</button>
         </RouterLink>    
       </section>
@@ -61,8 +61,8 @@ const authStore = useAuthStore();
             <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
-            <RouterLink to="/estoque" v-if="!authStore.user.is_admin"><button id="enviar" type="submit">Concluir</button></RouterLink>
-            <RouterLink to="/estoqueadmin" v-if="authStore.user.is_admin"><button id="enviar" type="submit">Concluir</button></RouterLink>
+            <RouterLink class="button-area" to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
+            <RouterLink to="/estoqueadmin" v-if="authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
             </form>
       </div>
        <div>
@@ -78,19 +78,30 @@ const authStore = useAuthStore();
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
-
+.teste {
+  display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
 .img {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: -20%;
       }
 
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .container{
-  display: grid;
-  grid-template-columns: 25% 1fr 25%
 }
 .pergunta{
-margin-top: 5rem;
+margin-top: 3rem;
 font-size: 22px;
 }
 #main {
@@ -100,8 +111,9 @@ font-size: 22px;
 
 #h1{
   color: #000000;
-  font-size: 36px;
-  margin-top: 15%;
+  font-size: 30px;
+  margin-top: 20vh;
+  margin-left: -5vh;
 }
 h1{
   font-family: 'Readex Pro';
@@ -111,7 +123,7 @@ h1{
   line-height: 40px;
   color: #FFFFFF;
   text-align: center;
-  margin-top: 2%;
+  margin-top: -5% !important;
 }
 .logo{
   display: flex;
@@ -125,10 +137,9 @@ input {
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
   border: 0px solid; /* Borda inicial em cinza claro */
-  margin: 0;
   cursor: pointer;
-padding-left: 2%;
-transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+  padding-left: 2%;
+  transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
 }
 input:focus {
   border: 2px solid blue;
@@ -142,12 +153,12 @@ label{
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
   color: #000000;
   text-align: center;
   margin-top: 6%;
   margin-bottom: 4%;
-  
+  text-align: start;
+
 }
 
  button{
@@ -168,16 +179,17 @@ label{
   border: none;
   text-align: center;
   cursor: pointer; /* Adiciona a mudança do cursor para a mãozinha */
-  transition: transform 0.1s ease; /* Adiciona uma transição suave para o efeito */
+  transition: transform 0.1s ease; 
 }
 button:active {
-  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+  transform: scale(0.95); 
 }
-button#enviar {
-  margin-left: 120px;
-}
-button#enviarc {
-  margin-left: 100px;
+
+
+.button-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 section {
   background: #0f0541;
@@ -186,7 +198,10 @@ section {
 }
 
 aside {
-  margin: 5%;
+  margin-top: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bemvindo,
@@ -207,86 +222,94 @@ p {
 } 
 @media (max-width: 768px) {
   section {
-    height: 50vh; 
-    padding: 10px; 
+    height: 40vh;
+    padding: 2px;
   }
+
   .logo {
-    width: 120px; 
-    margin-bottom: 20px;
+    width: 35vw;
+    margin-bottom: 2vh;
   }
+
   #main {
-    grid-template-columns: 1fr; /* Uma coluna para telas menores */
+    grid-template-columns: 1fr;
   }
-  
-  .container {
-    grid-template-columns: 1fr; /* Formulário com uma coluna */
-  }
+
 
   input {
-    width: 100%; /* Ajusta o tamanho dos inputs para a largura da tela */
+    width: 200% !important;
+    margin-left: -50%;
+    margin-top: 0.006%;
   }
-  button {
+  label {
+    margin-left: -50%;
     font-size: 14px;
-    padding: 10px 20px;
-    margin-left: auto; /* Alinha à esquerda em dispositivos muito pequenos */
-    margin-right: auto; /* Alinha à direita em dispositivos muito pequenos */
+  }
+
+  button {
+    weight: 10px;
+    width: 30% !important; /* Novo comprimento para telas menores */
+    font-size: 15px;
+    padding: 8px 16px !important;
+    
   }
   button#enviar {
-    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
-    width: 150px; /* Comprimento para tablets */
-    padding: 8px 15px; /* Ajusta o preenchimento */
-    margin-left: 100px; /* Alinha à esquerda em dispositivos muito pequenos */
+    padding: 10px 20px !important;
+    margin-top: 20%;
+    width: 100% !important;
+    font-size: 15px;
+    margin-left: 25%;
+
+
   }
   button#enviarc {
-    width: 150px; /* Comprimento para tablets */
-    padding: 8px 15px; /* Ajusta o preenchimento */
-    margin-left: 110px; /* Alinha à esquerda em dispositivos muito pequenos */
-    margin-top: 20px;
+    width: 100% !important;
+    margin-top: 15%;
+    margin-left: 10%;
+    padding: 10px 35px !important;
+    
   }
-
-
   #h1 {
-    font-size: 28px; /* Ajusta o tamanho da fonte do título */
+    font-size: 6vw;
+    margin-top: -10% !important;
+    margin-left: 0.5%;
   }
 
   h1 {
-    font-size: 20px; /* Ajusta o tamanho da fonte do título principal */
-
+    font-size: 4vw;
+    margin-top: -20vw;
   }
 
- 
-
   .pergunta {
-    font-size: 18px; 
-    margin-top: 10px;
+    font-size: 4vw;
+    margin-top: 2vh !important;
   }
 }
 
-
 @media (max-width: 480px) {
   .container {
-    grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+    grid-template-columns: 1fr;
   }
 
   input {
-    width: 100%; /* Ajusta para ocupar toda a largura */
+    width: 100%;
   }
 
   button {
-    width: 100%; /* Ajusta o botão para ocupar toda a largura */
+    width: 100%;
     margin-left: 0;
   }
 
   #h1 {
-    font-size: 24px; /* Diminui ainda mais o título em telas pequenas */
+    font-size: 6vw;
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 4vw;
   }
 
   .logo {
-    margin-top: 15%;
+    margin-top: 8vh;
   }
 }
 </style>

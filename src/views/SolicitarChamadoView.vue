@@ -8,8 +8,14 @@ import pagHeader from '@/components/pagHeader.vue';
   <MenuFuncionarios></MenuFuncionarios>
   <main id="main">
     <div>
+<h1 class="solicitar">SOLICITAR CHAMADO</h1>
+<label for=""> Título do chamado </label>
+<input class="input1" placeholder="Insira o título do chamado">
 
-      <h1 class="solicitar">SOLICITAR CHAMADO</h1>
+</div>
+    <div>
+
+      
       <label for=""> Motivo </label>
       <input class="input1" placeholder="Insira o motivo do chamado">
 
@@ -43,12 +49,13 @@ import pagHeader from '@/components/pagHeader.vue';
   font-size: 26px;
   line-height: 18px;
   color: #180577;
-  padding: 53px;
-  margin-left: -9%;
+  padding-top: 15%;
+  padding-bottom: 5%;
+  margin-left: 0%;
 }
 
 .espacamento {
-  margin-top: 8%;
+  margin-top: 4%;
 }
 
 .input1 {

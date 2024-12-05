@@ -1,19 +1,7 @@
 <script setup>
 // import { useAuthStore } from '@/stores/auth';
 import { useEstoqueStore } from '../stores/estoque.js';
-// import axios from 'axios';
-
-// async function buscarTodasAsCategorias() {
-//   try {
-//     const resposta = await axios.get(
-//       'http://ip_e_porta_do_servidor/categorias',
-//     );
-//     return resposta.data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
+import { useAuthStore } from '@/stores/auth';
 // const props = defineProps(['id']);
 const estoqueStore = useEstoqueStore();
 // const authStore = useAuthStore();
@@ -23,73 +11,75 @@ const estoqueStore = useEstoqueStore();
 // onMounted(() => {
 //   estoque.value = estoqueStore.getProductById(props.id)
 // })
-
+const authStore = useAuthStore();
 </script>
-
 <template>
-  <div class="small">
-    <main>
-      <div class="setas">
-        <button><img src="../assets/esquerda.png" alt="" /></button>
-        <p>1</p>
-        <button><img src="../assets/direita.png" alt="" /></button>
-      </div>
-    </main>
-    <table class="tabela-itens">
-      <thead>
-        <tr>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Código do item </span>
-            </div>
-          </th>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Nome do item </span>
-            </div>
-          </th>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Quantidade </span>
-            </div>
-          </th>
-          <th>
-            <div class="th-content">
-              <section class="order-icons">
-                <img src="../assets/Vector-1.png" alt="" />
-                <img src="../assets//Vector.png" alt="" />
-              </section>
-              <span> Marca do item </span>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
-          <td>{{ estoque.id }}</td>
-          <td>{{ estoque.nome }}</td>
-          <td>{{ estoque.quantidade }}</td>
-          <td>{{ estoque.marca }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="large">
-    <div id="display">
+  <div class="espacamento">
+    <div class="small">
       <main>
+        <RouterLink to="/additem" v-if="authStore.user.is_admin"><button class="btn-azul">ADICIONAR ITEM</button></RouterLink>
+        <div class="filtrar">
+          <label for="">Filtrar:</label>
+          <select name="Selecione" id="Selecione">
+            <option value="" class="option">SELECIONE</option>
+          </select>
+        </div>
+      
+      </main>
+      <table class="tabela-itens">
+        <thead>
+          <tr>
+            <th>
+              <div class="th-content">
+          
+                <span> Código do item </span>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+             
+                <span> Nome do item </span>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+           
+                <span> Quantidade </span>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+             
+                <span> Marca do item </span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="estoque in estoqueStore.estoques" :key="estoque.id">
+            <td>{{ estoque.id }}</td>
+            <td>{{ estoque.nome }}</td>
+            <td>{{ estoque.quantidade }}</td>
+            <td>{{ estoque.marca }}</td>
+          </tr>
+        </tbody>
+      </table>
+        <div class="setas">
+          <button><img src="../assets/esquerda.png" alt="" /></button>
+          <p>1</p>
+          <button><img src="../assets/direita.png" alt="" /></button>
+        </div>
+    </div>
+
+    <div class="large">
+      <main>
+        <RouterLink to="/additem" v-if="authStore.user.is_admin"><button class="btn-azul">ADICIONAR ITEM</button></RouterLink>
+        <div class="filtrar">
+          <label for="">Filtrar:</label>
+          <select name="Selecione" id="Selecione">
+            <option value="" class="option">SELECIONE</option>
+          </select>
+        </div>
         <div class="setas">
           <button><img src="../assets/esquerda.png" alt="" /></button>
           <p>1</p>
@@ -149,6 +139,7 @@ const estoqueStore = useEstoqueStore();
       </table>
     </div>
   </div>
+  
 </template>
 
 <style scoped>
@@ -213,6 +204,20 @@ const estoqueStore = useEstoqueStore();
     margin-right: 3%;
   }
 
+  .filtrar {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 10%;
+  }
+
   label,
   select,
   option {
@@ -249,33 +254,65 @@ const estoqueStore = useEstoqueStore();
     margin-left: 5%;
 
   }
+
+  
+.btn-azul {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width:65%;
+  font-family: 'Karla';
+  background-color: #091d87;
+  padding: 2%;
+  padding-left: 9%;
+  padding-right: 9%;
+  font-weight: 700;
+  display: block;
+ margin: 0 auto;
+ margin-top: 8%;
+
+}
 }
 
 @media only screen and (min-device-width: 701px) {
+
+  
+.btn-azul {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Karla';
+  background-color: #091d87;
+  width: 250%;
+  padding: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-weight: 700;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+  .espacamento {
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    margin-left: 20%;
+    position: absolute;
+    top: 20%;
+    width: 90%;
+  }
+
   .small {
     display: none;
   }
 
-  #display {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     background-color: #f5f5f5;
-    margin: 0;
   }
 
   .tabela {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    margin-left: 22%;
+    margin-left: 5%;
     padding-right: 10%;
   }
 
@@ -284,7 +321,8 @@ const estoqueStore = useEstoqueStore();
     font-weight: 450;
     width: 80%;
     border-collapse: collapse;
-    margin-left: 22%;
+    margin: 0 auto;
+    margin-left: 5%;
     line-height: 2.5rem;
 
     & td {
@@ -296,7 +334,6 @@ const estoqueStore = useEstoqueStore();
       align-items: center;
       /* Alinha o conteúdo verticalmente */
       justify-content: flex-start;
-
       /* Se quiser espaçar igualmente */
     }
   }
@@ -326,15 +363,14 @@ const estoqueStore = useEstoqueStore();
   main {
     display: flex;
     margin-bottom: 3%;
-    margin-left: 17%;
   }
 
   .setas {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: -0.4%;
+    flex-wrap: nowrap;
+    margin-left: -5%;
+    margin-top: -0.9%;
   }
 
   label {
@@ -345,7 +381,6 @@ const estoqueStore = useEstoqueStore();
     flex-wrap: nowrap;
     width: 100%;
     margin-left: 20%;
-
   }
 
   label,
@@ -378,13 +413,10 @@ const estoqueStore = useEstoqueStore();
     padding: 0.2%;
     padding-left: 2%;
     padding-right: 2%;
-
   }
 
   main {
     margin-top: 5%;
-    margin-top: -70%;
-
   }
 
   .option {
