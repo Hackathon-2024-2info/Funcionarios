@@ -158,7 +158,6 @@ label{
   display: inline;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 15px 40px;
   gap: 10px;
   width: 230px;

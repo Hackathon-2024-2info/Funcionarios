@@ -15,7 +15,10 @@ const estoqueStore = useEstoqueStore();
 </script>
 
 <template>
-  <div class="espacamento">
+   <RouterLink to="/additem">
+          <button id="adicionar" type="submit" >Adicionar</button>
+     </RouterLink>  
+  <div class="espacamento"> 
     <div class="small">
       <main>
         <div class="filtrar">
@@ -147,7 +150,7 @@ const estoqueStore = useEstoqueStore();
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> 
   </div>
   
 </template>
@@ -157,8 +160,21 @@ const estoqueStore = useEstoqueStore();
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
+#adicionar {
+  margin-left: 20%;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #091D87;
+  border-radius: 5px;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.95); /* Diminui o tamanho do botão para 95% */
+}
 @media only screen and (max-device-width: 700px) {
-
+  
   body {
     margin: 0;
     max-width: fit-content;
