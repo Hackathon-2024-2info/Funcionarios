@@ -225,7 +225,7 @@ label {
 }
 
 button {
-  margin-left:30%;
+  margin: 0 30% 0 30%;
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
@@ -252,7 +252,7 @@ button:active {
   justify-content: center;
   text-align: center;
   margin-top: 13%;
-  margin-left: 26%;
+  margin-left: 30%;
 
 }
 }
