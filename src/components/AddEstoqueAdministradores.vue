@@ -34,16 +34,16 @@ import axios from 'axios';
 // };
 
 const submitEstoque = async () => {
-  try {
-	const response = await axios.post('http://seu-dominio.com/api/Ferramentaspecas/', {
-  	nome: nome_ferramentaspecas.value,
-  	marca: marca.value,
-  	quantidade: quantidade_ferramentaspecas.value,
-	});
-	console.log('Relatório enviado com sucesso:', response.data);
-  } catch (error) {
-	console.error('Erro ao enviar relatório:', error);
-  }
+    try {
+        const response = await axios.post('https://bdhackathon.fly.dev/Ferramentaspecas', {
+            nome: nome_ferramentaspecas.value,
+            marca: marca.value,
+            quantidade: quantidade_ferramentaspecas.value,
+        });
+        console.log('Relatório enviado com sucesso:', response.data);
+    } catch (error) {
+        console.error('Erro ao enviar relatório:', error);
+    }
 };
 
 // onMounted(() => {
@@ -58,28 +58,35 @@ const quantidade_ferramentaspecas = ref('');
 </script>
 
 <template>
+ <form method="post" action="https://bdhackathon.fly.dev/Ferramentaspecas/">
+        {% FlyV1
+        fm2_lJPECAAAAAAAB+tJxBA9UKl2PxsA+pkLNpfK9+pMwrVodHRwczovL2FwaS5mbHkuaW8vdjGWAJLOAA2htB8Lk7lodHRwczovL2FwaS5mbHkuaW8vYWFhL3YxxDypR2z1TutORfM/vnko6VqCyWNNRMQQBdrpc5NSCuE+G4WElY+PxKlLX1Phrm72tv9wsGvHaWGlNNjyTSvETmklCxBwRRc/T62VZDHy+O6jM8JVPwEIHZIeYEqjjST/LWVS7jUkvYqYZ3fabffS/NxxJmgmN1sHY1rQ+M+D0/921JCfEOCWKdM5sXSFpQ2SlAORgc4AU5oEHwWRgqdidWlsZGVyH6J3Zx8BxCDPHTJMZhUpXfmwQTYP6r6s8OhIRXUgUKmEK8Oks9IB5Q==,fm2_lJPETmklCxBwRRc/T62VZDHy+O6jM8JVPwEIHZIeYEqjjST/LWVS7jUkvYqYZ3fabffS/NxxJmgmN1sHY1rQ+M+D0/921JCfEOCWKdM5sXSFpcQQreMr4IJpGQ31z056C71cVcO5aHR0cHM6Ly9hcGkuZmx5LmlvL2FhYS92MZgEks5nUP4WzwAAAAEjSRw0F84ADTL2CpHOAA0y9gzEEOmSJRIInVM8zZIYm25quqbEINmqehbZdEnC+3wR8TQYk5umw279i1hrvOxMNrtbpDlc
+        %}
     <main id="main">
         <div>
             <h1 class="add">ADICIONAR ITEM AO ESTOQUE</h1>
             <label for=""> Nome do item </label>
-            <input type="text" class="input1" placeholder="Insira o nome do item a ser adicionado" v-model="nome_ferramentaspecas">
+            <input type="text" class="input1" placeholder="Insira o nome do item a ser adicionado"
+                v-model="nome_ferramentaspecas.value" name="nome_Ferramentaspecas">
         </div>
 
         <div class="espacamento"></div>
 
         <div>
             <label for=""> Marca do item </label>
-            <input type="text" class="input2" placeholder="Insira a marca do item" v-model="marca">
+            <input type="text" class="input2" placeholder="Insira a marca do item" v-model="marca.value">
         </div>
 
         <div class="espacamento"></div>
         <div>
             <label for="">Quantidade do item </label>
-            <input type="text" class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item" v-model="quantidade_ferramentaspecas">
+            <input type="text" class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item"
+                v-model="quantidade_ferramentaspecas.value">
             <button id="Adicionar" type="submit" @click="submitEstoque">Adicionar</button>
         </div>
 
     </main>
+</form>
 
 </template>
 
