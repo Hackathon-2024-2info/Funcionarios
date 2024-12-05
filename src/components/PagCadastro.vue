@@ -133,8 +133,7 @@ function processarForm() {
 }
 
 aside {
-  margin-top: -5%;
-  margin-left: 25%;
+
 }
 
 .formularioo {
@@ -152,7 +151,6 @@ aside {
   color: #000000;
   text-align: center;
   margin-top: 10%;
-  margin-left: -32%;
   white-space: nowrap;
   margin-bottom: 5%;
 
@@ -160,7 +158,6 @@ aside {
 
 
 #enviar {
-  margin-left: 83%;
 }
 
 .img {
@@ -180,7 +177,6 @@ aside {
   font-family: 'Readex Pro';
   font-size: 32px;
   color: white;
-  margin-left: 18%;
   margin-top: 1%;
   font-weight: 500;
 }
