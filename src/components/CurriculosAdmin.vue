@@ -129,7 +129,7 @@ td{
   font-family: 'Karla';
 margin-left: 35%;
   font-size: 140px;
-  width: 50%;
+  width: 55%;
   color: #091d87;
   font-weight: 400;
   display: flex;
@@ -161,6 +161,8 @@ margin-left: 35%;
   margin: 0 auto;
   margin-left: 25%;
   line-height: 2.5rem;
+  position: absolute;
+    top: 40%;
 
  
 
@@ -233,7 +235,8 @@ span {
 main {
   display: flex;
   margin-bottom: 3%;
-  margin-top: -77%;
+  position: absolute;
+  top: 30%;
   width: 100%;
   margin-left: 9%;
 }
