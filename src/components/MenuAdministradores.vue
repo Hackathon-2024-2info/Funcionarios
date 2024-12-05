@@ -371,6 +371,7 @@ margin: 0 auto;
     margin: 10%;
     text-align: center;
     font-family: 'Karla';
+    margin-left: -1%;
     margin-top: 15%;
   }
 
