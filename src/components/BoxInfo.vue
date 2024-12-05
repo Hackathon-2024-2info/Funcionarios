@@ -4,10 +4,16 @@ import { useAuthStore } from '@/stores/auth';
 import { useServicoStore } from '../stores/servicos.js';
 
 
+
+
 const props = defineProps(['id']);
 const servicoStore = useServicoStore();
 const authStore = useAuthStore()
 const servico = ref({})
+
+
+
+
 
 
 
@@ -17,7 +23,11 @@ onMounted(() => {
 })
 
 
+
+
 </script>
+
+
 
 
 <template>
@@ -26,27 +36,30 @@ onMounted(() => {
       <div class="box">
         <img src="../assets/Video Task.png" alt="mapaDps" />
         <p class="titulo">{{ servico.nome }}</p>
-          <div class="minicontainer">
-          <p>{{servico.cliente}}</p>
+        <div class="minicontainer">
+          <p>{{ servico.cliente }}</p>
         </div>
         <div class="infos">
-          <p>Prestadores: {{servico.prestadores}}</p>
-          <p v-if="!authStore.user.is_admin">Previsão de duração: {{servico.prevduracao}}</p>
+          <p>Prestadores: {{ servico.prestadores }}</p>
+          <p v-if="!authStore.user.is_admin">Previsão de duração: {{ servico.prevduracao }}</p>
           <p v-if="!authStore.user.is_admin">Contato do responsável pela máquina: {{ servico.contatoresponsavel }}</p>
           <p class="descricao" v-if="!authStore.user.is_admin">
             Descrição: {{ servico.descricao }}
           </p>
           <p v-if="authStore.user.is_admin">Data de início: {{ servico.datainicio }}</p>
-          <p v-if="authStore.user.is_admin">Data de finalização: {{servico.datafinal}}</p>
-          <p v-if="authStore.user.is_admin">Pendências: {{servico.pendencias}}</p>
+          <p v-if="authStore.user.is_admin">Data de finalização: {{ servico.datafinal }}</p>
+          <p v-if="authStore.user.is_admin">Pendências: {{ servico.pendencias }}</p>
           <div class="teste">
-          <RouterLink to="/detalherelatorio"><button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar relatório</button></RouterLink>
-        </div>
+            <RouterLink to="/detalherelatorio"><button v-if="authStore.user.is_admin" id="visurelatorio">Visualizar
+                relatório</button></RouterLink>
+          </div>
         </div>
       </div>
     </div>
   </main>
 </template>
+
+
 
 
 <style scoped>
@@ -56,7 +69,11 @@ onMounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 
-#visurelatorio{
+
+
+
+
+#visurelatorio {
   font-family: 'Karla';
   color: white;
   background-color: #180577;
@@ -69,21 +86,28 @@ onMounted(() => {
 }
 
 
-.teste{
+
+
+.teste {
   display: flex;
   justify-content: end;
-  margin-bottom: 30%;
+
+
 }
+
+
 
 
 main {
   background-color: #f5f5f5;
-  /* height: 154vh; */
-  height: 200vh;
-  margin-left:35%;
-    position: absolute;
-    top: 30%;
+  height: 120vh;
+  margin-left: 32%;
+  position: absolute;
+  top: 20%;
 }
+
+
+
 
 
 
@@ -93,21 +117,28 @@ main {
 }
 
 
+
+
 .box {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width:80%;
   background: #ffffff;
   border-radius: 10px;
   margin-top: 7%;
   margin-right: 0px;
+  height: 95%;
 }
+
+
 
 
 .box img {
   width: 100%;
   height: auto;
 }
+
+
 
 
 .titulo {
@@ -125,6 +156,8 @@ main {
 }
 
 
+
+
 .minicontainer {
   width: 50%;
   margin-left: 5%;
@@ -135,6 +168,8 @@ main {
 }
 
 
+
+
 .minicontainer p {
   display: flex;
   object-fit: contain;
@@ -142,6 +177,8 @@ main {
   padding-top: 0.7%;
   padding-left: 40%;
 }
+
+
 
 
 .infos {
@@ -156,6 +193,8 @@ main {
 }
 
 
+
+
 .infos p {
   object-fit: contain;
   display: flex;
@@ -164,7 +203,9 @@ main {
   color: black;
   margin-bottom: 2%;
 }
-.descricao{
+
+
+.descricao {
   line-height: 110%;
   width: 75%;
   word-wrap: break-word;
@@ -173,109 +214,144 @@ main {
 
 
 
+
+
+
+
 @media only screen and (max-device-width: 480px) {
 
 
+
+
+
+
   main {
-  background-color: #f5f5f5;
-  height: 154vh;
-  margin-top: 15%;
-  margin-left:1%;
-}
-
-  #visurelatorio{
-  font-family: 'Karla';
-  color: white;
-  background-color: #180577;
-  width: 120%;
-  height: 4.5vh;
-  font-size: 10px;
-  font-weight: 700;
-  border-radius: 20px;
-  border-color: rgba(217, 217, 217, 0);
-}
+    background-color: #f5f5f5;
+    height: 154vh;
+    margin-top: 0%;
+    margin-left: -3%;
+  }
 
 
-.teste{
-  display: flex;
-  justify-content: start;
-  margin-bottom: 30%;
-}
+  #visurelatorio {
+    font-family: 'Karla';
+    color: white;
+    background-color: #180577;
+    width: 120%;
+    height: 4.5vh;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 20px;
+    border-color: rgba(217, 217, 217, 0);
+  }
+
+
+
+
+  .teste {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 30%;
+  }
+
+
 
 
   .box {
-  display: flex;
-  flex-wrap: wrap;
-  width: 65%;
-  height: 80%;
-  background: #ffffff;
-  border-radius: 10px;
-  margin-top: 7%;
-  margin-left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 48%;
+    height: 70%;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 7%;
+    margin-left: 3%;
 
 
-}
 
 
-p{
-  font-size: 15px;
-}
+  }
 
 
-img {
-  width: 100%;
-  height: auto;
-}
-.espaçamento {
-  display: grid;
-  margin-left: 0%;
-  margin-top: -15%;
-}
-.titulo {
-  margin-top: 4%;
-  font-size: 26px;
-  font-family: 'Kantumruy Pro';
-}
 
 
-.minicontainer {
-  width: 70%;
-  margin-left: 5%;
-  height: 3%;
-  margin-top: 2%;
-}
+  p {
+    font-size: 17px;
+  }
 
 
-.minicontainer p {
-  margin-top: -1%;
-  font-weight: 400;
-  font-size: 20px;
-}
 
 
-.infos {
-  line-height: 200%;
-  margin-left: 5%;
-  padding-right: 5%;
-  margin-top: 5%;
-}
+  img {
+    width: 100%;
+    height: auto;
+  }
 
 
-.infos p {
-  object-fit: contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: black;
+  .espaçamento {
+    display: grid;
+    margin-left: 1%;
+  }
 
 
-}
-.descricao{
-  line-height: 110%;
-  word-wrap: break-word;
-  width: 60%;
-}
+  .titulo {
+    margin-top: 4%;
+    font-size: 22px;
+    font-family: 'Kantumruy Pro';
+  }
+
+
+
+
+  .minicontainer {
+    width: 70%;
+    margin-left: 5%;
+    height: 4%;
+    margin-top: 2%;
+  }
+
+
+
+
+  .minicontainer p {
+    margin-top: -1%;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+
+
+
+  .infos {
+    line-height: 100%;
+    margin-left: 5%;
+    padding-right: 5%;
+    margin-top: 5%;
+  }
+
+
+
+
+  .infos p {
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    word-wrap: break-word;
+    width: 45%;
+  }
+
+
+  .descricao {
+    line-height: 110%;
+    word-wrap: break-word;
+    width: 60%;
+  }
+
+
 
 
 }
 </style>
+

@@ -78,6 +78,7 @@ body {
   margin-top: -10%;
 }
 @media only screen and (min-device-width: 601px) {
+
   .menu-sm {
     display: none;
   }
@@ -413,6 +414,7 @@ body {
 }
 
 @media only screen and (max-device-width: 600px) {
+
   .menu-lg {
     display: none;
   }
@@ -433,6 +435,9 @@ body {
 
   body {
     width: 100%;
+    position: fixed; /* ou absolute */
+    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
+
   }
 
   .menu {
