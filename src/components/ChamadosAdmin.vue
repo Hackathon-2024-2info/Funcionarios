@@ -201,28 +201,21 @@ span {
 main {
   display: flex;
   margin-bottom: 3%;
-  margin-top: -77%;
+  margin-top: -95%;
   width: 100%;
-  margin-left: 9%;
+
 }
 
-.setas {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  margin-left: 1%;
-  margin-top: -0.4%;
-}
+
 
 label {
   margin-right: 3%;
 }
 
 .filtrar {
-  flex-wrap: nowrap;
-  width: 50%;
-  margin-left: 32%;
-  padding-top: 1%;
+display: flex;
+text-align: center;
+margin-left: 52%;
 }
 
 label,
@@ -255,9 +248,8 @@ select {
   padding: 0.2%;
   padding-left: 2%;
   padding-right: 2%;
+  margin-left: 5%;
 }
-
-
 
 .option {
   font-size: 17%;
