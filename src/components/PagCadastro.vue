@@ -376,7 +376,7 @@ font-family: 'Karla';
   text-align: center;
   display: block;
   margin: 0 auto;
-
+margin-top: 10%;
   margin-bottom: 5%
 }
 </style>
