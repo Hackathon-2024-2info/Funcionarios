@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const isOpen = ref(false);
 
@@ -60,7 +61,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Remover acesso</p>
           <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
-          <router-link to="/removeracesso"><button class="button">Clique aqui</button></router-link>
+          <router-link to="/removeracesso" style="background: none;"><button class="button"><p style="margin-top: 3%;">Clique aqui</p></button></router-link>
         </div>
       </nav>
     </div>
@@ -81,8 +82,10 @@ body {
 
   .menu-sm {
     display: none;
+    position: fixed; /* ou absolute */
+    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
   }
-  
+ 
   nav a {
       position: relative;
       display: block;
@@ -116,24 +119,22 @@ body {
   
  
 
-  .box {
+ 
+    .box {
     background-color: #384dbb;
     color: white;
     font-weight: 400;
     border-radius: 10px;
     margin-left: 10%;
     margin-right: 10%;
-    height: 60%;
-    margin-top: -15%;
-    padding-bottom: 10%;
-    
-   
+
+    padding-top: -18%;
+  
   }
 
   .warning {
-    margin-bottom: -10%;
+    margin-bottom: -20%;
   }
-
   .menu-lg {
     display: grid;
     grid-template-columns: 18% 1fr;
@@ -232,28 +233,32 @@ body {
 
   .frase-box {
     font-size: 80%;
-    margin: 10%;
+    margin: 10% 0;
     text-align: center;
     font-family: 'Karla';
     margin-top: 15%;
+    height: 5vh;
+width: 100%;
   }
 
   .button {
+    background-color: white;
     border-radius: 10px;
-    height: 15%;
+    padding-top: 20%;
+    padding-bottom: 20%;
     width: 85%;
     border: none;
-
-    text-align: center;
-    place-items: center;
+display: block;
+margin: 0 auto;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 0%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+  
     margin-top: -3% !important;
+    padding-top: 3%;
     background-color: white;
+    margin-bottom: -15%;
   }
+
 
   .title {
     font-size: 100%;
@@ -394,15 +399,15 @@ body {
     height: 15%;
     width: 85%;
     border: none;
-
     text-align: center;
     place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 7%;
+    margin-left:-12%;
     margin-top: 8%;
     padding-top: 3%;
     padding-bottom: 3%;
+    height: 5vh !important;
   }
 
   .title {

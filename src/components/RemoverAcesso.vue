@@ -1,6 +1,5 @@
 <script setup>
 
-
 const itens = [
   {
     nome: 'Edson',
@@ -55,9 +54,7 @@ const itens = [
 ]
 </script>
 
-
 <template>
-  <div class="body">
   <main id="main">
     <div class="filtrar">
       <label for="">Filtrar:</label>
@@ -71,7 +68,6 @@ const itens = [
       <button><img src="../assets/direita.png" alt="" /></button>
     </div>
   </main>
-
 
   <table class="tabela-itens">
     <thead>
@@ -119,24 +115,15 @@ const itens = [
       </tr>
     </tbody>
 
-
   </table>
-</div>
 
 
 </template>
-
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-.body{
-  position: absolute;
-  width: 100%;
-  top: 15%;
-}
 
 
 .remover{
@@ -155,9 +142,7 @@ text-align: center;
   width: 100%;
 }
 
-
 .tabela-itens {
-
 
   font-family: 'Roboto', sans-serif;
   font-weight: 450;
@@ -167,24 +152,20 @@ text-align: center;
   line-height: 2.5rem;
   margin-left: 30%;
 
-
   & td {
     border-bottom: 0.5px solid #d4d2d2;    
    
   }
 
-
-  & .th-content {
+  & .th-content { 
     display: flex;
     align-items: center; /* Alinha o conteúdo verticalmente */
     justify-content: flex-start; /* Se quiser espaçar igualmente */
   }
 }
 
-
 span{
   margin-left: 5%;}
-
 
 /* .icons-and-text {
   display: flex;
@@ -193,26 +174,23 @@ span{
   gap: 2%;
 } */
 
-
 .order-icons {
   display: flex;
   flex-direction: column;  
 
-
   & img {
     width: 8px;
     height: 8px;
- 
+  
   }
 }
-
 
 #main {
   display: flex;
   margin-bottom: 3%;
+  margin-top: -77%;
   margin-left: 10%;
 }
-
 
 .setas {
   width: 100%;
@@ -221,7 +199,6 @@ span{
   margin-left: -15%;
   margin-top: -5%;
 }
-
 
 label {
   margin-right: 3%;
@@ -232,7 +209,6 @@ label {
   margin-left: 40%;
   padding-top: 1%;
 }
-
 
 label,
 select,
@@ -251,12 +227,10 @@ option {
   color: black;
 }
 
-
 button {
   border: none;
   background: white;
 }
-
 
 select {
   border-radius: 20px;
@@ -268,16 +242,13 @@ select {
   padding-right: 7%;
 }
 
-
 main {
   margin-top: 5%;
 }
 
-
 .option {
   font-size: 17%;
 }
-
 
 ul,
 li {
@@ -296,9 +267,6 @@ li {
 
 
 
-
-
-
 .linha {
   width: 150%;
   margin-top: 5%;
@@ -310,11 +278,7 @@ li {
   margin-bottom: -10%;
 }
 
-
 /* img {
   display:;
 } */
 </style>
-
-
-
