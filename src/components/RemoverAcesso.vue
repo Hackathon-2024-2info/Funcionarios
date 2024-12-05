@@ -189,7 +189,7 @@ span{
 }
 .teste{
   position: absolute;
-  top: 30%;
+  top: 20%;
 width: 100%;
 margin-left: 15%;
 }
