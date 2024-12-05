@@ -128,7 +128,7 @@ padding-top: 25%;
   }
 
   .warning {
-    margin-bottom: -18%;
+    margin-bottom: -10%;
   }
 
   .menu-lg {
@@ -251,7 +251,7 @@ margin: 0 auto;
     font-size: 100%;
     text-align: center;
     font-family: 'Kantumruy Pro', sans-serif;
-    margin-top: 0%;
+   
   }
 
   .barra {
@@ -277,9 +277,6 @@ margin: 0 auto;
     padding-bottom: 10%;
   }
 
-  .warning {
-    margin-bottom: -13%;
-  }
 
   .menu-lg {
     display: grid;
@@ -401,7 +398,7 @@ margin: 0 auto;
     font-size: 100%;
     text-align: center;
     font-family: 'Kantumruy Pro', sans-serif;
-    margin-top: 35%;
+  margin-top: 15%;
   }
 }
 

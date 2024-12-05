@@ -133,7 +133,7 @@ body {
   }
 
   .warning {
-    margin-bottom: -20%;
+    margin-bottom: -15%;
   }
   .menu-lg {
     display: grid;
@@ -270,9 +270,7 @@ margin: 0 auto;
   }
 
 
-  .warning {
-    margin-bottom: -15%;
-  }
+
 
   .menu-lg {
     display: grid;
@@ -384,7 +382,7 @@ margin: 0 auto;
     place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-   
+    margin-top: 8%;
     padding-top: 3%;
     padding-bottom: 3%;
     height: 5vh !important;
