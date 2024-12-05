@@ -55,6 +55,7 @@ const itens = [
 </script>
 
 <template>
+  <div class="teste">
   <main id="main">
     <div class="filtrar">
       <label for="">Filtrar:</label>
@@ -117,7 +118,7 @@ const itens = [
 
   </table>
 
-
+  </div>
 </template>
 
 <style scoped>
@@ -150,7 +151,9 @@ text-align: center;
   border-collapse: collapse;
   margin: 0 auto;
   line-height: 2.5rem;
-  margin-left: 30%;
+  /* margin-left: 30%;
+  position: absolute; */
+  top: 40%;
 
   & td {
     border-bottom: 0.5px solid #d4d2d2;    
@@ -184,12 +187,19 @@ span{
   
   }
 }
+.teste{
+  position: absolute;
+  top: 30%;
+width: 100%;
+margin-left: 15%;
+}
 
 #main {
   display: flex;
+  /* position: absolute;
+  top: 20%; */
   margin-bottom: 3%;
-  margin-top: -77%;
-  margin-left: 10%;
+  margin-left: -15%;
 }
 
 .setas {
