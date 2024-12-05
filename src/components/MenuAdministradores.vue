@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const isOpen = ref(false);
 
@@ -78,8 +79,11 @@ body {
   margin-top: -10%;
 }
 @media only screen and (min-device-width: 601px) {
+
   .menu-sm {
     display: none;
+    position: fixed; /* ou absolute */
+    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
   }
   
   nav a {
@@ -235,6 +239,8 @@ body {
     text-align: center;
     font-family: 'Karla';
     margin-top: 15%;
+    height: 5vh;
+    margin-left: -0%;
   }
 
   .button {
@@ -252,6 +258,8 @@ body {
     padding-bottom: 3%;
     margin-top: -3% !important;
     background-color: white;
+    height: 5vh !important;
+    margin-left: -10%;
   }
 
   .title {
@@ -393,15 +401,15 @@ body {
     height: 15%;
     width: 85%;
     border: none;
-
     text-align: center;
     place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 7%;
+    margin-left:-12%;
     margin-top: 8%;
     padding-top: 3%;
     padding-bottom: 3%;
+    height: 5vh !important;
   }
 
   .title {
@@ -413,6 +421,7 @@ body {
 }
 
 @media only screen and (max-device-width: 600px) {
+
   .menu-lg {
     display: none;
   }
@@ -433,6 +442,9 @@ body {
 
   body {
     width: 100%;
+    position: fixed; /* ou absolute */
+    z-index: 1000; /* Valor alto para garantir que ele fique na frente */
+
   }
 
   .menu {

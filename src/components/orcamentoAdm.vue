@@ -141,6 +141,7 @@ main {
     color: #000000;
     margin-top: 4%;
     margin-left: 10%;
+    white-space:nowrap;
 }
 
 .tipo-input-um {
@@ -283,57 +284,100 @@ button {
 
 @media only screen and (max-device-width: 480px) {
 
+    .tipo-label-dois {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+    .botaozinho {
+    display: flex;
+    justify-content: center;
+    padding: 3% 6%;
+    background: rgba(84, 111, 255, 0.32);
+    border-radius: 10px;
+    margin-left: 83%;
+    margin-right: 7%;
+    margin-top: -14%;
+    margin-bottom: 5%;
+}
+
+    .tipo-label-um {
+    display: flex;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 20px;
+    color: #000000;
+    margin-top: 4%;
+    margin-left: 10%;
+    white-space:nowrap;
+}
+
+
     main {
         display: flex;
         position: absolute;
+        z-index: 1;
         flex-direction: column;
         height: 130vh;
         margin-left: 0%;
         top: 15%;
-}
+    }
 
     .container-um {
         display: flex;
         flex-direction: column;
         width: 90%;
-        height: 20%;
+        height: 15%;
         background: #384dbb;
         border-radius: 24px;
         color: white;
         margin-top: 15%;
-        margin-left: 7%;
+        margin-left: 5%;
     }
 
     .container-um h1 {
         display: flex;
         font-family: 'Inter';
         font-weight: 600;
-        font-size: 22px;
+        font-size: 15px;
         margin-left: 7%;
-        margin-top: 10%;
+        margin-top: 12%;
+    }
+
+    .container-dois h1{
+        display: flex;
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 15px;
     }
 
     .tipo-input-um {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 2.5%;
-    margin-left: 10%;
-    width: 55%;
-    height: 26px;
-    background: rgba(84, 111, 255, 0.32);
-    border-radius: 5px;
-    border: none;
-}
-
-    .os-container-input{
         display: flex;
-  gap: 30%;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2.5%;
+        margin-left: 10%;
+        width: 55%;
+        height: 26px;
+        background: rgba(84, 111, 255, 0.32);
+        border-radius: 5px;
+        border: none;
     }
+
+    .os-container-input {
+        display: flex;
+        gap: 30%;
+    }
+
     .container-input {
         display: flex;
         float: left;
         flex-direction: column;
+        height: 60%;
         width: 40%;
         background: #d9d9d9;
         border-radius: 20px;
@@ -350,88 +394,102 @@ button {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .quantia {
         display: flex;
         margin-left: 7%;
-        margin-top: 2%;
+        margin-top: 4%;
         font-family: 'Inter';
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         color: rgba(255, 255, 255, 0.7);
     }
 
     .container-dois {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: 40%;
-    background: #384dbb;
-    border-radius: 24px;
-    color: white;
-    margin-left: 17%;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 40%;
+        background: #384dbb;
+        border-radius: 24px;
+        color: white;
+        margin-left: 9%;
+        margin-top: 7%;
+    }
+
+    .tipo-input-dois {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5% 7%;
+        background: rgba(84, 111, 255, 0.32);
+        border-radius: 5px;
+        border: none;
+        width: 85px;
+        height: 20px;
+        background: rgba(217, 217, 217, 0.38);
+        border-radius: 20px;
+        border: none;
+        margin-left: 35%;
+        margin-top: -5%;
+        margin-bottom: 10%;
+    }
+
+    select {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2% 20%;
+        background: rgba(84, 111, 255, 0.32);
+        border-radius: 5px;
+        border: none;
+        width: 120px;
+        height: 23px;
+        border-radius: 20px;
+        border: none;
+        margin-left: 35%;
+        margin-top: -3%;
+        margin-bottom: 10%
+    }
+    ::placeholder {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #180577;
 }
 
-.tipo-input-dois {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5% 7%;
-    background: rgba(84, 111, 255, 0.32);
-    border-radius: 5px;
-    border: none;
-    width: 85px;
-    height: 20px;
-    background: rgba(217, 217, 217, 0.38);
-    border-radius: 20px;
-    border: none;
-    margin-left: 30%;
-    margin-top: -5%;
-}
-select {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2% 20%;
-    background: rgba(84, 111, 255, 0.32);
-    border-radius: 5px;
-    border: none;
-    width: 120px;
-    height: 23px;
-    border-radius: 20px;
-    border: none;
-    margin-left: 30%;
-    margin-top: -3%;
-}
-.num-dois {
-    display: flex;
-    justify-content: end;
-    margin-top: -30%;
-    margin-right: 2%;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 30%;
-}
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 17%;
-    height: 28px;
-    top: calc(50% - 28px / 2 + 215px);
-    background: #091d87;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-family: 'Karla';
-    font-weight: 700;
-    font-size: 12px;
-    margin-left: 25%
-}
+    .num-dois {
+        display: flex;
+        justify-content: end;
+        margin-right: 2%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 10%
+    }
+
+    button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 4vh;
+        background: #091d87;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-family: 'Karla';
+        font-weight: 700;
+        font-size: 12px;
+        margin-left: 25%;
+        margin-top: -5%;
+    }
 
 }
 </style>

@@ -245,6 +245,11 @@ margin: 0 auto;
 
   }
 
+  .button#chamado{
+    height: 5vh;
+    margin-left: -0%;
+  }
+
   .title {
     font-size: 100%;
     text-align: center;
