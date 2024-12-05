@@ -381,6 +381,7 @@ button {
         height: 60%;
         width: 40%;
         background: #d9d9d9;
+        margin-right: -30%;
         border-radius: 20px;
         margin-left: 7%;
         margin-top: 10%;
