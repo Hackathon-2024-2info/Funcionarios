@@ -179,7 +179,7 @@ aside {
   font-family: 'Readex Pro';
   font-size: 32px;
   color: white;
-  margin-left: 18%;
+  margin-left: 2%;
   margin-top: 1%;
   font-weight: 500;
 }
@@ -190,8 +190,8 @@ aside {
   font-weight: 120;
   font-size: 150%;
   text-align: center;
-  margin-top: 10%;
-  padding-left: 18%;
+  margin-top: 20%;
+  padding-left: 20%;
   padding-right: 18%;
   
 }
@@ -225,7 +225,7 @@ label {
 }
 
 button {
-  margin: 0 30% 0 30%;
+  margin-left:30%;
   background-color: #091D87;
   border-radius: 5px;
   font-family: 'Karla';
