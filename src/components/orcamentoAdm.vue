@@ -187,7 +187,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 45%;
-    height: 38%;
+    height:28%;
     background: #384dbb;
     border-radius: 24px;
     color: white;
