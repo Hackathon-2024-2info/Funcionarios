@@ -11,9 +11,8 @@ const estoqueStore = useEstoqueStore();
 // onMounted(() => {
 //   estoque.value = estoqueStore.getProductById(props.id)
 // })
-const authStore = useAuthStore()
+const authStore = useAuthStore();
 </script>
-
 <template>
   <div class="espacamento">
     <div class="small">

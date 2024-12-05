@@ -1,8 +1,5 @@
 <script setup>
 
-import { useAuthStore } from '@/stores/auth';
-const authStore = useAuthStore()
-
 </script>
 
 
@@ -13,7 +10,6 @@ const authStore = useAuthStore()
   <div class="block-reveal" style="--bc: rgba(217, 217, 217, 1); --d: 0.25s">Olá, Edson!</div>
 </h1>
         <RouterLink to="/perfil"><img src="../assets/foto-perfil.png" alt=""></RouterLink>
-        <button @click="authStore.toggleAdmin">trocar p admin</button>
     </header>
 </main>
 </template>

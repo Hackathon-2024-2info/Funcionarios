@@ -1,5 +1,5 @@
 <script setup>
-import Estoque from '@/components/Estoque.vue'
+import PagEstoque from '@/components/PagEstoque.vue'
 import MenuAdministradores from '@/components/MenuAdministradores.vue';
 import pagHeader from '@/components/pagHeader.vue';
 
@@ -8,5 +8,5 @@ import pagHeader from '@/components/pagHeader.vue';
 <template> 
         <pagHeader></pagHeader>
         <MenuAdministradores></MenuAdministradores>
-<Estoque></Estoque>
+<PagEstoque></PagEstoque>
 </template>
