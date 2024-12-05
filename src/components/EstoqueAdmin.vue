@@ -149,6 +149,7 @@ const estoqueStore = useEstoqueStore();
       </table>
     </div>
   </div>
+  
 </template>
 
 <style scoped>
