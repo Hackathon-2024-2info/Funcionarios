@@ -283,8 +283,8 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 1030px;
-  top: 31%;
+  margin-left: 60%;
+  top: 38%;
 
 
 }
@@ -405,6 +405,8 @@
   color: #000000;
   border: none;
   outline: none;
+
+
 
 
 }
