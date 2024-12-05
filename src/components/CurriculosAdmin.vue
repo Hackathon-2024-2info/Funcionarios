@@ -54,7 +54,6 @@ const relatorios = [
         <th>
           <div class="th-content">
             <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
             <span> Remetente </span>
           </div>
@@ -62,7 +61,6 @@ const relatorios = [
         <th>
           <div class="th-content">
             <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
             <span>Cargo solicitado </span>
           </div>
@@ -70,7 +68,6 @@ const relatorios = [
         <th>
           <div class="th-content" style="padding-left:25%;">
             <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
             <span > Data </span>
           </div>
@@ -78,7 +75,6 @@ const relatorios = [
         <th>
           <div class="th-content" style="padding-left:20%;">
             <section class="order-icons">
-              <img src="../assets/Vector-1.png" alt="" /> <img src="../assets//Vector.png" alt="" />
             </section>
             <span> Currículo </span>
           </div>
@@ -334,5 +330,196 @@ li {
   text-align: left;
   padding-left: 5%;
   padding-top: 1%;
+}
+/* Regras para dispositivos menores que 768px (exemplo de celular) */
+@media (max-width: 768px) {
+  .setas {
+    position: fixed !important;  /* Fixa as setas na parte inferior */
+    bottom: 45% !important; /* Distância da parte inferior */
+    display: flex !important;  /* Garante que as setas fiquem lado a lado */
+    gap: 10px !important; /* Espaçamento entre as setas */
+    margin-left: 80%;
+  }
+
+ 
+
+  .setas button {
+    background: none !important;
+    border: none !important;
+  }
+  .abrir-curriculo {
+    font-size: 0.7rem !important; /* Reduz o tamanho do texto para telas menores */
+    padding: 3px 5px !important; /* Reduz espaço interno para telas pequenas */
+    gap: 6px !important; /* Reduz espaço entre ícone e texto */
+    width: auto !important; /* Mantém largura dinâmica */
+    justify-content: center !important; /* Centraliza horizontalmente */
+    align-items: center !important; /* Centraliza verticalmente */
+    margin-left: 40%;
+  }
+
+  .img {
+    width: 14px !important; /* Ícones menores */
+    height: 14px !important;
+    margin: 0 !important; /* Remove margens desnecessárias */
+    padding: 0 !important; /* Remove espaçamentos desnecessários */
+  }
+
+  .abrir-curriculo .curriculo {
+    display: none !important; /* Oculta o texto "ABRIR CURRÍCULO" */
+  }
+  main {
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+  }
+
+  .filtrar {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80% !important; /* Reduz a largura do filtro */
+    margin-left: 50%  !important; /* Centraliza e reduz a margem */
+    padding: 5px !important; /* Diminui o espaçamento interno */
+  }
+
+  select {
+    border-radius: 10px !important; /* Borda arredondada */
+    padding: 0.2% 3% !important; /* Ajusta o padding do select */
+    font-size: 0.75rem !important; /* Reduz o tamanho da fonte */
+  }
+
+  label,
+  select,
+  option {
+    font-size: 0.75rem !important; /* Reduz o tamanho da fonte */
+  }
+
+  option {
+    font-size: 0.75rem !important; /* Font-size ajustado para as opções */
+  }
+
+ 
+
+  table {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-size: 0.6rem !important; /* Reduzido */
+  }
+
+  .tabela-itens {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-size: 0.65rem !important; /* Reduzido */
+  }
+
+  .th-content {
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+
+  .td {
+    padding-left: 0 !important;
+    text-align: center !important;
+    font-size: 0.6rem !important; /* Reduzido */
+  }
+
+  .botoes {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 5px auto !important;
+    gap: 3px !important; /* Menor espaço entre botões */
+    flex-wrap: nowrap !important;
+  }
+
+  
+  .btn-azul {
+    padding: 3px 5px !important; /* Menor padding */
+    font-size: 0.4rem !important; /* Fonte menor */
+  }
+
+  .x-btn {
+    width: 16px !important; /* Botão menor */
+    height: 16px !important;
+    margin-left: 15% !important;
+  }
+
+  /* Ajuste específico para os ícones */
+  .abrir-curriculo img,
+  .botoes img {
+    width: 14px !important; /* Ícones menores */
+    height: 14px !important;
+  }
+  
+}
+
+
+/* Regras para tablets (768px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    flex-direction: column !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+  }
+
+  .filtrar {
+    margin: 0 auto !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .setas {
+    justify-content: center !important;
+  }
+
+  table {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-size: 0.7rem !important; /* Mais compacto */
+  }
+
+  .tabela-itens {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-size: 0.7rem !important; /* Mais compacto */
+  }
+
+  .th-content {
+    text-align: center !important;
+  }
+
+  .botoes {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 5px auto !important;
+    gap: 5px !important; /* Compactação leve */
+    flex-wrap: nowrap !important;
+  }
+
+  .abrir-curriculo {
+    justify-content: center !important;
+    font-size: 1rem !important; /* Reduzido */
+  }
+
+  .btn-azul {
+    padding: 5px 8px !important; /* Mais compacto */
+    font-size: 0.7rem !important; /* Fonte menor */
+  }
+
+  .x-btn {
+    width: 18px !important; /* Botão menor */
+    height: 18px !important;
+    margin: 0 !important;
+  }
+
+  /* Ajuste específico para os ícones */
+  .abrir-curriculo img,
+  .botoes img {
+    width: 10px !important; /* Ícones menores */
+    height: 10px !important;
+  }
 }
 </style>

@@ -4,7 +4,7 @@ import pagHeader from '@/components/pagHeader.vue';
 import MenuAdministradores from '@/components/MenuAdministradores.vue';
 </script>
 <template>
-    <MenuAdministradores></MenuAdministradores>
     <pagHeader></pagHeader>
+    <MenuAdministradores></MenuAdministradores>
     <RemoverAcesso></RemoverAcesso>
 </template>
