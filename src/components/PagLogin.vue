@@ -101,7 +101,7 @@ const authStore = useAuthStore();
 .container{
 }
 .pergunta{
-margin-top: 5rem;
+margin-top: 3rem;
 font-size: 22px;
 }
 #main {
@@ -198,7 +198,7 @@ section {
 }
 
 aside {
-  margin: 5%;
+  margin-top: 22%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +222,7 @@ p {
 } 
 @media (max-width: 768px) {
   section {
-    height: 35vh;
+    height: 40vh;
     padding: 2px;
   }
 
@@ -251,10 +251,11 @@ p {
     width: 30% !important; /* Novo comprimento para telas menores */
     font-size: 15px;
     padding: 8px 16px !important;
+    
   }
   button#enviar {
     padding: 10px 20px !important;
-    margin-top: 8%;
+    margin-top: 20%;
     width: 100% !important;
     font-size: 15px;
     margin-left: 25%;
@@ -266,11 +267,12 @@ p {
     margin-top: 15%;
     margin-left: 10%;
     padding: 10px 35px !important;
-
+    
   }
   #h1 {
     font-size: 6vw;
-    margin-top: 15% !important;
+    margin-top: -10% !important;
+    margin-left: 0.5%;
   }
 
   h1 {
@@ -307,7 +309,7 @@ p {
   }
 
   .logo {
-    margin-top: 10vh;
+    margin-top: 8vh;
   }
 }
 </style>
