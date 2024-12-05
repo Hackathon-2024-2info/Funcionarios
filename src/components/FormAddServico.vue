@@ -116,31 +116,36 @@ const novoServico = reactive({
   #formulario {
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-top: 10%;
   }
 
 
   input {
-    width: 87.5%;
+    width: 80%;
     height: 40px;
     margin-bottom: 8%;
     padding-left: 2%;
+    margin-left: 1%;
 
 
   }
 
 
   select {
-    width: 90%;
+    width: 82.5%;
     height: 40px;
     color: rgb(114, 112, 112);
     margin-bottom: 8%;
+    margin-left: 1%;
   }
 
 
   label {
     font-size: 13px;
     margin-bottom: 4%;
+    margin-left: 1%;
+
   }
 
 
@@ -149,11 +154,11 @@ const novoServico = reactive({
     font-size: 20px;
     font-family: 'Readex Pro', sans-serif;
     font-weight: 600;
-    margin-bottom: 2%;
     margin-left: 7%;
-    margin-top: 4%;
-    margin-bottom: 5%;
-    margin: 10%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 40%;
+    padding-bottom: 0% ;
   }
 
 
@@ -167,7 +172,7 @@ const novoServico = reactive({
     font-weight: 700;
     width: 35%;
     height: 29px;
-    margin: 5% 30% 0 30%;
+    margin: 5% 0% 0 25%;
 
 
   }

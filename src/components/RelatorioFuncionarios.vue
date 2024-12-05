@@ -53,7 +53,7 @@
 <div class="espacing" @click="openFileSelection">
   <fieldset class="arquivo">
     <div class="archive-input">
-      <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+      <input type="file" @change="handleFileChange" accept=".pdf, .png, .jpeg" ref="fileInput"
         style="display: none" />
       <button @click="triggerFileInput" class="icon-button">
         <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
@@ -82,7 +82,7 @@
 <div class="espacing" @click="openFileSelection">
 <fieldset class="arquivo">
   <div class="archive-input">
-    <input type="file" @change="handleFileChange" accept=".zip,.tar,.tar.gz, .pdf, .txt" ref="fileInput"
+    <input type="file" @change="handleFileChange" accept=".pdf, .png, .jpeg" ref="fileInput"
       style="display: none" />
     <button @click="triggerFileInput" class="icon-button">
       <i class="fas fa-file-archive"> <img src="@/assets/image-add.png" alt="" id="imagelogo"></i>
@@ -283,8 +283,8 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 950px;
-  top: 31%;
+  left: 990px;
+  top: 43%;
 
 
 }
@@ -392,7 +392,7 @@
 
 .input3 {
   width: 465px;
-  height: 403px;
+  height: 390px;
   top: 177px;
   background: rgba(217, 217, 217, 0.43);
   border-radius: 5px;
@@ -448,7 +448,7 @@ label {
   text-align: center;
   margin-left: 51%;
   position: absolute;
-  top: 140%;
+  top: 125%;
 }
 
 
