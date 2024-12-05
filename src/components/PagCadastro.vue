@@ -134,13 +134,14 @@ function processarForm() {
 
 aside {
   margin-top: -5%;
-  margin-left: 25%;
+  /* margin-left: 10%; */
 }
 
 .formularioo {
   display: grid;
   grid-template-columns: 25% 1fr 25%;
   order: 1;
+  margin-left: -10%;
 }
 
 .faca {
@@ -155,7 +156,7 @@ aside {
   margin-left: -32%;
   white-space: nowrap;
   margin-bottom: 5%;
-
+  
 }
 
 
@@ -325,7 +326,7 @@ input{
 
 }
 input{
-  width: 320px;
+  width: 520px;
   height: 46px;
   border: none;
   border-radius: 5px;
@@ -338,7 +339,7 @@ align-items: center;
 padding: 10px;
 gap: 10px;
 
-width: 320px;
+width: 520px;
 height: 46px;
 
 background: rgba(217, 217, 217, 0.43);

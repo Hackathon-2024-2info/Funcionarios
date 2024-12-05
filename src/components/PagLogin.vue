@@ -57,8 +57,8 @@ const authStore = useAuthStore();
         <div> 
 
           <form class="formulario" @submit.prevent="processarForm">
-            <label for="">SEU USUÁRIO</label>
-            <input type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
+            <label>SEU USUÁRIO</label>
+            <input class="teste1" type="text" v-model="info.usuario" required placeholder="Insira seu usuário" />
             <label for="">SUA SENHA</label>
             <input type="password" v-model="info.senha" required placeholder="Insira sua senha" />
             <RouterLink class="button-area" to="/estoque" v-if="!authStore.user.is_admin"><button id="enviarc" type="submit">Concluir</button></RouterLink>
@@ -78,6 +78,18 @@ const authStore = useAuthStore();
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
+
+.teste1{
+  width: 578px;
+  height: 46px;
+  background: rgba(217, 217, 217, 0.43);
+  border-radius: 5px;
+  border: 0px solid; /* Borda inicial em cinza claro */
+  cursor: pointer;
+  padding-left: 2%;
+  transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+}
+
 .teste {
   display: flex;
         align-items: center;

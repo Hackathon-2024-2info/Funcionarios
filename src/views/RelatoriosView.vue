@@ -5,17 +5,11 @@ import pagHeader from '@/components/pagHeader.vue';
 </script>
 
 <template>
+      <pagHeader class="pagHeader"></pagHeader>
    <MenuAdministradores class="menu"></MenuAdministradores>
-   <pagHeader class="pagHeader"></pagHeader>
    <RelatoriosAdmin></RelatoriosAdmin>
 </template>
 
 <style scoped>
-.pagHeader{
-margin-top: -103%
-}
 
-.menu{
-   margin-top: 0;
-}
 </style>

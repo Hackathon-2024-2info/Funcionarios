@@ -123,6 +123,7 @@ font-family: 'Roboto', sans-serif;
 .body {
   display: grid;
   grid-template-columns: 18% 1fr;
+  margin-top: -90%;
 }
 * {
   margin: 0;
