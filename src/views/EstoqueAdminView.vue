@@ -1,7 +1,7 @@
 <script setup>
+import PagEstoque from '@/components/PagEstoque.vue'
 import MenuAdministradores from '@/components/MenuAdministradores.vue';
 import pagHeader from '@/components/pagHeader.vue';
-import PagEstoque from '@/components/PagEstoque.vue';
 
 </script>
 
@@ -9,6 +9,4 @@ import PagEstoque from '@/components/PagEstoque.vue';
         <pagHeader></pagHeader>
         <MenuAdministradores></MenuAdministradores>
 <PagEstoque></PagEstoque>
-
 </template>
-
