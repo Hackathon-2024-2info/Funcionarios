@@ -70,22 +70,22 @@ main {
     display: flex;
     flex-direction: column;
     height: 130vh;
-    margin-left: 3%;
+    margin-left: 20%;
     position: absolute;
     top: 30%;
-    width: 100%;
+    width: 80%;
 }
 
 
 .container-um {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 85%;
     height: 17%;
     background: #384dbb;
     border-radius: 24px;
     color: white;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 .container-um h1 {
@@ -123,13 +123,13 @@ main {
     display: flex;
     float: left;
     flex-direction: column;
-    width: 20%;
+    width: 23%;
     background: #d9d9d9;
     border-radius: 20px;
-    margin-right: -30%;
+    margin-right: -20%;
     margin-bottom: 3.5%;
     margin-top: 3.5%;
-    margin-left: 35%;
+    margin-left: 25%;
 }
 
 .tipo-label-um {
@@ -191,7 +191,7 @@ img {
     background: #384dbb;
     border-radius: 24px;
     color: white;
-    margin-left: 35%;
+    margin-left: 28%;
 }
 
 .container-dois h1 {
@@ -325,6 +325,7 @@ button {
         height: 130vh;
         margin-left: 0%;
         top: 15%;
+        width: 100%;
     }
 
     .container-um {
@@ -380,6 +381,7 @@ button {
         height: 60%;
         width: 40%;
         background: #d9d9d9;
+        margin-right: -30%;
         border-radius: 20px;
         margin-left: 7%;
         margin-top: 10%;

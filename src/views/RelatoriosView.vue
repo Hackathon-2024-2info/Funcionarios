@@ -12,7 +12,7 @@ import pagHeader from '@/components/pagHeader.vue';
 
 <style scoped>
 .pagHeader{
-margin-top: -110%
+margin-top: -103%
 }
 
 .menu{

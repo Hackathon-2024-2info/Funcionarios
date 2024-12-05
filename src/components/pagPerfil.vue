@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+    
     <header></header>
         <img class="foto-perfil" src="../assets/image (2).png" alt="">
         <div class="infos">
@@ -29,6 +30,7 @@
     margin-left: 32%;
     align-items: center; 
     flex-wrap: wrap; /* Faz com que os itens "quebrem linha" em telas menores */
+    margin-bottom: 10%;
 }
 p {
     margin: 0;
@@ -99,7 +101,6 @@ button {
     color: white;
     border: none;
     margin-top: 50%;
-    margin-bottom: 5%;
     margin-left: -35%;
 }
 
