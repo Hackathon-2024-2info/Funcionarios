@@ -7,165 +7,132 @@
         <div>
             <h1 class="add">ADICIONAR ITEM AO ESTOQUE</h1>
             <label for=""> Nome do item </label>
-            <input type="text" class="input1" placeholder="Insira o nome do item a ser adicionado">
+            <input type="text" class="input" placeholder="Insira o nome do item a ser adicionado">
         </div>
 
         <div class="espacamento"></div>
 
         <div>
             <label for=""> Marca do item </label>
-            <input type="text" class="input2" placeholder="Insira a marca do item">
+            <input type="text" class="input" placeholder="Insira a marca do item">
         </div>
 
         <div class="espacamento"></div>
         <div>
             <label for="">Quantidade do item </label>
-            <input type="text" class="input3" placeholder="Insira a quantidade a ser adicionada ao estoque do item">
-            <button id="Adicionar" type="submit">Adicionar</button>
+            <input type="text" class="input" placeholder="Insira a quantidade a ser adicionada ao estoque do item">
+            <button id="Adicionar" type="submit" class="button">Adicionar</button>
         </div>
-
     </main>
-
 </template>
-
-
-
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Readex+Pro:wght@160..700&display=swap');
 
-
-
 #main {
-    width: 29%;
-    margin-left: 24%;
-    margin-top: 7%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+    max-width: 600px;
 }
-
-
-
 
 .add {
     font-family: 'Readex Pro';
     font-style: normal;
     font-weight: 600;
-    font-size: 26px;
-    line-height: 18px;
+    font-size: 1.8rem;
+    line-height: 1.2;
     color: #180577;
-    padding: 10%;
-    margin-left: -9%;
+    text-align: center;
+    margin-bottom: 1rem;
 }
-
-
 
 .espacamento {
-    margin-top: 5%;
+    margin-top: 1.5rem;
 }
 
-
-
-.input1 {
-    padding: 2% 3%;
-    gap: 1%;
-    width: 85%;
-    height: 46px;
+.input {
+    padding: 0.8rem;
+    width: 100%;
+    height: auto;
     background: rgba(217, 217, 217, 0.43);
     border-radius: 5px;
-    border: none;
+    border: 0px solid #ccc;
     outline: none;
     font-family: 'Karla';
-    font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #687C94;
+    font-size: 1rem;
     color: #000000;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.input2 {
-    padding: 2% 3%;
-    gap: 1%;
-    width: 85%;
-    height: 46px;
-    background: rgba(217, 217, 217, 0.43);
-    border-radius: 5px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    border: none;
-    outline: none;
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #687C94;
-    color: #000000;
-
+.input:focus {
+    border: none; 
+    box-shadow: 0 0 10px rgba(9, 29, 135, 0.5); 
+    background: rgba(217, 217, 217, 0.6); 
 }
-
-
-.input3 {
-    padding: 2% 3%;
-    gap: 1%;
-    width: 85%;
-    height: 46px;
-    background: rgba(217, 217, 217, 0.43);
-    border-radius: 5px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    border: none;
-    outline: none;
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #687C94;
-    color: #000000;
-}
-
-
 
 label {
     font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
+    font-size: 1rem;
     color: #666666;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    padding: 3%;
-    margin-left: -2.1%;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-
-button {
+.button {
     background-color: #091D87;
     border-radius: 5px;
     font-family: 'Karla';
-    display: inline;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 3% 5%;
-    font-size: 16px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     color: white;
-    margin-top: 3rem;
     border: none;
-    margin-left: 32%;
-    font-style: normal;
+    display: block;
+    margin: 2rem auto 0 auto;
     font-weight: 700;
-    line-height: 19px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
 
+.button:active {
+    transform: scale(0.95); 
+    background-color: #07166a; 
+}
+
+@media (max-width: 768px) {
+    .add {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .add {
+        font-size: 1.3rem;
+    }
+
+    .input {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
 }
 </style>
