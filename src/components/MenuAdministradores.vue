@@ -61,7 +61,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Remover acesso</p>
           <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
-          <router-link to="/removeracesso" style="background: none;"><button class="button"><p style="margin-top: 3%; background: white; border-radius: 10px; padding: 5%; padding-top: 5%; padding-bottom: 5%;">Clique aqui</p></button></router-link>
+          <router-link to="/removeracesso" style="background: none;"><button class="button" style="background: none;"><p style=" background: white; border-radius: 10px; padding: 5%; padding-top: 5%; padding-bottom: 5%; display: block; margin: 0 auto;">Clique aqui</p></button></router-link>
         </div>
       </nav>
     </div>
@@ -97,8 +97,8 @@ body {
       &::after {
         position: absolute;
         content: "";
-        top: 90%;
-        left: 20px;
+        top: 100%;
+        left: 10px;
         width: 80%;
         height: 3px;
         background: gray;
@@ -242,9 +242,6 @@ width: 100%;
   }
 
   .button {
-   
-
-    width: 85%;
     border: none;
 display: block;
 margin: 0 auto;
@@ -272,17 +269,6 @@ margin: 0 auto;
     display: none;
   }
 
-  .box {
-    background-color: #384dbb;
-    color: white;
-    font-weight: 400;
-    border-radius: 10px;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 60%;
-    margin-top: -8%;
-    padding-bottom: 10%;
-  }
 
   .warning {
     margin-bottom: -13%;
