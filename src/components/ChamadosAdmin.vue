@@ -255,7 +255,7 @@ label {
 .filtrar {
 display: flex;
 text-align: center;
-margin-left: 52%;
+margin-left: 43%;
 }
 
 
