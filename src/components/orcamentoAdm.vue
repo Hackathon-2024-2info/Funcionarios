@@ -226,7 +226,7 @@ select {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 2% 20%;
+    padding: 2% 23.5%;
     background: rgba(84, 111, 255, 0.32);
     border-radius: 5px;
     border: none;
@@ -267,7 +267,7 @@ button {
     font-family: 'Karla';
     font-weight: 700;
     font-size: 14px;
-    margin-left: 25%
+    margin-left: 36%
 }
 
 .num-dois {

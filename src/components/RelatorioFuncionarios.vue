@@ -283,7 +283,7 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 1030px;
+  left: 950px;
   top: 31%;
 
 
