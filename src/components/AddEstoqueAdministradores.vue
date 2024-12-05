@@ -35,7 +35,7 @@ import axios from 'axios';
 
 const submitEstoque = async () => {
     try {
-        const response = await axios.post('https://bdhackathon.fly.dev/Ferramentaspecas', {
+        const response = await axios.post('https://bdhackathon.fly.dev/admin/hackathon/administrador/Ferramentaspecass', {
             nome: nome_ferramentaspecas.value,
             marca: marca.value,
             quantidade: quantidade_ferramentaspecas.value,
