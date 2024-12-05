@@ -36,7 +36,7 @@ const toggleDropdown = () => {
           <div class="dropdown-content" v-if="isOpen">
             <a><router-link to="/estoque"> Estoque </router-link></a>
             <hr>
-            <a><router-link to="/servicos/:id"> Serviço </router-link></a>
+            <a><router-link to="/servicos/1"> Serviço </router-link></a>
             <hr>
             <a><router-link to="/relatorios"> Relatório </router-link></a>
           </div>
@@ -49,7 +49,7 @@ const toggleDropdown = () => {
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
 
         <router-link to="/estoque"> Estoque </router-link>
-        <router-link to="/servicos/:id"> Serviço </router-link>
+        <router-link to="/servicos/1"> Serviço </router-link>
         <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>

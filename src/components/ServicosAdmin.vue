@@ -38,7 +38,7 @@ const servicoStore = useServicoStore();
                   <p class="txt-box"> {{ servico.datainicio }}</p>
                 </div>
 
-                <RouterLink to="/detalheservico/:id"><button class="btn-box">Ver detalhes</button></RouterLink>
+                <RouterLink to="/detalheservico/1"><button class="btn-box">Ver detalhes</button></RouterLink>
               </div>
           </div>
         </section>

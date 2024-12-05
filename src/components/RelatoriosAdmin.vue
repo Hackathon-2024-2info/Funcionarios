@@ -32,7 +32,7 @@ const relatorioStore = useRelatorioStore();
                   <p class="txt-box">{{relatorio.dataenvio}} </p>
                 </div>
 
-                <RouterLink to="/detalherelatorio/:id"><button class="btn-box">Ver detalhes</button></RouterLink>
+                <RouterLink to="/detalherelatorio/1"><button class="btn-box">Ver detalhes</button></RouterLink>
               </div>
           </div>
           </div>
