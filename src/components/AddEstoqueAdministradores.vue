@@ -1,8 +1,11 @@
 <script setup>
-
+import MenuAdministradores from '@/components/MenuAdministradores.vue';
+import pagHeader from '@/components/pagHeader.vue';
 </script>
 
 <template>
+      <pagHeader></pagHeader>
+      <MenuAdministradores></MenuAdministradores>
     <main id="main">
         <div>
             <h1 class="add">ADICIONAR ITEM AO ESTOQUE</h1>
@@ -35,6 +38,9 @@
     margin: 0 auto;
     margin-top: 5%;
     max-width: 600px;
+    position:absolute;
+    top: 30%;
+    left: 35%;
 }
 
 .add {
@@ -107,17 +113,20 @@ label {
 }
 
 @media (max-width: 768px) {
+    #main {
+        left: 5%;
+    }
     .add {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
     }
 
     .input {
-        font-size: 0.9rem;
+        font-size: 0.9rem important;
     }
 
     .button {
         font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
+        padding: 0.6rem 1.2remimportant;
     }
 }
 
