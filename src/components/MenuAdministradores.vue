@@ -61,7 +61,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Remover acesso</p>
           <p class="frase-box">Para invalidar o acesso de login de um funcionário</p>
-          <router-link to="/removeracesso" style="background: none;"><button class="button"><p style="margin-top: 3%;">Clique aqui</p></button></router-link>
+          <router-link to="/removeracesso"><button class="button">Clique aqui</button></router-link>
         </div>
       </nav>
     </div>
@@ -85,7 +85,7 @@ body {
     position: fixed; /* ou absolute */
     z-index: 1000; /* Valor alto para garantir que ele fique na frente */
   }
- 
+  
   nav a {
       position: relative;
       display: block;
@@ -119,22 +119,24 @@ body {
   
  
 
- 
-    .box {
+  .box {
     background-color: #384dbb;
     color: white;
     font-weight: 400;
     border-radius: 10px;
     margin-left: 10%;
     margin-right: 10%;
-
-    padding-top: -18%;
-  
+    height: 60%;
+    margin-top: -15%;
+    padding-bottom: 10%;
+    
+   
   }
 
   .warning {
-    margin-bottom: -20%;
+    margin-bottom: -10%;
   }
+
   .menu-lg {
     display: grid;
     grid-template-columns: 18% 1fr;
@@ -233,32 +235,32 @@ body {
 
   .frase-box {
     font-size: 80%;
-    margin: 10% 0;
+    margin: 10%;
     text-align: center;
     font-family: 'Karla';
     margin-top: 15%;
     height: 5vh;
-width: 100%;
+    margin-left: -0%;
   }
 
   .button {
-    background-color: white;
     border-radius: 10px;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    height: 15%;
     width: 85%;
     border: none;
-display: block;
-margin: 0 auto;
+
+    text-align: center;
+    place-items: center;
     color: #546fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
-  
-    margin-top: -3% !important;
+    margin-left: 0%;
     padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: -3% !important;
     background-color: white;
-    margin-bottom: -15%;
+    height: 5vh !important;
+    margin-left: -10%;
   }
-
 
   .title {
     font-size: 100%;

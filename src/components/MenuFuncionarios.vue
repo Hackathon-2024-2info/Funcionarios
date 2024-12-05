@@ -6,8 +6,6 @@ const isOpen = ref(false);
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
 };
-
-
 </script>
 
 <template>
@@ -50,8 +48,8 @@ const toggleDropdown = () => {
       <nav>
         <img src="../assets/logo AVANTE.png" alt="" class="img" />
 
-        <router-link to="/estoque" name v-if="id === '1'"> Estoque </router-link>
-        <router-link to="/servicos/1"> Serviço </router-link>
+        <router-link to="/estoque"> Estoque </router-link>
+        <router-link to="/servicos/:id"> Serviço </router-link>
         <router-link to="/relatorios"> Relatório </router-link>
 
         <div class="vazio"></div>
@@ -60,7 +58,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Abra um chamado</p>
           <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <router-link to="/solicitarchamado" style="background: none;"><button class="button" id="chamado"><p style="margin-top: 3%;">Abrir chamado</p></button></router-link>
+          <router-link to="/solicitarchamado"><button class="button" id="chamado">Abrir chamado</button></router-link>
         </div>
       </nav>
     </div>
@@ -83,9 +81,7 @@ body {
     display: none;
   }
   
-.title{
-padding-top: 25%;
-}
+
   nav a {
       position: relative;
       display: block;
@@ -124,13 +120,13 @@ padding-top: 25%;
     border-radius: 10px;
     margin-left: 10%;
     margin-right: 10%;
-
-    padding-top: -15%;
-  
+    height: 60%;
+    margin-top: -15%;
+    padding-bottom: 10%;
   }
 
   .warning {
-    margin-bottom: -18%;
+    margin-bottom: -10%;
   }
 
   .menu-lg {
@@ -234,10 +230,8 @@ padding-top: 25%;
   }
 
   .button {
-    background-color: white;
     border-radius: 10px;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    height: 15%;
     width: 85%;
     border: none;
 display: block;
@@ -248,7 +242,12 @@ margin: 0 auto;
     margin-top: -3% !important;
     padding-top: 3%;
     background-color: white;
-    margin-bottom: -15%;
+
+  }
+
+  .button#chamado{
+    height: 5vh;
+    margin-left: -0%;
   }
 
   .title {
