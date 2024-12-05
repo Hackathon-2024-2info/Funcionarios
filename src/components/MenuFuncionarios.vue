@@ -58,7 +58,7 @@ const toggleDropdown = () => {
         <div class="box">
           <p class="title">Abra um chamado</p>
           <p class="frase-box">Dúvidas ou problemas, abra um chamado ao administrador.</p>
-          <router-link to="/solicitarchamado"><button class="button" id="chamado">Abrir chamado</button></router-link>
+          <router-link to="/solicitarchamado" style="background: none;"><button class="button" id="chamado"><p style="margin-top: 3%;">Abrir chamado</p></button></router-link>
         </div>
       </nav>
     </div>
@@ -81,7 +81,9 @@ body {
     display: none;
   }
   
-
+.title{
+padding-top: 25%;
+}
   nav a {
       position: relative;
       display: block;
@@ -120,13 +122,13 @@ body {
     border-radius: 10px;
     margin-left: 10%;
     margin-right: 10%;
-    height: 60%;
-    margin-top: -15%;
-    padding-bottom: 10%;
+
+    padding-top: -15%;
+  
   }
 
   .warning {
-    margin-bottom: -10%;
+    margin-bottom: -18%;
   }
 
   .menu-lg {
@@ -230,8 +232,10 @@ body {
   }
 
   .button {
+    background-color: white;
     border-radius: 10px;
-    height: 15%;
+    padding-top: 20%;
+    padding-bottom: 20%;
     width: 85%;
     border: none;
 display: block;
@@ -242,12 +246,7 @@ margin: 0 auto;
     margin-top: -3% !important;
     padding-top: 3%;
     background-color: white;
-
-  }
-
-  .button#chamado{
-    height: 5vh;
-    margin-left: -0%;
+    margin-bottom: -15%;
   }
 
   .title {
